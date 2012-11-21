@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-DevelopersForGood::Application.config.session_store :cookie_store, key: '_developers_for_good_session'
+CodeMontage::Application.config.session_store :cookie_store, key: '_code_montage_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# DevelopersForGood::Application.config.session_store :active_record_store
+# CodeMontage::Application.config.session_store :active_record_store

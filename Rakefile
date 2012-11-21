@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DevelopersForGood::Application.load_tasks
+CodeMontage::Application.load_tasks

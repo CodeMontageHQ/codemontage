@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: developersforgood_development
+  database: codemontage_development
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -10,9 +10,9 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: developersforgood_test
+  database: codemontage_test
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: developersforgood_production
+  database: codemontage_production
