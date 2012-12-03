@@ -1,6 +1,10 @@
-DevelopersForGood::Application.routes.draw do
+CodeMontage::Application.routes.draw do
 
   root :to => "home#index"
+  
+  get '/about', {:controller => 'home', :action => 'about'}
+  get '/joinus', {:controller => 'home', :action => 'joinus'}
+  get '/services', {:controller => 'home', :action => 'services'}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
