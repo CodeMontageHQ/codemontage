@@ -7,14 +7,20 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the default SQLite database.
+# Ignore database configuration files
+/config/database.yml
+
+# Ignore the default SQLite database
 /db/*.sqlite3
 
-# Ignore all logfiles and tempfiles.
+# Ignore all logfiles and tempfiles
 /log/*.log
 /tmp
 *.swp*
 *.swo*
 
-# Ignore all Mac helper files.
+# Ignore all Mac helper files
 *.DS_Store
+
+# Ignore RVM files
+.rvmrc
