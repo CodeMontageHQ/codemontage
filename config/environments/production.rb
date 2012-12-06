@@ -1,3 +1,5 @@
+GOOGLE_ANALYTICS_TRACKING_CODE = "UA-12971916-2"
+
 CodeMontage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
