@@ -25,6 +25,23 @@
 </head>
 <body data-controller="<%= controller.controller_name %>"
   data-action="<%= controller.action_name %>">
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="/">CodeMontage</a></h1></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+    <section>
+      <ul class="left">
+        <li><a href="/about">About</a></li>
+      </ul>
+      <ul>
+        <li><a href="/services">Services</a></li>
+      <ul>
+      <ul class="right">
+        <li><a href="/joinus">Join Us</a></li>
+      </ul>
+    </section>
+  </nav>
   <%= yield %>
 </body>
 </html>
