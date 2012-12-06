@@ -4,6 +4,12 @@
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!-- http://www.cssstickyfooter.com/using-sticky-footer-code.html -->
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	
@@ -25,23 +31,29 @@
 </head>
 <body data-controller="<%= controller.controller_name %>"
   data-action="<%= controller.action_name %>">
-  <nav class="top-bar">
-    <ul>
-      <li class="name"><h1><a href="/">CodeMontage</a></h1></li>
-      <li class="toggle-topbar"><a href="#"></a></li>
-    </ul>
-    <section>
-      <ul class="left">
-        <li><a href="/about">About</a></li>
-      </ul>
+  <div id="wrap">
+    <nav class="top-bar">
       <ul>
-        <li><a href="/services">Services</a></li>
-      <ul>
-      <ul class="right">
-        <li><a href="/joinus">Join Us</a></li>
+        <li class="name"><h1><a href="/">CodeMontage</a></h1></li>
+        <li class="toggle-topbar"><a href="#"></a></li>
       </ul>
-    </section>
-  </nav>
-  <%= yield %>
+      <section>
+        <ul class="left">
+          <li><a href="/about">About</a></li>
+        </ul>
+        <ul>
+          <li><a href="/services">Services</a></li>
+        <ul>
+        <ul class="right">
+          <li><a href="/joinus">Join Us</a></li>
+        </ul>
+      </section>
+    </nav>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>  
+  
+  <%= render 'layouts/footer' %>
 </body>
 </html>
