@@ -25,6 +25,10 @@
 </head>
 <body data-controller="<%= controller.controller_name %>"
   data-action="<%= controller.action_name %>">
-  <%= yield %>
+  <div id="wrap">
+    <%= yield %>
+  </div>  
+  
+  <%= render 'layouts/footer' %>
 </body>
-</html>
+</html
