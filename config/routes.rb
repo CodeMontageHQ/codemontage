@@ -3,6 +3,7 @@ CodeMontage::Application.routes.draw do
   root :to => "home#index"
   
   get '/about', {:controller => 'home', :action => 'about'}
+  get '/apply', {:controller => 'home', :action => 'apply'}
   get '/joinus', {:controller => 'home', :action => 'joinus'}
   get '/services', {:controller => 'home', :action => 'services'}
 
