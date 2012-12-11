@@ -3,7 +3,11 @@ CodeMontage::Application.routes.draw do
   root :to => "home#index"
   
   get '/about', {:controller => 'home', :action => 'about'}
-  get '/joinus', {:controller => 'home', :action => 'joinus'}
+  get '/apply', {:controller => 'home', :action => 'apply'}
+  get '/join', {:controller => 'home', :action => 'join'}
+  get '/how-it-works', {:controller => 'home', :action => 'how_it_works'}
+  get '/jobs', {:controller => 'home', :action => 'jobs'}
+  get '/developers-for-good', {:controller => 'home', :action => 'developers_for_good'}
   get '/services', {:controller => 'home', :action => 'services'}
 
   # The priority is based upon order of creation:
