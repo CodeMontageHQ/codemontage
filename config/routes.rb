@@ -6,6 +6,7 @@ CodeMontage::Application.routes.draw do
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/join', {:controller => 'home', :action => 'join'}
   get '/how-it-works', {:controller => 'home', :action => 'how_it_works'}
+  get '/developers-for-good', {:controller => 'home', :action => 'developers_for_good'}
   get '/services', {:controller => 'home', :action => 'services'}
 
   # The priority is based upon order of creation:
