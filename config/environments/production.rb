@@ -3,6 +3,8 @@ GOOGLE_ANALYTICS_TRACKING_CODE = "UA-12971916-2"
 CodeMontage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.action_mailer.default_url_options = { :host => 'codemontage.com' }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
