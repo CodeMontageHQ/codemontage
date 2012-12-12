@@ -11,6 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121211233531) do
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name",                                 :null => false
+    t.string   "url"
+    t.string   "github_org"
+    t.text     "description"
+    t.boolean  "is_tax_exempt",     :default => false, :null => false
+    t.string   "contact_name"
+    t.string   "contact_role"
+    t.string   "contact_email"
+    t.integer  "annual_budget_usd"
+    t.integer  "total_staff_size"
+    t.integer  "tech_staff_size"
+    t.text     "notes"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+  end
 
 end
