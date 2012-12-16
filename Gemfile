@@ -8,6 +8,15 @@ gem "meta_search",    '>= 1.1.0.pre'
 gem 'rails', '3.2.6'
 gem 'pg'
 
+# Let's set up the testing framework
+group :development, :test do 
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
