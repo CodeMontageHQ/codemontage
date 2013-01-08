@@ -21,3 +21,7 @@ Get started by
 Once you've installed these dependencies, test your setup by running $ 'rails server' and visiting the site at http://localhost:3000
 
 Congratulations, you're ready to help build CodeMontage!
+
+## License
+
+CodeMontage's source code is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl.html).
