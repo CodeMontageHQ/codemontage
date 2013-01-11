@@ -10,7 +10,7 @@ If you'd like to join our quest to empower software superheroes, feel free to su
 
 ###Development Environment Setup
 
-CodeMontage currently uses Ruby on Rails version 3.2.6 and Postgres 9.1.4.
+CodeMontage currently uses Ruby on Rails version 3.2.11 and Postgres 9.1.4.
 
 Get started by
 * Installing Rails. We recommend [Rails Installer](http://railsinstaller.org).
