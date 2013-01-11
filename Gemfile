@@ -5,7 +5,7 @@ gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 
 # Baseline Infrastructure
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.11'
 gem 'pg'
 
 # Let's set up the testing framework
