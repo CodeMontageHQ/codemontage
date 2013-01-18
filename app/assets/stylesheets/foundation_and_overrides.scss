@@ -1,4 +1,5 @@
 @import "foundation/common/ratios";
+@import url(http://fonts.googleapis.com/css?family=Rambla);
 
 // Settings file containing Foundation defaults
 
@@ -24,12 +25,13 @@
 
 // Typography Settings
 
-// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $headerFontWeight: bold;
-// $headerFontColor: #222;
-// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headerFontFamily: Rambla,Helvetica,sans-serif;
+$headerFontWeight: normal;
+$headerFontColor: #7a3a74;
+
+$bodyFontFamily: Cambria,Georgia,Times,serif;
 // $bodyFontWeight: normal;
-// $bodyFontColor: #222;
+$bodyFontColor: #494949;
 
 // Button Settings
 
@@ -53,9 +55,16 @@
 // $navBarHeight: 40px;
 // $navFlyoutBaseWidth: 250px;
 
+// Top Bar Settings
+
+$topBarBgColor: #1aacbc;
+//$topBarLinkColor: white;
+$topBarTitleSize: 24px;
+.top-bar ul li {font-family: Rambla,Helvetica,sans-serif;}
+
 // Modular Scale
 // $ratio: $golden;
-// $baseFontSize: 14px;
+$baseFontSize: 16px;
 // $importantModNum: 44px;
 
 // Tooltip Settings
