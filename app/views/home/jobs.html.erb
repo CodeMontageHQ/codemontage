@@ -1,7 +1,9 @@
 <body>
   <h4>Jobs</h4>
   
-  <p><strong>CodeMontage makes crafting humanitarian software the standard in software professional development.</strong> We believe coders make the best superheroes, and that empowering coders to improve themselves while improving the world is as cool as it gets. If you agree, <a href="mailto:jobs@codemontage.com?Subject=I+Want+To+Make+More+Superheroes" target="_blank"> drop us a line</a> and tell us about the moment you realized coders could be superheroes.</p>
+  <h5>CodeMontage is making humanitarian software development the standard in professional development for coders.</h5>
+  
+  <p>We believe coders make the best superheroes, and that empowering coders to improve themselves while improving the world is as cool as it gets. If you agree, <%= mail_to "jobs@codemontage.com", " drop us a line",:subject => "I want to help make superheroes!" %> and tell us about the moment you realized coders could be superheroes.</p>
   <p>We're always on the lookout for <a href="http://skillcrush.com/2012/12/07/how-to-get-hired-as-a-professional-developer" target="_blank">passionate people who are smart, get things done, solve hard problems, and explain their solutions</a>.</p>
     
   <p>Some of the specific <strong>problems we're working to solve</strong>:
@@ -25,6 +27,5 @@
     <ul>
   </p>
   
-  <p>Sound like a worthy way to spend your time? <a href="mailto:jobs@codemontage.com?Subject=I+Want+To+Help+Make+More+Superheroes" target="_blank">Reach out to us</a>!</p>
-  
+  <p>Sound like a worthy way to spend your time? <%= mail_to "jobs@codemontage.com", "Reach out to us",:subject => "I want to help make superheroes!" %>!</p>
 </body>
