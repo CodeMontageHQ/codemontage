@@ -4,16 +4,24 @@ html, body {height: 100%;}
 
 #wrap {min-height: 100%;}
 
-#main {overflow:auto;
-	padding-bottom: 150px;}  /* must be same height as the footer */
+#main {
+  overflow:auto;
+	padding-bottom: 150px; /* must be same height as the footer */
+}
 
-#footer {position: relative;
+#footer {
+  position: relative;
+  background: #CCCCCC;
+  font-family: Rambla,Helvetica,sans-serif;
 	margin-top: -150px; /* negative value of footer height */
 	height: 150px;
-	clear:both;} 
+	clear:both;
 	
-#footer a {color: #E41C03;}
+	#social-media {padding-top: 10px;}
+} 
 
+#copyright {font-size: .75em;}
+	
 /* Opera Fix */
 body:before {
 	content:"";
