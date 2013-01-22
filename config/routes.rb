@@ -3,7 +3,7 @@ CodeMontage::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :users
+  devise_for :users, :path => 'auth'
 
   root :to => "home#index"
   
@@ -14,10 +14,6 @@ CodeMontage::Application.routes.draw do
   get '/our_story', {:controller => 'home', :action => 'our_story'}
   get '/services', {:controller => 'home', :action => 'services'}
   get '/training', {:controller => 'home', :action => 'training'}
-
-  get "sign_up" => "users#new", as: 'sign_up'
-
-  resources :users
 
   # Preserve links from tumblr placeholder
   match "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
