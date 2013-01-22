@@ -14,6 +14,12 @@ CodeMontage::Application.routes.draw do
   get '/services', {:controller => 'home', :action => 'services'}
   get '/training', {:controller => 'home', :action => 'training'}
 
+  # Preserve links from tumblr placeholder
+  match "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
+  match "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
+  match "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
+  match "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
