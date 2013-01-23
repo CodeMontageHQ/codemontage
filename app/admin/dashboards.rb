@@ -3,7 +3,23 @@ ActiveAdmin::Dashboards.build do
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.
+
+  section "Newest Users" do
+    ul do
+      User.last(5).map do |user|
+        li link_to(user.email, admin_user_path(user))
+      end
+    end
+  end
   
+  section "Recent Projects" do
+    ul do
+      Project.last(5).map do |proj|
+        li link_to(proj.name, admin_project_path(proj))
+      end
+    end
+  end
+
   # == Simple Dashboard Section
   # Here is an example of a simple dashboard section
   #
