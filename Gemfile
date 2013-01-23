@@ -7,6 +7,12 @@ gem "meta_search",    '>= 1.1.0.pre'
 # Baseline Infrastructure
 gem 'rails', '3.2.11'
 gem 'pg'
+gem 'psych'
+
+# Users & Authentication
+gem 'bcrypt-ruby', require: 'bcrypt' 
+gem 'devise'
+gem 'simple_form'
 
 # Let's set up the testing framework
 group :development, :test do 
@@ -34,9 +40,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
