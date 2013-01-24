@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      redirect_to root_url, notice: 'Thank you for registering to help save the world!'
-    else
-      render 'new'
-    end
+    @user = User.new
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.remember_me = params[:user][:remember_me]    
+    @user.save
   end
 
   def new
