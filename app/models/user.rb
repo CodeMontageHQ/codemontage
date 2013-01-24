@@ -5,9 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :token_authenticatable,
          :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :remember_me
-
+  attr_protected :is_admin
+  
   before_save :encrypt_password
   
   validates_presence_of :password, :on => :create #will only run on account creation
