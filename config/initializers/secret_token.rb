@@ -4,4 +4,19 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CodeMontage::Application.config.secret_token = '2f7fa4a57b7bc74b0bdd68c2e2a2f98d075ceceec9f9bc8bce5f007c12a1c246639c794d82dab01525d0ff6a5b5ff99bda2246742873bbb817a8093ed620b007'
+
+begin 
+    if ENV['SECRET_TOKEN'] then
+      CodeMontage::Application.configure do
+          config.secret_token = ENV['SECRET_TOKEN']
+      end
+    else
+      token_file = Rails.root.to_s + "/secret_token"
+      to_load = open(token_file).read
+      CodeMontage::Application.configure do
+          config.secret_token = to_load
+      end
+    end
+rescue LoadError, Errno::ENOENT => e
+    raise "Secret token couldn't be loaded! Error: #{e}"
+end
