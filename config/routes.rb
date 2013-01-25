@@ -1,10 +1,14 @@
 CodeMontage::Application.routes.draw do
 
+  root :to => "home#index"
+
   ActiveAdmin.routes(self)
 
   devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
-  root :to => "home#index"
+  # Add Omniauth authentication
+  match '/auth/:service/callback' => 'services#create' 
+  resources :services, :only => [:index, :create, :destroy]
   
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
