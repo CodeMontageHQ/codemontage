@@ -1,0 +1,24 @@
+<body>
+  <section id="auth_services">
+    <h4>Authentication Services</h4>
+
+    <div id="current_services">
+        <h5>The following <%= @services.count == 1 ? 'account is' : 'services are' %> connected with your CodeMontage account:</h5>
+    
+        <% @services.each do |service| %>  
+          <div class="services_used">  
+              <%= image_tag "#{service.provider}_64.png", :size => "64x64" %>
+              <div class = "user">
+                <div class="line1">ID: <%= service.uid %></div>  
+                <div class="line2">Email: <%= service.uemail != '' ? service.uemail : 'not set' %></div>
+                <div class="line3">
+                    <% @services.count == 1 ? @msg = 'Removing this service might lock you out of your account if you do not know your CodeMontage email and password' : @msg = '' %>
+                    <%= link_to "Remove this service", service, :confirm => 'Are you sure you want to remove this authentication service? ' + @msg, :method => :delete, :class => "remove" %>
+                </div>
+              </div>
+          </div>  
+        <% end %>
+    </div>
+
+</section>
+</body>
