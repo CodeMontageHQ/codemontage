@@ -3,6 +3,7 @@
     <h4>Authentication Services</h4>
 
     <div id="current_services">
+      <% if current_user.services.exists? %>
         <h5>The following <%= @services.count == 1 ? 'account is' : 'services are' %> connected with your CodeMontage account:</h5>
     
         <% @services.each do |service| %>  
@@ -18,6 +19,11 @@
               </div>
           </div>  
         <% end %>
+        
+      <% else %>
+        <h5>There are currently no external services connected with your CodeMontage account. We recommend adding <%= link_to "Github", "/auth/github" %>.</h5>
+      <% end %>
+      
     </div>
 
 </section>
