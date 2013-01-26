@@ -1,8 +1,10 @@
+# Structure and majority of code inspired by Markus Proske of Ruby on Rails CommunityGuides
+# http://communityguides.heroku.com/articles/11
+
 class ServicesController < ApplicationController
   before_filter :authenticate_user!, :except => [:create]
 
 def index
-  # get all authentication services assigned to the current user
   @services = current_user.services.all
 end
 
@@ -26,9 +28,8 @@ def create
     
     # map the returned hashes to our variables first - the hashes differ for every service
     if service_route == 'github'
-      omniauth['user_info']['email'] ? email =  omniauth['user_info']['email'] : email = ''
-      # omniauth['user_info']['name'] ? name =  omniauth['user_info']['name'] : name = ''
-      omniauth['extra']['user_hash']['id'] ?  uid =  omniauth['extra']['user_hash']['id'] : uid = ''
+      omniauth['info']['email'] ? email =  omniauth['info']['email'] : email = ''
+      omniauth['extra']['raw_info']['id'] ?  uid =  omniauth['extra']['raw_info']['id'] : uid = ''
       omniauth['provider'] ? provider =  omniauth['provider'] : provider = ''
     else
       # we have an unrecognized service, just output the hash that has been returned
@@ -43,7 +44,7 @@ def create
       if !user_signed_in?
         
         # check if user has already signed in using this service provider and continue with sign in process if yes
-        auth = Service.find_by_provider_and_uid(provider, uid)
+        auth = Service.find_by_provider_and_uid(provider, uid.to_s)
         if auth
           flash[:notice] = 'Signed in successfully via ' + provider.capitalize + '.'
           sign_in_and_redirect(:user, auth.user)
@@ -66,10 +67,7 @@ def create
               # add this authentication service to our new user
               user.services.build(:provider => provider, :uid => uid, :uemail => email)
 
-              # do not send confirmation email, we directly save and confirm the new record
-              user.skip_confirmation!
               user.save!
-              user.confirm!
 
               # flash and sign in
               flash[:myinfo] = 'Your account on CodeMontage has been created via ' + provider.capitalize + '. In your account settings, you can change your email address and/or your password.'
@@ -84,7 +82,7 @@ def create
         # the user is currently signed in
         
         # check if this service is already linked to his/her account, if not, add it
-        auth = Service.find_by_provider_and_uid(provider, uid)
+        auth = Service.find_by_provider_and_uid(provider, uid.to_s)
         if !auth
           current_user.services.create(:provider => provider, :uid => uid, :uemail => email)
           flash[:notice] = 'Sign in via ' + provider.capitalize + ' has been added to your account.'
