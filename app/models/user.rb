@@ -1,13 +1,15 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable,:lockable, and :timeoutable
-  devise :database_authenticatable, :registerable, #, :omniauthable, :registerable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :token_authenticatable,
          :trackable, :validatable
 
   attr_protected :is_admin
   
   before_save :encrypt_password
+
+  has_many :services
   
   validates_presence_of :password, :on => :create #will only run on account creation
   

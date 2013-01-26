@@ -1,17 +1,26 @@
 CodeMontage::Application.routes.draw do
 
+  root :to => "home#index"
+
   ActiveAdmin.routes(self)
 
-  devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
-
-  root :to => "home#index"
+  devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => 'registrations' }
   
+  devise_scope :user do
+    get "settings" => "registrations#edit", :as => :edit_user_registration
+    get "settings" => "registrations#edit", :as => :services
+  end
+
+  # Add Omniauth authentication
+  match '/auth/:service/callback' => 'services#create' 
+  resources :services, :only => [:create, :destroy]
+   
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
   get '/jobs', {:controller => 'home', :action => 'jobs'}
   get '/join', {:controller => 'home', :action => 'join'}
   get '/our_story', {:controller => 'home', :action => 'our_story'}
-  get '/services', {:controller => 'home', :action => 'services'}
+  get '/our_services', {:controller => 'home', :action => 'services'}
   get '/training', {:controller => 'home', :action => 'training'}
 
   # Preserve links from tumblr placeholder

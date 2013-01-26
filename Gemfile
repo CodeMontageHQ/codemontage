@@ -12,6 +12,8 @@ gem 'psych'
 # Users & Authentication
 gem 'bcrypt-ruby', require: 'bcrypt' 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
 gem 'simple_form'
 
 # Let's set up the testing framework
