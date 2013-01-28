@@ -11,10 +11,11 @@ CodeMontage::Application.routes.draw do
     get "settings" => "registrations#edit", :as => :services
   end
 
-  # Add Omniauth authentication
+  # Omniauth authentication
   match '/auth/:service/callback' => 'services#create' 
   resources :services, :only => [:create, :destroy]
-   
+  
+  # Static content 
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
   get '/jobs', {:controller => 'home', :action => 'jobs'}
