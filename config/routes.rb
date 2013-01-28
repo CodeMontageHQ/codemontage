@@ -15,6 +15,9 @@ CodeMontage::Application.routes.draw do
   match '/auth/:service/callback' => 'services#create' 
   resources :services, :only => [:create, :destroy]
   
+  # Organizations and project information
+  resources :organizations
+  
   # Static content 
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
