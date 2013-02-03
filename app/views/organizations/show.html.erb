@@ -1,0 +1,20 @@
+<body>
+  
+  <h4><%= @organization.name %><h4>
+
+  <div id="summary">
+    <% if @organization.image_url !="" %>
+      <img src=<%= @organization.image_url %> alt=<%= @organization.name %>/>
+    <% end %>
+    <p><%= @organization.description %></p>
+  </div>
+
+  <div id="projects">
+    <h5>Projects</h5>
+    
+    <% @projects.each do |project| %>
+      <h6><%= link_to project.name, project.github_url, :target => "_blank" %></h6>
+    <% end %>
+  </div>
+
+</body>
