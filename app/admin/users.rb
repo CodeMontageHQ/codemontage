@@ -35,12 +35,8 @@ ActiveAdmin.register User do
     attributes_table do
       row :name
       row :email
-      row "Causes" do
-        ad.cause_list
-      end
-      row "Technologies" do
-        ad.technology_list
-      end
+      row "Causes" do ad.cause_list end
+      row "Technologies" do ad.technology_list end
       row "Coder" do ad.is_coder end
       row "Organization" do ad.represents_org end
       row "Team" do ad.represents_team end
