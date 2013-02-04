@@ -1,0 +1,22 @@
+<body>
+  
+  <h4><%= link_to @project.name, @project.github_url, :target => "_blank" %></h4>
+
+  <div id="summary">
+    <% if @project.organization.image_url !="" %>
+      <img src=<%= @project.organization.image_url %> alt=<%= @project.organization.name %>/>
+    <% end %>
+    <p><%= @project.organization.description %></p>
+  </div>
+
+  <% if @related_projects.exists? %>
+    <div id="related_projects">
+      <h5>Related Projects</h5>
+    
+      <% @related_projects.each do |project| %>
+        <h6><%= link_to project.name, project_path(project) %></h6>
+      <% end %>
+    </div>
+  <% end %>
+  
+</body>
