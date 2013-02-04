@@ -4,7 +4,23 @@ ActiveAdmin::Dashboards.build do
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.
 
-  section "Newest Users" do
+  section "Top User Causes", :priority => 1 do
+    ul do
+      User.tag_counts_on(:causes).last(5).map do |tag|
+        li link_to(tag.name + " (" + User.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      end
+    end
+  end
+  
+  section "Top User Technologies", :priority => 1 do
+    ul do
+      User.tag_counts_on(:technologies).last(5).map do |tag|
+        li link_to(tag.name + " (" + User.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      end
+    end
+  end
+    
+  section "New Users", :priority => 2 do
     ul do
       User.last(5).map do |user|
         li link_to(user.email, admin_user_path(user))
@@ -12,7 +28,23 @@ ActiveAdmin::Dashboards.build do
     end
   end
   
-  section "Recent Projects" do
+  section "Top Project Causes", :priority => 3 do
+    ul do
+      Project.tag_counts_on(:causes).last(5).map do |tag|
+        li link_to(tag.name + " (" + Project.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      end
+    end
+  end
+
+  section "Top Project Technologies", :priority => 3 do
+    ul do
+      Project.tag_counts_on(:technologies).last(5).map do |tag|
+        li link_to(tag.name + " (" + Project.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      end
+    end
+  end
+
+  section "Recent Projects", :priority => 4 do
     ul do
       Project.last(5).map do |proj|
         li link_to(proj.name, admin_project_path(proj))

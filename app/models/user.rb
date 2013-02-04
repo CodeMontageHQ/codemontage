@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+
+  acts_as_ordered_taggable
+  acts_as_ordered_taggable_on :technologies, :causes
+
   # Include default devise modules. Others available are:
   # :confirmable,:lockable, and :timeoutable
   devise :database_authenticatable, :registerable,
