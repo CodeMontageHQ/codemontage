@@ -16,7 +16,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
 
-# Let's set up the testing framework
+# Test Suite
 group :development, :test do 
   gem 'rspec-rails'
 end
