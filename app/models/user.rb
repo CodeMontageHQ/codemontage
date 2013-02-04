@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   has_many :services
+  has_one :profile, :class_name => "UserProfile"
+  delegate  :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :to => :profile
   
   validates_presence_of :password, :on => :create #will only run on account creation
   
