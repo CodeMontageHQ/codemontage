@@ -1,0 +1,15 @@
+<body>
+  
+  <h4>Organizations<h4>
+  
+  <% @featured_orgs.each do |featured| %>
+    <h5><strong><%= link_to featured.name, organization_path(featured) %><strong></h5>
+  <% end %>
+
+  <% @organizations.each do |org| %>
+    <h6><%= link_to org.name, organization_path(org) %></h6>
+  <% end %>
+  
+  <p>Interested in accelerating your impact with technology? Check out our <%= link_to "services", our_services_path %> and <%= mail_to "hello@codemontage.com", "reach out to us", :subject => "Interested in Open Social Innovation" %> to learn how open innovation can work for you.</p>
+  
+</body>
