@@ -2,9 +2,6 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   after_create :create_profile
 
-  acts_as_ordered_taggable
-  acts_as_ordered_taggable_on :technologies, :causes
-
   # Include default devise modules. Others available are:
   # :confirmable,:lockable, and :timeoutable
   devise :database_authenticatable, :registerable,
@@ -15,7 +12,7 @@ class User < ActiveRecord::Base
   
   has_many :services
   has_one :profile, :class_name => "UserProfile"
-  delegate  :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :to => :profile
+  delegate :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :cause_list, :technology_list, :to => :profile
   
   validates_presence_of :password, :on => :create #will only run on account creation
   
