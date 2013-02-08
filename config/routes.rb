@@ -11,6 +11,7 @@ CodeMontage::Application.routes.draw do
     get "settings" => "registrations#edit", :as => :services
   end
   get '/dashboard', {:controller => 'home', :action => 'dashboard'}
+  resource :user_profile
 
   # Omniauth authentication
   match '/auth/:service/callback' => 'services#create' 

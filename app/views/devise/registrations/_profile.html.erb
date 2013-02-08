@@ -1,0 +1,37 @@
+<body>
+  <section id="user_profile">
+    <h4>Profile</h4>
+
+    <div class="profile_details">
+      <%= simple_form_for(@user_profile) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <h5>
+            <%= f.input :name, :autofocus => true %>
+            <%= f.input :headline %>
+            <%= f.input :cause_list, :label => "Causes" %>
+            <%= f.input :technology_list, :label => "Technologies" %>
+          </h5>
+        </div>
+
+        <div class="form-actions">
+          <%= f.submit "Update" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="profile_projects">
+      <h4>Your Projects</h4>
+
+      <p>No favorites yet? Browse more <%= link_to "projects to change the world", projects_path %>.</p>
+    </div>
+
+    <div class="profile_montage">
+      <h4>Your CodeMontage</h4>
+
+      <p>In the future, here's where your personalized CodeMontage will be! (We believe everyone, not just Rocky, deserves a sweet animation that makes incredible progress look easy). 
+      In the meantime, if there are features or data or anything else you'd like in order to change the world, please <%= mail_to "hello@codemontage.com", "let us know", :subject => "Suggestion for CodeMontage" %>.</p>
+    </div>
+  </section>
+</body>
