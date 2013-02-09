@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   
   has_many :services
   has_one :profile, :class_name => "UserProfile"
-  delegate :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :cause_list, :technology_list, :to => :profile
+  delegate :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :cause_list, :technology_list, :email_news, :email_training, :to => :profile
   
   validates_presence_of :password, :on => :create #will only run on account creation
   
