@@ -51,13 +51,15 @@
           <li><%= link_to "Training", training_path %></li>
         <ul>
       </section>
-      <% if !user_signed_in? %>
-        <section>
+      <section>
+        <% if !user_signed_in? %>
+        <div id="get_started">
           <ul class="left">
             <li><%= link_to "Get Started", new_user_registration_path %></li>
           <ul>
-        </section>
-      <% end %>
+        </div>
+        <% end %>
+      </section>
     </nav>
     <div id="main" class="row">
       <div class="twelve columns">
