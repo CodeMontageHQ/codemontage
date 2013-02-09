@@ -28,6 +28,11 @@ ActiveAdmin.register User do
       f.input :gravatar_email
     end
 
+    f.inputs "User Email Settings", :multipart => true do
+      f.input :email_news, :label => "News and announcements from the CodeMontage team", :as => :boolean
+      f.input :email_training, :label => "Upcoming CodeMontage training programs", :as => :boolean
+    end
+
     f.buttons
   end
   
@@ -40,6 +45,8 @@ ActiveAdmin.register User do
       row "Coder" do ad.is_coder end
       row "Organization" do ad.represents_org end
       row "Team" do ad.represents_team end
+      row "News and announcements from the CodeMontage team" do ad.email_news end
+      row "Upcoming CodeMontage training programs" do ad.email_training end
       row :gravatar_email
       row :current_sign_in_at
       row :last_sign_in_at
