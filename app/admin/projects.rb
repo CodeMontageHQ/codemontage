@@ -7,10 +7,44 @@ ActiveAdmin.register Project do
     column :name
     column :github_repo
     column :description
+    column "Causes", :cause_list
+    column "Technologies", :technology_list
     column :notes
     column :created_at
     column :updated_at
     
     default_actions
-  end  
+  end
+  
+  form do |f|
+    f.inputs "Project Details", :multipart => true do    
+      f.input :name
+      f.input :github_repo
+      f.input :description
+      f.input :cause_list, :label => "Causes"
+      f.input :technology_list, :label => "Technologies"
+      f.input :notes
+    end
+    
+    f.buttons
+  end
+  
+  show do |ad|
+    attributes_table do
+      row :name
+      row :github_repo
+      row :description
+      row "Causes" do
+        ad.cause_list
+      end
+      row "Technologies" do
+        ad.technology_list
+      end
+      row :notes
+      row :created_at
+      row :updated_at
+    end
+    
+    active_admin_comments
+  end
 end

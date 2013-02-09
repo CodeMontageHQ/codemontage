@@ -1,19 +1,27 @@
-<h2>Edit Account</h2>
+<body>
+  
+  <%= render "devise/registrations/profile" %>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= f.error_notification %>
+  <section id="user_settings">
+    <h5>Account Settings</h5>
 
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :autocomplete => "off", :placeholder => "(leave blank to keep your current password)", :required => false %>
-    <%= f.input :current_password, :required => true %>
-  </div>
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+      <div class="form-inputs">
+        <%= f.input :email, :required => true, :autofocus => true %>
+        <%= f.input :password, :autocomplete => "off", :placeholder => "(leave blank to keep your current password)", :required => false %>
+        <%= f.input :current_password, :required => true %>
+      </div>
 
-<%= render "devise/registrations/services" %>
+      <div class="form-actions">
+        <%= f.button :submit, "Update my Account Settings" %>
+      </div>
+    <% end %>
+  </section>
 
-<%= link_to "Back", :back %>
+  <%= render "devise/registrations/services" %>
+
+  <%= link_to "Back", :back %>
+
+</body>
