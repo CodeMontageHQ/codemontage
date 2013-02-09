@@ -1,12 +1,36 @@
 <body>
-  <h4>Welcome to CodeMontage!</h4>
-  
-  <h5>CodeMontage promotes open social innovation while helping coders improve their skills.</h5>
-
-  <p><strong>Coders</strong> - Ready to code to change the world? Check out our <%= link_to "programs", training_path %> or browse our <a href="http://github.com/CodeMontage" target="_blank">projects</a> today.</p>
-
-  <p><strong>Companies</strong> - Looking to hire or train developers? Check out our <%= link_to "programs", training_path %> or <%= mail_to "hello@codemontage.com", "contact us", :subject => "I want to train superhero developers" %> to learn about our internship, apprenticeship, and team programs.</p>
-
-  <p><strong>Organizations</strong> - Interested in accelerating your impact with technology? Check out our <%= link_to "services", services_path %> and <%= mail_to "hello@codemontage.com", "reach out to us", :subject => "Interested in Open Social Innovation" %> to learn how open innovation can work for you.</p>
-
+  <section>
+    <div id="mission">
+      <%= image_tag("cm_mission.png") %>
+    </div>
+  <section>
+  <section>
+    <div id="coder_welcome" class="row">
+      <div class="six columns">
+        <h5><strong>Ready to code to change the world?</strong></h5>
+        <p>Join our collective of do-gooder coders. Gain access to {code}montage open source projects and contribute as much as you want to. Together we can change the world. <%= link_to("View our current projects", projects_path)%></p>
+      </div>
+      <div class="six columns">
+        <% if !user_signed_in? %>
+          <%= link_to "Sign up with Github", new_user_registration_path, :class => "large radius button" %>
+        <% else %>
+          <%= link_to "Let's do this!", projects_path, :class => "large radius button" %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div id="org_welcome" class="six columns">
+        <h5><strong>Submit Your Project</strong></h5>
+        <p>Interested in accelerating your impact with technology? <%= link_to "View the services we provide", services_path %> or <%= mail_to "hello@codemontage.com", "reach out to us", :subject => "Interested in Open Social Innovation" %> to learn how open innovation can work for you.</p>
+        <%= link_to "Organization Services", services_path, :class => "small radius button" %>
+      </div>
+      <div id="company_welcome" class="six columns">
+        <h5><strong>We'll Train Your Developers</strong></h5>
+        <p>Looking to hire or train developers? Check out our <%= link_to "programs", training_path %> or <%= mail_to "hello@codemontage.com", "contact us", :subject => "I want to train superhero developers" %> to learn about our internship, apprenticeship, and team programs.</p>
+        <%= link_to "Training Programs", training_path, :class => "small radius button" %>
+      </div>
+    </div>
+  </section>
 </body>
