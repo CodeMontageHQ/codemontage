@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204033541) do
+ActiveRecord::Schema.define(:version => 20130204180346) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -81,6 +81,20 @@ ActiveRecord::Schema.define(:version => 20130204033541) do
   create_table "tags", :force => true do |t|
     t.string "name"
   end
+
+  create_table "user_profiles", :force => true do |t|
+    t.integer  "user_id",                            :null => false
+    t.string   "name"
+    t.string   "headline"
+    t.string   "gravatar_email"
+    t.boolean  "is_coder",        :default => false, :null => false
+    t.boolean  "represents_org",  :default => false, :null => false
+    t.boolean  "represents_team", :default => false, :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
+
+  add_index "user_profiles", ["user_id"], :name => "index_user_profiles_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

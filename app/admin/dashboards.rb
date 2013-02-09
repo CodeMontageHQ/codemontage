@@ -6,16 +6,16 @@ ActiveAdmin::Dashboards.build do
 
   section "Top User Causes", :priority => 1 do
     ul do
-      User.tag_counts_on(:causes).last(5).map do |tag|
-        li link_to(tag.name + " (" + User.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      UserProfile.tag_counts_on(:causes).last(5).map do |tag|
+        li link_to(tag.name + " (" + UserProfile.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
       end
     end
   end
   
   section "Top User Technologies", :priority => 1 do
     ul do
-      User.tag_counts_on(:technologies).last(5).map do |tag|
-        li link_to(tag.name + " (" + User.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
+      UserProfile.tag_counts_on(:technologies).last(5).map do |tag|
+        li link_to(tag.name + " (" + UserProfile.tagged_with(tag).count.to_s + ")", admin_tag_path(tag))
       end
     end
   end
