@@ -32,15 +32,12 @@ ActiveAdmin.register Project do
   
   show do |ad|
     attributes_table do
+      row :organization
       row :name
       row :github_repo
       row :description
-      row "Causes" do
-        ad.cause_list
-      end
-      row "Technologies" do
-        ad.technology_list
-      end
+      row "Causes" do ad.cause_list end
+      row "Technologies" do ad.technology_list end
       row :notes
       row :created_at
       row :updated_at
