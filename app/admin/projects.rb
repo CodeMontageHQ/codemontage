@@ -18,6 +18,7 @@ ActiveAdmin.register Project do
   
   form do |f|
     f.inputs "Project Details", :multipart => true do    
+      f.input :organization
       f.input :name
       f.input :github_repo
       f.input :description
