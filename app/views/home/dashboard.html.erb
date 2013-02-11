@@ -1,22 +1,20 @@
 <body>
-  
-  <h3>Welcome<%= if user_signed_in? && current_user.name.to_s != "" then ", " + current_user.name else "" end %>!</h3>
+  <h3>Welcome<%= if current_user.name.to_s != "" then ", " + current_user.name else "" end %>!</h3>
 
-  <div id="projects">
-    <h5>Your Projects</h5>
+  <div class="profile_projects">
+    <h4>Your Projects</h4>
     <% @favorite_projects.present? && @favorite_projects.each do |project| %>
       <ul>
         <li><%= link_to project.name, project_path(project) %></li>
       </ul>
     <% end %>
-    <p>Check out our <%= link_to "Projects", projects_path %> directory.</p>
-  </div>
-  
-  <h5>Your CodeMontage</h5>
-  
-  <p> In the future, here's where your personalized CodeMontage will be! (We believe everyone, not just Rocky, deserves a sweet animation that makes incredible progress look easy). 
-  </p>
-  <p>In the meantime, if there are features or data or anything else you'd like to see to better change the world, please <%= mail_to "hello@codemontage.com", "let us know", :subject => "Suggestion for CodeMontage" %>.
-  </p>
 
+    <p>No favorites yet? Browse more <%= link_to "projects to change the world", projects_path %>.</p>
+  </div>
+  <div class="profile_montage">
+    <h4>Your CodeMontage</h4>
+
+    <p>In the future, here's where your personalized CodeMontage will be! (We believe everyone, not just Rocky, deserves a sweet animation that makes incredible progress look easy). 
+    In the meantime, if there are features or data or anything else you'd like in order to change the world, please <%= mail_to "hello@codemontage.com", "let us know", :subject => "Suggestion for CodeMontage" %>.</p>
+  </div>
 </body>
