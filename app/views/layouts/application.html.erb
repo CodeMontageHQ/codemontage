@@ -33,29 +33,7 @@
 <body data-controller="<%= controller.controller_name %>"
   data-action="<%= controller.action_name %>">
   <div id="wrap">
-    <nav class="top-bar">
-      <ul>
-        <li class="name"><h1><a href="/">CodeMontage</a></h1></li>
-        <li class="toggle-topbar"><a href="#"></a></li>
-      </ul>
-      <section>
-        <ul class="left">
-          <li><%= link_to "Apply", apply_path %></li>
-          <li><%= link_to "Services", our_services_path %></li>
-          <li><%= link_to "Training", training_path %></li>
-          <li><%= link_to "Join", join_path %></li>
-          <li><%= link_to "Our Story", our_story_path %></li>
-          <li><%= link_to "Jobs", jobs_path %></li>
-          <li><a href="http://www.github.com/CodeMontage">Github</a></li>
-        <ul>
-      </section>
-      <section>
-        <ul class="right">
-          <%= render 'devise/menu/registration_items' %>
-          <%= render 'devise/menu/login_items' %>
-        <ul>
-      </section>
-    </nav>
+    <%= render 'layouts/header' %>
     <div id="main" class="row">
       <div class="twelve columns">
         <p class="notice"><%= notice %></p>

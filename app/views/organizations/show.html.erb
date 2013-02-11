@@ -13,7 +13,7 @@
     <h5>Projects</h5>
     
     <% @projects.each do |project| %>
-      <h6><%= link_to project.name, project.github_url, :target => "_blank" %></h6>
+      <h6><%= link_to project.name, project_path(project) %></h6>
     <% end %>
   </div>
 

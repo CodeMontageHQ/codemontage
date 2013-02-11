@@ -1,0 +1,17 @@
+@import "colors";
+
+#header {
+  background: #222222;
+  padding: 6px;
+} 
+
+#header a {
+  color: $cmLightGrey;
+  font-size: 14px;
+}
+
+#header ul.inline-list {
+  margin-bottom: 0px;
+  
+  li.social_media {margin-left: 10px;}
+}
