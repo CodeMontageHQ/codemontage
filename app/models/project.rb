@@ -4,6 +4,9 @@ class Project < ActiveRecord::Base
   acts_as_ordered_taggable_on :technologies, :causes
   
   attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list
+
+  has_many :favorite_projects
+  has_many :users, :through => :favorite_projects
   
   def github_url
     github_url = "http://github.com/" + self.organization.github_org + "/" + self.github_repo
