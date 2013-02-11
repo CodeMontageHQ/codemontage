@@ -3,9 +3,14 @@
     <div class="one column"></div>
     <div class="ten columns">
       <div class="right">
-        <%= link_to "Dashboard", dashboard_path unless !user_signed_in? %>
-        <%= render 'devise/menu/registration_items' %>
-        <%= render 'devise/menu/login_items' %>
+        <ul class="inline-list">
+          <li class="social_media"><%= link_to '<i class="social foundicon-twitter"></i>'.html_safe, "http://twitter.com/CodeMontage" %></li>
+          <li class="social_media"><%= link_to '<i class="social foundicon-facebook"></i>'.html_safe, "http://facebook.com/CodeMontage" %></li>
+          <li class="social_media"><%= link_to '<i class="social foundicon-tumblr"></i>'.html_safe, "http://codemontage.tumblr.com" %></li>
+          <li><%= link_to "Dashboard", dashboard_path unless !user_signed_in? %></li>
+          <li><%= link_to('Settings', edit_user_registration_path) unless !user_signed_in? %></li>
+          <li><%= render 'devise/menu/login_items' %></li>
+        </ul>
       </div>
     </div>
     <div class="one column"></div>

@@ -1,3 +1,4 @@
+@import "colors";
 
 #header {
   background: #222222;
@@ -5,5 +6,12 @@
 } 
 
 #header a {
+  color: $cmLightGrey;
   font-size: 14px;
+}
+
+#header ul.inline-list {
+  margin-bottom: 0px;
+  
+  li.social_media {margin-left: 10px;}
 }
