@@ -63,6 +63,12 @@ $topBarTitleSize: 24px;
 // .top-bar ul li {font-family: "Source Sans Pro",sans-serif;}
 .top-bar #get_started a:not(.button) {background-color: #7a3a74}
 
+.top-bar ul li.logo img {
+  margin: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
 // Modular Scale
 // $ratio: $golden;
 $baseFontSize: 16px;
