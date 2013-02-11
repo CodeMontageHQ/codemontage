@@ -9,10 +9,13 @@ html, body {height: 100%;}
   position: relative;
   background: #1E1E1E;
   clear:both;
-  color: #FFFFFF;
-  font-family: "Source Sans Pro",sans-serif;
-  font-weight: normal;
-} 
+  color: #BBBBBB;
+}
+
+#footer div {
+  font-size: 12px;
+  font-weight: bold;
+}
 
 /* Opera Fix */
 body:before {
