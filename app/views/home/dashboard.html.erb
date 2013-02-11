@@ -2,9 +2,16 @@
   
   <h3>Welcome<%= if user_signed_in? && current_user.name.to_s != "" then ", " + current_user.name else "" end %>!</h3>
 
-  <h5>Projects</h5>
-  <p>Check out our <%= link_to "Projects", projects_path %> directory.</p>
-
+  <div id="projects">
+    <h5>Your Projects</h5>
+    <% @favorite_projects.present? && @favorite_projects.each do |project| %>
+      <ul>
+        <li><%= link_to project.name, project_path(project) %></li>
+      </ul>
+    <% end %>
+    <p>Check out our <%= link_to "Projects", projects_path %> directory.</p>
+  </div>
+  
   <h5>Your CodeMontage</h5>
   
   <p> In the future, here's where your personalized CodeMontage will be! (We believe everyone, not just Rocky, deserves a sweet animation that makes incredible progress look easy). 
