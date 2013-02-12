@@ -1,20 +1,35 @@
 <body>
-  
-  <h4><%= @organization.name %><h4>
+  <div class="row">
+    <div class="one column"></div>
 
-  <div id="summary">
-    <% if @organization.image_url !="" %>
-      <img src=<%= @organization.image_url %> alt=<%= @organization.name %>/>
-    <% end %>
-    <p><%= @organization.description %></p>
-  </div>
+    <div class="six columns">
+      <h4><%= @organization.name %></h4>
 
-  <div id="projects">
-    <h5>Projects</h5>
+      <div id="summary">
+        <ul class="inline-list">
+          <li><%= link_to '<i class="general foundicon-globe"></i> '.html_safe + @organization.url, @organization.url, :target => '_blank' unless !@organization.url.present? %></li>
+          <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + @organization.github_url, @organization.github_url, :target => '_blank' unless !@organization.github_url.present? %></li>
+        </ul>
+        <p><%= @organization.description %></p>
+      </div>
+
+      <div id="projects">
+        <h5>Projects</h5>
     
-    <% @projects.each do |project| %>
-      <h6><%= link_to project.name, project_path(project) %></h6>
-    <% end %>
-  </div>
+        <% if @projects.present? %>
+          <% @projects.each do |project| %>
+            <h6><%= link_to project.name, project_path(project) %></h6>
+          <% end %>
+        <% else %>
+            <p>Aww, bummer. There aren't any current projects for this organization. Check out other projects <%= link_to "here", projects_path %>.</p>
+        <% end %>
+      </div>
+    </div>
 
+    <div class="four columns">
+      <%= link_to image_tag(@organization.image_url, :alt => @organization.name), @organization.url, :target => '_blank' unless !@organization.image_url.present? %>
+    </div>
+
+    <div class="one column"></div>
+  </div>
 </body>
