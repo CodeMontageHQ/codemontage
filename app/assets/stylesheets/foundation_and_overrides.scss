@@ -53,20 +53,22 @@ $bodyFontColor: $cmDarkGrey;
 
 // Nav Bar Settings
 
-// $navBarHeight: 40px;
+// $navBarHeight: 60px;
 // $navFlyoutBaseWidth: 250px;
 
 // Top Bar Settings
 
 $topBarBgColor: $cmOffBlack;
+$topBarHeight: 60px;
 // $topBarLinkColor: white;
 $topBarLinkSize: 16px;
-.top-bar #get_started a:not(.button) {background-color: $cmPurple}
+$topBarNavToggleSize: 12px;
 
+.top-bar #get_started a:not(.button) {background-color: $cmPurple}
 .top-bar ul li.logo img {
-  margin: 5px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 // Modular Scale
