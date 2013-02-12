@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
 
   attr_protected :is_admin
   
+  has_many :favorite_projects
+  has_many :favorites, :through => :favorite_projects, :source => :project
+  has_many :projects, :through => :favorite_projects
+  
   has_many :services
   has_one :profile, :class_name => "UserProfile"
   delegate :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :cause_list, :technology_list, :email_news, :email_training, :to => :profile

@@ -4,24 +4,19 @@ html, body {height: 100%;}
 
 #wrap {min-height: 100%;}
 
-#main {
-  overflow:auto;
-	padding-bottom: 150px; /* must be same height as the footer */
+#footer {
+  padding: 10px;
+  position: relative;
+  background: #1E1E1E;
+  clear:both;
+  color: #BBBBBB;
 }
 
-#footer {
-  position: relative;
-  background: #CCCCCC;
-  font-family: "Source Sans Pro",sans-serif;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
-	clear:both;
-	
-	#social-media {padding-top: 10px;}
-} 
+#footer div {
+  font-size: 12px;
+  font-weight: bold;
+}
 
-#copyright {font-size: .75em;}
-	
 /* Opera Fix */
 body:before {
 	content:"";

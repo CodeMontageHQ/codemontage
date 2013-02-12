@@ -1,8 +1,7 @@
 class OrganizationsController < ApplicationController
 
   def index
-    @organizations = Organization.all
-    @featured_orgs = Organization.where("image_url IS NOT NULL")
+    @featured_orgs = Organization.where(Project.where("organization_id = organizations.id").exists).order("name")
   end
   
   def show

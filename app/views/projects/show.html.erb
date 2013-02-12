@@ -1,6 +1,9 @@
 <body>
   
-  <h4><%= link_to @project.name, @project.github_url, :target => "_blank" %></h4>
+  <h4><%= @project.name %></h4>
+  <div id="links">
+    <h4><%= link_to '<i class="social foundicon-github"></i>'.html_safe, @project.github_url, :target => "_blank" %></h4>
+  </div>
 
   <div id="summary">
     <% if @project.organization.image_url !="" %>
