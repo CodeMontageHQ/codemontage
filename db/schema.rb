@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211000056) do
+ActiveRecord::Schema.define(:version => 20130212061136) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -39,11 +39,11 @@ ActiveRecord::Schema.define(:version => 20130211000056) do
   add_index "favorite_projects", ["user_id"], :name => "index_favorite_projects_on_user_id"
 
   create_table "organizations", :force => true do |t|
-    t.string   "name",                                 :null => false
+    t.string   "name",                                               :null => false
     t.string   "url"
     t.string   "github_org"
     t.text     "description"
-    t.boolean  "is_tax_exempt",     :default => false, :null => false
+    t.boolean  "is_tax_exempt",                   :default => false, :null => false
     t.string   "contact_name"
     t.string   "contact_role"
     t.string   "contact_email"
@@ -51,9 +51,10 @@ ActiveRecord::Schema.define(:version => 20130211000056) do
     t.integer  "total_staff_size"
     t.integer  "tech_staff_size"
     t.text     "notes"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
+    t.string   "twitter",           :limit => 15
   end
 
   create_table "projects", :force => true do |t|
