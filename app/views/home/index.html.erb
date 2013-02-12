@@ -2,21 +2,21 @@
   <section>
     <div id="mission" class="row">
       <div class="two column"></div>
-      <div class="eight columns centered">
-        <%= image_tag("cm_mission.png") %>
+      <div class="twelve columns centered">
+        <%= image_tag("cm_mission-2.png") %>
       </div>
       <div class="two column"></div>
     </div>
   <section>
   <section>
     <div id="coder_welcome" class="row">
-      <div class="one column"></div>
-      <div class="panel radius shadow ten column">
-        <div class="six columns">
+      
+      <div class="panel radius shadow twelve column">
+        <div class="seven columns">
           <h2>Ready to code to change the world?</h2>
           <p>Join our collective of do-gooder coders. Gain access to {code}montage open source projects and contribute as much as you want to. Together we can change the world. <%= link_to("View our current projects", projects_path)%></p>
         </div>
-        <div class="four columns">
+        <div class="five columns">
           <% if !user_signed_in? %>
             <%= link_to "Sign up with Github", new_user_registration_path, :class => "large radius button" %>
           <% else %>
@@ -24,23 +24,23 @@
           <% end %>
         </div>
       </div>
-      <div class="one column"></div>
+      
     </div>
   </section>
   <section>
     <div id="secondary_welcomes" class="row">
-      <div class="one column"></div>
-      <div id="org_welcome" class="five columns">
+    
+      <div id="org_welcome" class="six columns">
         <h3>Submit Your Project</h3>
         <p>Interested in accelerating your impact with technology? <%= link_to "View the services we provide", services_path %> or <%= mail_to "hello@codemontage.com", "reach out to us", :subject => "Interested in Open Social Innovation" %> to learn how open innovation can work for you.</p>
         <%= link_to "Organization Services", services_path, :class => "small radius button" %>
       </div>
-      <div id="company_welcome" class="five columns">
+      <div id="company_welcome" class="six columns">
         <h3>We'll Train Your Developers</h3>
         <p>Looking to hire or train developers? Check out our <%= link_to "programs", training_path %> or <%= mail_to "hello@codemontage.com", "contact us", :subject => "I want to train superhero developers" %> to learn about our internship, apprenticeship, and team programs.</p>
         <%= link_to "Training Programs", training_path, :class => "small radius button" %>
       </div>
-      <div class="one column"></div>
+      
     </div>
   </section>
 </body>
