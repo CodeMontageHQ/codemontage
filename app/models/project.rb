@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
   has_many :users, :through => :favorite_projects
   
   def github_url
-    github_url = "http://github.com/" + self.organization.github_org + "/" + self.github_repo
+    github_url = self.organization.github_url + "/" + self.github_repo
   end  
 
   def related_projects
