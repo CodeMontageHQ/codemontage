@@ -1,5 +1,11 @@
 CodeMontage::Application.routes.draw do
 
+  constraints(:host => /^www\./) do
+      match "(*x)" => redirect { |params, request|
+        URI.parse(request.url).tap {|url| url.host.sub!('www.', '') }.to_s
+      }
+    end
+
   root :to => "home#index"
 
   ActiveAdmin.routes(self)
