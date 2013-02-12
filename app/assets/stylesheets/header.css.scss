@@ -1,7 +1,7 @@
 @import "colors";
 
 #header {
-  background: #222222;
+  background: #292929;
   padding: 6px;
 } 
 
@@ -13,5 +13,6 @@
 #header ul.inline-list {
   margin-bottom: 0px;
   
+  a:hover {color: $cmTeal;}
   li.social_media {margin-left: 10px;}
 }
