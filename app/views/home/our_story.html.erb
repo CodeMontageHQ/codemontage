@@ -1,12 +1,32 @@
 <body>
-	<h4>Our Story</h4>
-  
-  <p>We believe that computing is the most efficient way to improve the human experience, and that software developers become the best through lots of practice building real applications. We know from teaching beginners that there's a frustrating gap between learning to code and being able to build robust applications, and we know from hiring and mentoring developers that experience can't be replaced with canned tutorials.</p>
-  
-  <p>So, if it takes a lot of work to become a great developer, how can we make sure that work matters? That it moves society forward, as well as developers?</p>
-  
-  <p>That's what CodeMontage is about: <strong>improving yourself while improving the world.</strong></p>
+  <div class="row">
+    <div class="one column"></div>
+    <div class="ten columns">
+  	  <h4>Our Story</h4>
 
-  <p>If you'd like to keep in the loop on how we're doing, join our <%= link_to "mailing list", join_path %>.</p>
+      <div id="story_intro" class="row">
+        <div class="eight columns">
+          <p>At the age of four, I made a <%= link_to "promise", "http://www.girlscouts.org/program/basics/promise_law" %> to try to help people at all times. By college, I'd planned to become a doctor, but discovered computer science and quickly became enthralled with its impact. Computers help humans connect, learn, share, and even automate so we can focus on being human. I believe deeply in computing's potential to improve humanity, and in empowering people as makers of technology.</p>
+        </div>
+        <div class="four columns">
+            <%= image_tag "vhurst_shoulders.jpeg", :alt => "Vanessa Hurst" %>
+            <h6>Vanessa Hurst, Founder</h6>
+        </div>
+      </div>
 
+      <div>
+          <p>Early in my career, I discovered three things: I loved writing code, I learned much better on the job than I had in school, and I <i>hated</i> finance. I liked my work, but was just not feeling the big picture. I started <%= link_to "Developers for Good", "http://developersforgood.org" %> to connect with other technologists and use our skills to help social causes. By volunteering, I spent time in open source communities and was able to practice PHP, Ruby, MySQL, PostgreSQL, and dig into Drupal, Joomla, SalesForce, and WordPress platforms. I learned faster than ever, and I genuinely cared about solutions because I was helping nonprofits achieve their missions.</p>
+          <p>Though I started working with humanitarian organizations to apply my skills, I discovered that working on projects with an impact was the best environment to learn new skills I'd ever had. With CodeMontage, I hope to provide the same opportunity for advancement and fulfillment to technologists everywhere. Whether you're a self-taught coder or a recent grad looking for experience, or an experienced developer getting comfortable in a new language, CodeMontage can empower you. Together, we're building a movement of coders whose commitment to continuous learning also creates good in the world. </p>
+      </div>
+
+
+      <h5>Our Motivation</h5>
+      <p>We believe computing is the most efficient way to improve the human experience, and that coders become the best through lots of practice building real applications. We know from teaching beginners that there's a frustrating gap between learning to code and being able to build robust applications, and we know from hiring and mentoring coders that experience can't be replaced with canned tutorials.</p>
+
+      <p>So, if it takes a lot of work to become a great coder, how can we make sure that work matters? That it moves society forward, as well as coders? That's where CodeMontage comes in: <strong>improve yourself while improving the world.</strong></p>
+
+      <p>If you'd like to keep in the loop on how we're doing, <%= link_to "sign up", new_user_registration_path unless user_signed_in? %> or join our <%= link_to "mailing list", join_path %>.</p>
+    </div>
+    <div class="one column"></div>
+  </div>
 </body>
