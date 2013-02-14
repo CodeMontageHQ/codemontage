@@ -1,18 +1,23 @@
 <body>
-  
-  <h4>Projects by Organization<h4>
-
   <div class="row">
-    <!-- split organizations to display into groups based on three column design -->
-    <% @featured_split = (@featured_orgs.count / 3) + 1 %> 
+    <div class="one column"></div>
+    <div class="ten columns">
+      <h4>Projects by Organization<h4>
 
-    <% @featured_orgs.in_groups_of(@featured_split, false).each do |featured_array| %>
-      <div class="four columns">
-        <% featured_array.each do |featured| %>
-          <h5><strong><%= link_to featured.name, organization_path(featured) %><strong></h5>
+      <div class="row">
+        <!-- split organizations to display into groups based on three column design -->
+        <% @featured_split = (@featured_orgs.count / 3) + 1 %> 
+
+        <% @featured_orgs.in_groups_of(@featured_split, false).each do |featured_array| %>
+          <div class="four columns">
+            <% featured_array.each do |featured| %>
+              <h5><strong><%= link_to featured.name, organization_path(featured) %><strong></h5>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
+
+    </div>
+    <div class="one column"></div>
   </div>
-  
 </body>
