@@ -1,18 +1,55 @@
 <body>
-  <h4>Services</h4>
-  
-  <h5>For NonProfits and Social Mission Organizations</h5>
-  
-  <p>CodeMontage is committed to helping you use open technology innovation to achieve your goals. We offer the following services, customized to support your organization:</p>
-  <ul>
-  <li><strong>Open Sourcing</strong> - we'll make your privately developed application available on the web where developers are waiting to contribute! We follow best practices and secure your private data, so only the safe-for-public-eyes stuff gets shared.</li>
-  </ul>
-  <ul>
-  <li><strong>Technical Advising</strong> - we stand in as the CTO you badly need but who doesn't quite fit into your full-time budget. Advising ranges from evaluating technologies against your mission and goals, strategizing technological improvements, and managing your open source projects and community.</li>
-  </ul>
-  <ul>
-  <li><strong>Office Hours</strong> - we understand the value of talking to a real person, especially while you're figuring out new technology. As a member of the CodeMontage community, you have access to regular open office hours hosted by our team and community experts.</li>
-  </ul>
-  <p><%= mail_to "hello@codemontage.com", "Contact us", :subject => "Interested in Open Social Innovation" %> to accelerate your impact with open innovation today.</p>
+  <div class="row">
+    <div class="one column"></div>
+    <div class="ten columns">
+      <h5>Harness the power of open innovation with CodeMontage.</h5>
 
+      <p>CodeMontage is committed to helping social innovators like you use open technology principles to achieve your mission. By joining us, you can engage coders and receive the following services customized to your organization:</p>
+
+      <div class="membership four columns">
+        <ul class="pricing-table">
+          <li class="title">Community Membership</li>
+          <li class="price">$15/month</li>
+          <li class="bullet-item"><strong>Promotion</strong> of your projects to our community of coders</li>
+          <li class="bullet-item"><strong>Project Management</strong> of coding completed by our training coders</li>
+          <li class="bullet-item"><strong>Quality Code</strong> contributed and reviewed by our coders</li>
+          <li class="cta-button"><%= mail_to "hello@codemontage.com", "Join Today", :class => "radius button", :subject => "Interest in Community Membership" %></li>
+        </ul>
+      </div>
+      <div class="membership four columns">
+        <ul class="pricing-table">
+          <li class="title">Partner Membership</li>
+          <li class="price">$500/month</li>
+          <li class="bullet-item"><strong>Strategy</strong> sessions with our Innovation Advisors</li>
+          <li class="bullet-item"><strong>Technical Answers</strong> to your important questions</li>
+          <li class="bullet-item"><strong>Unlimited Projects</strong> reviewed by our team and promoted to our training coders</li>
+          <li class="cta-button"><%= mail_to "hello@codemontage.com", "Join Today", :class => "radius button", :subject => "Interest in Partner Membership" %></li>    
+        </ul>
+      </div>
+      <div class="membership four columns">
+        <ul class="pricing-table">
+          <li class="title">Open Source Setup</li>
+          <li class="price">custom</li>
+          <li class="bullet-item"><strong>Code Publishing</strong> so you can get help from our coder community</li>
+          <li class="bullet-item"><strong>Smart Sharing</strong>. We prepare, version, license, document, and help plan the future of your code</li>
+            <li class="bullet-item"><strong>Promotion</strong> of your projects to our community of coders</li>
+          <li class="cta-button"><%= mail_to "hello@codemontage.com", "Contact us", :class => "radius button", :subject => "Interest in Open Source Setup" %></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Details, Details</h5>
+        <p>CodeMontage organizes and empowers coders to build maintainable and sustainable code for your organization so you can spend more time doing what you do best: changing the world.</p>
+
+        <h6>Partner Membership Advising</h6>
+        <p>We stand in as the CTO you badly need, but don't quite have in the budget. Advising includes helping evaluate technologies against your mission and goals, strategizing technological improvements, and managing your open source code projects.</p>
+
+        <h6>Open Source Setup</h6>
+        <p>We'll make your privately developed application available on the web where coders are waiting to contribute! We follow best practices and secure your private data, so only the safe-for-public-eyes stuff gets shared.</p>
+
+        <p><%= mail_to "hello@codemontage.com", "Reach out to us", :subject => "Interested in Open Social Innovation" %> to accelerate your impact with open innovation today.</p>
+      </div>
+    </div>
+    <div class="one column"></div>
+  </div>
 </body>
