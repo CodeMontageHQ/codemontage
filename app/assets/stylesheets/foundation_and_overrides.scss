@@ -63,13 +63,19 @@ $topBarHeight: 60px;
 $topBarLinkSize: 18px;
 $topBarNavToggleSize: 12px;
 
-.top-bar {margin: 0 0 20px 0;}
-.top-bar #get_started a:not(.button) {background-color: $cmPurple}
-.top-bar ul li.logo img {
-  margin: 5px;
-  margin-left: 45px;
-  margin-right: 45px;
-  margin-top:-40px;
+.top-bar {
+  margin: 0 0 20px 0;
+
+  ul {
+    li.logo {
+      img {
+        margin: 5px;
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-top:-40px;
+      }
+    }
+  }
 }
 
 // Modular Scale
