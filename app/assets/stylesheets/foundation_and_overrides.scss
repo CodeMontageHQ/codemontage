@@ -70,6 +70,9 @@ $topBarNavToggleSize: 12px;
     background: $cmOffBlack;
     li.logo, li.toggle-topbar, li.name {
       background: $cmOffBlack;
+    }
+    li.logo {
+      a:hover { background: $cmOffBlack; }
       img {
         margin: 5px;
         margin-left: 45px;
