@@ -1,27 +1,50 @@
 <body>
-  <h4>Training</h4>
-  
-  <h5>For Development Teams</h5>
-  
-  <p>CodeMontage empowers your team members to become better software developers. <%= mail_to "hello@codemontage.com", "Contact us", :subject => "I want to train superhero developers" %> to discuss how CodeMontage programs (internships, apprenticeships, online training) can help you create superheroes out of high-potential employees.</p>
-  </br>  
-  <h5>For Coders</h5>
-  <blockquote>
-  <p>"I've tried a lot of languages, tinkering with the projects. They all seem so lame though...<strong><span> who wants to build a blackjack simulator? I don't play blackjack."</span></strong></p>
-  </blockquote>
-  <br />
-  <p>Once you've been accepted into the program, your CodeMontage begins with your first project challenge, which you'll receive via <a href="https://github.com/blog/831-issues-2-0-the-next-generation" target="_blank">Github issue</a> and email on the first Monday of your session.</p>
-  <p>For each challenge, you'll have until that Friday at 5pm EST to submit your solution. Following a challenge, you'll receive code reviews and feedback, which you'll use to refactor and improve your code (if needed), and resubmit each Friday. At any given time during the program, you'll probably have one new challenge to solve and one older challenge to improve based on feedback.</p>
-  <br />
-  <h5>Program Timeline</h5>
-  <p><em>First Monday</em> - You receive your first development challenge by 5pm EST.</p>
-  <p><em>First Friday</em> - Your first challenge is due and you receive your second challenge.
-    <br />-- this week, you'll receive feedback on your first challenge --<br /></p>
-  <p><em>Second Friday</em> - Your second challenge is due at 5pm EST and you receive your third challenge.
-    <br />-- this week, you'll receive feedback on your second challenge --</p>
-  <p><em>Third Friday</em> - Your third challenge is due at 5pm EST and you receive your final challenge.
-    <br />-- this week, you'll receive feedback on your third challenge --<br /></p>
-  <p><em>Fourth Friday</em> - Your final challenge is due at 5pm EST. Session concludes and you receive a Certificate of Completion, a beefed up Github profile, and a huge High Five for making the world a better place.</p>
-  <p><%= link_to "Apply", apply_path %> to start your CodeMontage today</a>!</p>
-  <p><br />* Schedule is subject to change based on your needs / pace and project constraints.</p>
+  <div class="row">
+    <div class="one column"></div>
+    <div class="ten columns">
+      <h5>Improve your coding skills with real projects that matter.</h5>
+
+      <p>We believe <%= link_to "coders make the best superheroes", "http://www.slideshare.net/CodeMontage/coders-as-superheroes-15284076", :target => "_blank" %>, and we know becoming a superhero isn’t easy. We also know there’s a big difference between learning to code and feeling ready to save the world. We’re here to help you get to the next level, whether it’s a new job, comfort in a new language, or skills to build your own world-saving project.</p>
+
+      <div class="row">
+        <div class="membership four columns">
+          <ul class="pricing-table">
+            <li class="title">Community Membership</li>
+            <li class="price">Free</li>
+            <li class="bullet-item"><strong>Community</strong> of our open source to change the world movement</li>
+            <li class="bullet-item"><strong>Impact</strong> of coding completed by our training coders</li>
+            <li class="cta-button"><%= link_to "Join Today", new_user_registration_path, :class => "radius button" %></li>
+          </ul>
+        </div>
+        <div class="membership four columns">
+          <ul class="pricing-table">
+            <li class="title">Sprint Membership</li>
+            <li class="price">$450/month</li>
+            <li class="bullet-item"><strong>Project Matching</strong> based on your skills and goals</li>
+            <li class="bullet-item"><strong>Feedback</strong> from expert coders</li>
+            <li class="bullet-item"><strong>Portfolio</strong> of high quality, open source code</li>
+            <li class="cta-button"><%= mail_to "hello@codemontage.com", "Join Today", :class => "radius button", :subject => "Interest in Sprint Membership" %></li>
+          </ul>
+        </div>
+        <div class="membership four columns">
+          <ul class="pricing-table">
+            <li class="title">Trainer Membership</li>
+            <li class="price">$45/month</li>
+            <li class="bullet-item"><strong>Code Reviews</strong> on your open source social good contributions</li>
+            <li class="bullet-item"><strong>Alerts</strong> to stay updated on causes and technologies you care about</li>
+            <li class="cta-button"><%= mail_to "hello@codemontage.com", "Join Today", :class => "radius button", :subject => "Interest in Trainee Membership" %></li
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        </br>
+        <h5>Empower your high potential team to become better coders.</h5>
+        <p>We'll help your team get to the next level through real projects that align with your company's values and technology goals. We offer team training programs, group sprint memberships, and a stellar apprenticeship program to help you build a pipeline of superhero coders. <%= mail_to "hello@codemontage.com", "Contact us to learn more", :subject => "I want to train superhero coders" %>.</p>
+
+      </div>
+      
+    </div>
+    <div class="one column"></div>
+  </div>
 </body>
