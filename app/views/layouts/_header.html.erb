@@ -16,28 +16,24 @@
 </div>
 
 <nav class="top-bar">
-  <section>
+  <div class="row">
     <ul>
       <!-- For small screens, use a text title, otherwise use the logo in navigation -->
-      <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %><li>
+      <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %></li>
       <li class="name show-for-small"><a href="/">CodeMontage</a></li>
       <li class="toggle-topbar"><a href="#"></a></li>
     </ul>
-  </section>
-  <section>
     <ul class="left">
       <li><%= link_to "Explore", projects_path %></li>
       <li><%= link_to "Code", training_path %></li>
       <li><%= link_to "Benefit", our_services_path %></li>
       <li><%= link_to "Our Story", our_story_path %></li>
-    <ul>
-  </section>
-  <section>
+    </ul>
     <% if !user_signed_in? %>
     <div id="get_started">
       <ul class="left">
-        <li><%= link_to "Get Started", new_user_registration_path %></li>
-      <ul>
+        <li class="cta"><%= link_to "Get Started", new_user_registration_path, :class => "button small" %></li>
+      </ul>
     </div>
     <% end %>
   </section>
