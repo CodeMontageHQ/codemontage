@@ -17,14 +17,16 @@
           <h2>Ready to change the world?</h2>
           <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", training_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
         </div>
-        <div class="four columns offset-by-one">
+        <div class="five columns offset-by-one">
           <h2>&nbsp;</h2>
           <% if !user_signed_in? %>
-            <%= link_to "Sign up with Github", new_user_registration_path, :class => "large radius button" %>
+            <%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, new_user_registration_path, :class => "large radius button" %>
           <% else %>
-            <%= link_to "Choose a project", projects_path, :class => "large radius button" %>
+            <%= link_to "Start Coding", projects_path, :class => "large radius button" %>
           <% end %>
         </div>
+
+      </div>
       <div class="one column"></div>
 
       </div>

@@ -5,8 +5,11 @@
 
 // Index
 
-#coder_welcome.shadow {
-  box-shadow: 0 0 5px $cmLightGrey;
+#coder_welcome .button {
+
+  .social.foundicon-github {
+    font-size: 1.2em;
+  }
 }
 
 #mission {padding-bottom: 30px;}
