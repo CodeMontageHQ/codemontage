@@ -12,17 +12,21 @@
     <div id="coder_welcome" class="row">
       <div class="one column"></div>
       <div class="panel radius shadow ten column">
+
         <div class="six columns">
-          <h2>Ready to code to change the world?</h2>
-          <p>Join our collective of do-gooder coders. Gain access to {code}montage open source projects and contribute as much as you want to. Together we can change the world. <%= link_to("View our current projects", projects_path)%></p>
+          <h2>Ready to change the world?</h2>
+          <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", coders_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
         </div>
-        <div class="four columns">
+        <div class="four columns offset-by-one">
+          <h2>&nbsp;</h2>
           <% if !user_signed_in? %>
             <%= link_to "Sign up with Github", new_user_registration_path, :class => "large radius button" %>
           <% else %>
-            <%= link_to "Let's do this!", projects_path, :class => "large radius button" %>
+            <%= link_to "Choose a project", projects_path, :class => "large radius button" %>
           <% end %>
         </div>
+      <div class="one column"></div>
+
       </div>
       <div class="one column"></div>
     </div>
@@ -31,13 +35,13 @@
     <div id="secondary_welcomes" class="row">
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
-        <h3>Submit Your Project</h3>
-        <p>Interested in accelerating your impact with technology? <%= link_to "View the services we provide", our_services_path %> or <%= mail_to "hello@codemontage.com", "reach out to us", :subject => "Interested in Open Social Innovation" %> to learn how open innovation can work for you.</p>
-        <%= link_to "Organization Services", our_services_path, :class => "small radius button" %>
+        <h3>Need help changing the world?</h3>
+        <p>Interested in accelerating your social impact with technology? Check out our <%= link_to "benefit services", our_services_path %> to learn how open innovation can work for you.</p>
+        <%= link_to "Benefit Services", our_services_path, :class => "small radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
-        <h3>We'll Train Your Developers</h3>
-        <p>Looking to hire or train developers? Check out our <%= link_to "programs", training_path %> or <%= mail_to "hello@codemontage.com", "contact us", :subject => "I want to train superhero developers" %> to learn about our internship, apprenticeship, and team programs.</p>
+        <h3>Building a team of coders?</h3>
+        <p>Have high potential superheroes ready to level up their coding skills? Check out our <%= link_to "training programs", training_path %> for apprenticeships and teams.</p>
         <%= link_to "Training Programs", training_path, :class => "small radius button" %>
       </div>
       <div class="one column"></div>
