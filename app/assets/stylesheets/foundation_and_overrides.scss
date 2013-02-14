@@ -81,6 +81,7 @@ $topBarNavToggleSize: 12px;
       }
     }
     > li.cta:hover { background: $cmOffBlack !important; }
+    > li.cta .button { background: $cmPurple; border: $cmPurple; margin-left: 20px; }
   }
 }
 
