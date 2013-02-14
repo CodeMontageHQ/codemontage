@@ -19,11 +19,7 @@
         </div>
         <div class="five columns offset-by-one">
           <h2>&nbsp;</h2>
-          <% if !user_signed_in? %>
-            <%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, new_user_registration_path, :class => "large radius button" %>
-          <% else %>
-            <%= link_to "Start Coding", projects_path, :class => "large radius button" %>
-          <% end %>
+          <%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, user_signed_in? ? projects_path : new_user_registration_path, :class => "large radius button" %>
         </div>
 
       </div>
