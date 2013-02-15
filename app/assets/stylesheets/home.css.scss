@@ -6,11 +6,15 @@
 // Index
 
 #coder_welcome .button {
+  background: $cmPurple;
+  border: $cmPurple;
 
   .social.foundicon-github {
     font-size: 1.2em;
   }
 }
+
+#coder_welcome .button:hover { background: lighten($cmPurple, 10%); }
 
 #mission {padding-bottom: 30px;}
 
