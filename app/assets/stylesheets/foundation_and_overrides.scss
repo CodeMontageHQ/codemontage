@@ -80,8 +80,9 @@ $topBarNavToggleSize: 12px;
         margin-top:-40px;
       }
     }
-    > li.cta:hover { background: $cmOffBlack !important; }
+    > li.cta:hover { background: $cmOffBlack !important; }  //do not highlight top bar rectangle behind button
     > li.cta .button { background: $cmPurple; border: $cmPurple; margin-left: 20px; }
+    > li.cta .button:hover { background: lighten($cmPurple, 10%); color: white; }
   }
 }
 
