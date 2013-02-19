@@ -6,12 +6,30 @@
 // Index
 
 #coder_welcome .button {
-  background: $cmPurple;
+
   border: $cmPurple;
+background: $cmPurple;
+background: -moz-linear-gradient(top,  #8e4487 0%, #653060 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8e4487), color-stop(100%,#653060));
+background: -webkit-linear-gradient(top,  #8e4487 0%,#653060 100%);
+background: -o-linear-gradient(top,  #8e4487 0%,#653060 100%);
+background: -ms-linear-gradient(top,  #8e4487 0%,#653060 100%);
+background: linear-gradient(to bottom,  #8e4487 0%,#653060 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e4487', endColorstr='#653060',GradientType=0 );
+
+
 
   .social.foundicon-github {
-    font-size: 1.2em;
+    font-size: 1.8em;
+    vertical-align:middle;
+    margin-right:3px;
   }
+}
+
+
+
+.home-signup {
+margin-top:25px;
 }
 
 #coder_welcome .button:hover { background: lighten($cmPurple, 10%); }
@@ -19,3 +37,4 @@
 #mission {padding-bottom: 30px;}
 
 #secondary_welcomes {padding-bottom: 30px;}
+
