@@ -35,6 +35,7 @@ CodeMontage::Application.routes.draw do
   get '/join', {:controller => 'home', :action => 'join'}
   get '/our_story', {:controller => 'home', :action => 'our_story'}
   get '/our_services', {:controller => 'home', :action => 'services'}
+  get '/resources', {:controller => 'home', :action => 'resources'}
   get '/training', {:controller => 'home', :action => 'training'}
 
   # Preserve links from tumblr placeholder
