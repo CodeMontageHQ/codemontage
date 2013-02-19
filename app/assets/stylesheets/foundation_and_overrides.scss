@@ -150,4 +150,14 @@ border-radius: 12px;
   -moz-box-shadow:    1px 1px 10px 0px #2d2d2d;
   -webkit-box-shadow: 1px 1px 10px 0px #2d2d2d;
   box-shadow:         1px 1px 10px 0px #2d2d2d;
+  
+  background: #27a0ad;
+  background: -moz-linear-gradient(top,  #27a0ad 0%, #228691 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#27a0ad), color-stop(100%,#228691));
+  background: -webkit-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: -o-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: -ms-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: linear-gradient(to bottom,  #27a0ad 0%,#228691 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27a0ad', endColorstr='#228691',GradientType=0 );
+  border: none;
 }
