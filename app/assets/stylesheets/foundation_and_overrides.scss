@@ -144,3 +144,10 @@ border-radius: 12px;
   vertical-align: middle;
 }
 
+
+.button {
+
+  -moz-box-shadow:    1px 1px 10px 0px #2d2d2d;
+  -webkit-box-shadow: 1px 1px 10px 0px #2d2d2d;
+  box-shadow:         1px 1px 10px 0px #2d2d2d;
+}
