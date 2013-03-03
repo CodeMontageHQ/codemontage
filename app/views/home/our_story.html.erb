@@ -2,6 +2,7 @@
   <div class="row">
     <div class="one column"></div>
     <div class="ten columns">
+
   	  <h4>Our Story</h4>
 
       <div id="story_intro" class="row">
@@ -25,7 +26,76 @@
 
       <p>So, if it takes a lot of work to become a great coder, how can we make sure that work matters? That it moves society forward, as well as coders? That's where CodeMontage comes in: <strong>improve yourself while improving the world.</strong></p>
 
-      <p>If you'd like to keep in the loop on how we're doing, <%= link_to "sign up", new_user_registration_path unless user_signed_in? %> or join our <%= link_to "mailing list", join_path %>.</p>
+
+      <h5>Our Team</h5>
+      <h6>Major Contributors</h6>
+      
+      <div id="major_contributors">
+        <div class="horizontal_bios row">
+          <div id="vhurst_img" class="three columns">
+            <%= image_tag "vhurst_head.jpg", :alt => "Vanessa Hurst", :size => "150x150" %>
+          </div>
+          <div id="vhurst_info" class="three columns">
+            <strong>Vanessa Hurst</strong>
+            <p>Founder & Coder</p>
+            <ul>
+              <li><%= link_to '<i class="social foundicon-twitter"></i>&nbsp;'.html_safe + 'DBNess', 'http://twitter.com/DBNess', :target => '_blank' %></li>
+              <li><%= link_to '<i class="social foundicon-github"></i>&nbsp;'.html_safe + 'DBNess', 'http://github.com/DBNess', :target => '_blank' %></li>
+            <ul>
+          </div>
+          <div id="djabin_img"class="three columns">
+            <%= image_tag "djabin_head.jpg", :alt => "Danielle Jabin", :size => "150x150" %>
+          </div>
+          <div id="djabin_info" class="three columns">
+            <strong>Danielle Jabin</strong>
+            <p>Marketing Strategist</p>
+            <ul>
+              <li><%= link_to '<i class="social foundicon-github"></i>&nbsp;'.html_safe + 'dj4b1n', 'http://github.com/dj4b1n', :target => '_blank' %></li>
+            <ul>
+          </div>
+        </div>
+        <div class="horizontal_bios row">
+          <div id="bmartin_img"class="three columns">
+            <%= image_tag "https://secure.gravatar.com/avatar/5594abf6d81cda0e13a081081ea2e7f4?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png", :alt => "Bethany Martin", :size => "150x150" %>
+          </div>
+          <div id="bmartin_info" class="three columns">
+            <strong>Bethany Martin</strong>
+            <p>Designer & Coder</p>
+            <ul>
+              <li><%= link_to '<i class="social foundicon-twitter"></i>&nbsp;'.html_safe + 'bmartinstudio', 'http://twitter.com/bmartinstudio', :target => '_blank' %></li>
+              <li><%= link_to '<i class="social foundicon-github"></i>&nbsp;'.html_safe + 'bmartinstudio', 'http://github.com/bmartinstudio', :target => '_blank' %></li>
+            <ul>
+          </div>
+          <div id="nhurst_img"class="three columns">
+            <%= image_tag "https://secure.gravatar.com/avatar/8cee3c0153dde40e14dc6794295d5ee9?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png", :alt => "Nathan Hurst", :size => "150x150" %>
+          </div>
+          <div id="nhurst_info" class="three columns">
+            <strong>Nathan Hurst</strong>
+            <p>Advisor & Coder</p>
+            <ul>
+              <li><%= link_to '<i class="social foundicon-twitter"></i>&nbsp;'.html_safe + 'nahurst', 'http://twitter.com/nahurst', :target => '_blank' %></li>
+              <li><%= link_to '<i class="social foundicon-github"></i>&nbsp;'.html_safe + 'nahurst', 'http://github.com/nahurst', :target => '_blank' %></li>
+            <ul>
+          </div>
+        </div>
+        <div class="horizontal_bios row">
+          <div id="cervin_img" class="three columns">
+            <%= image_tag "http://m3.licdn.com/mpr/pub/image-udexq2Y4giwEX9PW08BpwNFK8aEMPwqNud44aplp8GRxkFodude4Yrv48smJPYb2RSXJ/courteney-ervin.jpg", :alt => "Courteney Ervin", :size => "150x150" %>
+          </div>
+          <div id="cervin_info" class="three columns">
+            <strong>Courteney Ervin</strong>
+            <p>Community Strategist</p>
+            <ul>
+              <li><%= link_to '<i class="social foundicon-twitter"></i>&nbsp;'.html_safe + 'courteneyervin', 'http://twitter.com/courteneyervin', :target => '_blank' %></li>
+              <li><%= link_to '<i class="social foundicon-github"></i>&nbsp;'.html_safe + 'courte', 'http://github.com/courte', :target => '_blank' %></li>
+            <ul>
+          </div>
+          <div class="six columns"></div>
+        </div>
+      </div>
+
+      <h5>Join Us</h5>
+      <p>Join the movement! You can help by <%= link_to "signing up,", new_user_registration_path unless user_signed_in? %> joining our <%= link_to "mailing list", join_path %>, or <%= mail_to "hello@codemontage.com", "emailing us", :subject => "How can I help with CodeMontage?", :target => '_blank' %> to get involved.</p>
     </div>
     <div class="one column"></div>
   </div>
