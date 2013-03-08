@@ -16,7 +16,15 @@ ActiveAdmin.register User do
     column :created_at
     column :updated_at
   end
-  
+
+  filter :email
+  filter :is_admin
+  filter :sign_in_count, :as => :numeric
+  filter :current_sign_in_at
+  filter :last_sign_in_at
+  filter :created_at
+  filter :updated_at
+
   form do |f|
     f.inputs "User Details", :multipart => true do    
       f.input :name
