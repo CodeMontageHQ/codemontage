@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def has_github
+    self.services.where(:provider => 'github').exists?
+  end
+
   protected
   
   def create_profile

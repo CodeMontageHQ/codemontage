@@ -4,6 +4,7 @@ ActiveAdmin.register User do
     column :email do |user|
       link_to user.email, admin_user_path(user)
     end
+    column "Github?", :has_github
     column "Causes", :cause_list
     column "Technologies", :technology_list
     column "Coder", :is_coder
