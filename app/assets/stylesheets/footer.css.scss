@@ -13,8 +13,7 @@ html, body {height: 100%;}
 }
 
 #footer div {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 /* Opera Fix */
@@ -24,4 +23,23 @@ body:before {
 	float:left;
 	width:0;
 	margin-top:-32767px;
+}
+
+.wepay-custom-button {
+  background-color: #1E1E1E !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+
+  color: #BBBBBB !important;
+  float: right; 
+  font-family: "Source Sans Pro", sans-serif !important;
+  padding: 0px !important;
+  text-shadow: none !important;
+
+}
+
+.wepay-custom-button:hover {
+  color: #1aacbc !important;
 }
