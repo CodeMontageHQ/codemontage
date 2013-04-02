@@ -33,8 +33,8 @@
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
         <h3>Need help changing the world?</h3>
-        <p>Interested in accelerating your social impact with technology? Check out our <%= link_to "benefit services", our_services_path %> to learn how open innovation can work for you.</p>
-        <%= link_to "Benefit Services", our_services_path, :class => "small radius button" %>
+        <p>Interested in accelerating your organization's social impact with technology? <%= mail_to "projects@codemontage.com", "Submit your project today", :subject => "Social Impact Project for CodeMontage" %> or check out <%= link_to "our services", our_services_path %> to learn more about how open innovation can work for you.</p>
+        <%= link_to "Social Mission Organization Services", our_services_path, :class => "small radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
         <h3>Building a team of coders?</h3>
