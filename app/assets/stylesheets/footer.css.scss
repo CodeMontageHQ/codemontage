@@ -1,3 +1,5 @@
+@import "colors";
+
 /* From CSS Sticky Footer Code http://www.cssstickyfooter.com/using-sticky-footer-code.html */
 
 html, body {height: 100%;}
@@ -9,11 +11,49 @@ html, body {height: 100%;}
   position: relative;
   background: #1E1E1E;
   clear:both;
-  color: #BBBBBB;
-}
 
-#footer div {
-  font-size: 14px;
+  ul>li { margin-left: 0px; padding-left: 20px;}
+  ul>li a {
+    border-right: 1px solid $cmDarkGrey;
+    color: $cmLightGrey;
+    font-size: .9em;
+    padding-right: 20px;
+  }
+  ul>li a:hover {color: $cmTeal;}
+
+  .footer_legal div {
+    color: $cmDarkGrey;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .footer_links {
+    padding: 20px 0 20px 0;
+  }
+  .footer_links ul>li:last-child a {
+    padding-right: 0;
+    border-right: none;
+  }
+    
+  .wepay-custom-button {
+    background-color: #1E1E1E !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+
+    color: $cmTeal !important;
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-weight: bold;
+    line-height: normal;
+    min-width: 0;
+    padding: 0px !important;
+    text-shadow: none !important;
+  }
+  .wepay-custom-button:hover {
+    color: $cmLightGrey !important;
+  }
+
 }
 
 /* Opera Fix */
@@ -23,23 +63,4 @@ body:before {
 	float:left;
 	width:0;
 	margin-top:-32767px;
-}
-
-.wepay-custom-button {
-  background-color: #1E1E1E !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-
-  color: #BBBBBB !important;
-  float: right; 
-  font-family: "Source Sans Pro", sans-serif !important;
-  padding: 0px !important;
-  text-shadow: none !important;
-
-}
-
-.wepay-custom-button:hover {
-  color: #1aacbc !important;
 }
