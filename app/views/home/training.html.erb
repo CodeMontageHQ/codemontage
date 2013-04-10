@@ -8,44 +8,25 @@
 
       <p>Become part of the CodeMontage community and hear about new features any time (for free) simply by <%= link_to "signing up", new_user_registration_path %>. When you're ready to accelerate your learning and world-saving, choose a membership:</p>
 
-      <div class="row">
-        <div class="membership four columns">
-          <ul class="pricing-table">
-            <li class="title">Contribute</li>
-            <li class="price">$15/month*<li>
-            <li class="description">community members who support open source, humanitarian coding</li>
-            <li class="bullet-item"><strong>Project Recommendations</strong></li>
-            <li class="bullet-item"><strong>Supporter Recognition</li>
-            <li class="cta-button"><%= link_to "Join", new_user_registration_path, :class => "radius button" %></li>
-          </ul>
+      <div id="coder_memberships" class="row">
+        <div class="one columns"></div>
+        <div id="training_membership" class="panel radius shadow five columns">
+          <div>
+            <h2>Need a Trusty Sidekick?</h2>
+            <p>We'll help you find a great project, You decide how you want to contribute, We'll help you improve your code.</p>
+            <p><%= mail_to "hello@codemontage.com", "Train with Us", :class => "medium radius button", :subject => "Ready to start Training" %></p>
+            <p><strong>$45/month Includes:</strong></p>
+            <ul>
+              <li>Custom Project Recommendations</li>
+              <li>Code Reviews and Feedback</li>
+              <li>Personalized Progress Tracking</li>
+            </ul>
+          </div>
         </div>
-        <div class="membership four columns">
-          <ul class="pricing-table">
-            <li class="title">Train</li>
-            <li class="price">$45/month</li>
-            <li class="description">self-directed coders committed to continuous learning</li>
-            <li class="bullet-item"><strong>Project Recommendations</strong></li>
-            <li class="bullet-item"><strong>Supporter Recognition</li>
-            <li class="bullet-item"><strong>Personalized Progress Tracking</strong></li>
-            <li class="cta-button"><%= mail_to "hello@codemontage.com", "Join", :class => "radius button", :subject => "Interest in Trainee Membership" %></li
-          </ul>
-        </div>
-        <div class="membership four columns">
-          <ul class="pricing-table">
-            <li class="title">Sprint</li>
-            <li class="price">$450/month</li>
-            <li class="description">coders who know the basics and are ready to gain meaningful experience</li>
-            <li class="bullet-item"><strong>Trainee Membership</strong></li>
-            <li class="bullet-item"><strong>Custom Code Challenges</strong></li>
-            <li class="bullet-item"><strong>Code Reviews & Feedback</strong></li>
-            <li class="bullet-item"><strong>Open Source Portfolio Development</strong></li>
-            <li class="cta-button"><%= mail_to "hello@codemontage.com", "Apply", :class => "radius button", :subject => "Interest in Sprint Membership" %></li>
-          </ul>
-        </div>
+        <div class="one columns"></div>
       </div>
 
       <div>
-        <p><strong>*</strong> Coders who <%= link_to "register with github", new_user_registration_path %> and contribute to a CodeMontage project automatically earn a free Contributor membership<p>
         <h5>Empower your high potential team to become better coders.</h5>
         <p>We'll help your team get to the next level through real projects that align with your company's values and technology goals. We offer team training programs, group sprint memberships, and a stellar apprenticeship program to help you build a pipeline of superhero coders. <%= mail_to "hello@codemontage.com", "Contact us to learn more", :subject => "I want to train superhero coders" %>.</p>
 
