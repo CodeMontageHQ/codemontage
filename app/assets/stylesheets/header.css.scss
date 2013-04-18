@@ -3,7 +3,6 @@
 #header {
   background: $cmOffBlack;
   padding: 6px;
-  height: 80px;
 } 
 
 #header a {
@@ -16,4 +15,17 @@
   
   a:hover {color: $cmTeal;}
   li.social_media {margin-left: 10px;}
+}
+
+@media only screen and (max-width: 1000px) {
+  .top-bar ul li.logo img{
+    height: 59px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-bar ul li.logo img{
+    margin: 0;
+  }
 }
