@@ -25,8 +25,7 @@ CodeMontage::Application.routes.draw do
   
   # Organizations and project information
   resources :organizations
-  get '/projects', {:controller => 'organizations', :action => 'index'}
-  resources :projects, :only => [:show]
+  resources :projects
   
   # Static content 
   get '/apply', {:controller => 'home', :action => 'apply'}
