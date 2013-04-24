@@ -42,7 +42,7 @@ group :assets do
   # Foundation front-end framework
   gem 'compass-rails'
   gem 'foundation-icons-sass-rails'
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '3.2.5'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
