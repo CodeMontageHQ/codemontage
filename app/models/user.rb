@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
   validates_presence_of :email    # will run in all validation contexts
   validates_uniqueness_of :email  # will run in all validation contexts
   
+  scope :with_github, where(Service.where('services.user_id = users.id AND provider = ?', "github").exists)
+  
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
