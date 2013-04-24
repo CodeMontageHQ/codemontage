@@ -1,0 +1,47 @@
+<body>
+  <div class="row">
+    <div class="one column"></div>
+    <div class="ten columns">
+      <h4>Projects</h4>
+      
+      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like.</p>
+
+      <div class="projects">
+        <% @featured_projects.each do |project| %>
+          <div class="row">
+            <div class="project_summary six columns">
+              <h5><%= link_to project.name, project_path(project) %></h5>
+              <p><%= project.description %></p>
+            </div>
+
+            <div class="project_links two columns">
+              </br>
+              <ul>
+                <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code Now", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+                <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "Follow", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
+              </ul>
+            </div>
+
+            <div class="project_technologies two columns">
+              <h6>Technologies</h6>
+              <%= project.technology_list %>
+            </div>
+
+            <div class="project_causes two columns">
+              <h6>Causes</h6>
+              <%= project.cause_list %>
+            </div>
+
+          </div>
+        <% end %>
+      </div>
+      
+      <div class="resources">
+        <h6>Looking for something else?</h6>
+        <p>Check out our <%= link_to "resources", resources_path %> to connect with other ways to learn, code, and do good.</p>
+      </div>
+
+    </div>
+    <div class="one column"></div>
+  </div>
+</body>
