@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :organization
-  acts_as_ordered_taggable
-  acts_as_ordered_taggable_on :technologies, :causes
+  acts_as_taggable
+  acts_as_taggable_on :technologies, :causes
   
   attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list
 
