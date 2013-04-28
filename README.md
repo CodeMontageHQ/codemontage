@@ -10,7 +10,7 @@ If you'd like to join our quest to empower software superheroes, feel free to su
 
 ###Development Environment Setup
 
-CodeMontage currently uses Ruby on Rails version 3.2.11 and Postgres 9.2.2.
+CodeMontage currently uses Ruby on Rails version 3.2.13 and Postgres 9.2.2.
 
 Get started by
 * Installing Rails. We recommend [Rails Installer](http://railsinstaller.org).
@@ -25,4 +25,4 @@ Congratulations, you're ready to help build CodeMontage!
 
 ## License
 
-CodeMontage's source code is licensed under the [GNU General Public License](http://www.gnu.org/licenses/gpl.html).
+Copyright (c) 2013 Code for Humanity, LLC. See [LICENSE](https://github.com/CodeMontageHQ/codemontage/tree/master/LICENSE) for details.
