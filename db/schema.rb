@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212061136) do
+ActiveRecord::Schema.define(:version => 20130628183344) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(:version => 20130212061136) do
 
   add_index "favorite_projects", ["project_id"], :name => "index_favorite_projects_on_project_id"
   add_index "favorite_projects", ["user_id"], :name => "index_favorite_projects_on_user_id"
+
+  create_table "organization_metrics", :force => true do |t|
+    t.integer  "organization_id", :null => false
+    t.string   "metric_value",    :null => false
+    t.string   "metric_label",    :null => false
+    t.text     "metric_footnote"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "organizations", :force => true do |t|
     t.string   "name",                                               :null => false
