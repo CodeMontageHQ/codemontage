@@ -1,4 +1,31 @@
 ActiveAdmin.register Organization do
+  form do |f|
+    f.inputs "Organization Details", :multipart => true do
+      f.input :name
+      f.input :url
+      f.input :github_org
+      f.input :description
+      f.input :is_tax_exempt
+      f.input :contact_name
+      f.input :contact_role
+      f.input :contact_email
+      f.input :annual_budget_usd
+      f.input :total_staff_size
+      f.input :tech_staff_size
+      f.input :image_url
+      f.input :twitter
+      f.input :notes
+    end
+
+    f.inputs "Impact Metrics" do
+      f.semantic_fields_for :organization_metrics do |m|
+        m.inputs :metric_value, :metric_label, :metric_footnote
+      end
+    end
+
+    f.buttons
+  end
+
   show do |ad|
     attributes_table do
       row :name
