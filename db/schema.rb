@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628183344) do
+ActiveRecord::Schema.define(:version => 20130629011055) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -67,13 +67,14 @@ ActiveRecord::Schema.define(:version => 20130628183344) do
   end
 
   create_table "projects", :force => true do |t|
-    t.integer  "organization_id", :null => false
-    t.string   "name",            :null => false
+    t.integer  "organization_id",                   :null => false
+    t.string   "name",                              :null => false
     t.string   "github_repo"
     t.string   "description"
     t.text     "notes"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.boolean  "is_active",       :default => true, :null => false
   end
 
   create_table "services", :force => true do |t|
