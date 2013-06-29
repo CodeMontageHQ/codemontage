@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
   acts_as_ordered_taggable
   acts_as_ordered_taggable_on :technologies, :causes
   
-  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list
+  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list, :is_active
 
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
