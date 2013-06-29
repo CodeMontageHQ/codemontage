@@ -18,7 +18,7 @@
               </br>
               <ul>
                 <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code Now", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
-                <li><%= link_to '<i class="general foundicon-calendar"></i> '.html_safe + "Code Later", "https://www.google.com/calendar/render?action=TEMPLATE&text=Code+with+CodeMontage&dates="+Date.now.end_of_week.ago(172799).to_s('%Y%m%d')+"T100000Z/"+Date.now.end_of_week.ago(172799).to_s('%Y%m%d')+"T120000Z&details=For+ideas,+visit+http://codemontage.com/projects.&location=Anywhere&sf=true&output=xml", :target => '_blank' %></li>
+                <li><%= link_to '<i class="general foundicon-calendar"></i> '.html_safe + "Code Later", @code_later_url, :target => '_blank' %></li>
                 <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "Follow", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
               </ul>
             </div>
