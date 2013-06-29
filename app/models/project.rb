@@ -8,7 +8,8 @@ class Project < ActiveRecord::Base
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
 
-  scope :featured, where("organization_id IS NOT NULL")
+  scope :active, where(:is_active => true)
+  scope :featured, where("organization_id IS NOT NULL").active
   
   def github_url
     github_url = self.organization.github_url + "/" + self.github_repo
