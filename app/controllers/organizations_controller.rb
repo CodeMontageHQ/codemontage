@@ -1,7 +1,7 @@
 class OrganizationsController < ApplicationController
 
   def index
-    @featured_orgs = Organization.where(Project.where("organization_id = organizations.id").exists).order("name")
+    @featured_orgs = Organization.featured
   end
   
   def show
