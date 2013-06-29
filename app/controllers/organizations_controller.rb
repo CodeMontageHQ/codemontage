@@ -6,6 +6,6 @@ class OrganizationsController < ApplicationController
   
   def show
     @organization = Organization.find_by_id(params[:id])
-    @projects = @organization.projects
+    @projects = @organization.projects.featured
   end
 end
