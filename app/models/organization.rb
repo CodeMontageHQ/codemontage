@@ -7,6 +7,8 @@ class Organization < ActiveRecord::Base
 
   accepts_nested_attributes_for :organization_metrics
 
+  scope :featured, where(Project.where("organization_id = organizations.id").exists).order("name")
+
   def github_url
     github_url = ("http://github.com/" + self.github_org) unless self.github_org.blank?
   end

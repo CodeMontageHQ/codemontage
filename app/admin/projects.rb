@@ -10,6 +10,7 @@ ActiveAdmin.register Project do
     column "Causes", :cause_list
     column "Technologies", :technology_list
     column :notes
+    column "Active?", :is_active
     column :created_at
     column :updated_at
     
@@ -25,6 +26,7 @@ ActiveAdmin.register Project do
       f.input :cause_list, :label => "Causes"
       f.input :technology_list, :label => "Technologies"
       f.input :notes
+      f.input :is_active, :label => "Active?"
     end
     
     f.buttons
@@ -39,6 +41,7 @@ ActiveAdmin.register Project do
       row "Causes" do ad.cause_list end
       row "Technologies" do ad.technology_list end
       row :notes
+      row "Active?" do ad.is_active end
       row :created_at
       row :updated_at
     end
