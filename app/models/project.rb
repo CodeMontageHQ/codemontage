@@ -11,6 +11,10 @@ class Project < ActiveRecord::Base
   scope :active, where(:is_active => true)
   scope :featured, where("organization_id IS NOT NULL").active
   
+  def github_display
+    github_display = self.organization.github_org + "/" + self.github_repo
+  end
+
   def github_url
     github_url = self.organization.github_url + "/" + self.github_repo
   end  
