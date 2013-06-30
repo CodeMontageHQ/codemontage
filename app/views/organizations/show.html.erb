@@ -28,7 +28,7 @@
             <hr>
             <div class="row">
               <div class="eight columns">
-                <h5><%= project.name %></h5>
+                <h5 class="project_title"><%= link_to project.name, project_path(project) %></h5>
                 <ul>
                   <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + project.github_display, project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
                 </ul>
