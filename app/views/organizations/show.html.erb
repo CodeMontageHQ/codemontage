@@ -8,7 +8,7 @@
 
           <ul>
             <li><%= link_to '<i class="general foundicon-globe"></i> '.html_safe + @organization.url, @organization.url, :target => '_blank' unless !@organization.url.present? %></li>
-            <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + @organization.github_url, @organization.github_url, :target => '_blank' unless !@organization.github_url.present? %></li>
+            <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + @organization.github_org, @organization.github_url, :target => '_blank' unless !@organization.github_url.present? %></li>
             <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + '@' + @organization.twitter, @organization.twitter_url, :target => '_blank' unless !@organization.twitter.present? %></li>
           </ul>
         </div>
