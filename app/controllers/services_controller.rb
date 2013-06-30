@@ -29,6 +29,8 @@ def create
     # map the returned hashes to our variables first - the hashes differ for every service
     if service_route == 'github'
       omniauth['info']['email'] ? email =  omniauth['info']['email'] : email = ''
+      omniauth['info']['name'] ? name =  omniauth['info']['name'] : name = ''
+      omniauth['info']['nickname'] ? login =  omniauth['info']['nickname'] : login = ''
       omniauth['extra']['raw_info']['id'] ?  uid =  omniauth['extra']['raw_info']['id'] : uid = ''
       omniauth['provider'] ? provider =  omniauth['provider'] : provider = ''
     else
@@ -55,7 +57,7 @@ def create
             existing_user = User.find_by_email(email)
             if existing_user
               # map this new login method via a service provider to an existing account if the email address is the same
-              existing_user.services.create(:provider => provider, :uid => uid, :uemail => email)
+              existing_user.services.create(:provider => provider, :uid => uid, :uemail => email, :ulogin => login, :uname => name)
               flash[:notice] = 'Sign in via ' + provider.capitalize + ' has been added to your account ' + existing_user.email + '. Signed in successfully!'
               sign_in_and_redirect(:user, existing_user)
             else
@@ -65,7 +67,7 @@ def create
               user = User.new :email => email, :password => SecureRandom.hex(10)
 
               # add this authentication service to our new user
-              user.services.build(:provider => provider, :uid => uid, :uemail => email)
+              user.services.build(:provider => provider, :uid => uid, :uemail => email, :ulogin => login, :uname => name)
 
               user.save!
 
@@ -84,7 +86,7 @@ def create
         # check if this service is already linked to his/her account, if not, add it
         auth = Service.find_by_provider_and_uid(provider, uid.to_s)
         if !auth
-          current_user.services.create(:provider => provider, :uid => uid, :uemail => email)
+          current_user.services.create(:provider => provider, :uid => uid, :uemail => email, :ulogin => login, :uname => name)
           flash[:notice] = 'Sign in via ' + provider.capitalize + ' has been added to your account.'
           redirect_to services_path
         else
