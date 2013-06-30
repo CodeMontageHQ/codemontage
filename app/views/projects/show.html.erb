@@ -13,6 +13,18 @@
 
       <div id="summary">
         <p><%= @project.description %></p>
+
+        <% if @project.organization.organization_metrics.exists? %>
+          <div id="metrics">
+            <ul>
+            <% @project.organization.organization_metrics.each do |metric| %>
+              <li><span class="metric_value"><%= metric.metric_value %></span> 
+                <span class="metric_label"><%= metric.metric_label %></span>
+              </li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
       </div>
 
       <% if @related_projects.exists? %>

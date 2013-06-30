@@ -18,6 +18,18 @@
       </div>
       <div id="org_summary">
         <p><%= @organization.description %></p>
+
+        <% if @organization.organization_metrics.exists? %>
+          <div id="metrics">
+            <ul>
+            <% @organization.organization_metrics.each do |metric| %>
+              <li><span class="metric_value"><%= metric.metric_value %></span> 
+                <span class="metric_label"><%= metric.metric_label %></span>
+              </li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
         </br>
       </div>
       <div id="org_projects">
