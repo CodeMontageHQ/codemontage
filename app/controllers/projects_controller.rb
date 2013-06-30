@@ -1,12 +1,12 @@
 class ProjectsController < ApplicationController
 
   def index
-    @featured_projects = Project.where("organization_id IS NOT NULL")
+    @featured_projects = Project.featured
     @featured_technologies = @featured_projects.technology_counts.order("count DESC")
   end
 
   def show
     @project = Project.find_by_id(params[:id])
-    @related_projects = @project.related_projects
+    @related_projects = @project.related_projects.featured
   end
 end

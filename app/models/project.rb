@@ -3,10 +3,13 @@ class Project < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :technologies, :causes
   
-  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list
+  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list, :is_active
 
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
+
+  scope :active, where(:is_active => true)
+  scope :featured, where("organization_id IS NOT NULL").active
   
   def github_url
     github_url = self.organization.github_url + "/" + self.github_repo

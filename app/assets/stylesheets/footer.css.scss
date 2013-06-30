@@ -22,9 +22,12 @@ html, body {height: 100%;}
   ul>li a:hover {color: $cmTeal;}
 
   .footer_legal div {
-    color: $cmDarkGrey;
+    color: darken($cmLightGrey, 10%);
     font-size: 14px;
     text-align: right;
+    
+    a { color: darken($cmLightGrey, 10%); }
+    a:hover { color: $cmTeal; }
   }
 
   .footer_links {
