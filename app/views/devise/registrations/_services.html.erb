@@ -9,7 +9,7 @@
         <div class="services_used">  
             <%= image_tag "#{service.provider}_64.png", :size => "64x64" %>
             <div class = "user">
-              <div class="line1">Login: <%= service.ulogin %></div>  
+              <div class="line1">Login: <%= service.ulogin != '' ? service.ulogin : 'not set' %></div>  
               <div class="line2">Email: <%= service.uemail != '' ? service.uemail : 'not set' %></div>
               <div class="line3">
                   <% @services.count == 1 ? @msg = 'Removing this service might lock you out of your account if you do not know your CodeMontage email and password' : @msg = '' %>
