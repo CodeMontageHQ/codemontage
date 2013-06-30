@@ -30,7 +30,7 @@
               <div class="eight columns">
                 <h5><%= project.name %></h5>
                 <ul>
-                  <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + project.github_url, project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+                  <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + project.github_display, project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
                 </ul>
                 <p><%= project.description %></p>
               </div>
