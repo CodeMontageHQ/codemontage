@@ -1,11 +1,11 @@
 class OrganizationsController < ApplicationController
 
   def index
-    @featured_orgs = Organization.where(Project.where("organization_id = organizations.id").exists).order("name")
+    @featured_orgs = Organization.featured
   end
   
   def show
     @organization = Organization.find_by_id(params[:id])
-    @projects = @organization.projects
+    @projects = @organization.projects.featured
   end
 end

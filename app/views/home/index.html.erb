@@ -15,7 +15,7 @@
 
         <div class="six columns">
           <h2>Ready to change the world?</h2>
-          <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", training_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
+          <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", new_user_registration_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
         </div>
         <div class="five columns offset-by-one">
 		<%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, user_signed_in? ? projects_path : new_user_registration_path, :class => "large radius button home-signup" %>
@@ -33,13 +33,13 @@
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
         <h3>Need help changing the world?</h3>
-        <p>Interested in accelerating your social impact with technology? Check out our <%= link_to "benefit services", our_services_path %> to learn how open innovation can work for you.</p>
-        <%= link_to "Benefit Services", our_services_path, :class => "small radius button" %>
+        <p>Interested in accelerating your organization's social impact with technology? <%= mail_to "projects@codemontage.com", "Submit your project today", :subject => "Social Impact Project for CodeMontage" %> or check out <%= link_to "our services", our_services_path %> to learn more about how open innovation can work for you.</p>
+        <%= link_to "Social Mission Organization Services", our_services_path, :class => "small radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
         <h3>Building a team of coders?</h3>
-        <p>Have high potential superheroes ready to level up their coding skills? Check out our <%= link_to "training programs", training_path %> for apprenticeships and teams.</p>
-        <%= link_to "Training Programs", training_path, :class => "small radius button" %>
+        <p>Have high potential employees ready to level up their coding skills? Ready to help your coders save the world? Check out <%= link_to "our programs", training_path %> for interns, apprentices, and teams.</p>
+        <%= link_to "Technology Team Training Programs", training_path, :class => "small radius button" %>
       </div>
       <div class="one column"></div>
     </div>

@@ -5,7 +5,7 @@ gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 
 # Baseline Infrastructure
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 gem 'pg'
 gem 'psych'
 
@@ -28,6 +28,11 @@ group :test do
   gem 'shoulda-matchers'
 end
 
+# Development helpers
+group :development do
+  gem 'quiet_assets'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -37,7 +42,7 @@ group :assets do
   # Foundation front-end framework
   gem 'compass-rails'
   gem 'foundation-icons-sass-rails'
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '3.2.5'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

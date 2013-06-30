@@ -25,8 +25,7 @@ CodeMontage::Application.routes.draw do
   
   # Organizations and project information
   resources :organizations
-  get '/projects', {:controller => 'organizations', :action => 'index'}
-  resources :projects, :only => [:show]
+  resources :projects
   
   # Static content 
   get '/apply', {:controller => 'home', :action => 'apply'}
@@ -38,6 +37,8 @@ CodeMontage::Application.routes.draw do
   get '/resources', {:controller => 'home', :action => 'resources'}
   get '/training', {:controller => 'home', :action => 'training'}
 
+  # Blog
+  match '/blog' => redirect("http://blog.codemontage.com")
   # Preserve links from tumblr placeholder
   match "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
   match "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
