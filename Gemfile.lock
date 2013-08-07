@@ -83,6 +83,7 @@ GEM
       sass-rails (>= 3.1.1)
     fssm (0.2.10)
     geocoder (1.1.8)
+    gmaps4rails (1.5.6)
     has_scope (0.5.1)
     hashie (2.0.3)
     hike (1.2.2)
@@ -224,6 +225,7 @@ DEPENDENCIES
   devise
   foundation-icons-sass-rails
   geocoder
+  gmaps4rails
   jquery-rails
   meta_search (>= 1.1.0.pre)
   omniauth
