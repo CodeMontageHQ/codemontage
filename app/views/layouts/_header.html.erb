@@ -30,9 +30,9 @@
       <li><%= link_to "Our Story", our_story_path %></li>
     </ul>
     <% if !user_signed_in? %>
-    <div id="get_started">
+    <div id="sign_up">
       <ul class="left">
-        <li class="cta"><%= link_to "Get Started", new_user_registration_path, :class => "small radius button" %></li>
+        <li class="cta"><%= link_to "Sign Up", new_user_registration_path, :class => "medium radius button" %></li>
       </ul>
     </div>
     <% end %>
