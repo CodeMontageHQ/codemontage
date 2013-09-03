@@ -15,10 +15,15 @@
 
         <div class="six columns">
           <h2>Ready to change the world?</h2>
-          <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", new_user_registration_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
+          <p>We believe <%= link_to 'coders can be superheroes', "http://devslovebacon.com/conferences/bacon-2013/talks/developers-are-superheroes-and-so-can-you" %>.</br>
+            Join us to find open source, social impact projects that improve the world.</p>
         </div>
-        <div class="five columns offset-by-one">
-		<%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, user_signed_in? ? projects_path : new_user_registration_path, :class => "large radius button home-signup" %>
+        <div class="six columns">
+		    <% if user_signed_in? %>
+          <%= link_to '<i class="general foundicon-website"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius button home-signup" %>
+        <% else %>
+          <%= link_to '<i class="social foundicon-github"></i> Sign up with Github'.html_safe, "/auth/github", :class => "large radius button home-signup" %>
+        <% end %>
         </div>
 
       </div>
