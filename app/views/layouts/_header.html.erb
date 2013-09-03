@@ -32,7 +32,7 @@
     <% if !user_signed_in? %>
     <div id="sign_up">
       <ul class="left">
-        <li class="cta"><%= link_to "Sign Up", new_user_registration_path, :class => "medium radius button" %></li>
+        <li class="cta"><%= link_to "Sign Up", "/auth/github", :class => "medium radius button" %></li>
       </ul>
     </div>
     <% end %>
