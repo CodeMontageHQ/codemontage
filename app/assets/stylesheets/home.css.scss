@@ -28,7 +28,14 @@
 
 #mission {padding-bottom: 30px;}
 
-#secondary_welcome {padding-bottom: 30px;}
+#secondary_welcome {
+  padding: 10px;
+  padding-bottom: 30px;
+  
+  .button {
+    margin-left: 75px;
+  }
+}
 
 
 // Our Story

@@ -37,14 +37,14 @@
     <div id="secondary_welcome" class="row">
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
-        <h3>Need help changing the world?</h3>
-        <p>Interested in accelerating your organization's social impact with technology? <%= mail_to "projects@codemontage.com", "Submit your project today", :subject => "Social Impact Project for CodeMontage" %> or check out <%= link_to "our services", our_services_path %> to learn more about how open innovation can work for you.</p>
-        <%= link_to "Social Mission Organization Services", our_services_path, :class => "small radius button" %>
+        <h3>Submit an open source project</h3>
+        <p>Working on software to save the world? We'd love to help! Let us know the Github repository and we'll take it from there.</p>
+        <%= mail_to "projects@codemontage.com", "Submit a Project", :subject => "Social Impact Project for CodeMontage", :class => "medium radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
-        <h3>Building a team of coders?</h3>
-        <p>Have high potential employees ready to level up their coding skills? Ready to help your coders save the world? Check out <%= link_to "our programs", training_path %> for interns, apprentices, and teams.</p>
-        <%= link_to "Technology Team Training Programs", training_path, :class => "small radius button" %>
+        <h3>Support coding for social good</h3>
+        <p>Want to hire or connect with superhero software developers? Reach out to learn about our Corporate Partnerships.</p>
+        <%= mail_to "partnerships@codemontage.com", "Support Coders", :subject => "Interested in Corporate Partnership", :class => "medium radius button" %>
       </div>
       <div class="one column"></div>
     </div>
