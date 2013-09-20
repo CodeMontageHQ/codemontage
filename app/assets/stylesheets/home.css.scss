@@ -26,7 +26,42 @@
   margin-top:25px;
 }
 
-#mission {padding-bottom: 30px;}
+#mission {
+
+  padding: 30px 0 30px 0;
+
+  img {
+    height: 190px;
+    width: auto;
+  }
+
+  .mission_text {
+    font-size: 2em;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+ }
+  
+  #cm_logo_code {
+    color: $cmPurple;
+    font-family: Rockwell;
+  }
+
+  #cm_logo_montage {
+    color: $cmTeal;
+    font-family: Courgette;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  #mission {
+
+    img { height: 350px; }
+    .mission_text { font-size: 1.7em; }
+
+  }
+}
 
 #secondary_welcome {
   padding: 10px;
