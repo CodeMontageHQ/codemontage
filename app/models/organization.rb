@@ -9,6 +9,10 @@ class Organization < ActiveRecord::Base
 
   scope :featured, where(Project.where("organization_id = organizations.id").exists).order("name")
 
+  def display_url
+    display_url = self.url.gsub(/^https?:\/\//,"")
+  end
+
   def github_url
     github_url = ("http://github.com/" + self.github_org) unless self.github_org.blank?
   end
