@@ -2,10 +2,22 @@
   <div class="row">
     <div class="one column"></div>
     <div class="ten columns">
-      <h4>Projects</h4>
-      
-      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.</p>
+      <div class="browse row">
+        <div class="project_technologies ten columns">
+          <dl class="sub-nav">
+            <!-->TODO: Show only projects tagged with technology + highlight technology as class="active" when selected <-->
+            <dd class="active"><%= link_to "All", projects_path %></dd>
+            <% @featured_technologies.each do |technology| %>
+              <dd><%= link_to "#{technology.name}", projects_path %></dd>
+            <% end %>
+          </dl>
+        </div>
 
+        <div class="project_organizations two columns">
+          <p><%= link_to "View Projects by Cause & Organization", organizations_path %></p>
+        </div>
+      </div>
+      
       <div class="projects">
         <% @featured_projects.each do |project| %>
           <div class="row">
