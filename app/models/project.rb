@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
 
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
-
+  
   scope :active, where(:is_active => true)
   scope :featured, where("organization_id IS NOT NULL").active
   

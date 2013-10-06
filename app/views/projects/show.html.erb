@@ -27,7 +27,7 @@
     </div>
 
     <div class="three columns">
-      <%= link_to image_tag(@project.organization.image_url, :alt => @project.organization.name), @project.organization.url, :target => '_blank' unless !@project.organization.image_url.present? %>
+      <%= link_to image_tag(@project.organization.logo.url(:medium), :alt => @project.organization.name), @project.organization.url, :target => '_blank' unless !@project.organization.logo.url.present? %>
       
       <div id="project_causes">
         <h5>Causes</h5>

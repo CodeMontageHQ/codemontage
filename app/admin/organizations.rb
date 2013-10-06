@@ -13,6 +13,7 @@ ActiveAdmin.register Organization do
       f.input :total_staff_size
       f.input :tech_staff_size
       f.input :image_url
+      f.input :logo, :as => :file, :hint => f.template.image_tag(f.object.logo.url(:medium))
       f.input :twitter
       f.input :notes
     end
@@ -40,6 +41,7 @@ ActiveAdmin.register Organization do
       row :total_staff_size
       row :tech_staff_size
       row :image_url
+      row "Logo" do image_tag(organization.logo.url(:thumb)) end
       row :twitter
       row :notes
       row :created_at
