@@ -31,8 +31,8 @@ CodeMontage::Application.routes.draw do
   get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
-  get '/jobs', {:controller => 'home', :action => 'jobs'}
   get '/join', {:controller => 'home', :action => 'join'}
+  get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}
   get '/our_story', {:controller => 'home', :action => 'about'} #preserve old routes
   get '/our_services', {:controller => 'home', :action => 'services'}
   get '/resources', {:controller => 'home', :action => 'resources'}
