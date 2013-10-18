@@ -6,19 +6,25 @@
 
 // Index
 
-#coder_welcome .button {
+#coder_welcome {
 
-  border: $cmPurple;
-  @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
+  .button {
+    border: $cmPurple;
+    @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
 
-  &:hover{
-    @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+    &:hover{
+      @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+    }
+
+    .social.foundicon-github {
+      font-size: 1.8em;
+      vertical-align:middle;
+      margin-right:3px;
+    }
   }
-
-  .social.foundicon-github {
-    font-size: 1.8em;
-    vertical-align:middle;
-    margin-right:3px;
+  
+  #sign_up p {
+    text-align: center;
   }
 }
 
