@@ -1,0 +1,48 @@
+<body>
+  <div class="row">
+    <div class="one column"></div>
+    <div class="ten columns">
+      <h4>Jobs</h4>
+      
+      <p>Full-time, paid opportunities for coders support making an impact on the world through software. View all <%= link_to "supporters", '#hiring_companies' %>.</p>
+
+      <div class="jobs">
+        <div class="row">
+          <div class="job_headline six columns">
+            <h6><%= link_to 'Technical Lead', "/our_jobs" %> at <%= link_to 'ActionCam', "/" %></h6>
+          </div>
+          <div class="job_headline six columns">
+            <h6>{PHP, HTML5, JQuery, JavaScript, WordPress}</h6>  
+          </div>
+        </div>
+        <div class="row">
+          <div class="job_summary ten columns">
+            <p>ActionCam is seeking a volunteer developer to help build a second version of their website that provides summaries of public policy issues and ways the public can act in innovative ways to help solve them. <%= mail_to "hakime@stanfordalumni.org", "Apply to Karen Bhatia", :subject => "Interested in ActionCam Technical Lead Position via CodeMontage" %>.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="job_headline six columns">
+            <h6><%= link_to 'Technical Lead', "/our_jobs" %> at <%= link_to 'ActionCam', "/" %></h6>
+          </div>
+          <div class="job_headline six columns">
+            <h6>{PHP, HTML5, JQuery, JavaScript, WordPress}</h6>  
+          </div>
+        </div>
+        <div class="row">
+          <div class="job_summary ten columns">
+            <p>ActionCam is seeking a volunteer developer to help build a second version of their website that provides summaries of public policy issues and ways the public can act in innovative ways to help solve them. <%= mail_to "hakime@stanfordalumni.org", "Apply to Karen Bhatia", :subject => "Interested in ActionCam Technical Lead Position via CodeMontage" %>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="hiring_companies">
+        <h6>Looking for something else?</h6>
+        <p>Check out the companies below to find coding opportunities for coders who make an impact.</p>
+        <%= link_to image_tag("/assets/cm_header_logo.png", :alt =>"CodeMontage", :size => '75x150'), "/", :target => '_blank' %>
+        <%= link_to image_tag("/assets/cm_header_logo.png", :alt =>"CodeMontage", :size => '75x150'), "/", :target => '_blank' %>
+      </div>
+
+    </div>
+    <div class="one column"></div>
+  </div>
+</body>
