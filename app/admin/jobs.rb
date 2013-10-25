@@ -7,7 +7,7 @@ ActiveAdmin.register Job do
     column :title
     column :overview
     column "Application Link", :sortable => :apply_url do |job|
-      link_to job.apply_url
+      link_to job.apply_url, job.apply_url
     end
     column "Causes", :cause_list
     column "Technologies", :technology_list
