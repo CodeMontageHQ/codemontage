@@ -7,39 +7,31 @@
       <p>Full-time, paid opportunities for coders support making an impact on the world through software. View all <%= link_to "supporters", '#hiring_companies' %>.</p>
 
       <div class="jobs">
-        <div class="row">
-          <div class="job_headline six columns">
-            <h6><%= link_to 'Web Developer', "http://nyayahealth.org/join_us" %> at <%= link_to 'Nyaya Health', "http://nyayahealth.org" %></h6>
+        <% @active_jobs.each do |job| %>
+        <div class="job_post">
+          <div class="job_headline row">
+            <div class="six columns">
+              <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
+            </div>
+            <div class="job_technologies six columns">
+              <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
+            </div>
           </div>
-          <div class="job_headline six columns">
-            <h6>{WordPress, PHP, HTML5, JQuery, JavaScript}</h6>  
-          </div>
-        </div>
-        <div class="row">
-          <div class="job_summary ten columns">
-            <p>Nyaya Heath works to realize the right to health by delivering transparent, data-driven healthcare for Nepal’s rural poor. To apply, send your portfolio of work and an explanation on your interest in bring healthcare to the Nepalese poor: <%= mail_to "humanresources@nyayahealth.org", "Apply to Nyaya Health", :subject => "Interested in Nyaya Heath Technical Lead Position via CodeMontage" %>.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="job_headline six columns">
-            <h6><%= link_to 'Technical Lead', "/our_jobs" %> at <%= link_to 'ActionCam', "/" %></h6>
-          </div>
-          <div class="job_headline six columns">
-            <h6>{PHP, HTML5, JQuery, JavaScript, WordPress}</h6>  
+          <div class="job_summary row">
+            <div class="twelve columns">
+              <p><%= job.overview %></p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="job_summary ten columns">
-            <p>ActionCam is seeking a volunteer developer to help build a second version of their website that provides summaries of public policy issues and ways the public can act in innovative ways to help solve them. <%= mail_to "hakime@stanfordalumni.org", "Apply to Karen Bhatia", :subject => "Interested in ActionCam Technical Lead Position via CodeMontage" %>.</p>
-          </div>
-        </div>
+        <% end %>
       </div>
       
       <div id="hiring_companies">
         <h6>Looking for something else?</h6>
-        <p>Check out the companies below to find coding opportunities for coders who make an impact.</p>
-        <%= link_to image_tag("/assets/cm_header_logo.png", :alt =>"CodeMontage", :size => '75x150'), "/", :target => '_blank' %>
-        <%= link_to image_tag("/assets/cm_header_logo.png", :alt =>"CodeMontage", :size => '75x150'), "/", :target => '_blank' %>
+        <p>Check out the companies below to find job opportunities for coders who make an impact.</p>
+        <% @hiring_orgs.each do |org| %>
+          <%= link_to image_tag(org.image_url, :alt =>org.name, :size => '75x150'), org.url, :target => '_blank' %>
+        <% end %>
       </div>
 
     </div>
