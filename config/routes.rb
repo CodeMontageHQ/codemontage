@@ -24,6 +24,7 @@ CodeMontage::Application.routes.draw do
   resources :services, :only => [:create, :destroy]
   
   # Organizations and project information
+  resources :jobs
   resources :organizations
   resources :projects
   
