@@ -1,4 +1,5 @@
 class Organization < ActiveRecord::Base
+  has_many :jobs
   has_many :projects
   has_many :organization_metrics
   
