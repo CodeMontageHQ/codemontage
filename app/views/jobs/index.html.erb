@@ -30,7 +30,7 @@
         <h6>Looking for something else?</h6>
         <p>Check out the companies below to find job opportunities for coders who make an impact.</p>
         <% @hiring_orgs.each do |org| %>
-          <%= link_to image_tag(org.image_url, :alt =>org.name, :size => '75x150'), org.url, :target => '_blank' %>
+          <%= link_to image_tag(org.image_url, :alt =>org.name, :size => '75x150'), org.url, :target => '_blank' unless !org.image_url.present? %>
         <% end %>
       </div>
 
