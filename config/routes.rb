@@ -24,6 +24,7 @@ CodeMontage::Application.routes.draw do
   resources :services, :only => [:create, :destroy]
   
   # Organizations and project information
+  resources :jobs
   resources :organizations
   resources :projects
   
@@ -31,7 +32,6 @@ CodeMontage::Application.routes.draw do
   get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
-  get '/jobs', {:controller => 'home', :action => 'jobs'} #remove in favor of mvc
   get '/join', {:controller => 'home', :action => 'join'}
   get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}
   get '/our_story', {:controller => 'home', :action => 'about'} #preserve old routes
