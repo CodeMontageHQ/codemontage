@@ -16,8 +16,8 @@ To get started,
 * Install Rails. We recommend [Rails Installer](http://railsinstaller.org).
 * Install Postgres. We recommend [Postgres App](http://postgresapp.com). 
   (If you're using Mac OS X Lion, you may need [this fix for Postgres](http://stackoverflow.com/questions/9354122/how-to-install-postgresql-9-1-on-osx-lion).)
-* Configure the app for your local database by copying *database.yml.sample* to *database.yml* and making any changes needed for your database setup (possiby `rake db:create`). Once your database is created, `rake db:migrate`.
-* Load helpful example data into your local database by running `rake db:seed`
+* Configure the app for your local database by copying *database.yml.sample* to *database.yml* and making any changes needed for your database setup (possibly `rake db:create`). Once your database is created, run `rake db:migrate`.
+* Load helpful example data into your local database by running `rake db:seed`.
 * In your application directory, run `rake secret > secret_token` to create a secret token for your local environment. This file is specific to your machine and will be ignored by git.
 * If you'll be developing around Github login or registration, register your own [Github Oauth Application](https://github.com/settings/applications/new) for development and set your environment variables when you start your server. e.g. `GITHUB_KEY=your_key GITHUB_SECRET=your_secret rails server`
 
