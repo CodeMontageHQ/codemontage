@@ -31,6 +31,7 @@ CodeMontage::Application.routes.draw do
   # Static content 
   get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
+  get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day_of_service'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
   get '/join', {:controller => 'home', :action => 'join'}
   get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}

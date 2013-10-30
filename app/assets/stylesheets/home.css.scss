@@ -4,6 +4,26 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 
+// Coder Day of Service
+
+#mlkd_quote { text-align: right; }
+#mlkd_welcome {
+  text-align: center;
+  p {
+    font-weight: bold;
+  }
+  .event_name { 
+    color: $cmPurple; 
+    font-size: 2em; 
+  }
+}
+#mlkd_info { 
+  .info { 
+    color: $cmPurple; 
+    font-weight: bold; 
+  } 
+}
+
 // Index
 
 #coder_welcome {
