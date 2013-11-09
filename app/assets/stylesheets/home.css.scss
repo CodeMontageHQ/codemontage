@@ -29,11 +29,16 @@
     .info { 
       color: $cmPurple; 
       font-weight: bold; 
-    
-      ul {
-        list-style: arrow;
-      }
     } 
+    
+    table { 
+      border: none; 
+      td.info_label { font-weight: bold; }
+      td ul { 
+        list-style: disc; 
+        margin-left: 20px; 
+      }
+    }
   }
 
   #mlkd_rsvp { .button { border: $cmPurple; } }
