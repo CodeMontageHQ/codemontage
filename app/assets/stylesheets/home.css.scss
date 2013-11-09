@@ -6,22 +6,38 @@
 
 // Coder Day of Service
 
-#mlkd_quote { text-align: right; }
-#mlkd_welcome {
-  text-align: center;
-  p {
-    font-weight: bold;
+.mlkday {
+
+  h6 {font-weight: bold; }
+
+  #mlkd_quote { 
+    background-size: 300px auto;
+    float: right;
   }
-  .event_name { 
-    color: $cmPurple; 
-    font-size: 2em; 
+
+  #mlkd_welcome {
+    text-align: center;
+    p {
+      font-weight: bold;
+    }
+    .event_name { 
+      color: $cmPurple; 
+      font-size: 2em; 
+    }
   }
-}
-#mlkd_info { 
-  .info { 
-    color: $cmPurple; 
-    font-weight: bold; 
-  } 
+  #mlkd_info { 
+    .info { 
+      color: $cmPurple; 
+      font-weight: bold; 
+    
+      ul {
+        list-style: arrow;
+      }
+    } 
+  }
+
+  #mlkd_rsvp { .button { border: $cmPurple; } }
+
 }
 
 // Index

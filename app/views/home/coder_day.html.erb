@@ -1,39 +1,57 @@
 <body>
-  <% content_for :title do %>Coder Day of Service<% end %>
-  <div>
+  <% content_for :title do %>Coder Day of Service by CodeMontage<% end %>
+  <div class="mlkday">
     <div id="mlkd_quote">
-      <blockquote>
-        <p>Life's most persistent and urgent question is: What are you doing for others?</p>
-        <cite>Dr. Martin Luther King Jr.</cite>
-      </blockquote>
+      <%= image_tag "codemontage_mlk_persistent.png", :alt => "Life's most persistent and urgent question is: What are you doing for others? - Martin Luther King, Jr." %>
     </div>
-  </div>
-  <div id="mlkd_welcome" class="row">
-    <div class="six columns centered">
-      <p>Join us January 20, 2014 for a</br>
-        <span class="event_name">{Coder Day of Service}</span></br>
-        powered by CodeMontage</p>
+    <div id="mlkd_welcome" class="row">
+      <div class="six columns centered">
+        <p><strong>Join us January 2014 for a</strong></br>
+          <span class="event_name">{Coder Day of Service}</span></br>
+          powered by CodeMontage</p>
+      </div>
     </div>
-  </div>
-  <div id="mlkd_info" class="row">
-    <div class="ten columns centered">
-      <p><span class="info">{Who}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Over 250 coders, non-profits, and thought leaders coming together for a day of <em>Tech Service</em>.</span></p>
-      <p><span class="info">{When}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Martin Luther King Jr. Weekend 2014 in conjunction with the National Day of Service.</span></p>
-      <p><span class="info">{Why}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Skill-based volunteerism is real and needed. Over 70% of non-profits report needing technology help. CodeMontage believes there is a special call to action for developers: <em>Code for Good</em>.</span></p>
-      <p><span class="info">{How}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>The CodeMontage platform is an open source platform housing social good, humanitarian and non-profit projects enabling coders to give back with a simple fork of a repository.</span></p>
-      <p><span class="info">{You}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>We are actively seeking <em>Corporate Partners</em> to make this Coder Day of Service possible.</span></p>
+    <div id="mlkd_info" class="row">
+      <div class="ten columns centered">
+        <p><strong>{Who}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span><span class="info">Over 250 coders</span>, designers, nonprofits, and thought leaders coming together to <span class="info">Code for Good</span>.</p>
+        <p><strong>{What}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>A day of coders building open source solutions to social problems the CodeMontage way: <span class="info">improving ourselves by improving the world</span>.</p>
+        <p><strong>{When}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>Saturday, January 18 of MLK Weekend 2014, in conjunction with the National Day of Service.</p>
+        <p><strong>{Where}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>Launching in <span class="info">New York City</span>, available worldwide through the <span class="info">CodeMontage platform</span>.</p>
+        <p><strong>{Why}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="info">Giving forward</span> increases coder satisfaction, retention and training:
+            <ul>
+              <li>94% of people who volunteer their skills are happier in their jobs</li>
+              <li>Skills-based volunteers are 142% more likely to report job-related skills-gains</li>
+          </ul>
+        </p>
+      </div>
     </div>
-  </div>
-  <div id="mlkd_tags" class="row">
-    <div class="five columns offset-by-one">
-      <h6>Technologies Represented</h6>
-      <p>HTML, CSS, CoffeeScript, JavaScript, Jekyll, Ruby, Rails, Sinatra, Python, Django, C#, Java, Node.js, PHP, CakePHP, CodeIgniter, Drupal, MySQL, PostgreSQL, Spring, Hibernate, Android, iOS, Chef</p>
+    <div id="mlkd_rsvp" class="row">
+      <div class="four columns offset-by-two">
+        <%= link_to "Count me in!", "http://coderdayofservice.eventbrite.com/?utm_source=codemontage", :class => "medium radius button" %>
+      </div>
     </div>
-    <div class="five columns">
-      <h6>Causes Represented</h6>
-      <p>Civic Engagement, Education, Health, Human Rights, Human Trafficking, International Development, Microfinance, Open Data, Poverty Alleviation, Privacy, Security, Women and Girls&rsquo; Empowerment</p>
+    <div id="mlkd_tags" class="row">
+      <div class="five columns offset-by-one">
+        <h6>Technologies Represented</h6>
+        <p>HTML, CSS, CoffeeScript, JavaScript, Jekyll, Ruby, Rails, Sinatra, Python, Django, C#, Java, Node.js, PHP, CakePHP, CodeIgniter, Drupal, MySQL, PostgreSQL, Spring, Hibernate, Android, iOS, Chef</p>
+      </div>
+      <div class="five columns">
+        <h6>Causes Represented</h6>
+        <p>Civic Engagement, Education, Health, Human Rights, Human Trafficking, International Development, Microfinance, Open Data, Poverty Alleviation, Privacy, Security, Women and Girls&rsquo; Empowerment</p>
+      </div>
+      <div class="one column"></div>
     </div>
-    <div class="one column"></div>
+    <div id="mlkd_sponsors" class="row">
+      <div class="ten columns centered">
+        <h6>Sponsorship Opportunities</h6>
+        <p>Ready to join our movement? We are actively seeking sponsors for the Coder Day of Service and would love to talk to you. <%= mail_to "sponsorships@codemontage.com", "Reach out to us at sponsorships@codemontage.com", :subject => "Interested in Coder Day of Service Sponsorship Opportunities" %></p>
+      </div>
+    </div>
   </div>
   <% content_for(:press) do %>Press<% end %>
 </body>
