@@ -10,9 +10,8 @@ class Organization < ActiveRecord::Base
   validates_presence_of :name, :github_org
 
   #Paperclip
-  has_attached_file :logo, :style => { :thumb => "100x100>", :medium => "250x250>" },
-                    :path => "/assets/images/logos/:class/",
-                    :url  => "/assets/images/logos/:class/:name_:style.:extension"
+  has_attached_file :logo, :styles => { :thumb => "100x100>", :medium => "250x250>" },
+                    :url  => "/system/images/logos/:class/:style/:name.:extension"
 
   accepts_nested_attributes_for :organization_metrics, :projects
 
