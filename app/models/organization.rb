@@ -12,6 +12,8 @@ class Organization < ActiveRecord::Base
   #Paperclip
   has_attached_file :logo, :styles => { :thumb => "100x100>", :medium => "250x250>" },
                     :url  => "/system/images/logos/:class/:style/:name.:extension"
+  validates_attachment_size :logo, :less_than => 5.megabytes
+  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
   accepts_nested_attributes_for :organization_metrics, :projects
 
