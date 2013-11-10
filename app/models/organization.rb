@@ -4,10 +4,15 @@ class Organization < ActiveRecord::Base
   has_many :organization_metrics
   has_many :sponsorships
 
-  attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter
+  attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter, :logo
   attr_accessible :organization_metrics_attributes, :projects_attributes
 
   validates_presence_of :name, :github_org
+
+  #Paperclip
+  has_attached_file :logo, :style => { :thumb => "100x100>", :medium => "250x250>" },
+                    :path => "/assets/images/logos/:class/",
+                    :url  => "/assets/images/logos/:class/:name_:style.:extension"
 
   accepts_nested_attributes_for :organization_metrics, :projects
 
