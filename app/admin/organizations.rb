@@ -13,7 +13,12 @@ ActiveAdmin.register Organization do
       f.input :total_staff_size
       f.input :tech_staff_size
       f.input :image_url
-      f.input :logo, :as => :file, :hint => f.template.image_tag(f.object.logo.url(:thumb))
+      if f.object.logo.exists?
+        f.input :logo, :as => :file, :hint => f.template.image_tag(f.object.logo.url(:thumb))
+        f.input :logo_delete, :as => :boolean, :required => :false, :label => "Delete logo?"
+      else
+        f.input :logo, :as => :file
+      end
       f.input :twitter
       f.input :notes
     end
@@ -41,7 +46,13 @@ ActiveAdmin.register Organization do
       row :total_staff_size
       row :tech_staff_size
       row :image_url
-      row "Logo" do image_tag(organization.logo.url(:thumb)) end
+      row :logo do
+        if organization.logo.exists?
+          image_tag(organization.logo.url(:thumb))
+        else
+          "No image available"
+        end
+      end
       row :twitter
       row :notes
       row :created_at
