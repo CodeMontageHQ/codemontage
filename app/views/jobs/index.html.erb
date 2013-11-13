@@ -2,9 +2,9 @@
   <div class="row">
     <div class="one column"></div>
     <div class="ten columns">
-      <h4>Jobs</h4>
+      <h4>Jobs You've Been Looking For</h4>
       
-      <p>Full-time, paid opportunities for coders support making an impact on the world through software. View all <%= link_to "supporters", '#hiring_companies' %>.</p>
+      <p>Wonder if you can make a difference with <em>most</em> of your time, instead of just your free time? Check out the full-time, paid opportunities below at companies that want to help you make a bigger impact on the world.</p>
 
       <div class="jobs">
         <% @active_jobs.each do |job| %>
@@ -23,14 +23,6 @@
             </div>
           </div>
         </div>
-        <% end %>
-      </div>
-      
-      <div id="hiring_companies">
-        <h6>Looking for something else?</h6>
-        <p>Check out the companies below to find job opportunities for coders who make an impact.</p>
-        <% @hiring_orgs.each do |org| %>
-          <%= link_to image_tag(org.image_url, :alt =>org.name, :size => '75x150'), org.url, :target => '_blank' unless !org.image_url.present? %>
         <% end %>
       </div>
 
