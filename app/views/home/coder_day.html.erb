@@ -1,8 +1,10 @@
 <body>
   <% content_for :title do %>Coder Day of Service by CodeMontage<% end %>
   <div class="mlkday">
-    <div id="mlkd_quote">
-      <%= image_tag "codemontage_mlk_persistent.png", :alt => "Life's most persistent and urgent question is: What are you doing for others? - Martin Luther King, Jr." %>
+    <div id="mlkd_quote" class="row">
+      <div class="twelve columns centered">
+        <%= image_tag "codemontage_mlk_persistent.png", :alt => "Life's most persistent and urgent question is: What are you doing for others? - Martin Luther King, Jr." %>
+      </div>
     </div>
     <div id="mlkd_welcome" class="row">
       <div class="six columns centered">
@@ -32,7 +34,7 @@
           </tr>
           <tr>
             <td class="info_label">{Why}</td>
-            <td><span class="info">Giving forward</span> increases coder satisfaction, retention and training:
+            <td><span class="info">Giving forward</span> increases coder satisfaction, retention and skills development:
               <ul>
                 <li>94% of people who volunteer their skills are happier in their jobs</li>
                 <li>Skills-based volunteers are 142% more likely to report job-related skills-gains</li>
@@ -43,8 +45,8 @@
       </div>
     </div>
     <div id="mlkd_rsvp" class="row">
-      <div class="four columns offset-by-two">
-        <%= link_to "Count me in!", "http://coderdayofservice.eventbrite.com/?utm_source=codemontage", :class => "medium radius button" %>
+      <div class="six columns centered">
+        <%= link_to "RSVP for the Coder Day of Service", "http://coderdayofservice.eventbrite.com/?utm_source=codemontage", :class => "large radius button" %>
       </div>
     </div>
     <div id="mlkd_tags" class="row">
