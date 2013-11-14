@@ -11,8 +11,10 @@
   h6 {font-weight: bold; }
 
   #mlkd_quote { 
-    background-size: 300px auto;
-    float: right;
+    background-size: 350px auto;
+    float: center;
+    padding-bottom: 20px;
+    text-align: center;
   }
 
   #mlkd_welcome {
@@ -35,13 +37,14 @@
       border: none; 
       td.info_label { font-weight: bold; }
       td ul { 
-        list-style: disc; 
-        margin-left: 20px; 
+        list-style: disc;
+        margin-bottom: -20px;
+        margin-left: 20px;
       }
     }
   }
 
-  #mlkd_rsvp { .button { border: $cmPurple; } }
+  #mlkd_rsvp { .button { margin: 30px; } }
 
 }
 
