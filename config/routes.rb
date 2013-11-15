@@ -32,6 +32,7 @@ CodeMontage::Application.routes.draw do
   get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
   get '/coder_day', {:controller => 'home', :action => 'coder_day'}
+  get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day'}
   get '/coderday', {:controller => 'home', :action => 'coder_day'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
   get '/join', {:controller => 'home', :action => 'join'}
