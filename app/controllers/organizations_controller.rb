@@ -5,7 +5,7 @@ class OrganizationsController < ApplicationController
   end
   
   def show
-    @organization = Organization.find_by_id(params[:id])
+    @organization = Organization.find(params[:id])
     @projects = @organization.projects.featured
   end
 end

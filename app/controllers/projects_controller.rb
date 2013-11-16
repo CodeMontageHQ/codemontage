@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by_id(params[:id])
+    @project = Project.find(params[:id])
     @related_projects = @project.related_projects.featured
   end
 end
