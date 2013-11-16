@@ -8,6 +8,9 @@ class Organization < ActiveRecord::Base
 
   accepts_nested_attributes_for :organization_metrics
 
+  include FriendlyId
+  friendly_id :name, use: :slugged
+
   scope :featured, where(Project.where("organization_id = organizations.id").exists).order("name")
   scope :hiring, where(Job.where("organization_id = organizations.id").exists).order("name")
   

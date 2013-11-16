@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131116223958) do
+ActiveRecord::Schema.define(:version => 20131116230945) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -77,7 +77,10 @@ ActiveRecord::Schema.define(:version => 20131116223958) do
     t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
+    t.string   "slug"
   end
+
+  add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
 
   create_table "projects", :force => true do |t|
     t.integer  "organization_id",                   :null => false
