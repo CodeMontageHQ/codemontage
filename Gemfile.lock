@@ -81,6 +81,8 @@ GEM
     foundation-icons-sass-rails (2.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
+    friendly_id (4.0.10.1)
+      activerecord (>= 3.0, < 4.0)
     fssm (0.2.10)
     geocoder (1.1.8)
     gmaps4rails (1.5.6)
@@ -224,6 +226,7 @@ DEPENDENCIES
   compass-rails
   devise
   foundation-icons-sass-rails
+  friendly_id (~> 4.0.10)
   geocoder
   gmaps4rails
   jquery-rails

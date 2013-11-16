@@ -31,12 +31,13 @@
           <p>We believe <%= link_to 'coders can be superheroes', "http://devslovebacon.com/conferences/bacon-2013/talks/developers-are-superheroes-and-so-can-you" %>.</br>
             Join us to find open source, social impact projects that improve the world.</p>
         </div>
-        <div class="six columns">
+        <div id="sign_up" class="six columns">
 		    <% if user_signed_in? %>
           <%= link_to '<i class="general foundicon-website"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius button home-signup" %>
         <% else %>
           <%= link_to '<i class="social foundicon-github"></i> Sign up with Github'.html_safe, "/auth/github", :class => "large radius button home-signup" %>
         <% end %>
+        <p>or, <%= link_to "sign up with an email address", new_user_registration_path %></p>
         </div>
 
       </div>
@@ -62,4 +63,5 @@
       <div class="one column"></div>
     </div>
   </section>
+  <% content_for(:press) do %>Press<% end %>
 </body>

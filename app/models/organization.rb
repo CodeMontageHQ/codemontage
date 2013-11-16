@@ -1,4 +1,5 @@
 class Organization < ActiveRecord::Base
+  has_many :jobs
   has_many :projects
   has_many :organization_metrics
   
@@ -7,8 +8,12 @@ class Organization < ActiveRecord::Base
 
   accepts_nested_attributes_for :organization_metrics
 
-  scope :featured, where(Project.where("organization_id = organizations.id").exists).order("name")
+  include FriendlyId
+  friendly_id :name, use: :slugged
 
+  scope :featured, where(Project.where("organization_id = organizations.id").exists).order("name")
+  scope :hiring, where(Job.where("organization_id = organizations.id").exists).order("name")
+  
   def display_url
     display_url = self.url.gsub(/^https?:\/\//,"")
   end
