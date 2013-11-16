@@ -23,5 +23,5 @@
 # Ignore all Mac helper files
 *.DS_Store
 
-# Ignore RVM files
-.rvmrc
+# Ignore ruby version files
+.ruby-version
