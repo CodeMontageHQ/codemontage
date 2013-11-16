@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131025145947) do
+ActiveRecord::Schema.define(:version => 20131116223958) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -88,7 +88,10 @@ ActiveRecord::Schema.define(:version => 20131025145947) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.boolean  "is_active",       :default => true, :null => false
+    t.string   "slug"
   end
+
+  add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true
 
   create_table "services", :force => true do |t|
     t.integer  "user_id",    :null => false
