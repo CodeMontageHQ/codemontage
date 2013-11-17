@@ -18,6 +18,9 @@ gem 'simple_form'
 
 # Data & Features
 gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'friendly_id', '~> 4.0.10'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 # Test Suite
 group :development, :test do 

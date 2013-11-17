@@ -4,21 +4,71 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 
-// Index
+// Coder Day of Service
 
-#coder_welcome .button {
+.mlkday {
 
-  border: $cmPurple;
-  @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
+  h6 {font-weight: bold; }
 
-  &:hover{
-    @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+  #mlkd_quote { 
+    background-size: 350px auto;
+    float: center;
+    padding-bottom: 20px;
+    text-align: center;
   }
 
-  .social.foundicon-github {
-    font-size: 1.8em;
-    vertical-align:middle;
-    margin-right:3px;
+  #mlkd_welcome {
+    text-align: center;
+    p {
+      font-weight: bold;
+    }
+    .event_name { 
+      color: $cmPurple; 
+      font-size: 2em; 
+    }
+  }
+  #mlkd_info { 
+    .info { 
+      color: $cmPurple; 
+      font-weight: bold; 
+    } 
+    
+    table { 
+      border: none; 
+      td.info_label { font-weight: bold; }
+      td ul { 
+        list-style: disc;
+        margin-bottom: -20px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  #mlkd_rsvp { .button { margin: 30px; } }
+
+}
+
+// Index
+
+#coder_welcome {
+
+  .button {
+    border: $cmPurple;
+    @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
+
+    &:hover{
+      @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+    }
+
+    .social.foundicon-github {
+      font-size: 1.8em;
+      vertical-align:middle;
+      margin-right:3px;
+    }
+  }
+  
+  #sign_up p {
+    text-align: center;
   }
 }
 
@@ -26,9 +76,51 @@
   margin-top:25px;
 }
 
-#mission {padding-bottom: 30px;}
+#mission {
 
-#secondary_welcomes {padding-bottom: 30px;}
+  padding: 30px 0 30px 0;
+
+  img {
+    height: 190px;
+    width: auto;
+  }
+
+  .mission_text {
+    font-size: 2em;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+ }
+  
+  #cm_logo_code {
+    color: $cmPurple;
+    font-family: Rockwell;
+  }
+
+  #cm_logo_montage {
+    color: $cmTeal;
+    font-family: Courgette;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  #mission {
+
+    img { height: 350px; }
+    .mission_text { font-size: 1.7em; }
+
+  }
+}
+
+#secondary_welcome {
+  padding: 10px;
+  padding-bottom: 30px;
+  
+  .button {
+    margin-left: 75px;
+  }
+}
 
 
 // Our Story

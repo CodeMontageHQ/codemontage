@@ -24,15 +24,20 @@ CodeMontage::Application.routes.draw do
   resources :services, :only => [:create, :destroy]
   
   # Organizations and project information
+  resources :jobs
   resources :organizations
   resources :projects
   
   # Static content 
+  get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
+  get '/coder_day', {:controller => 'home', :action => 'coder_day'}
+  get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day'}
+  get '/coderday', {:controller => 'home', :action => 'coder_day'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
-  get '/jobs', {:controller => 'home', :action => 'jobs'}
   get '/join', {:controller => 'home', :action => 'join'}
-  get '/our_story', {:controller => 'home', :action => 'our_story'}
+  get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}
+  get '/our_story', {:controller => 'home', :action => 'about'} #preserve old routes
   get '/our_services', {:controller => 'home', :action => 'services'}
   get '/resources', {:controller => 'home', :action => 'resources'}
   get '/training', {:controller => 'home', :action => 'training'}

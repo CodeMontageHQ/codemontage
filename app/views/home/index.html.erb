@@ -1,9 +1,22 @@
 <body>
   <section>
-    <div id="mission" class="row">
-      
-      <div class="ten columns centered">
-        <%= image_tag("cm_mission.png") %>
+    <div class="row">
+
+      <div id="mission" class="ten columns centered row">
+          <%= image_tag("left_curly.jpg", :class => "mobile-one two columns") %>
+          <span class="mission_text mobile-two nine columns">
+            <span id="cm_logo_code">{code}</span> 
+            <span id="cm_logo_montage">montage</span> 
+            empowers 
+            <span id="coders" title="software developers, engineers, hackers, anyone who leverages computer programming">
+              <strong>coders</strong>
+            </span> 
+            to improve their 
+            <span id="impact" title="success, difference, good accomplished">
+              <strong>impact</strong>
+            </span> on the world.
+          </span>
+          <%= image_tag("right_curly.jpg", :class => "mobile-one two columns") %>
       </div>
       
     </div>
@@ -15,10 +28,16 @@
 
         <div class="six columns">
           <h2>Ready to change the world?</h2>
-          <p>Tired of side projects that just don't matter? <%= link_to "Join our collective", new_user_registration_path %> of do-gooder coders and choose an <%= link_to "open source project", projects_path %> to get started. Together we can change the world. </p>
+          <p>We believe <%= link_to 'coders can be superheroes', "http://devslovebacon.com/conferences/bacon-2013/talks/developers-are-superheroes-and-so-can-you" %>.</br>
+            Join us to find open source, social impact projects that improve the world.</p>
         </div>
-        <div class="five columns offset-by-one">
-		<%= link_to '<i class="social foundicon-github"></i> Start Coding'.html_safe, user_signed_in? ? projects_path : new_user_registration_path, :class => "large radius button home-signup" %>
+        <div id="sign_up" class="six columns">
+		    <% if user_signed_in? %>
+          <%= link_to '<i class="general foundicon-website"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius button home-signup" %>
+        <% else %>
+          <%= link_to '<i class="social foundicon-github"></i> Sign up with Github'.html_safe, "/auth/github", :class => "large radius button home-signup" %>
+        <% end %>
+        <p>or, <%= link_to "sign up with an email address", new_user_registration_path %></p>
         </div>
 
       </div>
@@ -29,19 +48,20 @@
     </div>
   </section>
   <section>
-    <div id="secondary_welcomes" class="row">
+    <div id="secondary_welcome" class="row">
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
-        <h3>Need help changing the world?</h3>
-        <p>Interested in accelerating your organization's social impact with technology? <%= mail_to "projects@codemontage.com", "Submit your project today", :subject => "Social Impact Project for CodeMontage" %> or check out <%= link_to "our services", our_services_path %> to learn more about how open innovation can work for you.</p>
-        <%= link_to "Social Mission Organization Services", our_services_path, :class => "small radius button" %>
+        <h3>Submit an open source project</h3>
+        <p>Working on software to save the world? We'd love to help! Let us know the Github repository and we'll take it from there.</p>
+        <%= mail_to "projects@codemontage.com", "Submit a Project", :subject => "Social Impact Project for CodeMontage", :class => "medium radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
-        <h3>Building a team of coders?</h3>
-        <p>Have high potential employees ready to level up their coding skills? Ready to help your coders save the world? Check out <%= link_to "our programs", training_path %> for interns, apprentices, and teams.</p>
-        <%= link_to "Technology Team Training Programs", training_path, :class => "small radius button" %>
+        <h3>Support coding for social good</h3>
+        <p>Want to hire or connect with superhero software developers? Reach out to learn about our Corporate Partnerships.</p>
+        <%= mail_to "partnerships@codemontage.com", "Support Coders", :subject => "Interested in Corporate Partnership", :class => "medium radius button" %>
       </div>
       <div class="one column"></div>
     </div>
   </section>
+  <% content_for(:press) do %>Press<% end %>
 </body>

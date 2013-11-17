@@ -23,6 +23,14 @@ class User < ActiveRecord::Base
   validates_presence_of :email    # will run in all validation contexts
   validates_uniqueness_of :email  # will run in all validation contexts
   
+  # Location from IP
+  geocoded_by :current_sign_in_ip
+  reverse_geocoded_by :latitude, :longitude, :address => :location
+  after_validation :geocode, :reverse_geocode, :if => :current_sign_in_ip_changed?
+
+  # Location mapping
+  acts_as_gmappable :process_geocoding => false #processed by geocoder, no need to repeat
+
   scope :with_github, where(Service.where('services.user_id = users.id AND provider = ?', "github").exists)
   
   def encrypt_password
