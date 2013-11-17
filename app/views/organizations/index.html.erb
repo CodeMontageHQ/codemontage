@@ -15,7 +15,7 @@
             <% featured_array.each do |featured| %>
             <h5><strong>  
               <% if featured.image_url? %>
-                <%= link_to (image_tag featured.image_url, :size => "150x150"), organization_path(featured) %>
+                <%= link_to (image_tag featured.image_url, :width => "150px"), organization_path(featured) %>
               <% else %>
                 <%= link_to featured.name, organization_path(featured) %>
               <% end %>
