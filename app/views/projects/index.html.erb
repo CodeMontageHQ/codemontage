@@ -5,7 +5,6 @@
       <div class="browse row">
         <div class="project_technologies ten columns">
           <dl class="sub-nav">
-            <!-->TODO: Show only projects tagged with technology + highlight technology as class="active" when selected <-->
             <dd class="active"><%= link_to "All", projects_path %></dd>
             <% @featured_technologies.each do |technology| %>
               <dd><%= link_to "#{technology.name}", projects_path %></dd>
