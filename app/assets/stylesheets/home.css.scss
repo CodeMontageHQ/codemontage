@@ -1,5 +1,6 @@
 @import "compass";
 @import "colors";
+@import url(http://fonts.googleapis.com/css?family=Courgette);
 
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
@@ -94,7 +95,8 @@
   
   #cm_logo_code {
     color: $cmPurple;
-    font-family: Rockwell;
+    font-family: Rockwell, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
+
   }
 
   #cm_logo_montage {
