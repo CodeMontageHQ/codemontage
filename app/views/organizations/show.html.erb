@@ -20,6 +20,30 @@
         <p><%= @organization.description %></p>
         </br>
       </div>
+      <% if @jobs.present? %>
+      <div id="org_jobs">
+        <h4>Jobs</h4>
+        <div id="job_posts">
+          <% @jobs.each do |job| %>
+            <div class="job_post">
+              <div class="job_headline row">
+                <div class="job_highlight six columns">
+                  <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
+                </div>
+                <div class="job_technologies six columns">
+                  <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
+                </div>
+              </div>
+              <div class="job_summary row">
+                <div class="twelve columns">
+                  <p><%= job.overview %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
       <div id="org_projects">
         <h4>Projects</h4>
 
