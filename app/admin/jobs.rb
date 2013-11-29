@@ -9,6 +9,7 @@ ActiveAdmin.register Job do
     column "Application Link", :sortable => :apply_url do |job|
       link_to job.apply_url, job.apply_url
     end
+    column :location
     column "Causes", :cause_list
     column "Technologies", :technology_list
     column "Expires", :expires_at
@@ -24,6 +25,7 @@ ActiveAdmin.register Job do
       f.input :title
       f.input :overview
       f.input :apply_url
+      f.input :location
       f.input :cause_list, :label => "Causes"
       f.input :technology_list, :label => "Technologies"
       f.input :expires_at, :as => :datepicker, :label => "Expires"
@@ -38,6 +40,7 @@ ActiveAdmin.register Job do
       row :title
       row :overview
       row :apply_url
+      row :location
       row "Causes" do ad.cause_list end
       row "Technologies" do ad.technology_list end
       row "Expires" do ad.expires_at end

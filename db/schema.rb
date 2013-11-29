@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131116230945) do
+ActiveRecord::Schema.define(:version => 20131129042911) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(:version => 20131116230945) do
     t.datetime "expires_at"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "jobs", ["expires_at"], :name => "index_jobs_on_expires_at"
@@ -78,6 +81,10 @@ ActiveRecord::Schema.define(:version => 20131116230945) do
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
     t.string   "slug"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
