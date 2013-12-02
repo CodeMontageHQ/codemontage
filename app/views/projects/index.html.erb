@@ -4,7 +4,8 @@
     <div class="ten columns">
       <h4>Projects</h4>
       
-      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.</p>
+      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
+        Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
 
       <div class="projects">
         <% @featured_projects.each do |project| %>
@@ -17,9 +18,9 @@
             <div class="project_links two columns">
               </br>
               <ul>
-                <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code Now", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
-                <li><%= link_to '<i class="general foundicon-calendar"></i> '.html_safe + "Code Later", code_later_url, :target => '_blank' %></li>
-                <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "Follow", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
+                <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+                <li><%= link_to '<i class="general foundicon-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
+                <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
               </ul>
             </div>
 
