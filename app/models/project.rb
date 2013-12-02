@@ -26,4 +26,8 @@ class Project < ActiveRecord::Base
     projects = self.organization.projects.where("id NOT IN (?)", self.id)
   end
 
+  def tasks_url
+    tasks_url = self.organization.github_url + "/" + self.github_repo + "/issues"
+  end  
+
 end
