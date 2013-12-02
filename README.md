@@ -1,11 +1,17 @@
 ##Welcome to the CodeMontage Platform
 
-**[CodeMontage](http://codemontage.com) is on a mission to help you become a software superhero.**
+**[CodeMontage](http://codemontage.com) empowers coders to improve their impact on the world.**
 
-We believe coding can help save the world, and that by contributing to the right open source, real world projects, you can become a great coder.
+We believe coding can help save the world. With this platform, we aim to help coders everywhere find and contribute to open source projects that improve the world and make us better coders.
 
-If you'd like to join our quest to empower software superheroes, feel free to submit a pull request or reach out to us at hello@codemontage.com.
+Join our mission to create superhero coders! You can get involved by taking any of the following actions:
 
+1. [Register for CodeMontage](http://codemontage.com/auth/github).
+2. [Follow us on Twitter](http://twitter.com/CodeMontage).
+3. Be the change you wish to see by submitting a [pull request](https://github.com/CodeMontageHQ/codemontage/pulls/new) to improve the platform.
+4. Suggest an improvement by opening an [issue](https://github.com/CodeMontageHQ/codemontage/issues/new). 
+(We recommend including [emojis](http://www.emoji-cheat-sheet.com) for maximum effectiveness.)
+5. Reach out to us at hello@codemontage.com.
 
 
 ###Development Environment Setup
