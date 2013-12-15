@@ -12,15 +12,6 @@ html, body {height: 100%;}
   background: #1E1E1E;
   clear:both;
 
-  ul>li { margin-left: 0px; padding-left: 20px;}
-  ul>li a {
-    border-right: 1px solid $cmDarkGrey;
-    color: $cmLightGrey;
-    font-size: .9em;
-    padding-right: 20px;
-  }
-  ul>li a:hover {color: $cmTeal;}
-
   .footer_legal div {
     color: darken($cmLightGrey, 10%);
     font-size: 14px;
@@ -31,13 +22,22 @@ html, body {height: 100%;}
   }
 
   .footer_links {
+    ul>li { margin-left: 0px; padding-left: 20px;}
+    ul>li a {
+      border-right: 1px solid $cmDarkGrey;
+      color: $cmLightGrey;
+      font-size: .9em;
+      padding-right: 20px;
+    }
+    ul>li a:hover {color: $cmTeal;}
+    ul>li:last-child a {
+      padding-right: 0;
+      border-right: none;
+    }
+
     padding: 20px 0 20px 0;
   }
-  .footer_links ul>li:last-child a {
-    padding-right: 0;
-    border-right: none;
-  }
-    
+
   .wepay-custom-button {
     background-color: #1E1E1E !important;
     background-image: none !important;
