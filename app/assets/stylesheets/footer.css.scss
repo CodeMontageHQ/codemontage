@@ -12,13 +12,16 @@ html, body {height: 100%;}
   background: #1E1E1E;
   clear:both;
 
-  .footer_legal div {
-    color: darken($cmLightGrey, 10%);
-    font-size: 14px;
-    text-align: right;
+  .footer_legal div ul {
+    float: right;
+
+    li {
+      color: darken($cmLightGrey, 10%);
+      font-size: 14px;
     
-    a { color: darken($cmLightGrey, 10%); }
-    a:hover { color: $cmTeal; }
+      a { color: darken($cmLightGrey, 10%); }
+      a:hover { color: $cmTeal; }
+    }
   }
 
   .footer_links {

@@ -13,8 +13,12 @@
   </div>
   <div class="footer_legal row">
     <div class="ten columns centered">
-      <%= link_to "Made in NYC", "http://nytm.org/made" %>
-      <%= "© #{Time.now.year} Code for Humanity, LLC" %>
+      <ul class="inline-list">
+        <li><%= link_to "Made in NYC", "http://nytm.org/made" %></li>
+        <li><%= "© #{Time.now.year} Code for Humanity, LLC" %></li>
+        <li><a href="https://www.iubenda.com/privacy-policy/772413" class="iubenda-black iubenda-embed" title="Privacy Policy">Privacy Policy</a></li>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+      </ul>
     </div>
   </div>
 </div>
