@@ -26,7 +26,7 @@ To get started,
 * Configure the app for your local database by copying *database.yml.sample* to *database.yml* and making any changes needed for your database setup (possibly `rake db:create`).
 * Once your database is created, run `rake db:migrate`.
 * Load helpful example data into your local database by running `rake db:seed`.
-* If you'll be developing around Github login or registration, register your own [Github Oauth Application](https://github.com/settings/applications/new) for development (use http://localhost:3000/auth for Authorization Callback) and set your environment variables when you start your server. e.g. `GITHUB_KEY=your_key GITHUB_SECRET=your_secret rails server`
+* If you'll be developing GitHub-related functionality, [register a GitHub API Application](https://github.com/settings/applications/new) using *Homepage URL* http://localhost:3000 and *Authorization callback URL* http://localhost:3000/auth/github/callback. Next, set your GitHub-related environment variables when you start your server. e.g. `GITHUB_KEY=client_id GITHUB_SECRET=client_secret rails server`. You can find the *Client ID* and *Client Secret* for your application from the [Applications page](http://github.com/settings/applications).
 
 Once you've installed these dependencies, test your setup by running `rails server` and visiting your site at [http://localhost:3000](http://localhost:3000)
 
