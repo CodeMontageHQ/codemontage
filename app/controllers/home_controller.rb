@@ -6,4 +6,7 @@ class HomeController < ApplicationController
     @favorite_projects = current_user.favorites
   end
 
+  def coder_day 
+    @sponsors = Organization.sponsors
+  end
 end

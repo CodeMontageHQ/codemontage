@@ -64,6 +64,28 @@
       <div class="ten columns centered">
         <h6>Sponsorship Opportunities</h6>
         <p>Ready to join our movement? We are actively seeking sponsors for the Coder Day of Service and would love to talk to you. Reach out to us at <%= mail_to "sponsorships@codemontage.com", "sponsorships@codemontage.com", :subject => "Interested in Coder Day of Service Sponsorship Opportunities" %></p>
+
+        <h6>Coder Day of Service Sponsors</h6>
+        <div class="sponsors row">
+          <!-- split organizations to display into groups based on three column design -->
+          <% @featured_split = (@sponsors.count / 3) + 1 %> 
+
+          <% @sponsors.in_groups_of(@featured_split, false).each do |featured_array| %>
+            <div class="four columns">
+              <% featured_array.each do |featured| %>
+              <h5><strong>  
+                <% if featured.image_url? %>
+                  <%= link_to (image_tag featured.image_url, :width => "150px"), featured.url %>
+                <% else %>
+                  <%= link_to featured.name, organization_path(featured) %>
+                <% end %>
+              <strong></h5>
+              <% end %>
+
+            </div>
+          <% end %>
+        </div>
+        
       </div>
     </div>
   </div>
