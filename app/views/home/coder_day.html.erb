@@ -67,21 +67,15 @@
 
         <h6>Coder Day of Service Sponsors</h6>
         <div class="sponsors row">
-          <!-- split organizations to display into groups based on three column design -->
-          <% @featured_split = (@sponsors.count / 3) + 1 %> 
-
-          <% @sponsors.in_groups_of(@featured_split, false).each do |featured_array| %>
+          <% @sponsors.each do |featured| %>
             <div class="four columns">
-              <% featured_array.each do |featured| %>
-              <h5><strong>  
+                <h5>
                 <% if featured.image_url? %>
-                  <%= link_to (image_tag featured.image_url, :width => "150px"), featured.url %>
+                  <%= link_to (image_tag featured.image_url), featured.url %>
                 <% else %>
                   <%= link_to featured.name, organization_path(featured) %>
                 <% end %>
-              <strong></h5>
-              <% end %>
-
+                </h5>
             </div>
           <% end %>
         </div>
