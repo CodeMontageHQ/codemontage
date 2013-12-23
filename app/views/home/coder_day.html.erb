@@ -8,7 +8,7 @@
     </div>
     <div id="mlkd_welcome" class="row">
       <div class="six columns centered">
-        <p><strong>Join us January 2014 for a</strong></br>
+        <p><strong>Join us January 18, 2014 for a</strong></br>
           <span class="event_name">{Coder Day of Service}</span></br>
           powered by CodeMontage</p>
       </div>
@@ -22,7 +22,7 @@
           </tr>
           <tr>
             <td class="info_label">{What}</td>
-            <td><span>A day of coders building open source solutions to social problems the CodeMontage way: <span class="info">improving ourselves by improving the world</span>.</td>
+            <td><span>A day of coders building open source solutions to social problems the CodeMontage way: <span class="info">improving our skills by improving the world</span>.</td>
           </tr>
           <tr>
             <td class="info_label">{When}</td>
@@ -64,6 +64,22 @@
       <div class="ten columns centered">
         <h6>Sponsorship Opportunities</h6>
         <p>Ready to join our movement? We are actively seeking sponsors for the Coder Day of Service and would love to talk to you. Reach out to us at <%= mail_to "sponsorships@codemontage.com", "sponsorships@codemontage.com", :subject => "Interested in Coder Day of Service Sponsorship Opportunities" %></p>
+
+        <h6>Coder Day of Service Sponsors</h6>
+        <div class="sponsors row">
+          <% @sponsors.each do |featured| %>
+            <div class="four columns">
+                <h5>
+                <% if featured.image_url? %>
+                  <%= link_to (image_tag featured.image_url), featured.url %>
+                <% else %>
+                  <%= link_to featured.name, organization_path(featured) %>
+                <% end %>
+                </h5>
+            </div>
+          <% end %>
+        </div>
+        
       </div>
     </div>
   </div>
