@@ -11,8 +11,8 @@ class Project < ActiveRecord::Base
   include FriendlyId
   friendly_id :name, use: :slugged
 
-  scope :active, where(:is_active => true)
   scope :approved, where(:is_approved => true)
+  scope :active, approved.where(:is_active => true)
   scope :featured, where("organization_id IS NOT NULL").active
   
   def github_display
