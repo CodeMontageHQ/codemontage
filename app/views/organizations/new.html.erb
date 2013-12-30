@@ -1,0 +1,30 @@
+<body>
+  
+  <h2>Submit Your Project</h2>
+
+  <%= simple_form_for @organization do |f| %>  
+  	<div class="form-inputs">
+	    <%= f.input :name, :label => 'Organization Name' %>
+	    <%= f.input :github_org, :label => 'Organization Github Username' %>
+	    <%= f.input :url, :label => 'Organization URL', :required => false,
+	    																								:as => :url %>
+	    <%= f.input :contact_name, :placeholder => 'Who should we talk to for more info?' %>
+	    <%= f.input :contact_role, :label => 'Contact Title',
+	    													 :placeholder => 'What do they do at the org?' %>
+	    <%= f.input :contact_email, :as => :email %>
+	    
+	    <%= f.simple_fields_for :projects do |project| %>
+	    	<%= project.input :name, :label => 'Project Name' %>
+	    	<%= project.input :github_repo, :placeholder => 'Just the repo name, please...' %>
+	    	<%= project.input :description, :placeholder => 'What does your project do?',
+	    																	:as => :text %>
+	    <% end %>
+    </div>
+
+    <div class="form-actions">
+    	<%= f.button :submit, 'Submit Your Project', :class => "small radius button" %>
+    </div>
+  <% end %>
+
+
+</body>
