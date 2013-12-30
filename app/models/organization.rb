@@ -7,6 +7,8 @@ class Organization < ActiveRecord::Base
   attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter
   attr_accessible :organization_metrics_attributes, :projects_attributes
 
+  validates_presence_of :name, :github_org
+
   accepts_nested_attributes_for :organization_metrics, :projects
 
   include FriendlyId
