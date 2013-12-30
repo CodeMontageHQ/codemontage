@@ -11,6 +11,7 @@ ActiveAdmin.register Project do
     column "Technologies", :technology_list
     column :notes
     column "Active?", :is_active
+    column "Approved?", :is_approved
     column :created_at
     column :updated_at
     
@@ -27,6 +28,7 @@ ActiveAdmin.register Project do
       f.input :technology_list, :label => "Technologies"
       f.input :notes
       f.input :is_active, :label => "Active?"
+      f.input :is_approved, :label => "Approved?"
     end
     
     f.buttons
@@ -42,6 +44,7 @@ ActiveAdmin.register Project do
       row "Technologies" do ad.technology_list end
       row :notes
       row "Active?" do ad.is_active end
+      row "Approved?" do ad.is_approved end
       row :created_at
       row :updated_at
     end
