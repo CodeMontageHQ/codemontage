@@ -70,7 +70,7 @@
       <div id="org_welcome" class="five columns">
         <h3>Submit an open source project</h3>
         <p>Working on software to save the world? We'd love to help! Let us know the Github repository and we'll take it from there.</p>
-        <%= mail_to "projects@codemontage.com", "Submit a Project", :subject => "Social Impact Project for CodeMontage", :class => "medium radius button" %>
+        <%= link_to "Submit a Project", new_organization_path, :class => "medium radius button" %>
       </div>
       <div id="company_welcome" class="five columns">
         <h3>Support coding for social good</h3>
