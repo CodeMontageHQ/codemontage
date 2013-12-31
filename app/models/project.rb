@@ -3,7 +3,8 @@ class Project < ActiveRecord::Base
   acts_as_ordered_taggable
   acts_as_ordered_taggable_on :technologies, :causes
   
-  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list, :is_active
+  attr_accessible :organization_id, :name, :github_repo, :description, :notes, :cause_list, :technology_list, :is_active, :is_approved
+  validates_presence_of :name, :github_repo
 
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
@@ -11,7 +12,8 @@ class Project < ActiveRecord::Base
   include FriendlyId
   friendly_id :name, use: :slugged
 
-  scope :active, where(:is_active => true)
+  scope :approved, where(:is_approved => true)
+  scope :active, approved.where(:is_active => true)
   scope :featured, where("organization_id IS NOT NULL").active
   
   def github_display
