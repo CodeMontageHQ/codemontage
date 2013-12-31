@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :force_www!
 
   def after_sign_in_path_for(resource)
     projects_path
@@ -22,5 +23,13 @@ class ApplicationController < ActionController::Base
   def login_required
     redirect_to '/' unless current_user.present?
     return false
+  end
+
+  protected
+
+  def force_www!
+    if Rails.env.production? and request.host[0..3] != "www."
+      redirect_to "https://www.#{request.host_with_port}#{request.fullpath}", :status => 301
+    end
   end
 end
