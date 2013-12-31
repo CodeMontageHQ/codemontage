@@ -1,0 +1,31 @@
+<body>
+  
+  <h2>Submit Your Project</h2>
+
+  <%= simple_form_for @organization do |f| %>  
+  	<div class="form-inputs">
+	    <%= f.simple_fields_for :projects do |project| %>
+	    	<%= project.input :name, :label => 'Project Name' %>
+	    	<%= project.input :github_repo, :placeholder => 'Just the repo name, please...' %>
+	    	<%= project.input :description, :placeholder => 'What does your project do?' %>
+	    <% end %>
+
+	    <%= f.input :name, :label => 'Organization Name' %>
+	    <%= f.input :github_org, :label => 'Organization Github Username' %>
+	    <%= f.input :url, :label => 'Organization Website', :required => false,
+	    																								:as => :url %>
+	    <%= f.input :contact_name, :label => 'Contact Name',
+	    													 :placeholder => 'Who should we talk to for more info?' %>
+	    <%= f.input :contact_role, :label => 'Contact Title',
+	    													 :placeholder => 'What do they do at the org?' %>
+	    <%= f.input :contact_email, :label => 'Contact Email', :as => :email %>
+    </div>
+
+    <div class="form-actions">
+    	<%= f.button :submit, 'Submit Your Project', :class => "small radius button" %>
+    </div>
+  <% end %>
+
+  <p>Already a Codemontage Organization? <%= mail_to "projects@codemontage.com", "Submit Your New Project", :subject => "New project for my organization" %></p>
+
+</body>
