@@ -26,6 +26,7 @@ gem 'gmaps4rails'
 # Test Suite
 group :development, :test do 
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :test do
