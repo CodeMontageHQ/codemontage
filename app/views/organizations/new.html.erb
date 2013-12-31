@@ -6,12 +6,12 @@
   	<div class="form-inputs">
 	    <%= f.simple_fields_for :projects do |project| %>
 	    	<%= project.input :name, :label => 'Project Name' %>
-	    	<%= project.input :github_repo, :placeholder => 'Just the repo name, please...' %>
+	    	<%= project.input :github_repo, :label => 'GitHub Repository', :placeholder => 'Just the repo name, please...' %>
 	    	<%= project.input :description, :placeholder => 'What does your project do?' %>
 	    <% end %>
 
 	    <%= f.input :name, :label => 'Organization Name' %>
-	    <%= f.input :github_org, :label => 'Organization Github Username' %>
+	    <%= f.input :github_org, :label => 'Organization GitHub Username' %>
 	    <%= f.input :url, :label => 'Organization Website', :required => false,
 	    																								:as => :url %>
 	    <%= f.input :contact_name, :label => 'Contact Name',
@@ -26,6 +26,6 @@
     </div>
   <% end %>
 
-  <p>Already a Codemontage Organization? <%= mail_to "projects@codemontage.com", "Submit Your New Project", :subject => "New project for my organization" %></p>
+  <p>Already a CodeMontage Organization? <%= mail_to "projects@codemontage.com", "Submit Your New Project", :subject => "New project for my organization" %></p>
 
 </body>
