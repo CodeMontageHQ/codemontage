@@ -1,13 +1,21 @@
 class Organization < ActiveRecord::Base
+  before_save :delete_logo
+
   has_many :jobs
   has_many :projects
   has_many :organization_metrics
   has_many :sponsorships
 
-  attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter
+  attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter, :logo, :logo_delete
   attr_accessible :organization_metrics_attributes, :projects_attributes
 
   validates_presence_of :name, :github_org
+
+  #Paperclip
+  has_attached_file :logo, :styles => { :thumb => "100x100>", :medium => "250x250>" },
+                    :url  => "/system/images/logos/:class/:style/:id_:basename.:extension"
+  validates_attachment_size :logo, :less_than => 5.megabytes
+  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
   accepts_nested_attributes_for :organization_metrics, :projects
 
@@ -30,5 +38,17 @@ class Organization < ActiveRecord::Base
   def twitter_url
     twitter_url = ("http://twitter.com/" + self.twitter) unless self.twitter.blank?
   end
-  
+
+  def logo_delete
+    @logo_delete || '0'
+  end
+
+  def logo_delete=(str)
+      @logo_delete = str
+  end
+
+  private
+    def delete_logo
+      self.logo.clear if self.logo_delete == '1'
+    end
 end
