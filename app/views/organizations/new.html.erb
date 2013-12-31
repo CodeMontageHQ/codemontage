@@ -1,6 +1,6 @@
 <body>
   
-  <h2>Submit Your Project</h2>
+  <h2>Submit a Project</h2>
 
   <%= simple_form_for @organization do |f| %>  
   	<div class="form-inputs">
@@ -22,10 +22,10 @@
     </div>
 
     <div class="form-actions">
-    	<%= f.button :submit, 'Submit Your Project', :class => "small radius button" %>
+    	<%= f.button :submit, 'Submit a Project', :class => "small radius button" %>
     </div>
   <% end %>
 
-  <p>Already a CodeMontage Organization? <%= mail_to "projects@codemontage.com", "Submit Your New Project", :subject => "New project for my organization" %></p>
+  <p>Already a CodeMontage Organization? <%= mail_to "projects@codemontage.com", "Submit a New Project", :subject => "New project for my organization" %></p>
 
 </body>
