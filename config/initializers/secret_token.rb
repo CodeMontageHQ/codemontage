@@ -5,18 +5,16 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 
-begin 
-    if ENV['SECRET_TOKEN'] then
-      CodeMontage::Application.configure do
-          config.secret_token = ENV['SECRET_TOKEN']
-      end
-    else
-      token_file = Rails.root.to_s + "/secret_token"
-      to_load = open(token_file).read
-      CodeMontage::Application.configure do
-          config.secret_token = to_load
-      end
-    end
+begin
+  CodeMontage::Application.config.secret_token = if !Rails.env.production?
+    ('x' * 30) # meets minimum requirement of 30 chars long
+  elsif ENV['SECRET_TOKEN'] then
+    ENV['SECRET_TOKEN'] # set secret_token from ENV
+  else
+    token_file = Rails.root.to_s + "/secret_token"
+    to_load = open(token_file).read
+    to_load # set secret_token from file
+  end
 rescue LoadError, Errno::ENOENT => e
-    raise "Secret token couldn't be loaded! Error: #{e}"
+  raise "Secret token couldn't be loaded! Error: #{e}"
 end
