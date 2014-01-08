@@ -30,7 +30,15 @@ APP = {
     index: function() {
 
     }
-  }
+  },
+  projects: {
+		index: function() {
+			$("form.button_to")
+				.bind("ajax:beforeSend", function(e, xhr) {
+					$(e.target).parent("div.favorite").html('<i class="general foundicon-star"></i> Saved');
+				});
+		}
+	}
 }
 UTIL = {
   exec : function(controller, action){
