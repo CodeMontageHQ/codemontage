@@ -11,7 +11,7 @@ gem 'pg'
 gem 'psych'
 
 # Operations
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '~> 3.7.1.182'
 
 # Users & Authentication
 gem 'bcrypt-ruby', require: 'bcrypt' 
