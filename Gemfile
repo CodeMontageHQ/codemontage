@@ -10,6 +10,9 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'psych'
 
+# Operations
+gem 'newrelic_rpm'
+
 # Users & Authentication
 gem 'bcrypt-ruby', require: 'bcrypt' 
 gem 'devise'
