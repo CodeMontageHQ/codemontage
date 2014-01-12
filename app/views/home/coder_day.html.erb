@@ -71,7 +71,7 @@
             <div class="four columns">
                 <h5>
                 <% if find_logo?(featured) %>
-                  <%= link_to (image_tag find_logo(featured)), featured.url %>
+                  <%= link_to (image_tag find_logo(featured)), organization_path(featured) %>
                 <% else %>
                   <%= link_to featured.name, organization_path(featured) %>
                 <% end %>
