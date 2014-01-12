@@ -46,7 +46,7 @@
       <% end %>
       <% if !@projects.present? && (@jobs.present? | @sponsorships.present?) %>
         <!--don't mention a lack of projects for organizations that post jobs or sponsor -->
-      <% elsif !@jobs.present? %>
+      <% else %>
       <div id="org_projects">
         <h4>Projects</h4>
 
