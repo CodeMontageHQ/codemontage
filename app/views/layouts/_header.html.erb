@@ -1,4 +1,8 @@
-<div id="header">
+<% if user_signed_in? %> 
+  <div id="header" class="logged-in">
+<% else %>
+  <div id="header" class="logged-out">
+<% end %>
   <div class="row">
     <div class="twelve columns">
       <div class="right">

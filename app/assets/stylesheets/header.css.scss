@@ -3,7 +3,6 @@
 #header {
   background: $cmOffBlack;
   padding: 6px;
-  height: 80px;
 } 
 
 #header a {
@@ -12,8 +11,16 @@
 }
 
 #header ul.inline-list {
-  margin-bottom: 10px;
-  
   a:hover {color: $cmTeal;}
   li.social_media {margin-left: 10px;}
+}
+
+#header.logged-in {
+  height: 30px;
+  ul.inline-list { margin-bottom: -10px; }
+}
+
+#header.logged-out {
+  height: 80px; 
+  ul.inline-list { margin-bottom: 10px; }
 }

@@ -10,12 +10,6 @@
     }
     li.logo {
       a:hover { background: $cmOffBlack; }
-      img {
-        margin: 5px;
-        margin-left: 45px;
-        margin-right: 45px;
-        margin-top:-40px;
-      }
     }
     > li.cta:hover { background: $cmOffBlack !important; }  //do not highlight top bar rectangle behind button
     > li.cta .button {   border: $cmPurple;
@@ -29,4 +23,17 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e4487', endColorstr='#653060',GradientType=0 ); margin-left: 20px; }
     > li.cta .button:hover { background: lighten($cmPurple, 10%); color: white; }
   }
+}
+
+.top-bar.logged-in ul>li.logo img {
+  margin-left: 55px;
+  margin-right: 35px;
+  margin-top: -8px;
+  width: 90px;
+}
+.top-bar.logged-out ul>li.logo img {
+  margin: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: -40px;
 }
