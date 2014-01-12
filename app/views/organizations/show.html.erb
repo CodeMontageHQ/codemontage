@@ -23,6 +23,7 @@
       <% if @jobs.present? %>
       <div id="org_jobs">
         <h4>Jobs</h4>
+        <hr>
         <div id="job_posts">
           <% @jobs.each do |job| %>
             <div class="job_post">
@@ -49,10 +50,10 @@
       <% else %>
       <div id="org_projects">
         <h4>Projects</h4>
+        <hr>
 
         <% if @projects.present? %>
           <% @projects.each do |project| %>
-            <hr>
             <div class="row">
               <div class="eight columns">
                 <h5 class="project_title"><%= link_to project.name, project_path(project) %></h5>
