@@ -1,20 +1,7 @@
 <body>
   <div class="row">
     <div class="three columns">
-      <h3>Your Profile</h3>
-
-      <p>
-        <strong>Name: </strong> <%= current_user.name %>
-        <br>
-        <strong>Headline: </strong> <%= current_user.headline %>
-        <br><br>
-        <strong>Skills: </strong> <%= current_user.technology_list %>
-        <br>
-        <strong>Causes: </strong> <%= current_user.cause_list %>
-      </p>
-      
-      <%= link_to "Edit Profile", edit_user_registration_path %>
-      
+      <%= render 'home/user_profile' %>
     </div>
     <div class="nine columns">
       <h3>Welcome<%= if current_user.name.to_s != "" then ", " + current_user.name else "" end %>!</h3>
