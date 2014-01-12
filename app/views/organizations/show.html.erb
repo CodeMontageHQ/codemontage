@@ -82,6 +82,18 @@
         </br>
       </div>
       <% end %>
+      <% if @sponsorships.present? %>
+      <div id="org_sponsorships">
+        <h4>Sponsorships</h4>
+        <hr>
+        <div id="sponsorships">
+          <div class="sponsorship_event">
+            <h6><%= link_to "Coder Day of Service 2014", coder_day_path %><h6>
+            <%= link_to (image_tag 'coder_day_badge_logo.png', :width => "120"), coder_day_path %>
+          </div>
+        </div>
+      </div>
+      <% end %>
     </div>
     <div class="one column"></div>
   </div>
