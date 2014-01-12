@@ -26,6 +26,7 @@ gem 'friendly_id', '~> 4.0.10'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'paperclip', '~> 3.0'
+gem 'aws-sdk'
 
 # Test Suite
 group :development, :test do 
