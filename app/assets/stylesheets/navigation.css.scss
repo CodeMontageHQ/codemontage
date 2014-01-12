@@ -1,0 +1,32 @@
+@import "colors";
+
+.top-bar {
+  margin: 0 0 20px 0;
+
+  ul {
+    background: $cmOffBlack;
+    li.logo, li.toggle-topbar, li.name {
+      background: $cmOffBlack;
+    }
+    li.logo {
+      a:hover { background: $cmOffBlack; }
+      img {
+        margin: 5px;
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-top:-40px;
+      }
+    }
+    > li.cta:hover { background: $cmOffBlack !important; }  //do not highlight top bar rectangle behind button
+    > li.cta .button {   border: $cmPurple;
+    background: $cmPurple;
+    background: -moz-linear-gradient(top,  #8e4487 0%, #653060 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8e4487), color-stop(100%,#653060));
+    background: -webkit-linear-gradient(top,  #8e4487 0%,#653060 100%);
+    background: -o-linear-gradient(top,  #8e4487 0%,#653060 100%);
+    background: -ms-linear-gradient(top,  #8e4487 0%,#653060 100%);
+    background: linear-gradient(to bottom,  #8e4487 0%,#653060 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e4487', endColorstr='#653060',GradientType=0 ); margin-left: 20px; }
+    > li.cta .button:hover { background: lighten($cmPurple, 10%); color: white; }
+  }
+}
