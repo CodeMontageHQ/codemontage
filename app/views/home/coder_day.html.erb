@@ -70,8 +70,8 @@
           <% @sponsors.each do |featured| %>
             <div class="four columns">
                 <h5>
-                <% if featured.image_url? %>
-                  <%= link_to (image_tag featured.image_url), featured.url %>
+                <% if find_logo?(featured) %>
+                  <%= link_to (image_tag find_logo(featured)), featured.url %>
                 <% else %>
                   <%= link_to featured.name, organization_path(featured) %>
                 <% end %>
