@@ -2,7 +2,7 @@
   <div class="row">
     <div class="one column"></div>
     <div class="ten columns">
-      <h4>Projects</h4>
+      <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
       <div class="projects">
         <% if @featured_projects.present? %>
           <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
@@ -39,19 +39,30 @@
 
               <div class="project_technologies two columns">
                 <h6>Technologies</h6>
-                <%= project.technology_list %>
+                <% project.technology_list.each_with_index do |tag, index| %>
+                  <% if index == project.technology_list.length - 1 %>
+                    <%= link_to tag, projects_path(:tags => tag) %>
+                  <% else %>
+                    <%= link_to tag + ", ", projects_path(:tags => tag) %>
+                  <% end %>
+                <% end %>
               </div>
 
               <div class="project_causes two columns">
                 <h6>Causes</h6>
-                <%= project.cause_list %>
+                <% project.cause_list.each_with_index do |tag, index| %>
+                  <% if index == project.cause_list.length - 1 %>
+                    <%= link_to tag, projects_path(:tags => tag) %>
+                  <% else %>
+                    <%= link_to tag + ", ", projects_path(:tags => tag) %>
+                  <% end %>
+                <% end %>
               </div>
 
             </div>
           <% end %>
         <% else %>
-          <p>Oops! We don't have any projects with those causes or technologies.<p>
-          <p>Try browsing <%= link_to "all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
+          <p>Oops! We can't seem to find any <%= params[:tags] %> projects. <%= link_to "View all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
         <% end %>
       </div>
       
