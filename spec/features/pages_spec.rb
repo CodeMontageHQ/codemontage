@@ -11,7 +11,7 @@ describe "The basic content site", #:js => true,
 
     it "displays projects page" do
       visit "/projects"
-      page.should have_content("These open source")
+      page.should have_content("Projects")
     end
 
     it "displays jobs page" do
