@@ -1,0 +1,13 @@
+<div class="profile_projects">
+  <h3>Your Saved Projects</h3>
+  <% if @favorite_projects.present? %>
+    <ul>
+      <% @favorite_projects.each do |project| %>
+        <li><%= link_to project.name, project_path(project) %></li>
+      <% end %>
+    </ul>
+    <p>Looking for something else? Browse more <%= link_to "projects to change the world", projects_path %>.</p>
+  <% else %>
+    <p>No favorites yet? Browse more <%= link_to "projects to change the world", projects_path %>.</p>
+  <% end %>  
+</div>

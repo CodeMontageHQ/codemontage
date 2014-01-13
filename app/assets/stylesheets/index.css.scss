@@ -1,0 +1,60 @@
+.index.panel.radius {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px; 
+  border-radius: 10px;
+}
+
+.index.panel {
+  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%); 
+  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+  background-image: -o-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #F2F2F2));
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #F2F2F2 100%);
+  -moz-box-shadow:    inset 0 0 5px #666666;
+  -webkit-box-shadow: inset 0 0 5px #666666;
+  box-shadow:         inset 0 0 5px #666666;
+}
+
+.foundicon-github {
+  vertical-align: middle;
+}
+
+.index.button.radius {
+  -webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+-ms-border-radius: 12px;
+-o-border-radius: 12px;
+border-radius: 12px;
+}
+
+.index.button {
+  -moz-box-shadow:    1px 1px 10px 0px #2d2d2d;
+  -webkit-box-shadow: 1px 1px 10px 0px #2d2d2d;
+  box-shadow:         1px 1px 10px 0px #2d2d2d;
+  
+  background: #27a0ad;
+  background: -moz-linear-gradient(top,  #27a0ad 0%, #228691 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#27a0ad), color-stop(100%,#228691));
+  background: -webkit-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: -o-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: -ms-linear-gradient(top,  #27a0ad 0%,#228691 100%);
+  background: linear-gradient(to bottom,  #27a0ad 0%,#228691 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27a0ad', endColorstr='#228691',GradientType=0 );
+  border: none;
+  text-shadow: 1px 1px 1px #2d2d2d;
+}
+
+.index.button:hover {
+  background: #0ac9de;
+  background: -moz-linear-gradient(top, #0ac9de 0%, #33878e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0ac9de), color-stop(100%,#33878e));
+  background: -webkit-linear-gradient(top, #0ac9de 0%,#33878e 100%);
+  background: -o-linear-gradient(top, #0ac9de 0%,#33878e 100%);
+  background: -ms-linear-gradient(top, #0ac9de 0%,#33878e 100%);
+  background: linear-gradient(to bottom, #0ac9de 0%,#33878e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0ac9de', endColorstr='#33878e',GradientType=0 );
+}
+
