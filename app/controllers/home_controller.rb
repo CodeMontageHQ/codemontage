@@ -11,6 +11,7 @@ class HomeController < ApplicationController
   end
 
   def coder_day_dashboard
+    @favorite_projects = current_user.favorites
   end
 
 end
