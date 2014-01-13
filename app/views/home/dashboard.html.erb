@@ -4,7 +4,6 @@
       <%= render 'home/dashboard/profile' %>     
     </div>
     <div class="nine columns">
-      <h3>Welcome<%= if current_user.name.to_s != "" then ", " + current_user.name else "" end %>!</h3>
       <%= render 'home/dashboard/projects' %>
       <%= render 'home/dashboard/montage' %>
     </div>
