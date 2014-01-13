@@ -35,7 +35,7 @@ APP = {
 		index: function() {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
-					$(e.target).parent("div.favorite").html('<i class="general foundicon-star"></i> Saved');
+					$(e.target).parent("span.favorite").html('<a href="/dashboard"><i class="general foundicon-star"></i></a>');
 				});
 		}
 	}
