@@ -2,48 +2,66 @@
   <div class="row">
     <div class="one column"></div>
     <div class="ten columns">
-      <h4>Projects</h4>
-      
-      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
-        Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
-
+      <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
       <div class="projects">
-        <% @featured_projects.each do |project| %>
-          <div class="row">
-            <div class="project_summary six columns">
-              <h5><%= link_to project.name, project_path(project) %></h5>
-              <p><%= project.description %></p>
-            </div>
+        <% if @featured_projects.present? %>
+          <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
+            Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
 
-            <div class="project_links two columns">
-              </br>
-              <ul>
-                <li>
-                  <div class="favorite">
-                    <% if @favorite_projects.include?(project.id)%>
-                    <i class="general foundicon-star"></i> Saved
+          <% @featured_projects.each do |project| %>
+            <div class="row">
+              <div class="project_summary six columns">
+                <h5><%= link_to project.name, project_path(project) %>
+                  <span class="favorite">
+                    <% if user_signed_in? %>
+                      <% if @favorite_projects.include?(project.id) %>
+                        <%= link_to '<i class="general foundicon-star"></i> '.html_safe, dashboard_path, :class => "favorited" %>
+                      <% else %>
+                        <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
+                      <% end %>
                     <% else %>
-                      <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
+                      <%= link_to '<i class="general foundicon-star"></i> '.html_safe + "Save", new_user_session_path, :target => '_blank' %>
                     <% end %>
-                  </div>
-                </li>
-                <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
-                <li><%= link_to '<i class="general foundicon-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
-                <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
-              </ul>
-            </div>
+                  </span>
+                </h5>
+                <p><%= project.description %></p>
+              </div>
 
-            <div class="project_technologies two columns">
-              <h6>Technologies</h6>
-              <%= project.technology_list %>
-            </div>
+              <div class="project_links two columns">
+                </br>
+                <ul>
+                  <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+                  <li><%= link_to '<i class="general foundicon-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
+                  <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
+                </ul>
+              </div>
 
-            <div class="project_causes two columns">
-              <h6>Causes</h6>
-              <%= project.cause_list %>
-            </div>
+              <div class="project_technologies two columns">
+                <h6>Technologies</h6>
+                <% project.technology_list.each_with_index do |tag, index| %>
+                  <% if index == project.technology_list.length - 1 %>
+                    <%= link_to tag, projects_path(:tags => tag) %>
+                  <% else %>
+                    <%= link_to tag + ", ", projects_path(:tags => tag) %>
+                  <% end %>
+                <% end %>
+              </div>
 
-          </div>
+              <div class="project_causes two columns">
+                <h6>Causes</h6>
+                <% project.cause_list.each_with_index do |tag, index| %>
+                  <% if index == project.cause_list.length - 1 %>
+                    <%= link_to tag, projects_path(:tags => tag) %>
+                  <% else %>
+                    <%= link_to tag + ", ", projects_path(:tags => tag) %>
+                  <% end %>
+                <% end %>
+              </div>
+
+            </div>
+          <% end %>
+        <% else %>
+          <p>Oops! We can't seem to find any <%= params[:tags] %> projects. <%= link_to "View all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
         <% end %>
       </div>
       

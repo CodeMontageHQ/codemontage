@@ -1,11 +1,17 @@
 class ProjectsController < ApplicationController
 
   def index
-    @featured_projects = Project.featured
-    @favorite_projects = FavoriteProject.
-      where(:user_id => current_user.id).
-      map {|p| p.project_id }.
-      to_set
+    @featured_projects = 
+      if params[:tags].present?
+        Project.featured.tagged_with(params[:tags], :any => true) 
+      else 
+        Project.featured 
+      end
+    @favorite_projects = 
+      if current_user.present?
+        FavoriteProject.where(:user_id => current_user.id).map {|p| p.project_id }.to_set
+      else
+      end
   end
 
   def show
