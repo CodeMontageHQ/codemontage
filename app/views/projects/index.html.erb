@@ -20,10 +20,14 @@
               <ul>
                 <li>
                   <div class="favorite">
-                    <% if @favorite_projects.include?(project.id)%>
-                    <i class="general foundicon-star"></i> Saved
+                    <% if user_signed_in? %>
+                      <% if @favorite_projects.include?(project.id) %>
+                      <i class="general foundicon-star"></i> Saved
+                      <% else %>
+                        <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
+                      <% end %>
                     <% else %>
-                      <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
+                      <%= link_to '<i class="general foundicon-star"></i> '.html_safe + "Save", new_user_session_path, :target => '_blank' %>
                     <% end %>
                   </div>
                 </li>
