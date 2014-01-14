@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131231231157) do
+ActiveRecord::Schema.define(:version => 20140114160637) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -26,6 +26,29 @@ ActiveRecord::Schema.define(:version => 20131231231157) do
   add_index "active_admin_comments", ["author_user_id"], :name => "index_active_admin_comments_on_author_user_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "event_participants", :force => true do |t|
+    t.integer  "event_id",   :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "event_participants", ["event_id"], :name => "index_event_participants_on_event_id"
+  add_index "event_participants", ["user_id"], :name => "index_event_participants_on_user_id"
+
+  create_table "events", :force => true do |t|
+    t.string   "short_code",  :null => false
+    t.string   "name",        :null => false
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string   "description"
+    t.text     "notes"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true
 
   create_table "favorite_projects", :force => true do |t|
     t.integer  "project_id",                    :null => false
