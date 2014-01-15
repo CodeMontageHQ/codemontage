@@ -1,0 +1,16 @@
+<div id="events" class="index radius panel row">
+  <h3>Upcoming Events</h3>
+  
+  <div id="coder_day">
+    <%= link_to image_tag('coder_day_badge_logo.png', :height => "300px"), coder_day_path %>
+    <div class="eight columns centered">
+    <span class="registration">
+      <% if @events.present? %>
+        <p><i class="general foundicon-checkmark"></i> Registered<p>
+      <% else %>
+      <%= button_to "Register", events_path(:short_code => "CDOS201401"), :remote => :true, :class => "radius button" %>
+      <% end %>
+    </span>
+    </div>
+  </div>
+</div>
