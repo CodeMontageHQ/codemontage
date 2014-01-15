@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(:version => 20140114160637) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_active_admin_comments_on_resource_type_and_resource_id"
 
-  create_table "event_participants", :force => true do |t|
+  create_table "event_registrations", :force => true do |t|
     t.integer  "event_id",   :null => false
     t.integer  "user_id",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "event_participants", ["event_id"], :name => "index_event_participants_on_event_id"
-  add_index "event_participants", ["user_id"], :name => "index_event_participants_on_user_id"
+  add_index "event_registrations", ["event_id"], :name => "index_event_registrations_on_event_id"
+  add_index "event_registrations", ["user_id"], :name => "index_event_registrations_on_user_id"
 
   create_table "events", :force => true do |t|
     t.string   "short_code",  :null => false

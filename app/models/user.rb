@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
 
   attr_protected :is_admin
   
+  has_many :event_registrations
+  has_many :events, :through => :event_registrations
+  
   has_many :favorite_projects
   has_many :favorites, :through => :favorite_projects, :source => :project
   has_many :projects, :through => :favorite_projects
@@ -43,7 +46,7 @@ class User < ActiveRecord::Base
   def has_github
     self.services.where(:provider => 'github').exists?
   end
-
+  
   protected
   
   def create_profile
