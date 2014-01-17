@@ -23,6 +23,7 @@ CodeMontage::Application.routes.draw do
   resources :organizations
   resources :projects
   resources :favorites
+  resources :events
   
   # Static content 
   get '/about', {:controller => 'home', :action => 'about'}
