@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  before_filter :login_required, :only => [:coder_day_dashboard, :dashboard]
+  before_filter :login_required, :only => [:dashboard]
 
   def dashboard
     @favorite_projects = current_user.favorites
@@ -9,10 +9,6 @@ class HomeController < ApplicationController
 
   def coder_day 
     @sponsors = Organization.sponsors
-  end
-
-  def coder_day_dashboard
-    @favorite_projects = current_user.favorites
   end
 
 end
