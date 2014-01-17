@@ -11,7 +11,6 @@ CodeMontage::Application.routes.draw do
     get "settings" => "registrations#edit", :as => :services
   end
   get '/dashboard', {:controller => 'home', :action => 'dashboard'}
-  get '/coder_day_dashboard', {:controller => 'home', :action => 'coder_day_dashboard'}
   resource :user_profile
 
   # Omniauth authentication
@@ -31,7 +30,6 @@ CodeMontage::Application.routes.draw do
   get '/code_of_conduct', {:controller => 'home', :action => 'code_of_conduct'}
   get '/coder_day', {:controller => 'home', :action => 'coder_day'}
   get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day'}
-  get '/coderday', {:controller => 'home', :action => 'coder_day'}
   get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
   get '/join', {:controller => 'home', :action => 'join'}
   get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}
