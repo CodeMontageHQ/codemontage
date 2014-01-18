@@ -52,7 +52,7 @@
 		    <% if user_signed_in? %>
           <%= link_to '<i class="general foundicon-website"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button home-signup" %>
         <% else %>
-          <%= link_to '<i class="social foundicon-github"></i> Sign up with Github'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
+          <%= link_to '<i class="social foundicon-github"></i> Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
         <% end %>
         <p>or, <%= link_to "sign up with an email address", new_user_registration_path %></p>
         </div>
@@ -69,7 +69,7 @@
       <div class="one column"></div>
       <div id="org_welcome" class="five columns">
         <h3>Submit an open source project</h3>
-        <p>Working on software to save the world? We'd love to help! Let us know the Github repository and we'll take it from there.</p>
+        <p>Working on software to save the world? We'd love to help! Let us know the GitHub repository and we'll take it from there.</p>
         <%= link_to "Submit a Project", new_organization_path, :class => "medium radius index button" %>
       </div>
       <div id="company_welcome" class="five columns">
