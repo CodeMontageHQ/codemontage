@@ -15,11 +15,7 @@ describe Organization do
     it { should_not validate_presence_of(:github_org) }
   end
 
-<<<<<<< HEAD
   context 'if not public user, implicit' do
-=======
-  context 'if not public user' do
->>>>>>> 01f868befa473f255953e9930ce049c16b6f8ad8
     it { should_not validate_presence_of(:github_org) }
   end
 end
