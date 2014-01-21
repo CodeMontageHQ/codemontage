@@ -22,6 +22,8 @@ To get started,
 * Install Rails. We recommend [Rails Installer](http://railsinstaller.org).
 * Install Postgres. We recommend [Postgres App](http://postgresapp.com). 
   (If you're using Mac OS X Lion, you may need [this fix for Postgres](http://stackoverflow.com/questions/9354122/how-to-install-postgresql-9-1-on-osx-lion).)
+* Clone the CodeMontage Repo:  `git clone https://github.com/CodeMontageHQ/codemontage.git`
+* Install dependencies: `cd codemontage`, `bundle install`
 * Configure the app for your local database by copying *database.yml.sample* to *database.yml* and making any changes needed for your database setup (possibly `rake db:create`).
 * Once your database is created, run `rake db:migrate`.
 * Load helpful example data into your local database by running `rake db:seed`.
