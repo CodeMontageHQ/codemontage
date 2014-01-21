@@ -4,7 +4,7 @@
 
     <div class="seven columns">
       <h4><%= link_to @project.organization.name, organization_path(@project.organization) %></h4>
-      <h4><%= @project.name %></h4>
+      <h4><%= link_to_if @project.url, @project.name %></h4>
       <div id="links">
         <ul>
           <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + @project.github_display + " Code", @project.github_url, :target => '_blank' unless !@project.github_url.present? %></li>
