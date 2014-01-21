@@ -18,6 +18,17 @@ ActiveAdmin.register Project do
     default_actions
   end
   
+  filter :organization
+  filter :name
+  filter :github_repo
+  filter :description
+  filter :notes
+  filter :created_at
+  filter :updated_at
+  filter :is_active
+  filter :slug
+  filter :is_approved, :as => :select
+
   form do |f|
     f.inputs "Project Details", :multipart => true do    
       f.input :organization
