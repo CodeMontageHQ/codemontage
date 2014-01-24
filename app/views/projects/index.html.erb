@@ -15,12 +15,12 @@
                   <span class="favorite">
                     <% if user_signed_in? %>
                       <% if @favorite_projects.include?(project.id) %>
-                        <%= link_to '<i class="general foundicon-star"></i> '.html_safe, dashboard_path, :class => "favorited" %>
+                        <%= link_to '<i class="fi-star"></i> '.html_safe, dashboard_path, :class => "favorited" %>
                       <% else %>
                         <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
                       <% end %>
                     <% else %>
-                      <%= link_to '<i class="general foundicon-star"></i> '.html_safe + "Save", new_user_session_path, :target => '_blank' %>
+                      <%= link_to '<i class="fi-star"></i> '.html_safe + "Save", new_user_session_path, :target => '_blank' %>
                     <% end %>
                   </span>
                 </h5>
@@ -30,9 +30,9 @@
               <div class="project_links two columns">
                 </br>
                 <ul>
-                  <li><%= link_to '<i class="social foundicon-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
-                  <li><%= link_to '<i class="general foundicon-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
-                  <li><%= link_to '<i class="social foundicon-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
+                  <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+                  <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
+                  <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
                 </ul>
               </div>
 
