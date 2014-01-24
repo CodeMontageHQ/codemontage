@@ -50,9 +50,9 @@
         </div>
         <div id="sign_up" class="six columns">
 		    <% if user_signed_in? %>
-          <%= link_to '<i class="general foundicon-website"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button home-signup" %>
+          <%= link_to '<i class="fi-laptop"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button home-signup" %>
         <% else %>
-          <%= link_to '<i class="social foundicon-github"></i> Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
+          <%= link_to '<i class="fi-social-github"></i> Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
         <% end %>
         <p>or, <%= link_to "sign up with an email address", new_user_registration_path %></p>
         </div>
