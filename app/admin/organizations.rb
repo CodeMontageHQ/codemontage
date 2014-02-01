@@ -70,4 +70,18 @@ ActiveAdmin.register Organization do
 
     active_admin_comments
   end
+
+  controller do
+    def create
+      @organization = Organization.new(params[:organization])   
+      @organization.by_admin = true
+      super
+    end
+
+    def update
+      @organization = Organization.find(params[:id])   
+      @organization.by_admin = true
+      super
+    end
+  end
 end
