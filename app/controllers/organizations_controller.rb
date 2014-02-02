@@ -7,7 +7,7 @@ class OrganizationsController < ApplicationController
 
 	def create
 		@organization = Organization.new(params[:organization])
-		@organization.is_public_user = true
+		@organization.is_public_submission = true
 
 		if @organization.save
 			redirect_to root_path, :notice => "Your project has been submitted for approval."

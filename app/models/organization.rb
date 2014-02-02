@@ -9,10 +9,10 @@ class Organization < ActiveRecord::Base
   attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter, :logo, :logo_delete
   attr_accessible :organization_metrics_attributes, :projects_attributes
 
-  attr_accessor :is_public_user
+  attr_accessor :is_public_submission
 
   validates_presence_of :name
-  validates_presence_of :github_org, :if => :is_public_user
+  validates_presence_of :github_org, :if => :is_public_submission
 
   #Paperclip
   has_attached_file :logo, :styles => { :thumb => "100x100>", :medium => "250x250>" },
