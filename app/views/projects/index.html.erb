@@ -1,9 +1,9 @@
 <body>
   <div class="row">
-    <div class="one column"></div>
-    <div class="ten columns">
-      <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
+    <div>
       <div class="projects">
+        <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
+
         <% if @featured_projects.present? %>
           <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
             Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
@@ -71,6 +71,5 @@
       </div>
 
     </div>
-    <div class="one column"></div>
   </div>
 </body>

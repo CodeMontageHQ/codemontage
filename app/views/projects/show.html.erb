@@ -1,8 +1,6 @@
 <body>
   <div class="row">
-    <div class="one column"></div>
-
-    <div class="seven columns">
+    <div class="eight columns">
       <h4><%= link_to @project.organization.name, organization_path(@project.organization) %></h4>
       <h4><%= @project.name %></h4>
       <div id="links">
@@ -28,7 +26,7 @@
       <% end %>
     </div>
 
-    <div class="three columns">
+    <div class="four columns">
       <%= link_to image_tag(find_logo(@project.organization), :alt => @project.organization.name), @project.organization.url, :target => '_blank' if find_logo?(@project.organization) %>
       
       <div id="project_causes">
@@ -53,7 +51,5 @@
         <% end %>
       </div>
     </div>
-
-    <div class="one column"></div>
   </div>
 </body>
