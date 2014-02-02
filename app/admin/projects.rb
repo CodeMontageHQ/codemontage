@@ -23,6 +23,7 @@ ActiveAdmin.register Project do
       f.input :organization
       f.input :name
       f.input :github_repo
+      f.input :url
       f.input :description
       f.input :cause_list, :label => "Causes"
       f.input :technology_list, :label => "Technologies"
@@ -39,6 +40,7 @@ ActiveAdmin.register Project do
       row :organization
       row :name
       row :github_repo
+      row :url
       row :description
       row "Causes" do ad.cause_list end
       row "Technologies" do ad.technology_list end
