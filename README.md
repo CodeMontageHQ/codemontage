@@ -35,4 +35,4 @@ Congratulations, you're ready to help build CodeMontage!
 
 ## License
 
-Copyright (c) 2013 Code for Humanity, LLC. See [LICENSE](https://github.com/CodeMontageHQ/codemontage/tree/master/LICENSE) for details.
+Copyright (c) 2014 Code for Humanity, LLC. See [LICENSE](https://github.com/CodeMontageHQ/codemontage/tree/master/LICENSE) for details.
