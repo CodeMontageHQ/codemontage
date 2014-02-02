@@ -13,6 +13,14 @@ ActiveAdmin.register_page "Dashboard" do
             li link_to Project.count.to_s + " Projects", admin_projects_path
           end
         end
+
+        panel "Unapproved Projects", :priority => 4 do
+          ul do
+            Project.where(is_approved: false).map do |proj|
+              li link_to(proj.name, admin_project_path(proj))
+            end
+          end
+        end
       end
       
       column do # Users
