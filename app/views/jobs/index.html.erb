@@ -1,32 +1,35 @@
-<body>
-  <div class="row">
-    <div class="one column"></div>
-    <div class="ten columns">
-      <h4>Jobs You've Been Looking For</h4>
-      
-      <p>Wonder if you can make a difference with <em>most</em> of your time, instead of just your free time? Check out the full-time, paid opportunities below at companies that want to help you make a bigger impact on the world.</p>
+<div class="row">
+  <div class="one column"></div>
+  <div class="ten columns">
+    <div class="row">
+      <h4 class="nine columns">Jobs You've Been Looking For</h4>
+      <div class="three columns">
+        <%= render 'wepay/jobs' %>
+      </div>
+    </div>
+    
+    <p>Wonder if you can make a difference with <em>most</em> of your time, instead of just your free time? Check out the full-time, paid opportunities below at companies that want to help you make a bigger impact on the world.</p>
 
-      <div class="jobs">
-        <% @active_jobs.each do |job| %>
-        <div class="job_post">
-          <div class="job_headline row">
-            <div class="six columns">
-              <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
-            </div>
-            <div class="job_technologies six columns">
-              <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
-            </div>
+    <div class="jobs">
+      <% @active_jobs.each do |job| %>
+      <div class="job_post">
+        <div class="job_headline row">
+          <div class="six columns">
+            <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
           </div>
-          <div class="job_summary row">
-            <div class="twelve columns">
-              <p><%= job.overview %></p>
-            </div>
+          <div class="job_technologies six columns">
+            <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
           </div>
         </div>
-        <% end %>
+        <div class="job_summary row">
+          <div class="twelve columns">
+            <p><%= job.overview %></p>
+          </div>
+        </div>
       </div>
-
+      <% end %>
     </div>
-    <div class="one column"></div>
+
   </div>
-</body>
+  <div class="one column"></div>
+</div>

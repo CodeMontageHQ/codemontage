@@ -26,3 +26,4 @@
 # Ignore ruby version files
 .ruby-version
 .rvmrc
+.ruby-gemset
