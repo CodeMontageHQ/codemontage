@@ -4,9 +4,10 @@
 
     <div class="seven columns">
       <h4><%= link_to @project.organization.name, organization_path(@project.organization) %></h4>
-      <h4><%= link_to_if @project.url, @project.name %></h4>
+      <h4><%= @project.name %></h4>
       <div id="links">
         <ul>
+          <li><%= link_to '<i class="fi-web"></i> '.html_safe + display_url(@project.url), @project.url, :target => '_blank' unless !@project.url.present? %></li>
           <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + @project.github_display + " Code", @project.github_url, :target => '_blank' unless !@project.github_url.present? %></li>
           <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + @project.name + " Open Tasks", @project.tasks_url, :target => '_blank' unless !@project.tasks_url.present? %></li>
         </ul>
