@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def display_url(url)
+    display_url = url.gsub(/^https?:\/\//,"")
+  end
+
 	# Returns organization logo or image_url for organization logo,
 	# for use in organization and project views, if it exists.
 	def find_logo(organization, options = {})
