@@ -5,6 +5,9 @@ ActiveAdmin.register Project do
     end
     
     column :name
+    column :url do |proj|
+      link_to proj.url, proj.url, :target => 'blank' unless !proj.url?
+    end
     column :github_repo
     column :description
     column "Causes", :cause_list
@@ -34,6 +37,7 @@ ActiveAdmin.register Project do
       f.input :organization
       f.input :name
       f.input :github_repo
+      f.input :url
       f.input :description
       f.input :cause_list, :label => "Causes"
       f.input :technology_list, :label => "Technologies"
@@ -50,6 +54,9 @@ ActiveAdmin.register Project do
       row :organization
       row :name
       row :github_repo
+      row :url do |proj|
+        link_to proj.url, proj.url, :target => 'blank' unless !proj.url?
+      end
       row :description
       row "Causes" do ad.cause_list end
       row "Technologies" do ad.technology_list end
