@@ -38,13 +38,7 @@
 
               <div class="project_technologies two columns">
                 <h6>Technologies</h6>
-                <% project.technology_list.each_with_index do |tag, index| %>
-                  <% if index == project.technology_list.length - 1 %>
-                    <%= link_to tag, projects_path(:tags => tag) %>
-                  <% else %>
-                    <%= link_to tag + ", ", projects_path(:tags => tag) %>
-                  <% end %>
-                <% end %>
+                <%= technology_list_links project %>
               </div>
 
               <div class="project_causes two columns">
