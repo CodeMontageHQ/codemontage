@@ -46,6 +46,10 @@ CodeMontage::Application.routes.draw do
   match "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
   match "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
 
+  # CodeGoodSunday
+
+  get '/codegoodsunday', {:controller => 'codegoodsunday', :action => 'index'}
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
