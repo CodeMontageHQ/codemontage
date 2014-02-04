@@ -48,7 +48,7 @@ CodeMontage::Application.routes.draw do
 
   # CodeGoodSunday
 
-  get '/codegoodsunday', {:controller => 'codegoodsunday', :action => 'index'}
+  get '/code_good_sunday', {:controller => 'code_good_sunday', :action => 'index'}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
