@@ -20,43 +20,10 @@
 
 .mlkday {
 
-  h6 {font-weight: bold; }
-
-  #mlkd_quote { 
-    background-size: 350px auto;
-    float: center;
-    padding-bottom: 20px;
+  h2 { 
+    font-weight: bold;
     text-align: center;
   }
-
-  #mlkd_welcome {
-    text-align: center;
-    p {
-      font-weight: bold;
-    }
-    .event_name { 
-      color: $cmPurple; 
-      font-size: 2em; 
-    }
-  }
-  #mlkd_info { 
-    .info { 
-      color: $cmPurple; 
-      font-weight: bold; 
-    } 
-    
-    table { 
-      border: none; 
-      td.info_label { font-weight: bold; }
-      td ul { 
-        list-style: disc;
-        margin-bottom: -20px;
-        margin-left: 20px;
-      }
-    }
-  }
-
-  #mlkd_rsvp { .button { margin: 30px; } }
 
   #mlkd_sponsors {
     .sponsors a img {
