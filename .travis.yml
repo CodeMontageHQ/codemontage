@@ -1,0 +1,10 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.0.0-p353
+script: bundle exec rake db:drop db:create db:migrate db:test:prepare spec
+notifications:
+  email: false
+
+before_script:
+  - 'cp ./config/database.yml.sample ./config/database.yml'
