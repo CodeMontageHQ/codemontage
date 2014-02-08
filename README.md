@@ -1,4 +1,5 @@
 ##Welcome to the CodeMontage Platform
+[![Build Status](https://travis-ci.org/CodeMontageHQ/codemontage.png)](https://travis-ci.org/CodeMontageHQ/codemontage)
 
 **[CodeMontage](http://codemontage.com) empowers coders to improve their impact on the world.**
 
