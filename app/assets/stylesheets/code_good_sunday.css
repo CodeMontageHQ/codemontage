@@ -1,0 +1,47 @@
+// Place all the styles related to the CodeGoodSunday controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.codegood h1 {
+}
+
+body.codegood {
+  background: #00b0bb;
+  margin: 120px 150px 0 150px;
+}
+
+.codegood h1 {
+  color: white;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.codegood h3, .codegood li {
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.codegood ol {
+  padding-left: 50px;
+
+}
+
+.codegood .signature {
+  margin-top: 80px;
+}
+
+.codegood a {
+  color: #036b72;
+  font-weight: 700;
+}
+
+.codegood a:hover {
+  color: #292929;
+  font-weight: 700;
+}
+
+.codegood .twitter{
+  color: white;
+}

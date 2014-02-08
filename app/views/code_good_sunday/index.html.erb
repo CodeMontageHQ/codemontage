@@ -1,1 +1,32 @@
-<h1>hey now </h1>
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "#CodeGoodSunday" %></title>
+  
+  <!-- Included CSS Files -->
+  <%= stylesheet_link_tag    "application" %>
+  
+  <!-- Included JS Files  -->
+  <%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/google_analytics' %>
+</head>
+
+<body class="codegood">
+
+  <h1>#CodeGoodSunday</h1>
+
+  <section>
+    <h3>This Sunday, use your programming powers for good and contribute to open source.</h3>
+
+    <ol>
+      <li>Get started by checking out the many <a href="/">open source projects</a> on <a href="/projects">Code Montage</a>.</li>
+      <li>Then join us on Twitter every Sunday @ 1PM EST. </br>Use the hashtag #CodeGoodSunday and tell us what you’re working on and how we can help!</li>
+    </ol>
+     
+
+    <h3>For questions, tweet <a href="https://twitter.com/codemontage" class="twitter">@saronyitbarek</a> or <a href="https://twitter.com/saronyitbarek" class="twitter">@CodeMontage</a> with the hashtag #CodeGoodSunday.</h3> 
+    <h3 class="signature">See you Sunday!</h3>
+
+  </section>
+
+</body>
