@@ -13,35 +13,53 @@ body.codegood {
 .codegood h1 {
   color: white;
   font-weight: 800;
-  padding-bottom: 10px;
+  /*background: yellow;*/
+  /*margin: 0;*/
+  font-size: 6.5em; 
+  margin-bottom: -20px;
+}
+
+.codegood h2 {
+  /*color: #036b72;*/
+  color: yellow;
+  display: inline;
+  /*background:pink;*/
+  font-size: 2em;
+  font-weight: 700;
+  padding-left: 70px;
+}
+
+.codegood section {
+  padding-left: 80px;
+  padding-top: 30px;
+  width: 90%;
 }
 
 .codegood h3, .codegood li {
   color: white;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .codegood ol {
-  padding-left: 50px;
-
+  padding-left: 100px;
 }
 
 .codegood .signature {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .codegood a {
-  color: #036b72;
+  color: #ffffcc;
   font-weight: 700;
+}
+
+.codegood .keyword {
+  text-decoration: underline;
 }
 
 .codegood a:hover {
-  color: #292929;
+  color: #036b72;
   font-weight: 700;
-}
-
-.codegood .twitter{
-  color: white;
 }
