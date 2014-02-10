@@ -25,7 +25,7 @@
 	<%= stylesheet_link_tag    "application" %>
 	
 	<!-- Included JS Files  -->
-	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "vendor/custom.modernizr" %>
   
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics' %>
@@ -45,5 +45,7 @@
   
   <% if content_for?(:press) %><%= render 'layouts/press' %><% end %>
   <%= render 'layouts/footer' %>
+
+	<%= javascript_include_tag "application" %>
 </body>
 </html>

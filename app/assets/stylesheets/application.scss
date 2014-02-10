@@ -9,13 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation_and_overrides
+ *= require foundation
  *= require_tree .
  */
 
-// Import only specific parts of Foundation
 @import "compass/css3";
-@import "foundation/settings";
-@import "foundation/functions/all";
-
+@import "foundation_and_overrides";
 @import 'foundation-icons';
