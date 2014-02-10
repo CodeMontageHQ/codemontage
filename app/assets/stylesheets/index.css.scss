@@ -1,3 +1,82 @@
+@import "compass";
+@import "colors";
+@import url(//fonts.googleapis.com/css?family=Courgette);
+
+#coder_welcome {
+
+  .button {
+    border: $cmPurple;
+    @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
+
+    &:hover{
+      @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+    }
+    
+    margin-left: 75px;
+
+    .fi-social-github {
+      font-size: 1.8em;
+      vertical-align:middle;
+      margin-right:3px;
+    }
+  }
+  
+  #sign_up p {
+    text-align: center;
+  }
+}
+
+.home-signup {
+  margin-top:25px;
+}
+
+#mission {
+
+  padding: 15px 0 15px 0;
+
+  img {
+    height: 190px;
+    width: auto;
+  }
+
+  .mission_text {
+    font-size: 2em;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+ }
+  
+  #cm_logo_code {
+    color: $cmPurple;
+    font-family: Rockwell, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
+
+  }
+
+  #cm_logo_montage {
+    color: $cmTeal;
+    font-family: Courgette;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  #mission {
+
+    img { height: 350px; }
+    .mission_text { font-size: 1.7em; }
+
+  }
+}
+
+#secondary_welcome {
+  padding: 10px;
+  padding-bottom: 30px;
+  
+  .button {
+    margin-left: 75px;
+  }
+}
+
 .index.panel.radius {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
