@@ -23,44 +23,37 @@
   </section>
   <section>
     <div id="coder_welcome" class="row">
-      <div class="one column"></div>
-      <div class="index panel radius shadow ten column">
+      <div class="index panel radius shadow large-centered columns row">
 
-        <div class="six columns">
+        <div id="welcome_message" class="large-6 columns">
           <h2>Ready to change the world?</h2>
           <p>We believe <%= link_to 'coders can be superheroes', "http://devslovebacon.com/conferences/bacon-2013/talks/developers-are-superheroes-and-so-can-you" %>.</br>
             Join us to find open source, social impact projects that improve the world.</p>
         </div>
-        <div id="sign_up" class="six columns">
+        <div id="sign_up" class="large-6 columns">
 		    <% if user_signed_in? %>
-          <%= link_to '<i class="fi-laptop"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button home-signup" %>
+          <%= link_to '<i class="fi-laptop"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button centered home-signup" %>
         <% else %>
-          <%= link_to '<i class="fi-social-github"></i> Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
+          <%= link_to '<i class="fi-social-github"></i> Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button centered home-signup" %>
         <% end %>
         <p>or, <%= link_to "sign up with an email address", new_user_registration_path %></p>
         </div>
 
       </div>
-      <div class="one column"></div>
-
-      </div>
-      <div class="one column"></div>
     </div>
   </section>
   <section>
     <div id="secondary_welcome" class="row">
-      <div class="one column"></div>
-      <div id="org_welcome" class="five columns">
+      <div id="org_welcome" class="large-6 columns">
         <h3>Submit an open source project</h3>
         <p>Working on software to save the world? We'd love to help! Let us know the GitHub repository and we'll take it from there.</p>
         <%= link_to "Submit a Project", new_organization_path, :class => "medium radius index button" %>
       </div>
-      <div id="company_welcome" class="five columns">
+      <div id="company_welcome" class="large-6 columns">
         <h3>Support coding for social good</h3>
         <p>Want to hire or connect with superhero software developers? Reach out to learn about our Corporate Partnerships.</p>
         <%= mail_to "partnerships@codemontage.com", "Support Coders", :subject => "Interested in Corporate Partnership", :class => "medium radius index button" %>
       </div>
-      <div class="one column"></div>
     </div>
   </section>
   <% content_for(:press) do %>Press<% end %>

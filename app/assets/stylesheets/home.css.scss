@@ -44,6 +44,8 @@
     &:hover{
       @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
     }
+    
+    margin-left: 75px;
 
     .fi-social-github {
       font-size: 1.8em;
