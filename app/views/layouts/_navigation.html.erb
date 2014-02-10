@@ -3,25 +3,21 @@
 <% else %>
   <nav class="top-bar logged-out">
 <% end %>
-    <div class="row">
-      <ul>
-        <!-- For small screens, use a text title, otherwise use the logo in navigation -->
-        <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %></li>
-        <li class="name show-for-small"><a href="/">CodeMontage</a></li>
-        <li class="toggle-topbar"><a href="#"></a></li>
-      </ul>
+    <ul class="title-area">
+      <!-- For small screens, use a text title, otherwise use the logo in navigation -->
+      <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %></li>
+      <li class="name show-for-small"><a href="/">CodeMontage</a></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+    <section class="top-bar-section">
       <ul class="left">
         <li><%= link_to "Projects", projects_path %></li>
         <li><%= link_to "Jobs", jobs_path %></li>
         <li><%= link_to "Events", coder_day_path %></li>
         <li><%= link_to "Our Story", our_story_path %></li>
+        <% if !user_signed_in? %>
+        <li class="cta"><%= link_to "Sign Up", "/auth/github", :class => "medium radius index button" %></li>
+        <% end %>
       </ul>
-      <% if !user_signed_in? %>
-      <div id="sign_up">
-        <ul class="left">
-          <li class="cta"><%= link_to "Sign Up", "/auth/github", :class => "medium radius index button" %></li>
-        </ul>
-      </div>
-      <% end %>
     </section>
   </nav>
