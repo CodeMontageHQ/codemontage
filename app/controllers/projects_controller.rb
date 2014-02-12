@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
         Project.featured.tagged_with(params[:tags], :any => true) 
       else 
         Project.featured 
-      end.includes :technologies, :causes
+      end.with_technologies_and_causes.with_organization
 
     @favorite_projects = 
       if current_user.present?
