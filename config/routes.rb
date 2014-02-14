@@ -27,6 +27,7 @@ CodeMontage::Application.routes.draw do
   # Static content 
   get '/about', {:controller => 'home', :action => 'about'}
   get '/apply', {:controller => 'home', :action => 'apply'}
+  get '/code_good_day', {:controller => 'home', :action => 'code_good_day'}
   get '/code_of_conduct', {:controller => 'home', :action => 'code_of_conduct'}
   get '/coder_day', {:controller => 'home', :action => 'coder_day'}
   get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day'}
@@ -45,10 +46,6 @@ CodeMontage::Application.routes.draw do
   match "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
   match "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
   match "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
-
-  # CodeGoodSunday
-
-  get '/code_good_sunday', {:controller => 'code_good_sunday', :action => 'index'}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
