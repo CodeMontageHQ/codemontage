@@ -38,10 +38,6 @@ class Organization < ActiveRecord::Base
     github_url = ("http://github.com/" + self.github_org) unless self.github_org.blank?
   end
 
-  def twitter_url
-    twitter_url = ("http://twitter.com/" + self.twitter) unless self.twitter.blank?
-  end
-
   def logo_delete
     @logo_delete || '0'
   end
