@@ -1,10 +1,8 @@
-// Place all the styles related to the CodeGoodSunday controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
 
 body[data-controller="home"][data-action="code_good_day"] {
 
-  background: #00b0bb;
+  background: $cmTeal;
 
   .codegood {
 
@@ -81,7 +79,7 @@ body[data-controller="home"][data-action="code_good_day"] {
     }
 
     a {
-      color: #ffffcc;
+      color: $lightYellow;
       font-weight: 700;
     }
 
@@ -90,7 +88,7 @@ body[data-controller="home"][data-action="code_good_day"] {
     }
 
     a:hover {
-      color: #036b72;
+      color: $cmDarkTeal;
       font-weight: 700;
     }
 
