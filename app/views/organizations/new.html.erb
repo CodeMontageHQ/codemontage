@@ -15,7 +15,7 @@
 
 	    <%= f.input :name, :label => 'Organization Name', error_html: { class: "error" } %>
 	    <div class="row">
-	    	<%= f.input :github_org, :label => 'Organization GitHub Username', wrapper_html: { class: 'six columns'} %>
+	    	<%= f.input :github_org, :label => 'Organization GitHub Username', :required => true, wrapper_html: { class: 'six columns'}, error_html: { class: "error"} %>
 	    	<%= f.input :url, :label => 'Organization Website', :required => false, :as => :url, wrapper_html: { class: 'six columns'} %>
 	    </div>	
 	   <div class="row">
