@@ -19,4 +19,8 @@ module ApplicationHelper
 	def find_logo?(organization)
 		organization.logo.exists? || !organization.image_url.blank?
 	end
+
+	def twitter_url(handle)
+		"http://twitter.com/#{handle}" unless handle.blank?
+	end
 end
