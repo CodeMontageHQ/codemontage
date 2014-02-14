@@ -9,7 +9,7 @@
       background: $cmOffBlack;
     }
     li.logo {
-      a:hover { background: yellow; }
+      a:hover { background: $cmOffBlack; }
     }
     > li.cta:hover { background: $cmOffBlack !important; }  //do not highlight top bar rectangle behind button
     > li.cta .button {   border: $cmPurple;
