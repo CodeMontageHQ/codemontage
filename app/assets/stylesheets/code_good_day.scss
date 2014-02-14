@@ -1,0 +1,104 @@
+@import "colors";
+
+body[data-controller="home"][data-action="code_good_day"] {
+
+  background: $cmTeal;
+
+  .codegood {
+
+    h1 {
+      color: white;
+      font-weight: 800;
+      font-size: 6.5em; 
+      margin-bottom: -20px;
+    }
+
+    h2 {
+      color: yellow;
+      display: inline;
+      font-size: 2em;
+      font-weight: 700;
+      padding-left: 70px;
+    }
+
+    .deck {
+      width: 100%;
+      display: block;
+      position: relative;
+      height: 50px;
+      
+      h2 {
+        position: absolute;
+        top: 10;
+      }
+      
+    }
+
+    section {
+      padding-left: 70px;
+      padding-top: 30px;
+      width: 90%;
+      
+      h3:first-child{
+        width: 70%;
+      }
+    }
+
+    h3, li {
+      color: white;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+
+    ol {
+      list-style: none;
+      padding: 0 0 0 120px;
+      counter-reset: my-awesome-counter;
+    }
+
+    li {
+      margin: .5em;
+      padding: 0;
+      counter-increment: my-awesome-counter;
+    }
+
+    li:before {
+      content: counter(my-awesome-counter);
+      font-size: 1.5em;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 25px 0 -80px;
+      color: white;
+      width: 1.5em;
+      line-height: 1.5em;
+      text-align: center;
+      border-radius: 1in;
+      border: 1.5px solid yellow;
+      font-weight: 900;
+    }
+
+    a {
+      color: $lightYellow;
+      font-weight: 700;
+    }
+
+    .keyword {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: $cmDarkTeal;
+      font-weight: 700;
+    }
+
+    .signature {
+      font-weight: 900;
+      font-size: 1.5em;  
+      margin-top: 50px;
+      text-align: center;
+    }
+
+  }
+
+}
