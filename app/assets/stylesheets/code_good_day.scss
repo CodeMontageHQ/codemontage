@@ -45,10 +45,10 @@ body[data-controller="home"][data-action="code_good_day"] {
       padding-left: 70px;
       padding-top: 30px;
       width: 90%;
-    }
-
-    section h3:first-child{
-      width: 70%;
+      
+      h3:first-child{
+        width: 70%;
+      }
     }
 
     h3, li {
@@ -85,10 +85,6 @@ body[data-controller="home"][data-action="code_good_day"] {
       font-weight: 900;
     }
 
-    .signature {
-      margin-top: 50px;
-    }
-
     a {
       color: #ffffcc;
       font-weight: 700;
@@ -106,6 +102,7 @@ body[data-controller="home"][data-action="code_good_day"] {
     .signature {
       font-weight: 900;
       font-size: 1.5em;  
+      margin-top: 50px;
       text-align: center;
     }
 
