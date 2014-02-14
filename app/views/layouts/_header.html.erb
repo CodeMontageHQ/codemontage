@@ -10,6 +10,7 @@
           <li class="social_media"><%= link_to '<i class="fi-social-twitter"></i>'.html_safe, "http://twitter.com/CodeMontage" %></li>
           <li class="social_media"><%= link_to '<i class="fi-social-facebook"></i>'.html_safe, "http://facebook.com/CodeMontage" %></li>
           <li class="social_media"><%= link_to '<i class="fi-social-tumblr"></i>'.html_safe, "http://codemontage.tumblr.com" %></li>
+          <li class="social_media"><%= link_to '<i class="fi-social-github"></i>'.html_safe, "http://github.com/CodeMontageHQ/codemontage" %></li>
           <li><%= link_to "Admin", admin_dashboard_path unless !user_signed_in? || !current_user.is_admin? %></li>
           <li><%= link_to "Dashboard", dashboard_path unless !user_signed_in? %></li>
           <li><%= link_to "Settings", edit_user_registration_path unless !user_signed_in? %></li>

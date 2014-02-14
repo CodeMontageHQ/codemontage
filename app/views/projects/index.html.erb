@@ -32,7 +32,7 @@
                 <ul>
                   <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
                   <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
-                  <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + "News", project.organization.twitter_url, :target => '_blank' unless !project.organization.twitter_url.present? %></li>
+                  <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + "News", twitter_url(project.organization.twitter), :target => '_blank' unless !project.organization.twitter.present? %></li>
                 </ul>
               </div>
 
