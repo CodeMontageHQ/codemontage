@@ -5,21 +5,24 @@
   <%= simple_form_for @organization do |f| %>  
   	<div class="form-inputs">
 	    <%= f.simple_fields_for :projects do |project| %>
-	    	<%= project.input :name, :label => 'Project Name' %>
-	    	<%= project.input :github_repo, :label => 'GitHub Repository', :placeholder => 'Just the repo name, please...' %>
-	    	<%= project.input :url, :label => 'Project Website' %>
+	     <div class="row">
+	     	<%= project.input :name, :label => 'Project Name', wrapper_html: { class: "six columns" }, error_html: { class: "error"} %>
+	    	<%= project.input :github_repo, :label => 'GitHub Repository', :placeholder => 'Just the repo name, please...', wrapper_html: { class: 'six columns' }, error_html: { class: "error"} %>
+	    </div>	
+    	  <%= project.input :url, :label => 'Project Website' %>
 	    	<%= project.input :description, :placeholder => 'What does your project do?' %>
 	    <% end %>
 
-	    <%= f.input :name, :label => 'Organization Name' %>
-	    <%= f.input :github_org, :label => 'Organization GitHub Username' %>
-	    <%= f.input :url, :label => 'Organization Website', :required => false,
-	    																								:as => :url %>
-	    <%= f.input :contact_name, :label => 'Contact Name',
-	    													 :placeholder => 'Who should we talk to for more info?' %>
-	    <%= f.input :contact_role, :label => 'Contact Title',
-	    													 :placeholder => 'What do they do at the org?' %>
-	    <%= f.input :contact_email, :label => 'Contact Email', :as => :email %>
+	    <%= f.input :name, :label => 'Organization Name', error_html: { class: "error" } %>
+	    <div class="row">
+	    	<%= f.input :github_org, :label => 'Organization GitHub Username', wrapper_html: { class: 'six columns'} %>
+	    	<%= f.input :url, :label => 'Organization Website', :required => false, :as => :url, wrapper_html: { class: 'six columns'} %>
+	    </div>	
+	   <div class="row">
+    		<%= f.input :contact_name, :label => 'Contact Name', :placeholder => 'Who should we talk to for more info?', wrapper_html: { class: 'four columns' } %>
+    		<%= f.input :contact_role, :label => 'Contact Title', :placeholder => 'What do they do at the org?', wrapper_html: { class: 'four columns'} %>
+	   		<%= f.input :contact_email, :label => 'Contact Email', :as => :email, wrapper_html: { class: 'four columns'} %>
+	    </div>		
     </div>
 
     <div class="form-actions">
