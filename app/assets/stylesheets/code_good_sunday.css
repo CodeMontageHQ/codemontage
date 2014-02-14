@@ -1,0 +1,112 @@
+// Place all the styles related to the CodeGoodSunday controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.codegood h1 {
+}
+
+body.codegood {
+  background: #00b0bb;
+  margin: 80px 150px 0 150px;
+}
+
+.codegood h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 6.5em; 
+  margin-bottom: -20px;
+}
+
+.codegood h2 {
+  color: yellow;
+  display: inline;
+  font-size: 2em;
+  font-weight: 700;
+  padding-left: 70px;
+}
+
+.codegood .deck {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: 50px;
+}
+
+.codegood .deck h2 {
+  position: absolute;
+  top: 10;
+}
+
+.codegood .deck img {
+  position: absolute;
+  right: 200;
+  top: 10;
+}
+
+.codegood section {
+  padding-left: 70px;
+  padding-top: 30px;
+  width: 90%;
+}
+
+.codegood section h3:first-child{
+  width: 70%;
+}
+
+.codegood h3, .codegood li {
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.codegood ol {
+  list-style: none;
+  padding: 0 0 0 120px;
+  counter-reset: my-awesome-counter;
+}
+
+.codegood li {
+  margin: .5em;
+  padding: 0;
+  counter-increment: my-awesome-counter;
+}
+
+.codegood li:before {
+  content: counter(my-awesome-counter);
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 25px 0 -80px;
+  color: white;
+  width: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  border-radius: 1in;
+  border: 1.5px solid yellow;
+  font-weight: 900;
+}
+
+.codegood .signature {
+  margin-top: 50px;
+}
+
+.codegood a {
+  color: #ffffcc;
+  font-weight: 700;
+}
+
+.codegood .keyword {
+  text-decoration: underline;
+}
+
+.codegood a:hover {
+  color: #036b72;
+  font-weight: 700;
+}
+
+.codegood .signature {
+  font-weight: 900;
+  font-size: 1.5em;  
+  text-align: center;
+}
