@@ -2,22 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.codegood h1 {
-}
+body[data-controller="home"][data-action="code_good_day"] {
 
-body.codegood {
   background: #00b0bb;
-  margin: 80px 150px 0 150px;
-}
 
-.codegood h1 {
+.codegood {
+
+h1 {
   color: white;
   font-weight: 800;
   font-size: 6.5em; 
   margin-bottom: -20px;
 }
 
-.codegood h2 {
+h2 {
   color: yellow;
   display: inline;
   font-size: 2em;
@@ -25,54 +23,54 @@ body.codegood {
   padding-left: 70px;
 }
 
-.codegood .deck {
+.deck {
   width: 100%;
   display: block;
   position: relative;
   height: 50px;
 }
 
-.codegood .deck h2 {
+.deck h2 {
   position: absolute;
   top: 10;
 }
 
-.codegood .deck img {
+.deck img {
   position: absolute;
   right: 200;
   top: 10;
 }
 
-.codegood section {
+section {
   padding-left: 70px;
   padding-top: 30px;
   width: 90%;
 }
 
-.codegood section h3:first-child{
+section h3:first-child{
   width: 70%;
 }
 
-.codegood h3, .codegood li {
+h3, li {
   color: white;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 1.3em;
   font-weight: 400;
 }
 
-.codegood ol {
+ol {
   list-style: none;
   padding: 0 0 0 120px;
   counter-reset: my-awesome-counter;
 }
 
-.codegood li {
+li {
   margin: .5em;
   padding: 0;
   counter-increment: my-awesome-counter;
 }
 
-.codegood li:before {
+li:before {
   content: counter(my-awesome-counter);
   font-size: 1.5em;
   display: inline-block;
@@ -87,26 +85,30 @@ body.codegood {
   font-weight: 900;
 }
 
-.codegood .signature {
+.signature {
   margin-top: 50px;
 }
 
-.codegood a {
+a {
   color: #ffffcc;
   font-weight: 700;
 }
 
-.codegood .keyword {
+.keyword {
   text-decoration: underline;
 }
 
-.codegood a:hover {
+a:hover {
   color: #036b72;
   font-weight: 700;
 }
 
-.codegood .signature {
+.signature {
   font-weight: 900;
   font-size: 1.5em;  
   text-align: center;
+}
+
+}
+
 }
