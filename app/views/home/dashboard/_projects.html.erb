@@ -1,7 +1,7 @@
 <div class="profile_projects">
   <h3>Your Saved Projects</h3>
   <% if @favorite_projects.present? %>
-    <ul>
+    <ul class="no-bullet">
       <% @favorite_projects.each do |project| %>
         <li><%= link_to project.name, project_path(project) %></li>
       <% end %>
