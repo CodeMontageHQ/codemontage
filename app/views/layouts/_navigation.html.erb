@@ -1,8 +1,9 @@
-<% if user_signed_in? %> 
+<div class="contain-to-grid">
+  <% if user_signed_in? %> 
   <nav class="top-bar logged-in">
-<% else %>
+  <% else %>
   <nav class="top-bar logged-out">
-<% end %>
+  <% end %>
     <ul class="title-area">
       <!-- For small screens, use a text title, otherwise use the logo in navigation -->
       <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %></li>
@@ -21,3 +22,4 @@
       </ul>
     </section>
   </nav>
+</div>
