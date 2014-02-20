@@ -6,10 +6,14 @@
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
 
 // Custom Settings for CodeMontage Application
-$em-base: 18px;
+
+/* If you want your base font-size to be different and not have it effect the grid breakpoints, set $em-base to $base-font-size and make sure $base-font-size is a px value. */
+$base-font-size: 18px;
+$em-base: $base-font-size;
 
 $body-font-color: $cmDarkGrey;
 $body-font-family: "Source Sans Pro", sans-serif;
+$paragraph-font-weight: 300;
 
 $primary-color: $cmTeal;
 
@@ -17,15 +21,20 @@ $header-font-family: $body-font-family;
 $header-font-weight: normal;
 $header-font-color: $cmPurple;
 
+$h1-font-size: emCalc(44px);
+$h2-font-size: emCalc(28px);
+$h3-font-size: emCalc(24px);
+$h4-font-size: emCalc(29px);
+$h5-font-size: emCalc(27px);
+$h6-font-size: 1em;
+
 $button-font-weight: normal;
 
-//
-// Top Bar Variables
-//
+$list-style-position: inside;
 
+// Top Bar Variables
 $topbar-bg: $cmOffBlack;
 $topbar-height: 60px;
-
 $topbar-link-weight: normal;
 $topbar-link-font-size: $em-base;
 $topbar-nav-toggle-size: 12px;
