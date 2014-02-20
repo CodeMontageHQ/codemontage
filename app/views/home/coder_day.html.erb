@@ -1,7 +1,7 @@
 <body>
   <% content_for :title do %>Coder Day of Service by CodeMontage<% end %>
   <div class="mlkday">
-    <div id="mlk_welcome" class="ten columns centered">
+    <div id="mlk_welcome" class="large-10 columns large-centered">
       <%=image_tag image_path("logos/CDS-horiz-logo.jpg") %>
       <p>On January 18, a diverse group of over 200 coders inspired by Dr. Martin Luther King Jr. gathered in NYC and online to contribute to <strong>open source, social impact</strong> projects. Keynotes by technology leaders <strong><%= link_to "Julie Ann Horvath", "http://storify.com/CodeMontage/julie-ann-horvath-coder-day-of-service-keynote" %></strong> and <strong><%= link_to "John Resig", "http://storify.com/CodeMontage/john-resig-coder-day-of-service-keynote" %></strong> set the tone for collaboration, and more than <strong><%= link_to "50 projects", projects_path %></strong> were amplified that day.
       </p>
@@ -11,11 +11,11 @@
       <p><a href="http://vimeo.com/85846616">Coder Day of Service, powered by CodeMontage</a> from <a href="http://vimeo.com/codemontage">CodeMontage</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
     </div>
     <div id="mlkd_sponsors" class="row">
-      <div class="ten columns centered">
+      <div class="large-10 columns large-centered">
         <h2>Coder Day of Service January 2014 Sponsors</h2>
-        <div class="sponsors row centered">
+        <div class="sponsors row large-centered">
           <% @sponsors.each do |featured| %>
-            <div class="four columns">
+            <div class="large-4 columns">
                 <h5>
                 <% if find_logo?(featured) %>
                   <%= link_to (image_tag find_logo(featured)), organization_path(featured) %>
