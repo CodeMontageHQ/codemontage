@@ -1,10 +1,10 @@
 <body>
   <div class="row">
-    <div class="eight columns">
+    <div class="large-8 columns">
       <h4><%= link_to @project.organization.name, organization_path(@project.organization) %></h4>
       <h4><%= @project.name %></h4>
       <div id="links">
-        <ul>
+        <ul class="no-bullet">
           <li><%= link_to '<i class="fi-web"></i> '.html_safe + display_url(@project.url), @project.url, :target => '_blank' unless !@project.url.present? %></li>
           <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + @project.github_display + " Code", @project.github_url, :target => '_blank' unless !@project.github_url.present? %></li>
           <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + @project.name + " Open Tasks", @project.tasks_url, :target => '_blank' unless !@project.tasks_url.present? %></li>
@@ -26,7 +26,7 @@
       <% end %>
     </div>
 
-    <div class="four columns">
+    <div class="large-4 columns">
       <%= link_to image_tag(find_logo(@project.organization), :alt => @project.organization.name), @project.organization.url, :target => '_blank' if find_logo?(@project.organization) %>
       
       <div id="project_causes">
