@@ -51,7 +51,7 @@ group :assets do
 
   # Foundation front-end framework
   gem 'compass-rails'
-  gem 'zurb-foundation', '~> 4.0.0'
+  gem 'foundation-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
