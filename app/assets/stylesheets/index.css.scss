@@ -2,6 +2,12 @@
 @import "colors";
 @import url(//fonts.googleapis.com/css?family=Courgette);
 
+body[data-controller="home"][data-action="index"] {
+
+  h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+  .panel h1, h2, h3, h4, h5, h6 { color: $cmPurple; }
+}
+
 #coder_welcome {
 
   .button {
