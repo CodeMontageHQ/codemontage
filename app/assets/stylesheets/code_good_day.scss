@@ -26,6 +26,7 @@ body[data-controller="home"][data-action="code_good_day"] {
       display: block;
       position: relative;
       height: 50px;
+      background: pink;
       
       h2 {
         position: absolute;
@@ -37,12 +38,14 @@ body[data-controller="home"][data-action="code_good_day"] {
     img {
       position: absolute;
       right: 50px;
+      background: yellow;
     }
 
     section {
       padding-left: 70px;
       padding-top: 30px;
       width: 90%;
+      background: red;
       
       h3:first-child{
         width: 70%;
