@@ -17,18 +17,23 @@ Join our mission to create superhero coders! You can get involved by taking any 
 
 ###Development Environment Setup
 
-CodeMontage currently uses Ruby on Rails version 3.2.13 and Postgres 9.2.2.
+These setup instructions have been tested on Mac OS X, Microsoft Windows 7 with and without Cygwin, and Linux (Ubuntu 10.8.) Installing and running the site
+under Windows with or without Cygwin may be possible with enough environmental modifications, but doing so is outside the scope of this document.
+
+CodeMontage currently uses Ruby on Rails 3.2.13 and Postgres 9.2.2. The Gemfile specifies Ruby 2.0.0, but the site also runs in development under 1.9.3 and 
+2.1.1 (tested in Ubuntu.)
 
 To get started,
-* Install Rails. We recommend [Rails Installer](http://railsinstaller.org).
-* Install Postgres. We recommend [Postgres App](http://postgresapp.com). 
-  (If you're using Mac OS X Lion, you may need [this fix for Postgres](http://stackoverflow.com/questions/9354122/how-to-install-postgresql-9-1-on-osx-lion).)
+* Install Rails. If you're using a Mac, we recommend [Rails Installer](http://railsinstaller.org). Under Ubuntu, follow the instructions [here](https://www.digitalocean.com/community/articles/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-precise-pangolin-with-rvm).
+* Install Postgres. For the Mac, we recommend [Postgres App](http://postgresapp.com). (If you're using Mac OS X Lion, you may need [this fix for Postgres](http://stackoverflow.com/questions/9354122/how-to-install-postgresql-9-1-on-osx-lion).) Under Ubuntu, follow the instructions [here](http://stackoverflow.com/questions/11092807/installing-postgresql-on-ubuntu-for-ruby-on-rails).
+  
 * Clone the CodeMontage Repo:  `git clone https://github.com/CodeMontageHQ/codemontage.git`
 * Install dependencies: `cd codemontage`, `bundle install`
-* Configure the app for your local database by copying *database.yml.sample* to *database.yml* and making any changes needed for your database setup (possibly `rake db:create`).
+* Configure the app for your local database by copying *database.yml.sample* to *database.yml* and adding a valid username and password. Make any changes needed for your database setup ( and possibly `rake db:create`).
 * Once your database is created, run `rake db:migrate`.
 * Load helpful example data into your local database by running `rake db:seed`.
 * If you'll be developing GitHub-related functionality, [register a GitHub API Application](https://github.com/settings/applications/new) using *Homepage URL* http://localhost:3000 and *Authorization callback URL* http://localhost:3000/auth/github/callback. Next, set your GitHub-related environment variables when you start your server. e.g. `GITHUB_KEY=client_id GITHUB_SECRET=client_secret rails server`. You can find the *Client ID* and *Client Secret* for your application from the [Applications page](http://github.com/settings/applications).
+* On the Mac, you will usually have a JavaScript runtime already installed. If you don't have one on Ubuntu, you can get one by running `sudo apt-get install nodejs`.
 
 Once you've installed these dependencies, test your setup by running `rails server` and visiting your site at [http://localhost:3000](http://localhost:3000)
 
