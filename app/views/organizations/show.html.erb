@@ -65,25 +65,12 @@
               <div class="four columns">
                 <div id="project_causes">
                   <h5>Causes</h5>
-                  <% project.cause_list.each_with_index do |tag, index| %>
-                    <% if index == project.cause_list.length - 1 %>
-                      <%= link_to tag, projects_path(:tags => tag) %>
-                    <% else %>
-                      <%= link_to tag + ", ", projects_path(:tags => tag) %>
-                    <% end %>
-                  <% end %>
-                  
+                  <%= project_tags_link_list project, 'causes' %>
                 </div>
 
                 <div id="project_technologies">
                   <h5>Technologies</h5>
-                  <% project.technology_list.each_with_index do |tag, index| %>
-                    <% if index == project.technology_list.length - 1 %>
-                      <%= link_to tag, projects_path(:tags => tag) %>
-                    <% else %>
-                      <%= link_to tag + ", ", projects_path(:tags => tag) %>
-                    <% end %>
-                  <% end %>
+                  <%= project_tags_link_list project, 'technologies' %>
                 </div>
               </div>
             </div>

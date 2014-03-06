@@ -23,7 +23,7 @@ class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
     @jobs = @organization.jobs.active
-    @projects = @organization.projects.featured
+    @projects = @organization.projects.featured.includes :technologies, :causes
     @sponsorships = @organization.sponsorships
   end
 end
