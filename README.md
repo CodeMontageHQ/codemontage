@@ -29,9 +29,10 @@ To get started,
   
 * Clone the CodeMontage Repo:  `git clone https://github.com/CodeMontageHQ/codemontage.git`
 * Install dependencies: `cd codemontage`, `bundle install`
-* Configure the app for your local database by copying *database.yml.sample* to *database.yml* and adding a valid username and password. Make any changes needed for your database setup ( and possibly `rake db:create`).
 * Once your database is created, run `rake db:migrate`.
 * Load helpful example data into your local database by running `rake db:seed`.
+* Configure the app for your local database by copying database.yml.sample to database.yml and adding a valid username and password. Make any changes needed for your database setup ( and possibly `rake db:create`).
+  `cp config/database.yml.sample config/database.yml`
 * If you'll be developing GitHub-related functionality, [register a GitHub API Application](https://github.com/settings/applications/new) using *Homepage URL* http://localhost:3000 and *Authorization callback URL* http://localhost:3000/auth/github/callback. Next, set your GitHub-related environment variables when you start your server. e.g. `GITHUB_KEY=client_id GITHUB_SECRET=client_secret rails server`. You can find the *Client ID* and *Client Secret* for your application from the [Applications page](http://github.com/settings/applications).
 * On the Mac, you will usually have a JavaScript runtime already installed. If you don't have one on Ubuntu, you can get one by running `sudo apt-get install nodejs`.
 
