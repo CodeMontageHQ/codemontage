@@ -2,22 +2,26 @@
 
 body[data-controller="home"][data-action="code_good_day"] {
 
-  background: $cmTeal;
+  background: white;
 
   .codegood {
 
+    .working {
+      background: yellow;
+    }
+
     h1 {
-      color: white;
-      font-weight: 800;
-      font-size: 6.5em; 
+      color: $cmTeal;
+      font-weight: 900;
+      font-size: 5em; 
       margin-bottom: -20px;
     }
 
     h2 {
-      color: yellow;
+      color: $cmPurple;
       display: inline;
       font-size: 2em;
-      font-weight: 700;
+      font-weight: 900;
       padding-left: 70px;
     }
 
@@ -25,27 +29,29 @@ body[data-controller="home"][data-action="code_good_day"] {
       width: 100%;
       display: block;
       position: relative;
-      height: 50px;
-      
+      height: 50px;      
       h2 {
         position: absolute;
         top: 10;
-      }
-      
+      }     
+    }
+
+    img {
+      position: absolute;
+      right: 50px;
     }
 
     section {
       padding-left: 70px;
       padding-top: 30px;
-      width: 90%;
-      
+      width: 90%;      
       h3:first-child{
         width: 70%;
       }
     }
 
     h3, li {
-      color: white;
+      color: black;
       font-family: "Source Sans Pro", Helvetica, sans-serif;
       font-size: 1.3em;
       font-weight: 400;
@@ -69,17 +75,17 @@ body[data-controller="home"][data-action="code_good_day"] {
       display: inline-block;
       vertical-align: middle;
       margin: 0 25px 0 -80px;
-      color: white;
+      color: black;
       width: 1.5em;
       line-height: 1.5em;
       text-align: center;
       border-radius: 1in;
-      border: 1.5px solid yellow;
+      border: 1.5px solid $cmTeal;
       font-weight: 900;
     }
 
     a {
-      color: $lightYellow;
+      color: $cmPurple;
       font-weight: 700;
     }
 
