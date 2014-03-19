@@ -19,8 +19,8 @@ var APP = APP || {};
 APP = {
   common: {
     init: function() {
-			$(document).foundationTopBar();
-			$(document).foundationTopBar();
+			// $(document).foundationTopBar();
+			// $(document).foundationTopBar();
     }
   },
   home: {
