@@ -1,18 +1,18 @@
-development:
+common: &common
   adapter: postgresql
   encoding: utf8
-  database: codemontage_development
-  host: localhost
+  host: 127.0.0.1
+  user: root
+  password: 
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+development:
+  <<: *common
+  database: codemontage_development
+
 test:
-  adapter: postgresql
-  encoding: utf8
+  <<: *common
   database: codemontage_test
 
 production:
-  adapter: postgresql
-  encoding: utf8
+  <<: *common
   database: codemontage_production
