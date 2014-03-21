@@ -1,8 +1,7 @@
-<h2>Sign Up for CodeMontage</h2>
+<h2>Make a difference today. Sign Up!</h2>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
+<div class="large-5 columns">
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, :required => true, :autofocus => true, :placeholder => 'captain.planet@gmail.com' %>
     <%= f.input :password, :required => true %>
@@ -11,6 +10,16 @@
   <div class="form-actions">
     <%= f.button :submit, "Sign up", :class => "small radius button" %>
   </div>
-<% end %>
+  <% end %>
+  
+<%= link_to "Sign in", new_session_path(resource_name) %> | <%= link_to "Forgot your password?", new_password_path(resource_name) %>
 
-<%= render "devise/shared/links" %>
+</div>
+
+<div class="large-1 columns align-center sign-up-or">
+  <h2>OR</h2>
+</div>
+
+<div class="large-6 columns">
+  <%= link_to '<i class="fi-social-github"></i>  Sign up with GitHub'.html_safe, "/auth/github", :class => "large radius index button home-signup" %>
+</div>
