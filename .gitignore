@@ -26,3 +26,6 @@
 # Ignore ruby version files
 .ruby-version
 .rvmrc
+
+# Ignore coverage output
+coverage
