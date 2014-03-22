@@ -17,19 +17,19 @@ class Project < ActiveRecord::Base
   scope :featured, where("organization_id IS NOT NULL").active
   
   def github_display
-    github_display = self.organization.github_org + "/" + self.github_repo
+    "#{self.organization.github_org}/#{self.github_repo}"
   end
 
   def github_url
-    github_url = self.organization.github_url + "/" + self.github_repo
+    "#{self.organization.github_url}/#{self.github_repo}"
   end  
 
   def related_projects
-    projects = self.organization.projects.where("id NOT IN (?)", self.id)
+    self.organization.projects - [self]
   end
 
   def tasks_url
-    tasks_url = self.organization.github_url + "/" + self.github_repo + "/issues"
+    "#{github_url}/issues"
   end  
 
 end
