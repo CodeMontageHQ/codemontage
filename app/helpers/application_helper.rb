@@ -6,21 +6,20 @@ module ApplicationHelper
 	# Returns organization logo or image_url for organization logo,
 	# for use in organization and project views, if it exists.
 	def find_logo(organization, options = {})
-		size = options[:size] || :medium
-
-		if organization.logo.exists?
-			organization.logo.url(size)
-		elsif !organization.image_url.blank?
+		if organization.logo.present?
+			organization.logo.url(options[:size] || :medium)
+		elsif organization.image_url.present?
 			organization.image_url
 		end
 	end
 
 	# Returns true if organization logo or image_url for organization logo exist
 	def find_logo?(organization)
-		organization.logo.exists? || !organization.image_url.blank?
+		organization.logo.present? || organization.image_url.present?
 	end
 
 	def twitter_url(handle)
 		"http://twitter.com/#{handle}" unless handle.blank?
 	end
+
 end
