@@ -31,11 +31,7 @@ class Organization < ActiveRecord::Base
   scope :sponsors, Organization.joins(:sponsorships).order("sponsorships.tier, organizations.name")
 
   def display_url
-    begin
-      URI.parse(self.url).hostname
-    rescue
-      ""
-    end
+    self.url.to_s.gsub(/^https?:\/\//,"")
   end
 
   def github_url
