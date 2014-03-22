@@ -31,11 +31,15 @@ class Organization < ActiveRecord::Base
   scope :sponsors, Organization.joins(:sponsorships).order("sponsorships.tier, organizations.name")
 
   def display_url
-    display_url = self.url.gsub(/^https?:\/\//,"")
+    begin
+      URI.parse(self.url).hostname
+    rescue
+      ""
+    end
   end
 
   def github_url
-    github_url = ("http://github.com/" + self.github_org) unless self.github_org.blank?
+    "https://github.com/#{self.github_org}" if self.github_org.present?
   end
 
   def logo_delete
@@ -43,7 +47,7 @@ class Organization < ActiveRecord::Base
   end
 
   def logo_delete=(str)
-      @logo_delete = str
+    @logo_delete = str
   end
 
   private
