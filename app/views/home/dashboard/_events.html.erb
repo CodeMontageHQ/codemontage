@@ -1,10 +1,22 @@
 <div id="events" class="index radius panel row">
   <h3>Upcoming Events</h3>
+
+  <div id="code_good_sunday">
+    <h4>#CodeGoodSunday</h4>
+    <p>
+      <ul class="no-bullet">
+        <li><%= link_to '<i class="fi-megaphone"></i> '.html_safe + " Chat", 'http://tlk.io/codemontage', :target => '_blank' %></li>
+        <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " #CodeGoodSunday", 'http://twitter.com/#codegoodsunday', :target => '_blank' %></li>
+      </ul>
+    </p>
+  </div>
+
+  <h3>Past Events</h3>
   
   <div id="coder_day">
     <%= link_to image_tag('coder_day_badge_logo.png', :height => "300px"), coder_day_path %>
     <p>
-      <ul class="no-bullet">
+      <ul class="no-bullet hide">
         <li><%= link_to '<i class="fi-megaphone"></i> '.html_safe + " Chat", 'http://tlk.io/codemontage', :target => '_blank' %></li>
         <li><%= link_to '<i class="fi-map"></i> '.html_safe + " Map (NYC)", 'codemontage_coder_day_of_service_map.pdf', :target => '_blank' %></li>
         <li><%= link_to '<i class="fi-clock"></i> '.html_safe + " Schedule", 'codemontage_coder_day_of_service_schedule.pdf', :target => '_blank' %></li>
@@ -12,7 +24,7 @@
       </ul>
     </p>
     <div class="large-8 columns centered">
-    <span class="registration">
+    <span class="registration hide">
       <% if @events.present? %>
         <p><i class="fi-check"></i> Registered<p>
       <% else %>
