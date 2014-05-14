@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140121205604) do
+ActiveRecord::Schema.define(:version => 20140514193654) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -38,14 +38,18 @@ ActiveRecord::Schema.define(:version => 20140121205604) do
   add_index "event_registrations", ["user_id"], :name => "index_event_registrations_on_user_id"
 
   create_table "events", :force => true do |t|
-    t.string   "short_code",  :null => false
-    t.string   "name",        :null => false
+    t.string   "short_code",        :null => false
+    t.string   "name",              :null => false
     t.datetime "start_date"
     t.datetime "end_date"
     t.string   "description"
     t.text     "notes"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true
