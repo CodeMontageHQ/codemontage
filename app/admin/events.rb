@@ -30,6 +30,7 @@ ActiveAdmin.register Event do
       f.input :map_url
       f.input :schedule_url
       f.input :hashtag
+      f.input :eventbrite_url
       f.input :notes
     end
     f.buttons
@@ -54,6 +55,7 @@ ActiveAdmin.register Event do
       row :map_url do link_to ad.map_url, ad.map_url unless !ad.map_url.present? end
       row :schedule_url do link_to ad.schedule_url, ad.schedule_url unless !ad.schedule_url.present? end
       row :hashtag
+      row :eventbrite_url do link_to ad.eventbrite_url, ad.eventbrite_url unless !ad.eventbrite_url.present? end
       row :notes
       row :created_at
       row :updated_at

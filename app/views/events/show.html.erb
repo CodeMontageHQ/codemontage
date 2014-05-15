@@ -1,8 +1,29 @@
 <body>
-  <h4><%= @event.name %></h4>
+  <% content_for :title do @event.name end %>
   <div class="event">
-    <div id="event_welcome" class="large-10 columns large-centered">
-      <%=image_tag @event.logo %>
+    <div id="event_welcome" class="row">
+      <div class="large-8 columns large-centered">
+        <%= image_tag @event.logo, :alt => @event.name %>
+      </div>
+      <div>
+        </br>
+        <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></br>
+        </p>
+      </div>
+      <div class="large-8 columns large-centered">
+        <h1><%= @event.name %></h1>
+        <p><%=raw @event.description %><p>
+      </div>
+    </div>
+    <div id="event_rsvp" class="row">
+      <div class="large-6 columns large-centered text-center">
+        <%= %>
+        <% if @event.eventbrite_url.present? %>
+          <%= link_to "RSVP for the " + @event.name, @event.eventbrite_url, :class => "large index radius button" %>
+        <% else %>
+          <%= link_to "Join the " + @event.name, dashboard_path, :class => "large index radius button" %>
+        <% end %>
+      </div>
     </div>
     <% if @event_sponsors.present? %>
     <div id="event_sponsors" class="row">
