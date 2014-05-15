@@ -9,4 +9,14 @@ class EventsController < ApplicationController
     end
     
   end
+  
+  def index
+    @events = Event.order('start_date desc')
+  end
+
+  def show
+    @event = Event.find(params[:id])
+    @event_sponsors = Organization.sponsors.where('event = ?', params[:id])
+  end
+
 end

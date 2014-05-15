@@ -4,7 +4,8 @@ class HomeController < ApplicationController
 
   def dashboard
     @favorite_projects = current_user.favorites
-    @events = current_user.events
+    @registered_events = current_user.events
+    @upcoming_events = Event.upcoming_events
   end
 
   def coder_day 
