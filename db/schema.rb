@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140515032955) do
+ActiveRecord::Schema.define(:version => 20140515171006) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20140515032955) do
     t.string   "name",              :null => false
     t.datetime "start_date"
     t.datetime "end_date"
-    t.string   "description"
+    t.text     "description"
     t.text     "notes"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20140515032955) do
     t.string   "schedule_url"
     t.string   "hashtag"
     t.string   "slug"
+    t.string   "eventbrite_url"
   end
 
   add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true
