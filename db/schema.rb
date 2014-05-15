@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140515010637) do
+ActiveRecord::Schema.define(:version => 20140515032955) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -54,9 +54,11 @@ ActiveRecord::Schema.define(:version => 20140515010637) do
     t.string   "map_url"
     t.string   "schedule_url"
     t.string   "hashtag"
+    t.string   "slug"
   end
 
   add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true
+  add_index "events", ["slug"], :name => "index_events_on_slug", :unique => true
 
   create_table "favorite_projects", :force => true do |t|
     t.integer  "project_id",                    :null => false
