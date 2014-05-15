@@ -25,12 +25,12 @@
         <% end %>
       </div>
     </div>
-    <% if @event_sponsors.present? %>
+    <% if @event.sponsors.present? %>
     <div id="event_sponsors" class="row">
       <div class="large-10 columns large-centered">
         <h2><%= @event.name %> Sponsors</h2>
         <div class="sponsors row large-centered">
-          <% @event_sponsors.each do |featured| %>
+          <% @event.sponsors.each do |featured| %>
             <div class="large-4 columns">
                 <h5>
                 <% if find_logo?(featured) %>
