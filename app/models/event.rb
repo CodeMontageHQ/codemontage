@@ -12,6 +12,8 @@ class Event < ActiveRecord::Base
   validates_attachment_size :logo, :less_than => 5.megabytes
   validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
+  scope :upcoming_events, where("end_date >= ?", Date.tomorrow)
+
   def logo_delete
     @logo_delete || '0'
   end

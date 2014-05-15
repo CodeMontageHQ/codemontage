@@ -1,9 +1,9 @@
 <div id="events" class="index radius panel row">
   
   <div id="coder_day">
-  <% if @events.present? %>
+  <% if @upcoming_events.present? %>
     <h3>Upcoming Events</h3>
-    <% @events.each do |event| %>
+    <% @upcoming_events.each do |event| %>
     <div class="event">
       <% if event.logo.present? %>
         <%= link_to (image_tag event.logo.url, :height => "300px"), event_path(event) %>
@@ -21,7 +21,7 @@
     </div>
     <div class="event_registration">
       <span class="registration text-center">
-        <% if @events.include?(event.id) %>
+        <% if @registered_events.include?(event) %>
           <p><i class="fi-check text-centered"></i> Registered<p>
         <% else %>
         <%= button_to "Register", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
