@@ -19,10 +19,10 @@
         </ul>
       </p>
     </div>
-    <div class="event_registration">
-      <span class="registration text-center">
+    <div class="event_registration text-center">
+      <span class="registration">
         <% if @registered_events.include?(event) %>
-          <p><i class="fi-check text-centered"></i> Registered<p>
+          <p><i class="fi-check"></i> Registered<p>
         <% else %>
         <%= button_to "Register", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
         <% end %>
