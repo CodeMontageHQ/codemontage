@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def coder_day 
-    @sponsors = Event.find_by_short_code('CDOS201401').sponsors
+    @sponsors = Event.find_by_short_code('CDOS201401').sponsors unless !Event.find_by_short_code('CDOS201401').present?
   end
 
   def index
