@@ -19,6 +19,7 @@ ActiveAdmin.register Event do
       f.input :name
       f.input :start_date
       f.input :end_date
+      f.input :teaser
       f.input :description
       if f.object.logo.exists?
         f.input :logo, :as => :file, :hint => f.template.image_tag(f.object.logo.url(:thumb))
@@ -43,6 +44,7 @@ ActiveAdmin.register Event do
       row :name
       row :start_date
       row :end_date
+      row :teaser
       row :description
       row :logo do
         if event.logo.exists?
