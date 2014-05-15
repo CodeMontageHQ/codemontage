@@ -12,4 +12,8 @@ class HomeController < ApplicationController
     @sponsors = Event.find_by_short_code('CDOS201401').sponsors
   end
 
+  def index
+    @featured_event = Event.featured
+  end
+
 end

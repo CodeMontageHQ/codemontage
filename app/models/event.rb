@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
   has_many :sponsorships
   has_many :users, :through => :event_registrations
   
-  attr_accessible :name, :short_code, :start_date, :end_date, :description, :notes
+  attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
   attr_accessible :logo, :logo_delete
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
 
@@ -18,6 +18,10 @@ class Event < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   scope :upcoming_events, where("end_date >= ?", Date.tomorrow)
+
+  def self.featured
+    upcoming_events.order('start_date').first
+  end
 
   def logo_delete
     @logo_delete || '0'
