@@ -17,6 +17,10 @@ class Event < ActiveRecord::Base
 
   scope :upcoming_events, where("end_date >= ?", Date.tomorrow)
 
+  def self.featured
+    upcoming_events.order('start_date').first
+  end
+
   def logo_delete
     @logo_delete || '0'
   end

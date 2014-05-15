@@ -12,4 +12,8 @@ class HomeController < ApplicationController
     @sponsors = Organization.sponsors
   end
 
+  def index
+    @featured_event = Event.featured
+  end
+
 end

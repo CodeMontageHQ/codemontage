@@ -43,6 +43,21 @@
     </div>
   </section>
   <section>
+    <% if @featured_event.present? %>
+    <div id="featured_event" class="row">
+      <div class="large-10 index panel radius shadow large-centered columns row">
+        <div id="event_logo" class="large-4 columns">
+          <%= link_to (image_tag @featured_event.logo, :height => "400px"), event_path(@featured_event) %>
+        </div>
+        <div class="large-8 columns">
+          <h2><%= link_to @featured_event.name, event_path(@featured_event) %></h2>
+          <p><%=raw @featured_event.teaser %> Will you be there? <%= link_to 'RSVP', event_path(@featured_event) %>!</p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </section>
+  <section>
     <div id="secondary_welcome" class="large-10 large-centered columns row">
       <div id="org_welcome" class="large-6 columns">
         <h3>Submit an open source project</h3>
