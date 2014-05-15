@@ -1,0 +1,29 @@
+<body>
+  <h4><%= @event.name %></h4>
+  <div class="event">
+    <div id="event_welcome" class="large-10 columns large-centered">
+      <%=image_tag @event.logo %>
+    </div>
+    <% if @event_sponsors.present? %>
+    <div id="event_sponsors" class="row">
+      <div class="large-10 columns large-centered">
+        <h2><%= @event.name %> Sponsors</h2>
+        <div class="sponsors row large-centered">
+          <% @event_sponsors.each do |featured| %>
+            <div class="large-4 columns">
+                <h5>
+                <% if find_logo?(featured) %>
+                  <%= link_to (image_tag find_logo(featured)), organization_path(featured) %>
+                <% else %>
+                  <%= link_to featured.name, organization_path(featured) %>
+                <% end %>
+                </h5>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <% content_for(:press) do %>Press<% end %>
+</body>
