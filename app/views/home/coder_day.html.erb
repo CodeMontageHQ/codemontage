@@ -11,6 +11,7 @@
       <p><a href="http://vimeo.com/85846616">Coder Day of Service, powered by CodeMontage</a> from <a href="http://vimeo.com/codemontage">CodeMontage</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
     </div>
     <div id="mlkd_sponsors" class="row">
+      <% if @sponsors.present? %>
       <div class="large-10 columns large-centered">
         <h2>Coder Day of Service January 2014 Sponsors</h2>
         <div class="sponsors row large-centered">
@@ -27,6 +28,7 @@
           <% end %>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <% content_for(:press) do %>Press<% end %>

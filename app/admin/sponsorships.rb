@@ -4,7 +4,9 @@ ActiveAdmin.register Sponsorship do
       link_to job.organization.name, admin_organization_path(job.organization)
     end
     
-    column :event
+    column "Event", :sortable => :event_name do |sponsorship|
+      link_to sponsorship.event.name, admin_event_path(sponsorship.event)
+    end
     column :tier
     column :created_at
     column :updated_at
