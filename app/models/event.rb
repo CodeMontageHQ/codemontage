@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
   has_many :event_registrations
   has_many :users, :through => :event_registrations
   
-  attr_accessible :name, :short_code, :start_date, :end_date, :description, :notes
+  attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
   attr_accessible :logo, :logo_delete
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
 
