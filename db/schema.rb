@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514193654) do
+ActiveRecord::Schema.define(:version => 20140515010637) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(:version => 20140514193654) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "chat_url"
+    t.string   "map_url"
+    t.string   "schedule_url"
+    t.string   "hashtag"
   end
 
   add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true

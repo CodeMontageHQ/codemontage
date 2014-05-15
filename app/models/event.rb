@@ -4,6 +4,7 @@ class Event < ActiveRecord::Base
   
   attr_accessible :name, :short_code, :start_date, :end_date, :description, :notes
   attr_accessible :logo, :logo_delete
+  attr_accessible :chat_url, :map_url, :schedule_url, :hashtag
 
   #Paperclip
   has_attached_file :logo, :styles => { :thumb => "100x100>", :medium => "250x250>" },

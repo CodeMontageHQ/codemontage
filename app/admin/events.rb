@@ -26,6 +26,10 @@ ActiveAdmin.register Event do
       else
         f.input :logo, :as => :file
       end
+      f.input :chat_url
+      f.input :map_url
+      f.input :schedule_url
+      f.input :hashtag
       f.input :notes
     end
     f.buttons
@@ -46,6 +50,10 @@ ActiveAdmin.register Event do
           "No image available"
         end
       end
+      row :chat_url do link_to ad.chat_url, ad.chat_url unless !ad.chat_url.present? end
+      row :map_url do link_to ad.map_url, ad.map_url unless !ad.map_url.present? end
+      row :schedule_url do link_to ad.schedule_url, ad.schedule_url unless !ad.schedule_url.present? end
+      row :hashtag
       row :notes
       row :created_at
       row :updated_at
