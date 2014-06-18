@@ -26,3 +26,11 @@
 # Ignore ruby version files
 .ruby-version
 .rvmrc
+
+# Ignore VMs and disc images
+*.iso
+*.box
+.vagrant/
+
+# Precompiled assets
+/public/assets
