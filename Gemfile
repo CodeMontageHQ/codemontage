@@ -3,10 +3,11 @@ ruby "2.0.0"
 
 # Admin Tools
 gem 'activeadmin'
-gem "meta_search",    '>= 1.1.0.pre'
+gem 'meta_search',    '>= 1.1.0.pre'
 
 # Baseline Infrastructure
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.18'
+gem 'jquery-rails'
 gem 'pg'
 gem 'psych'
 
@@ -52,23 +53,5 @@ group :assets do
   # Foundation front-end framework
   gem 'compass-rails'
   gem 'zurb-foundation', '~> 4.0.0'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
