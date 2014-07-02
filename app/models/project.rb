@@ -15,7 +15,9 @@ class Project < ActiveRecord::Base
   scope :approved, where(:is_approved => true)
   scope :active, approved.where(:is_active => true)
   scope :featured, where("organization_id IS NOT NULL").active
-  
+  scope :with_technologies_and_causes, includes(:technologies, :causes  )
+  scope :with_organization, includes(:organization)
+
   def github_display
     github_display = self.organization.github_org + "/" + self.github_repo
   end
