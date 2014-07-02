@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+}
+
+.dialog {
+	text-align: center;
+	margin: 150px auto;
+}
+
+.dialog h1, a {
+	color: #7a3a74;
+	text-decoration: none;
+	
+}
+
+.dialog p {
+	color: #228691;
+}
+
+.fake-footer {
+	height: 64px;
+	width: 100%;
+	background-color: #292929;
+	position: fixed;
+	bottom: 0;
+}
+
+.fake-header {
+	height: 64px;
+	width: 100%;
+	background-color: #292929;
+	position: fixed;
+	top: 0;
+}
