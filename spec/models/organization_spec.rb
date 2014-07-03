@@ -26,17 +26,12 @@ describe Organization do
 
   context "url wrangling" do
 
-    let(:organization) { Organization.new(url: 'http://www.amazing.org/', github_org: 'amazing')}
+    let(:organization) { Organization.new(url: 'http://www.amazing.org', github_org: 'amazing')}
 
     describe "#display_url" do
 
       it "returns the hostname of its url" do
         expect(organization.display_url).to eq('www.amazing.org')
-      end
-
-      it "returns an empty string if its url is invalid" do
-        organization.stub(url: "random thing")
-        expect(organization.display_url).to eq('')
       end
 
       it "returns an empty string if its url is missing" do
