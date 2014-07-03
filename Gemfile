@@ -37,7 +37,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'simplecov'
+  gem 'simplecov', '~> 0.7.1'
 end
 
 # Development helpers
