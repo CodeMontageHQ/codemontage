@@ -1,31 +1,68 @@
 require "spec_helper"
 
 describe ProjectControllerHelper do
-  
-  before do
-    @project = Project.create(:organization_id => 1, :name => "CodeMontage Platform", :github_repo => "codemontage", :cause_list => "Cause1, Cause2", :technology_list => "Ruby, Rails")
+
+  describe "#code_later_url" do
+
+    let (:url) { helper.code_later_url }
+
+    before do
+      Date.stub(:tomorrow) { Date.parse("1971/12/17") }
+    end
+
+    it "returns a url with a start date parameter of tomorrow at 2pm" do
+      url = helper.code_later_url
+      expected = "19711217T140000Z"
+      expect(url.include?(expected)).to be_true
+    end
+
+    it "returns a url with an end date parameter of tomorrow at 6pm" do
+      url = helper.code_later_url
+      expected = "19711217T180000Z"
+      expect(url.include?(expected)).to be_true
+    end
+
   end
-  subject { @project }
 
   describe "#project_tags_link_list" do
-    it "returns list of links to the technologies when type technologies is given as argument" do    
-      links_list = helper.project_tags_link_list @project, 'technologies'
 
-      expect(links_list).to include("Ruby")
-      expect(links_list).to include(projects_path(:tags => "Ruby"))
+    let(:project) { Project.new(
+        organization_id: 1,
+        name: "CodeMontage Platform",
+        github_repo: "codemontage",
+      )
+    }
 
-      expect(links_list).to include("Rails")
-      expect(links_list).to include(projects_path(:tags => "Rails"))
+    before do
+      project.stub(:causes) { [double("Tag", name: 'Cause1'), double("Tag", name: 'Cause2')] }
+      project.stub(:technologies) { [double("Tag", name: 'Ruby'), double("Tag", name: 'Rails')] }
     end
 
-    it "returns list of links to the technologies when type causes is given as argument" do    
-      links_list = helper.project_tags_link_list @project, 'causes'
-      
-      expect(links_list).to include("Cause1")
-      expect(links_list).to include(projects_path(:tags => "Cause1"))
+    context "given a technologies argument" do
 
-      expect(links_list).to include("Cause2")
-      expect(links_list).to include(projects_path(:tags => "Cause2"))
+      let(:links_list) { helper.project_tags_link_list(project, 'technologies') }
+
+      it "returns a list of technology links" do
+        expect(links_list).to include("Ruby")
+        expect(links_list).to include("Rails")
+        expect(links_list).to include(projects_path(:tags => "Ruby"))
+        expect(links_list).to include(projects_path(:tags => "Rails"))
+      end
+
     end
+
+    context "given a causes argument" do
+
+      let(:links_list) { helper.project_tags_link_list(project, 'causes') }
+
+      it "returns a list of cause links" do
+        expect(links_list).to include("Cause1")
+        expect(links_list).to include("Cause2")
+        expect(links_list).to include(projects_path(:tags => "Cause1"))
+        expect(links_list).to include(projects_path(:tags => "Cause2"))
+      end
+
+    end
+
   end
 end
