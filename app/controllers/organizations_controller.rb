@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
 
 	def new
 		@organization = Organization.new
-		@project = @organization.projects.build(params[:projects])
+    @project = @organization.projects.new
 	end
 
 	def create

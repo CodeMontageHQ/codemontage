@@ -15,6 +15,24 @@ class ProjectsController < ApplicationController
       end
   end
 
+  def new
+    @project = Project.new
+  end
+
+  def create
+    @organization = Organization.find_by_name(params[:org_name])
+    if @organization
+      @organization.projects.build(params[:project])
+      if @organization.save
+        redirect_to root_path, :notice => "Your project has been submitted for approval."
+      else
+        render :new
+      end
+    else
+      render :new
+    end
+  end
+
   def show
     @project = Project.find(params[:id])
     @related_projects = @project.related_projects.featured
