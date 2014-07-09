@@ -17,8 +17,8 @@ class OrganizationsController < ApplicationController
 
     if success
       redirect_to root_path, :notice => "Your project has been submitted for approval."
-   	else
-	  render :new
+    else
+      render :new
     end
   end
 
