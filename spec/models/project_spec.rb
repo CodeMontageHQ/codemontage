@@ -37,19 +37,15 @@ describe Project do
 
   describe "#related_projects" do
 
-    let(:project_1) { Project.new }
-    let(:project_2) { Project.new }
-    let(:project_3) { Project.new }
-
-    let(:organization) { Organization.new }
+    let(:organization) { Organization.create!(name: 'CodeMontage') }
 
     before do
-      project_1.stub(:organization) { organization }
-      organization.projects = [project_1, project_2, project_3]
+      @project_1 = Project.create!(name: 'Code Montage', organization_id: organization.id, github_repo: 'codemontage')
+      @project_2 = Project.create!(name: 'Happy Days', organization_id: organization.id, github_repo: 'happydays')
     end
 
     it "returns its organization's other projects" do
-      expect(project_1.related_projects).to eq([project_2, project_3])
+      expect(@project_1.related_projects).to eq([@project_2])
     end
 
   end
