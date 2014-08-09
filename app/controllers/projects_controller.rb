@@ -17,6 +17,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @related_projects = @project.related_projects.featured
+    @related_projects = @project.related_projects.length > 0 ? @project.related_projects : false
   end
 end

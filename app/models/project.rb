@@ -32,6 +32,10 @@ class Project < ActiveRecord::Base
 
   def tasks_url
     "#{github_url}/issues"
-  end  
+  end
+
+  def active_featured
+    self.is_active == true && self.organization_id != nil
+  end
 
 end
