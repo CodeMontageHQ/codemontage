@@ -15,12 +15,13 @@
         <p><%= @project.description %></p>
       </div>
 
-      <% if @related_projects.exists? %>
+      <% if @related_projects %>
         <div id="related_projects">
           <h5>Related Projects</h5>
-    
           <% @related_projects.each do |project| %>
-            <h6><%= link_to project.name, project_path(project) %></h6>
+            <% if project.active_featured %>
+              <h6><%= link_to project.name, project_path(project) %></h6>
+            <% end %>
           <% end %>
         </div>
       <% end %>

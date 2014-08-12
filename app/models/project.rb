@@ -5,6 +5,7 @@ class Project < ActiveRecord::Base
   
   attr_accessible :organization_id, :name, :url, :github_repo, :description, :notes, :cause_list, :technology_list, :is_active, :is_approved
   validates_presence_of :name, :github_repo
+  validates :url, :presence => true, :uri => true
 
   has_many :favorite_projects
   has_many :users, :through => :favorite_projects
@@ -32,6 +33,10 @@ class Project < ActiveRecord::Base
 
   def tasks_url
     "#{github_url}/issues"
-  end  
+  end
+
+  def active_featured
+    self.is_active == true && self.organization_id != nil
+  end
 
 end

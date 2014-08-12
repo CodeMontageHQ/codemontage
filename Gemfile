@@ -28,6 +28,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
+gem 'addressable'
 
 # Test Suite
 group :development, :test do 
