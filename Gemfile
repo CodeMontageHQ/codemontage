@@ -9,7 +9,7 @@ gem 'meta_search',    '>= 1.1.0.pre'
 gem 'rails', '3.2.18'
 gem 'jquery-rails'
 gem 'pg'
-gem 'psych'
+gem 'psych', '~> 2.0.0'
 
 # Operations
 gem 'newrelic_rpm', '~> 3.7.1.182'
