@@ -6,7 +6,7 @@ gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
 
 # Baseline Infrastructure
-gem 'rails', '3.2.18'
+gem 'rails', '3.2.19'
 gem 'jquery-rails'
 gem 'pg'
 gem 'psych', '~> 2.0.0'
