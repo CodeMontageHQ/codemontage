@@ -29,6 +29,10 @@ gem 'gmaps4rails'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 
+
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+
 # Test Suite
 group :development, :test do 
   gem 'rspec-rails'

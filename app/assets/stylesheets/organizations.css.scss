@@ -9,3 +9,12 @@
   }
 
 }
+
+.simple_form .error {
+  padding-left: 10px;
+  color: #D00;
+}
+
+.field_with_errors, .field_with_errors input, .simple_form .error {
+	display: inline;
+}
