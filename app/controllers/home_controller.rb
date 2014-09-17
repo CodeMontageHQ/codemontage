@@ -16,4 +16,7 @@ class HomeController < ApplicationController
     @featured_event = Event.featured
   end
 
+  def code_of_conduct
+    @upcoming_events = Event.upcoming_events
+  end
 end
