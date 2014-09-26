@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
   has_many :users, :through => :event_registrations
   
   attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
-  attr_accessible :logo, :logo_delete
+  attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email, :organizer, :organizer_email, :location
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
 
   #Paperclip

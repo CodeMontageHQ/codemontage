@@ -32,8 +32,16 @@
 
   <h5>Upcoming Events Utilizing This Code of Conduct:</h5>
 
-  <p><strong>Event:</strong> Coder Day of Service &ndash; January 18, 2014 at AppNexus<br />
-  <strong>Lead Organizer:</strong> Elaine Marino, <a href="mailto:elaine@codemontage.com">elaine@codemontage.com</a><br />
-  <strong>Organizer:</strong> Courteney Ervin, <a href="mailto:courteney@codemontage.com">courteney@codemontage.com</a></p>
+  <% if @upcoming_events.present? %>
+  <% @upcoming_events.each do |event| %>
+    <p><strong>Event:</strong> <%= event.name %> &ndash; <%= event.start_date.strftime("%B %d, %Y") %> at <%= event.location %><br />
+      <% if event.lead_organizer.present? %>
+        <strong>Lead Organizer:</strong> <%= event.lead_organizer %>, <a href="mailto:<%= event.lead_email %>"><%= event.lead_email %></a><br />
+      <% end %>
+      <% if event.organizer.present? %>
+        <strong>Organizer:</strong> <%= event.organizer %>, <a href="mailto:<%= event.organizer_email %>"><%= event.organizer_email %></a></p>
+      <% end %>
+  <% end %>
+<% end %>
 
-  <p><strong>If you experience or witness any harassment at this event, please contact one of the organizers listed above.</strong></p>
+<p><strong>If you experience or witness any harassment at these events, please contact one of the organizers listed above.</strong></p>

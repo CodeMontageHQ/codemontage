@@ -10,6 +10,11 @@ ActiveAdmin.register Event do
     column :end_date
     column :created_at
     column :updated_at
+    column :lead_organizer
+    column :lead_email
+    column :organizer
+    column :organizer_email
+    column :location
     default_actions
   end
 
@@ -17,8 +22,13 @@ ActiveAdmin.register Event do
     f.inputs "Event Details", :multipart => true do
       f.input :short_code
       f.input :name
+      f.input :lead_organizer
+      f.input :lead_email, :label => "Lead organizer email"
+      f.input :organizer
+      f.input :organizer_email
       f.input :start_date
       f.input :end_date
+      f.input :location
       f.input :teaser
       f.input :description
       if f.object.logo.exists?
@@ -44,6 +54,11 @@ ActiveAdmin.register Event do
       row :name
       row :start_date
       row :end_date
+      row :location
+      row :lead_organizer
+      row :lead_email
+      row :organizer
+      row :organizer_email
       row :teaser
       row :description
       row :logo do
