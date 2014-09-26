@@ -2,7 +2,7 @@
   
   <h2>Submit a Project</h2>
 
-  <%= simple_form_for @organization do |f| %>  
+  <%= simple_form_for @organization, :validate => true do |f| %>  
   	<div class="form-inputs">
 	    <%= f.simple_fields_for :projects do |project| %>
 	     <div class="row">
