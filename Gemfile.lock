@@ -63,6 +63,10 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     chunky_png (1.2.8)
+    client_side_validations (3.2.6)
+    client_side_validations-simple_form (2.1.0)
+      client_side_validations (~> 3.2.5)
+      simple_form (~> 2.1.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -243,6 +247,8 @@ DEPENDENCIES
   aws-sdk
   bcrypt-ruby
   capybara
+  client_side_validations
+  client_side_validations-simple_form
   coffee-rails (~> 3.2.1)
   compass-rails
   devise (~> 2.2.8)
