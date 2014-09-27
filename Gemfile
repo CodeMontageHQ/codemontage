@@ -25,7 +25,6 @@ gem 'simple_form'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'friendly_id', '~> 4.0.10'
 gem 'geocoder'
-gem 'gmaps4rails'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 

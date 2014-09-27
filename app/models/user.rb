@@ -31,9 +31,6 @@ class User < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude, :address => :location
   after_validation :geocode, :reverse_geocode, :if => :current_sign_in_ip_changed?
 
-  # Location mapping
-  acts_as_gmappable :process_geocoding => false #processed by geocoder, no need to repeat
-
   scope :with_github, where(Service.where('services.user_id = users.id AND provider = ?', "github").exists)
   
   def encrypt_password
