@@ -6,7 +6,19 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "mailer@codemontage.com"
 
-  #config.secret_key = 'secret_key_goes_here'
+  begin
+    config.secret_key= if !Rails.env.production?
+      ('x' * 30) # meets minimum requirement of 30 chars long
+    elsif ENV['SECRET_TOKEN'] then
+      ENV['SECRET_TOKEN'] # set secret_token from ENV
+    else
+      token_file = Rails.root.to_s + "/secret_token"
+      to_load = open(token_file).read
+      to_load # set secret_token from file
+    end
+  rescue LoadError, Errno::ENOENT => e
+    raise "Secret key couldn't be loaded! Error: #{e}"
+  end
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
