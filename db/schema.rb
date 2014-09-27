@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140917053203) do
+ActiveRecord::Schema.define(:version => 20140927013645) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -120,11 +120,11 @@ ActiveRecord::Schema.define(:version => 20140917053203) do
     t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
+    t.string   "slug"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "slug"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
@@ -176,12 +176,15 @@ ActiveRecord::Schema.define(:version => 20140917053203) do
     t.datetime "created_at"
   end
 
-  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], :name => "taggings_idx", :unique => true
   add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
 
   create_table "tags", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "taggings_count", :default => 0
   end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
 
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id",                            :null => false
