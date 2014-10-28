@@ -46,7 +46,7 @@ CodeMontage::Application.routes.draw do
   match "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
   match "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
   match "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
-
+  match '*a', :to => 'errors#error_404'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
