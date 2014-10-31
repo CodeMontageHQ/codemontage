@@ -14,7 +14,7 @@ CodeMontage::Application.routes.draw do
   resource :user_profile
 
   # Omniauth authentication
-  match '/auth/:service/callback' => 'services#create' 
+  get '/auth/:service/callback' => 'services#create' 
   resources :services, :only => [:create, :destroy]
   
   # Organizations and project information
@@ -40,12 +40,12 @@ CodeMontage::Application.routes.draw do
   get '/training', {:controller => 'home', :action => 'training'}
 
   # Blog
-  match '/blog' => redirect("http://blog.codemontage.com")
+  get '/blog' => redirect("http://blog.codemontage.com")
   # Preserve links from tumblr placeholder
-  match "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
-  match "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
-  match "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
-  match "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
+  get "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
+  get "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
+  get "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
+  get "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
