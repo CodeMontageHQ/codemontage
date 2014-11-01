@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'acts-as-taggable-on', '~> 3.4.2'
 gem 'friendly_id', '~> 4.0.10'
 gem 'geocoder'
+gem 'octokit', '~> 3.5.2'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 
