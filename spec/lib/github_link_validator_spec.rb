@@ -29,4 +29,13 @@ describe GithubLinkValidator do
       end
     end
   end
+
+  describe '#valid_url?' do
+  end
+
+  describe '#parse_github_url' do
+  end
+
+  describe '#get_github_details' do
+  end
 end
