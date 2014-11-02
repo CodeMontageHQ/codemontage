@@ -8,7 +8,16 @@ module GithubLinkValidator
     url =~ GITHUB_URL_REGEX
   end
 
+  def append_http(url)
+    if url.start_with?('http')
+      url
+    else
+      url = 'https://' + url
+    end
+  end
+
   def valid_url?(url)
+    url = append_http(url)
     response = Net::HTTP.get_response(URI(url))
     response.code == 200 || 301
   end
