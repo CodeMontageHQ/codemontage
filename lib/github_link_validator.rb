@@ -8,9 +8,11 @@ module GithubLinkValidator
     url =~ GITHUB_URL_REGEX
   end
 
-  def append_http(url)
-    if url.start_with?('http')
+  def append_https(url)
+    if url.start_with?('https')
       url
+    elsif url.start_with?('http')
+      url.gsub!(/http:/, 'https:')
     else
       url = 'https://' + url
     end

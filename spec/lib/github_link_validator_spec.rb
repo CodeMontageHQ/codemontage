@@ -31,6 +31,13 @@ describe GithubLinkValidator do
   end
 
   describe '#valid_url?' do
+    it 'returns true for urls that are ok or redirect' do
+      valid_urls = valid_github_urls + ['http://www.cnn.com', 'http://www.google.com/search?q=this+american+life', 'www.twitter.com']
+
+      valid_urls.each do |valid_url|
+        expect(valid_url?(valid_url)).to be_true
+      end
+    end
   end
 
   describe '#parse_github_url' do
