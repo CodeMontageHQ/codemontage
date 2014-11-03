@@ -65,5 +65,10 @@ describe GithubLinkValidator do
   end
 
   describe '#get_github_details' do
+
+    it "returns the github org and repo in a hash" do
+      github_details = get_github_details(valid_github_url)
+      expect(github_details).to eq({github_org: 'codemontagehq', github_repo: 'codemontage'})
+    end
   end
 end
