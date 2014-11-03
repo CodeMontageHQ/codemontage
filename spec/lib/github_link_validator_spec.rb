@@ -11,6 +11,8 @@ describe GithubLinkValidator do
                               'https://github.com/courte/codemontage',
                               'github.com/dbness/codemontage'] }
 
+  let (:valid_github_url) { 'www.github.com/codemontagehq/codemontage' }
+
   describe '#github_url?' do
 
     it 'returns true for accurate github repo urls' do
@@ -49,6 +51,17 @@ describe GithubLinkValidator do
   end
 
   describe '#parse_github_url' do
+
+    it 'returns the github org, pulled from the input url' do
+      url = 'www.github.com/codemontagehq/codemontage'
+      github_details = parse_github_url(valid_github_url)
+      expect(github_details[:github_org]).to eq('codemontagehq')
+    end
+
+    it 'returns the github repo, pulled from the input url' do
+      github_details = parse_github_url(valid_github_url)
+      expect(github_details[:github_repo]).to eq('codemontage')
+    end
   end
 
   describe '#get_github_details' do
