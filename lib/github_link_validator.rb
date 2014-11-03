@@ -24,9 +24,14 @@ module GithubLinkValidator
   end
 
   def valid_url?(url)
-    url = append_http(url)
-    response = Net::HTTP.get_response(URI(url))
-    response.code == 200 || 301
+    github_preferred_url = remove_www(append_https(url))
+
+    begin
+      response = Net::HTTP.get_response(URI(github_preferred_url))
+      response.code == "200"
+    rescue
+      false
+    end
   end
 
   def parse_github_url(url)
