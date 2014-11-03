@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?q=repo%3Aempirical-org%2Fempirical-core+type%3Apr+created%3A2014-10-01..2014-10-02
+    uri: https://api.github.com/search/issues?q=repo%3Aempirical-org%2Fempirical-core+type%3Apr+created%3A2014-10-01..2014-10-02&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Mon, 03 Nov 2014 00:50:42 GMT
+      - Mon, 03 Nov 2014 01:20:11 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -37,7 +37,7 @@ http_interactions:
       x-ratelimit-remaining:
       - '9'
       x-ratelimit-reset:
-      - '1414975902'
+      - '1414977671'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4556F52E:44A1:518D14A:5456D162
+      - 4556F52E:31A0:447D4EC:5456D84B
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 474556b853193c38f1b14328ce2d1b7d
+      - 01d096e6cfe28f8aea352e988c332cd3
       content-encoding:
       - gzip
     body:
@@ -94,5 +94,5 @@ http_interactions:
         ","score":1.0},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/events","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","id":44606325,"number":386,"title":"Changed
         Homepage Copy","user":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=2","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-01T19:39:40Z","updated_at":"2014-10-02T19:13:53Z","closed_at":"2014-10-02T19:13:52Z","pull_request":{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/pulls/386","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","diff_url":"https://github.com/empirical-org/Empirical-Core/pull/386.diff","patch_url":"https://github.com/empirical-org/Empirical-Core/pull/386.patch"},"body":"","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Mon, 03 Nov 2014 00:50:43 GMT
+  recorded_at: Mon, 03 Nov 2014 01:20:11 GMT
 recorded_with: VCR 2.9.3
