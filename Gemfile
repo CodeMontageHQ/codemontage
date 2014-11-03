@@ -37,6 +37,8 @@ gem 'client_side_validations-simple_form'
 group :development, :test do 
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'vcr'
+  gem 'fakeweb'
 end
 
 group :test do
