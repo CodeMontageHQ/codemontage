@@ -18,6 +18,11 @@ module GithubLinkValidator
     end
   end
 
+  def remove_www(url)
+    return url.gsub!(/www./, '') if url.match(/www./)
+    url
+  end
+
   def valid_url?(url)
     url = append_http(url)
     response = Net::HTTP.get_response(URI(url))
