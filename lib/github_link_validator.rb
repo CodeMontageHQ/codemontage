@@ -43,10 +43,8 @@ module GithubLinkValidator
   end
 
   def get_github_details(url)
-    if valid_url?(url) && github_url?(url)
+    if github_url?(url) && valid_url?(url)
       parse_github_url(url)
-    else
-      raise "The submitted url is not valid."
     end
   end
 end
