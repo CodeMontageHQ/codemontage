@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140927013645) do
+ActiveRecord::Schema.define(:version => 20141208202212) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20140927013645) do
   end
 
   add_index "favorite_projects", ["project_id"], :name => "index_favorite_projects_on_project_id"
+  add_index "favorite_projects", ["user_id", "project_id"], :name => "index_favorite_projects_on_user_id_and_project_id", :unique => true
   add_index "favorite_projects", ["user_id"], :name => "index_favorite_projects_on_user_id"
 
   create_table "jobs", :force => true do |t|
@@ -120,11 +121,11 @@ ActiveRecord::Schema.define(:version => 20140927013645) do
     t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
-    t.string   "slug"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "slug"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
