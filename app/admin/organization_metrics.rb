@@ -1,2 +1,2 @@
-ActiveAdmin.register OrganizationMetric, :as => "Metric" do
+ActiveAdmin.register OrganizationMetric, as: 'Metric' do
 end

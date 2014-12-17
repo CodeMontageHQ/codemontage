@@ -4,15 +4,16 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "mailer@codemontage.com"
+  config.mailer_sender = 'mailer@codemontage.com'
 
   begin
-    config.secret_key= if !Rails.env.production?
+    config.secret_key =
+    if !Rails.env.production?
       ('x' * 30) # meets minimum requirement of 30 chars long
-    elsif ENV['SECRET_TOKEN'] then
+    elsif ENV['SECRET_TOKEN']
       ENV['SECRET_TOKEN'] # set secret_token from ENV
     else
-      token_file = Rails.root.to_s + "/secret_token"
+      token_file = Rails.root.to_s + '/secret_token'
       to_load = open(token_file).read
       to_load # set secret_token from file
     end
@@ -49,12 +50,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [ :email ]
+  config.case_insensitive_keys = [:email]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [ :email ]
+  config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the

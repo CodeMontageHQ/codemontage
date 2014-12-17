@@ -2,7 +2,7 @@ ActiveAdmin.register Event do
   index do
     column :id
     column :logo do |event|
-      image_tag(event.logo.url(:thumb)) unless !event.logo.exists?
+      image_tag(event.logo.url(:thumb)) if event.logo.exists?
     end
     column :name
     column :short_code
@@ -19,11 +19,11 @@ ActiveAdmin.register Event do
   end
 
   form do |f|
-    f.inputs "Event Details", :multipart => true do
+    f.inputs 'Event Details', multipart: true do
       f.input :short_code
       f.input :name
       f.input :lead_organizer
-      f.input :lead_email, :label => "Lead organizer email"
+      f.input :lead_email, label: 'Lead organizer email'
       f.input :organizer
       f.input :organizer_email
       f.input :start_date
@@ -32,10 +32,10 @@ ActiveAdmin.register Event do
       f.input :teaser
       f.input :description
       if f.object.logo.exists?
-        f.input :logo, :as => :file, :hint => f.template.image_tag(f.object.logo.url(:thumb))
-        f.input :logo_delete, :as => :boolean, :required => :false, :label => "Delete logo?"
+        f.input :logo, as: :file, hint: f.template.image_tag(f.object.logo.url(:thumb))
+        f.input :logo_delete, as: :boolean, required: :false, label: 'Delete logo?'
       else
-        f.input :logo, :as => :file
+        f.input :logo, as: :file
       end
       f.input :chat_url
       f.input :map_url
@@ -65,14 +65,14 @@ ActiveAdmin.register Event do
         if event.logo.exists?
           image_tag(event.logo.url(:thumb))
         else
-          "No image available"
+          'No image available'
         end
       end
-      row :chat_url do link_to ad.chat_url, ad.chat_url unless !ad.chat_url.present? end
-      row :map_url do link_to ad.map_url, ad.map_url unless !ad.map_url.present? end
-      row :schedule_url do link_to ad.schedule_url, ad.schedule_url unless !ad.schedule_url.present? end
+      row :chat_url do link_to ad.chat_url, ad.chat_url if ad.chat_url.present? end
+      row :map_url do link_to ad.map_url, ad.map_url if ad.map_url.present? end
+      row :schedule_url do link_to ad.schedule_url, ad.schedule_url if ad.schedule_url.present? end
       row :hashtag
-      row :eventbrite_url do link_to ad.eventbrite_url, ad.eventbrite_url unless !ad.eventbrite_url.present? end
+      row :eventbrite_url do link_to ad.eventbrite_url, ad.eventbrite_url if ad.eventbrite_url.present? end
       row :notes
       row :created_at
       row :updated_at

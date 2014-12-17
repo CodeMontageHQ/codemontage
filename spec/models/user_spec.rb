@@ -21,7 +21,7 @@ describe User do
   end
 
   describe 'duplicate email' do
-    before do 
+    before do
       @user2 = User.new(email: 'captain@planet.com', password: 'passw0rd')
       @user2.save
     end

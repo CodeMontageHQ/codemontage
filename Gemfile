@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby '2.0.0'
 
 # Admin Tools
 gem 'activeadmin'
@@ -15,7 +15,7 @@ gem 'psych', '~> 2.0.0'
 gem 'newrelic_rpm', '~> 3.9.0.229'
 
 # Users & Authentication
-gem 'bcrypt-ruby', require: 'bcrypt' 
+gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'devise', '~> 3.3.0'
 gem 'omniauth'
 gem 'omniauth-github'
@@ -29,12 +29,11 @@ gem 'octokit', '~> 3.5.2'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 
-
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 
 # Test Suite
-group :development, :test do 
+group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
 end

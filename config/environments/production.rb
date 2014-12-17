@@ -1,9 +1,9 @@
-GOOGLE_ANALYTICS_TRACKING_CODE = "UA-12971916-2"
+GOOGLE_ANALYTICS_TRACKING_CODE = 'UA-12971916-2'
 
 CodeMontage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
-  config.action_mailer.default_url_options = { :host => 'codemontage.com' }
+  config.action_mailer.default_url_options = { host: 'codemontage.com' }
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -68,14 +68,14 @@ CodeMontage::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  
+
   # Add-ins
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['S3_BUCKET_NAME'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV['S3_BUCKET_NAME'],
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 end

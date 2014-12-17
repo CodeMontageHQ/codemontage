@@ -1,5 +1,5 @@
-@import "compass";
-@import "colors";
+@import 'compass';
+@import 'colors';
 @import url(//fonts.googleapis.com/css?family=Courgette);
 
 // Place all the styles related to the home controller here.
@@ -20,7 +20,7 @@
 
 .mlkday {
 
-  h2 { 
+  h2 {
     font-weight: bold;
     text-align: center;
   }
@@ -37,17 +37,17 @@
 // Our Story
 
 .horizontal_bios {
-  img { 
+  img {
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
   }
-  
+
   img:hover {
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    filter: gray; /* IE6-9 */
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
   }
-  
+
   p { margin-bottom: 10px; }
 }
