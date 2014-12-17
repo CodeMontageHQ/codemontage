@@ -1,17 +1,17 @@
-@import "colors";
+@import 'colors';
 
-h5 span.favorite { 
-  font-size: 18px; 
-  margin: 0px 0px -10px 0px;
+h5 span.favorite {
+  font-size: 18px;
+  margin: 0 0 -10px;
   padding-left: 15px;
 
   form {
     display: inline-block;
-    div { margin: 0px 0px 10px 0px; }
+    div { margin: 0 0 10px; }
   }
 
-  .button { 
-    font-weight: normal; 
-    padding: 4px; 
+  .button {
+    font-weight: normal;
+    padding: 4px;
   }
 }

@@ -1,50 +1,49 @@
 CodeMontage::Application.routes.draw do
-
-  root :to => "home#index"
+  root to: 'home#index'
 
   ActiveAdmin.routes(self)
 
   # User routes
-  devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => 'registrations' }
+  devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: 'registrations' }
   devise_scope :user do
-    get "settings" => "registrations#edit", :as => :services
+    get 'settings' => 'registrations#edit', :as => :services
   end
-  get '/dashboard', {:controller => 'home', :action => 'dashboard'}
+  get '/dashboard', controller: 'home', action: 'dashboard'
   resource :user_profile
 
   # Omniauth authentication
-  get '/auth/:service/callback' => 'services#create' 
-  resources :services, :only => [:create, :destroy]
-  
+  get '/auth/:service/callback' => 'services#create'
+  resources :services, only: [:create, :destroy]
+
   # Organizations and project information
   resources :jobs
   resources :organizations
   resources :projects
   resources :favorites
   resources :events
-  
-  # Static content 
-  get '/about', {:controller => 'home', :action => 'about'}
-  get '/apply', {:controller => 'home', :action => 'apply'}
-  get '/code_good_day', {:controller => 'home', :action => 'code_good_day'}
-  get '/code_of_conduct', {:controller => 'home', :action => 'code_of_conduct'}
-  get '/coder_day', {:controller => 'home', :action => 'coder_day'}
-  get '/coder_day_of_service', {:controller => 'home', :action => 'coder_day'}
-  get '/developers_for_good', {:controller => 'home', :action => 'developers_for_good'}
-  get '/join', {:controller => 'home', :action => 'join'}
-  get '/our_jobs', {:controller => 'home', :action => 'our_jobs'}
-  get '/our_story', {:controller => 'home', :action => 'about'} #preserve old routes
-  get '/our_services', {:controller => 'home', :action => 'services'}
-  get '/resources', {:controller => 'home', :action => 'resources'}
-  get '/training', {:controller => 'home', :action => 'training'}
+
+  # Static content
+  get '/about', controller: 'home', action: 'about'
+  get '/apply', controller: 'home', action: 'apply'
+  get '/code_good_day', controller: 'home', action: 'code_good_day'
+  get '/code_of_conduct', controller: 'home', action: 'code_of_conduct'
+  get '/coder_day', controller: 'home', action: 'coder_day'
+  get '/coder_day_of_service', controller: 'home', action: 'coder_day'
+  get '/developers_for_good', controller: 'home', action: 'developers_for_good'
+  get '/join', controller: 'home', action: 'join'
+  get '/our_jobs', controller: 'home', action: 'our_jobs'
+  get '/our_story', controller: 'home', action: 'about' # preserve old routes
+  get '/our_services', controller: 'home', action: 'services'
+  get '/resources', controller: 'home', action: 'resources'
+  get '/training', controller: 'home', action: 'training'
 
   # Blog
-  get '/blog' => redirect("http://blog.codemontage.com")
+  get '/blog' => redirect('http://blog.codemontage.com')
   # Preserve links from tumblr placeholder
-  get "/post/36213108516/developersforgood-in-2011-programming-related" => redirect("http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related")
-  get "/post/36212820170/future-software-superheroes-its-time-for-your" => redirect("http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your")
-  get "/post/37410408569/announcing-rolling-admissions" => redirect("http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions")
-  get "/post/38111412609/cant-get-a-job-because-i-dont-have-experience" => redirect("http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience")
+  get '/post/36213108516/developersforgood-in-2011-programming-related' => redirect('http://blog.codemontage.com/post/36213108516/developersforgood-in-2011-programming-related')
+  get '/post/36212820170/future-software-superheroes-its-time-for-your' => redirect('http://blog.codemontage.com/post/36212820170/future-software-superheroes-its-time-for-your')
+  get '/post/37410408569/announcing-rolling-admissions' => redirect('http://blog.codemontage.com/post/37410408569/announcing-rolling-admissions')
+  get '/post/38111412609/cant-get-a-job-because-i-dont-have-experience' => redirect('http://blog.codemontage.com/post/38111412609/cant-get-a-job-because-i-dont-have-experience')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

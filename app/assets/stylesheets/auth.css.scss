@@ -1,19 +1,21 @@
-@import "colors";
+@import 'colors';
 
-.top-one{
-  margin-top:11%;
+.top-one {
+  margin-top: 11%;
 }
-.align-center{
-  text-align:center;
+
+.align-center {
+  text-align: center;
 }
-.github-signin .fi-social-github{
+
+.github-signin .fi-social-github {
   vertical-align: bottom;
 }
 
 .sign-up-or {
-  margin-top: 3%
+  margin-top: 3%;
 }
 
 .alert {
-	color: $red;
+  color: $red;
 }

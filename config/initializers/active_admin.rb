@@ -1,16 +1,15 @@
 ActiveAdmin.setup do |config|
-
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Code Montage"
+  config.site_title = 'Code Montage'
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  config.site_title_link = "/"
+  config.site_title_link = '/'
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -57,7 +56,6 @@ ActiveAdmin.setup do |config|
   # within the controller.
   config.authentication_method = :authenticate_admin_user!
 
-
   # == Current User
   #
   # Active Admin will associate actions with the current
@@ -66,7 +64,6 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # to return the currently logged in user.
   config.current_user_method = :current_admin_user
-
 
   # == Logging Out
   #
@@ -86,7 +83,6 @@ ActiveAdmin.setup do |config|
   # Default:
   config.logout_link_method = :delete
 
-
   # == Admin Comments
   #
   # Admin comments allow you to add comments to any model for admin use.
@@ -103,14 +99,12 @@ ActiveAdmin.setup do |config|
   #     without_comments.allow_comments = false
   #   end
 
-
   # == Controller Filters
   #
   # You can add before, after and around filters to all of your
   # Active Admin resources from here.
   #
   # config.before_filter :do_something_awesome
-
 
   # == Register Stylesheets & Javascripts
   #

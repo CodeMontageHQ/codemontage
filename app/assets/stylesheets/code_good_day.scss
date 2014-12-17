@@ -1,4 +1,4 @@
-@import "colors";
+@import 'colors';
 
 body[data-controller="home"][data-action="code_good_day"] {
 
@@ -12,8 +12,8 @@ body[data-controller="home"][data-action="code_good_day"] {
 
     h1 {
       color: $cmTeal;
+      font-size: 5em;
       font-weight: 900;
-      font-size: 5em; 
       margin-bottom: -20px;
     }
 
@@ -26,14 +26,14 @@ body[data-controller="home"][data-action="code_good_day"] {
     }
 
     .deck {
-      width: 100%;
       display: block;
+      height: 50px;
       position: relative;
-      height: 50px;      
+      width: 100%;
       h2 {
         position: absolute;
         top: 10;
-      }     
+      }
     }
 
     img {
@@ -44,44 +44,44 @@ body[data-controller="home"][data-action="code_good_day"] {
     section {
       padding-left: 70px;
       padding-top: 30px;
-      width: 90%;      
-      h3:first-child{
+      width: 90%;
+      h3:first-child {
         width: 70%;
       }
     }
 
     h3, li {
-      color: black;
+      color: #000;
       font-family: "Source Sans Pro", Helvetica, sans-serif;
       font-size: 1.3em;
       font-weight: 400;
     }
 
     ol {
+      counter-reset: my-awesome-counter;
       list-style: none;
       padding: 0 0 0 120px;
-      counter-reset: my-awesome-counter;
     }
 
     li {
+      counter-increment: my-awesome-counter;
       margin: .5em;
       padding: 0;
-      counter-increment: my-awesome-counter;
     }
 
     li:before {
-      content: counter(my-awesome-counter);
-      font-size: 1.5em;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 25px 0 -80px;
-      color: black;
-      width: 1.5em;
-      line-height: 1.5em;
-      text-align: center;
       border-radius: 1in;
       border: 1.5px solid $cmTeal;
+      color: #000;
+      content: counter(my-awesome-counter);
+      display: inline-block;
+      font-size: 1.5em;
       font-weight: 900;
+      line-height: 1.5em;
+      margin: 0 25px 0 -80px;
+      text-align: center;
+      vertical-align: middle;
+      width: 1.5em;
     }
 
     a {
@@ -99,8 +99,8 @@ body[data-controller="home"][data-action="code_good_day"] {
     }
 
     .signature {
+      font-size: 1.5em;
       font-weight: 900;
-      font-size: 1.5em;  
       margin-top: 50px;
       text-align: center;
     }

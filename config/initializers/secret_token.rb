@@ -6,12 +6,13 @@
 # no regular words or you'll be exposed to dictionary attacks.
 
 begin
-  CodeMontage::Application.config.secret_token = if !Rails.env.production?
+  CodeMontage::Application.config.secret_token =
+  if !Rails.env.production?
     ('x' * 30) # meets minimum requirement of 30 chars long
-  elsif ENV['SECRET_TOKEN'] then
+  elsif ENV['SECRET_TOKEN']
     ENV['SECRET_TOKEN'] # set secret_token from ENV
   else
-    token_file = Rails.root.to_s + "/secret_token"
+    token_file = Rails.root.to_s + '/secret_token'
     to_load = open(token_file).read
     to_load # set secret_token from file
   end

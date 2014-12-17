@@ -3,7 +3,7 @@
 #header {
   background: $cmOffBlack;
   padding: 6px;
-} 
+}
 
 #header a {
   color: $cmLightGrey;
@@ -21,9 +21,10 @@
 }
 
 #header.logged-out {
-  height: 80px; 
+  height: 80px;
   ul.inline-list { margin-bottom: 10px; }
 }
+
 ul.inline-list .fi-social-github {
   vertical-align: top;
 }
