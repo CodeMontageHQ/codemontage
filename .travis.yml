@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.0.0-p353
+  - 2.1.5
 script: bundle exec rake db:drop db:create db:migrate db:test:prepare spec
 notifications:
   email: false
