@@ -17,6 +17,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e4487', endColorstr='#653060',GradientType=0 ); margin-left: 20px; }
     > li.cta .button:hover { background: lighten($cmPurple, 10%); color: white; }
   }
+
+  .cta-nav {
+    background: $cmPurple;
+  }
+
+  .cta-nav:hover {
+    background: darken($cmPurple, 10%);
+  }
 }
 
 .top-bar.logged-in ul>li.logo img {

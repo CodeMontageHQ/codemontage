@@ -1,14 +1,14 @@
 <div class="contain-to-grid">
-  <% if user_signed_in? %> 
-  <nav class="top-bar logged-in">
+  <% if user_signed_in? %>
+  <nav class="top-bar logged-in" data-topbar>
   <% else %>
-  <nav class="top-bar logged-out">
+  <nav class="top-bar logged-out" data-topbar>
   <% end %>
     <ul class="title-area">
       <!-- For small screens, use a text title, otherwise use the logo in navigation -->
       <li class="logo hide-for-small"><%= link_to( image_tag("cm_header_logo.png", :size => "192x120"), "/") %></li>
-      <li class="name show-for-small"><a href="/">CodeMontage</a></li>
-      <li class="toggle-topbar"><a href="#"></a></li>
+      <li class="name show-for-small"><h1><a href="/">CodeMontage</a></h1></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
     <section class="top-bar-section">
       <ul class="left">
@@ -24,7 +24,8 @@
         </li>
         <li><%= link_to "Our Story", our_story_path %></li>
         <% if !user_signed_in? %>
-        <li class="cta"><%= link_to "Sign Up", "/auth/github", :class => "medium radius index button" %></li>
+          <li class="cta"><%= link_to "Sign Up", "/auth/github", :class => "show-for-medium-up medium radius index button" %></li>
+          <li><%= link_to "Sign Up", "/auth/github", class: "cta-nav hide-for-medium-up" %></li>
         <% end %>
       </ul>
     </section>
