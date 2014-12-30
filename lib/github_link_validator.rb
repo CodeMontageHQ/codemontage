@@ -2,7 +2,7 @@ require 'net/http'
 require 'open-uri'
 
 module GithubLinkValidator
-  GITHUB_URL_REGEX = /\A(http:\/\/|https:\/\/|www.)*github.com\/(\S+)\/(\S+)(.git)*\z/
+  GITHUB_URL_REGEX = /\A(http:\/\/|https:\/\/|www.)*github.com\/([\w\-]+)\/([\w\-]+)(\/[\w\-]*\/*)*(.git)*\z/
 
   def github_url?(url)
     url =~ GITHUB_URL_REGEX
