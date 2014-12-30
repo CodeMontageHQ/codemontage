@@ -9,7 +9,8 @@ describe GithubLinkValidator do
                               'http://github.com/dbness/codemontage',
                               'www.github.com/codemontagehq/codemontage',
                               'https://github.com/courte/codemontage',
-                              'github.com/dbness/codemontage'] }
+                              'github.com/dbness/codemontage',
+                              'https://github.com/CodeMontageHQ/codemontage/pull/269'] }
 
   let (:valid_github_url) { 'www.github.com/codemontagehq/codemontage' }
 
