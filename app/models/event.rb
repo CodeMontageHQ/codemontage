@@ -3,6 +3,8 @@ class Event < ActiveRecord::Base
   has_many :sponsors, through: :sponsorships, source: :organization
   has_many :sponsorships
   has_many :users, through: :event_registrations
+  has_many :featured_projects
+  has_many :projects, through: :featured_projects
 
   attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
   attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email, :organizer, :organizer_email, :location
