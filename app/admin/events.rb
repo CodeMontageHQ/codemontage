@@ -86,4 +86,10 @@ ActiveAdmin.register Event do
     end
     active_admin_comments
   end
+
+  sidebar 'Featured Projects', only: :show do
+    table_for event.featured_projects do
+      column :project
+    end
+  end
 end
