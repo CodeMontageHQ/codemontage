@@ -90,6 +90,11 @@ ActiveAdmin.register Event do
   sidebar 'Featured Projects', only: :show do
     table_for event.featured_projects do
       column :project
+      column 'Actions' do |fp|
+        link_to('View', admin_featured_project_path(fp), { class: 'member_link' }) +
+        link_to('Edit', edit_admin_featured_project_path(fp), { class: 'member_link' }) +
+        link_to('Delete', admin_featured_project_path(fp), { method: :delete, class: 'member_link' })
+      end
     end
   end
 end
