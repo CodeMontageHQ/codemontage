@@ -44,6 +44,13 @@ ActiveAdmin.register Event do
       f.input :eventbrite_url
       f.input :notes
     end
+
+    f.inputs 'Featured Projects' do
+      f.has_many :featured_projects, sortable: :project do |fp|
+        fp.input :project
+      end
+    end
+
     f.buttons
   end
 
