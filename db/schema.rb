@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20150105164219) do
   end
 
   add_index "featured_projects", ["event_id"], :name => "index_featured_projects_on_event_id"
+  add_index "featured_projects", ["project_id"], :name => "index_featured_projects_on_project_id"
 
   create_table "jobs", :force => true do |t|
     t.integer  "organization_id",               :null => false

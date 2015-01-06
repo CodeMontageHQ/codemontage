@@ -8,5 +8,6 @@ class CreateFeaturedProjects < ActiveRecord::Migration
     end
 
     add_index :featured_projects, :event_id
+    add_index :featured_projects, :project_id
   end
 end
