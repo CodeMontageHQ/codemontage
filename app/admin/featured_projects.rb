@@ -1,5 +1,5 @@
 ActiveAdmin.register FeaturedProject do
-  menu parent: 'Events'
+  menu parent: "Events"
 
   index do
     column :id

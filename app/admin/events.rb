@@ -45,7 +45,7 @@ ActiveAdmin.register Event do
       f.input :notes
     end
 
-    f.inputs 'Featured Projects' do
+    f.inputs "Featured Projects" do
       f.has_many :featured_projects, sortable: :project do |fp|
         fp.input :project
       end
@@ -87,13 +87,16 @@ ActiveAdmin.register Event do
     active_admin_comments
   end
 
-  sidebar 'Featured Projects', only: :show do
+  sidebar "Featured Projects", only: :show do
     table_for event.featured_projects do
       column :project
-      column 'Actions' do |fp|
-        link_to('View', admin_featured_project_path(fp), { class: 'member_link' }) +
-        link_to('Edit', edit_admin_featured_project_path(fp), { class: 'member_link' }) +
-        link_to('Delete', admin_featured_project_path(fp), { method: :delete, class: 'member_link' })
+      column "Actions" do |fp|
+        link_to("View", admin_featured_project_path(fp),
+          class: "member_link") +
+        link_to("Edit", edit_admin_featured_project_path(fp),
+          class: "member_link") +
+        link_to("Delete", admin_featured_project_path(fp),
+          method: :delete, class: "member_link")
       end
     end
   end
