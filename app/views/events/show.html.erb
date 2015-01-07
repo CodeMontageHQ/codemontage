@@ -15,6 +15,18 @@
       </div>
     </div>
 
+    <% if @featured_projects %>
+      <div id="event_featured_projects" class="row">
+        <div class="">
+          <ul>
+            <% @featured_projects.each do |featured_project| %>
+              <li><%= link_to(featured_project.name, project_path(featured_project)) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
     <div id="event_rsvp" class="row">
       <div class="large-6 columns large-centered text-center">
         <%= %>
