@@ -6,11 +6,9 @@
       <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
         Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
 
-      <div class="row">
-        <% @featured_projects.each do |project| %>
-          <%= render partial: 'project', locals: { project: project } %>
-        <% end %>
-      </div>
+      <% @featured_projects.each do |project| %>
+        <%= render partial: 'project', locals: { project: project } %>
+      <% end %>
     <% else %>
       <p>Oops! We can't seem to find any <%= params[:tags] %> projects. <%= link_to "View all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
     <% end %>
