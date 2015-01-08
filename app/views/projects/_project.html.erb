@@ -13,11 +13,11 @@
         <% end %>
       </span>
     </h5>
+
     <p><%= project.description %></p>
   </div>
 
   <div class="project_links large-2 columns">
-    </br>
     <ul class="no-bullet">
       <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
       <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
