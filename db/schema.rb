@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140927013645) do
+ActiveRecord::Schema.define(:version => 20150108142201) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -27,15 +27,16 @@ ActiveRecord::Schema.define(:version => 20140927013645) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_active_admin_comments_on_resource_type_and_resource_id"
 
-  create_table "event_registrations", :force => true do |t|
+  create_table "check_ins", :force => true do |t|
     t.integer  "event_id",   :null => false
     t.integer  "user_id",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "event_registrations", ["event_id"], :name => "index_event_registrations_on_event_id"
-  add_index "event_registrations", ["user_id"], :name => "index_event_registrations_on_user_id"
+  add_index "check_ins", ["event_id", "user_id"], :name => "index_check_ins_on_event_id_and_user_id", :unique => true
+  add_index "check_ins", ["event_id"], :name => "index_check_ins_on_event_id"
+  add_index "check_ins", ["user_id"], :name => "index_check_ins_on_user_id"
 
   create_table "events", :force => true do |t|
     t.string   "short_code",        :null => false
@@ -77,6 +78,16 @@ ActiveRecord::Schema.define(:version => 20140927013645) do
 
   add_index "favorite_projects", ["project_id"], :name => "index_favorite_projects_on_project_id"
   add_index "favorite_projects", ["user_id"], :name => "index_favorite_projects_on_user_id"
+
+  create_table "featured_projects", :force => true do |t|
+    t.integer  "project_id", :null => false
+    t.integer  "event_id",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "featured_projects", ["event_id"], :name => "index_featured_projects_on_event_id"
+  add_index "featured_projects", ["project_id"], :name => "index_featured_projects_on_project_id"
 
   create_table "jobs", :force => true do |t|
     t.integer  "organization_id",               :null => false

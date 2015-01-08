@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
 
   attr_protected :is_admin
 
-  has_many :event_registrations
-  has_many :events, through: :event_registrations
+  has_many :check_ins
+  has_many :events, through: :check_ins
 
   has_many :favorite_projects
   has_many :favorites, through: :favorite_projects, source: :project
