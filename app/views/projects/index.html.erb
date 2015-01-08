@@ -1,12 +1,12 @@
 <div class="row">
-  <div>
-    <div class="projects">
-      <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
+  <div class="projects">
+    <h4><%= params[:tags] + " " unless !params[:tags].present? %>Projects</h4>
 
-      <% if @featured_projects.present? %>
-        <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
-          Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
+    <% if @featured_projects.present? %>
+      <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
+        Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
 
+      <div class="row">
         <% @featured_projects.each do |project| %>
           <div class="row">
             <div class="project_summary large-6 columns">
@@ -47,15 +47,14 @@
 
           </div>
         <% end %>
-      <% else %>
-        <p>Oops! We can't seem to find any <%= params[:tags] %> projects. <%= link_to "View all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
-      <% end %>
-    </div>
-    
-    <div class="resources">
-      <h6>Looking for something else?</h6>
-      <p>Check out our <%= link_to "resources", resources_path %> to connect with other ways to learn, code, and do good.</p>
-    </div>
+      </div>
+    <% else %>
+      <p>Oops! We can't seem to find any <%= params[:tags] %> projects. <%= link_to "View all projects", projects_path %>, or <%= link_to "view by organization", organizations_path %>.</p>
+    <% end %>
+  </div>
 
+  <div class="resources">
+    <h6>Looking for something else?</h6>
+    <p>Check out our <%= link_to "resources", resources_path %> to connect with other ways to learn, code, and do good.</p>
   </div>
 </div>
