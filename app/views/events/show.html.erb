@@ -16,7 +16,8 @@
       </div>
 
       <div id="event_featured_projects" class="large-8 columns large-centered">
-        <% if @featured_projects %>
+        <% if @featured_projects.present? %>
+          <h4>Featured Projects</h4>
           <%= render partial: 'projects/project', collection: @featured_projects %>
         <% end %>
       </div>
