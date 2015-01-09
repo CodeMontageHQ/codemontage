@@ -33,7 +33,7 @@ APP = {
     dashboard: function() {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
-					$(e.target).parent("span.registration").html('<i class="fi-check"></i> Registered');
+					$(e.target).parent("span.check_in").html('<i class="fi-check"></i> Checked In');
 				});
     }
   },

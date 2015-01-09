@@ -19,12 +19,12 @@
         </ul>
       </p>
     </div>
-    <div class="event_registration text-center">
-      <span class="registration">
+    <div class="event_check_in text-center">
+      <span class="check_in">
         <% if @registered_events.include?(event) %>
-          <p><i class="fi-check"></i> Registered<p>
+          <p><i class="fi-check"></i> Checked In<p>
         <% else %>
-        <%= button_to "Register", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
+        <%= button_to "Check In", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
         <% end %>
       </span>
     </div>
