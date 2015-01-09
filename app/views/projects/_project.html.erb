@@ -3,7 +3,7 @@
     <h5><%= link_to project.name, project_path(project) %>
       <span class="favorite">
         <% if user_signed_in? %>
-          <% if @favorite_projects.include?(project.id) %>
+          <% if current_user.favorited_projects.include?(project.id) %>
             <%= link_to '<i class="fi-star"></i> '.html_safe, dashboard_path, :class => "favorited" %>
           <% else %>
             <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
