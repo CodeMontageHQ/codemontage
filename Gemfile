@@ -36,6 +36,7 @@ gem 'client_side_validations-simple_form'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :test do
