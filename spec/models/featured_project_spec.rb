@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe FeaturedProject do
   it { should belong_to(:event) }
