@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe Project do
   it { should belong_to(:organization) }
+  it { should have_many(:featured_projects) }
+  it { should have_many(:events).through(:featured_projects) }
+
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:github_repo) }
 
