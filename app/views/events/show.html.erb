@@ -1,20 +1,28 @@
 <body>
   <% content_for :title do @event.name end %>
+
   <div class="event">
     <div id="event_welcome" class="row">
       <div class="large-8 columns large-centered">
         <%= image_tag @event.logo, :alt => @event.name %>
       </div>
       <div>
-        </br>
-        <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></br>
-        </p>
+        <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></p>
       </div>
+
       <div class="large-8 columns large-centered">
         <h1><%= @event.name %></h1>
         <p><%=raw @event.description %><p>
       </div>
+
+      <div id="event_featured_projects" class="large-8 columns large-centered">
+        <% if @featured_projects.present? %>
+          <h4>Featured Projects</h4>
+          <%= render partial: 'projects/project', collection: @featured_projects %>
+        <% end %>
+      </div>
     </div>
+
     <div id="event_rsvp" class="row">
       <div class="large-6 columns large-centered text-center">
         <%= %>
@@ -25,26 +33,29 @@
         <% end %>
       </div>
     </div>
+
     <% if @event.sponsors.present? %>
-    <div id="event_sponsors" class="row">
-      <div class="large-10 columns large-centered">
-        <h2><%= @event.name %> Sponsors</h2>
-        <div class="sponsors row large-centered">
-          <% @event.sponsors.each do |featured| %>
-            <div class="large-4 columns">
-                <h5>
-                <% if find_logo?(featured) %>
-                  <%= link_to (image_tag find_logo(featured)), organization_path(featured) %>
-                <% else %>
-                  <%= link_to featured.name, organization_path(featured) %>
-                <% end %>
-                </h5>
-            </div>
-          <% end %>
+      <div id="event_sponsors" class="row">
+        <div class="large-10 columns large-centered">
+          <h2><%= @event.name %> Sponsors</h2>
+          <div class="sponsors row large-centered">
+            <% @event.sponsors.each do |featured| %>
+              <div class="large-4 columns">
+                  <h5>
+                  <% if find_logo?(featured) %>
+                    <%= link_to (image_tag find_logo(featured)), organization_path(featured) %>
+                  <% else %>
+                    <%= link_to featured.name, organization_path(featured) %>
+                  <% end %>
+                  </h5>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
+
   <% content_for(:press) do %>Press<% end %>
+
 </body>

@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
     services.where(provider: 'github').exists?
   end
 
+  def favorited_projects
+    favorite_projects.map(&:project_id).to_set
+  end
+
   protected
 
   def create_profile
