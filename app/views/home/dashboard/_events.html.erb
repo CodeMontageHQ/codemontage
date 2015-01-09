@@ -1,5 +1,5 @@
 <div id="events" class="index radius panel row">
-  
+
   <div id="coder_day">
   <% if @upcoming_events.present? %>
     <h3>Upcoming Events</h3>
@@ -30,7 +30,7 @@
     </div>
     <% end %>
   <% else %>
-    <h3>Let's Chat</h3>  
+    <h3>Let's Chat</h3>
     <p>Working on something great? Share with us!
       <ul class="no-bullet">
         <li><%= link_to '<i class="fi-megaphone"></i> '.html_safe + " CodeMontage Chat", 'http://tlk.io/codemontage', :target => '_blank' %></li>
