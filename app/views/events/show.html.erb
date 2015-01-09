@@ -9,23 +9,18 @@
       <div>
         <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></p>
       </div>
+
       <div class="large-8 columns large-centered">
         <h1><%= @event.name %></h1>
         <p><%=raw @event.description %><p>
       </div>
-    </div>
 
-    <% if @featured_projects %>
-      <div id="event_featured_projects" class="row">
-        <div class="">
-          <ul>
-            <% @featured_projects.each do |featured_project| %>
-              <li><%= link_to(featured_project.name, project_path(featured_project)) %></li>
-            <% end %>
-          </ul>
-        </div>
+      <div id="event_featured_projects" class="large-8 columns large-centered">
+        <% if @featured_projects %>
+          <%= render partial: 'projects/project', collection: @featured_projects %>
+        <% end %>
       </div>
-    <% end %>
+    </div>
 
     <div id="event_rsvp" class="row">
       <div class="large-6 columns large-centered text-center">
