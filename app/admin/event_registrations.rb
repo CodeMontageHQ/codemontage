@@ -1,4 +1,6 @@
-ActiveAdmin.register EventRegistration do
+ActiveAdmin.register EventRegistration, as: "Check In" do
+  menu parent: "Events"
+
   index do
     column 'Event', sortable: :event_name do |registration|
       link_to registration.event.name, admin_event_path(registration.event)
