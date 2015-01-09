@@ -15,5 +15,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @featured_projects = @event.projects
   end
 end
