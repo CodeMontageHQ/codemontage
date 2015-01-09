@@ -1,0 +1,35 @@
+<li class="project-box">
+  <h5><%= link_to project.name, project_path(project) %>
+    <span class="favorite">
+      <% if user_signed_in? %>
+        <% if current_user.favorite_projects.include?(project.id) %>
+          <%= link_to '<i class="fi-star"></i> '.html_safe, dashboard_path, :class => "favorited" %>
+        <% else %>
+          <%= button_to "Save", favorites_path(:project_id => project.id), :remote => true, :class => "favorite tiny radius button" %>
+        <% end %>
+      <% else %>
+        <%= link_to '<i class="fi-star"></i> '.html_safe + "Save", new_user_session_path, :target => '_blank' %>
+      <% end %>
+    </span>
+  </h5>
+
+  <div class="project_links">
+    <ul class="no-bullet inline-list">
+      <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + "Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
+      <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
+      <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + "News", twitter_url(project.organization.twitter), :target => '_blank' unless !project.organization.twitter.present? %></li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="project_technologies large-6 columns">
+      <h6>Technologies</h6>
+      <%= project_tags_link_list project, 'technologies' %>
+    </div>
+
+    <div class="project_causes large-6 columns">
+      <h6>Causes</h6>
+      <%= project_tags_link_list project, 'causes' %>
+    </div>
+  </div>
+</li>

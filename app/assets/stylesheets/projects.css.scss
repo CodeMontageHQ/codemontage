@@ -15,3 +15,15 @@ h5 span.favorite {
     padding: 4px;
   }
 }
+
+.project-box {
+  border: solid 1px $cmDarkTeal;
+  border-radius: 3px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+  &:last {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
