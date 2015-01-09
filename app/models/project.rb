@@ -8,6 +8,8 @@ class Project < ActiveRecord::Base
 
   has_many :favorite_projects
   has_many :users, through: :favorite_projects
+  has_many :featured_projects
+  has_many :events, through: :featured_projects
 
   include FriendlyId
   friendly_id :name, use: :slugged
