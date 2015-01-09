@@ -9,6 +9,7 @@ class Event < ActiveRecord::Base
   attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
   attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email, :organizer, :organizer_email, :location
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
+  attr_accessible :featured_projects_attributes
   attr_writer :logo_delete
 
   # Paperclip
@@ -16,6 +17,8 @@ class Event < ActiveRecord::Base
                            url: '/system/images/logos/:class/:style/:id_:basename.:extension'
   validates_attachment_size :logo, less_than: 5.megabytes
   validates_attachment_content_type :logo, content_type: ['image/jpeg', 'image/png', 'image/gif']
+
+  accepts_nested_attributes_for :featured_projects
 
   include FriendlyId
   friendly_id :name, use: :slugged
