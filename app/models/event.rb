@@ -24,6 +24,7 @@ class Event < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   scope :upcoming_events, where('end_date >= ?', Date.tomorrow)
+  scope :public_events, -> { where(is_public: true) }
 
   def self.featured
     upcoming_events.order('start_date').first
