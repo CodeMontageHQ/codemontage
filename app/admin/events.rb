@@ -15,7 +15,7 @@ ActiveAdmin.register Event do
     column :organizer
     column :organizer_email
     column :location
-    column 'Public?', :is_public
+    column "Public?", :is_public
     default_actions
   end
 
@@ -38,7 +38,7 @@ ActiveAdmin.register Event do
       else
         f.input :logo, as: :file
       end
-      f.input :is_public, label: 'Public?'
+      f.input :is_public, label: "Public?"
       f.input :chat_url
       f.input :map_url
       f.input :schedule_url
