@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?q=author%3Acourte+type%3Apr+created%3A2015-01-07..2015-01-08&per_page=100
+    uri: https://api.github.com/search/issues?q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2015-01-07..2015-01-08&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 03:29:16 GMT
+      - Tue, 13 Jan 2015 17:27:17 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,9 +35,9 @@ http_interactions:
       x-ratelimit-limit:
       - '10'
       x-ratelimit-remaining:
-      - '9'
+      - '4'
       x-ratelimit-reset:
-      - '1421119816'
+      - '1421170092'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:3E47:17E725:54B4910C
+      - 6C0E7A16:3E48:14ED953:54B55575
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,13 +64,14 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - c6c65e5196703428e7641f7d1e9bc353
+      - a241e1a8264a6ace03db946c85b92db3
       content-encoding:
       - gzip
     body:
       encoding: UTF-8
       string: '{"total_count":3,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","id":53720469,"number":295,"title":"Backend
-        transition from EventRegistration to CheckIn models (db, model, admin layers)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/code-review-wanted","name":"code-review-wanted","color":"bfe5bf"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/database","name":"database","color":"bfd4f2"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/deploy+with+care","name":"deploy
+        transition from EventRegistration to CheckIn models (db, model, admin layers)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/code+review+wanted","name":"code
+        review wanted","color":"bfe5bf"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/database","name":"database","color":"bfd4f2"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/deploy+with+care","name":"deploy
         with care","color":"eb6420"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-08T06:50:57Z","updated_at":"2015-01-09T06:12:43Z","closed_at":null,"pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/295","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.patch"},"body":"Everything
         that was once an event registration is now a check in. This primarily impacts
         the database and model layers.\r\n\r\n*Check ins on the admin dash*\r\n![screenshot
@@ -93,7 +94,7 @@ http_interactions:
         22 56 02](https://cloud.githubusercontent.com/assets/2766324/5657695/9c7adeae-96c0-11e4-88c4-3b71e9498dba.png)\r\n\r\n*Featuring
         projects, when the page is small*\r\n![screenshot 2015-01-07 22 56 48](https://cloud.githubusercontent.com/assets/2766324/5657696/9c7b8de0-96c0-11e4-889b-af20f9ec66f0.png)","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 03:29:16 GMT
+  recorded_at: Tue, 13 Jan 2015 17:27:18 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/295/commits?per_page=100
@@ -117,7 +118,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 03:29:17 GMT
+      - Tue, 13 Jan 2015 17:27:18 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -129,13 +130,13 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '59'
+      - '52'
       x-ratelimit-reset:
-      - '1421123357'
+      - '1421173633'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Mon, 12 Jan 2015 20:28:54 GMT
+      - Tue, 13 Jan 2015 04:55:24 GMT
       etag:
       - W/"45c47da68e6446170002f4807982ccb5"
       vary:
@@ -157,13 +158,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:3E48:1BF62E:54B4910D
+      - 6C0E7A16:3E47:12468E9:54B55576
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 76d9828c7e4f1d910f7ba069e90ce976
+      - 13d09b732ebe76f892093130dc088652
       content-encoding:
       - gzip
     body:
@@ -185,7 +186,7 @@ http_interactions:
         Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T14:25:31Z"},"message":"Restrict
         duplicate check-ins","tree":{"sha":"5e0be83c3171900033e440b4b33864893bad0ffb","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/5e0be83c3171900033e440b4b33864893bad0ffb"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/56c573ab5753ddc354a465e90af94ab31966b562","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/56c573ab5753ddc354a465e90af94ab31966b562","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/56c573ab5753ddc354a465e90af94ab31966b562","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/56c573ab5753ddc354a465e90af94ab31966b562/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"e9e1807aed54197b234e3012140d4bdd75bc1016","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/e9e1807aed54197b234e3012140d4bdd75bc1016","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/e9e1807aed54197b234e3012140d4bdd75bc1016"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 03:29:17 GMT
+  recorded_at: Tue, 13 Jan 2015 17:27:18 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/294/commits?per_page=100
@@ -209,7 +210,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 03:29:18 GMT
+      - Tue, 13 Jan 2015 17:27:18 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -221,13 +222,13 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '58'
+      - '51'
       x-ratelimit-reset:
-      - '1421123357'
+      - '1421173633'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Mon, 12 Jan 2015 20:28:54 GMT
+      - Tue, 13 Jan 2015 04:55:24 GMT
       etag:
       - W/"56e0d325d30493e260eb97beedab7387"
       vary:
@@ -249,13 +250,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:3E49:1EABB2:54B4910D
+      - 6C0E7A16:3E43:448E8A:54B55576
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 318e55760cf7cdb40e61175a4d36cd32
+      - 13d09b732ebe76f892093130dc088652
       content-encoding:
       - gzip
     body:
@@ -274,7 +275,7 @@ http_interactions:
         Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:50:57Z"},"message":"Remove
         unnecessary row that affected styling","tree":{"sha":"2b5212be4b3016e53b988d31481714c1787e420f","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/2b5212be4b3016e53b988d31481714c1787e420f"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"d569991c368f027445f30aae0969ef08d3824b1e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/d569991c368f027445f30aae0969ef08d3824b1e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/d569991c368f027445f30aae0969ef08d3824b1e"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 03:29:17 GMT
+  recorded_at: Tue, 13 Jan 2015 17:27:19 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/293/commits?per_page=100
@@ -298,7 +299,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 03:29:18 GMT
+      - Tue, 13 Jan 2015 17:27:19 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -310,13 +311,13 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '57'
+      - '50'
       x-ratelimit-reset:
-      - '1421123357'
+      - '1421173633'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Mon, 12 Jan 2015 20:28:54 GMT
+      - Tue, 13 Jan 2015 04:55:24 GMT
       etag:
       - W/"0d1926f3d19ce5fd3eb8e06c817d7c0a"
       vary:
@@ -338,13 +339,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:3E48:1BF794:54B4910E
+      - 6C0E7A16:3E47:1246A8B:54B55577
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 8a5c38021a5cd7cef7b8f49a296fee40
+      - 318e55760cf7cdb40e61175a4d36cd32
       content-encoding:
       - gzip
     body:
@@ -386,5 +387,5 @@ http_interactions:
         Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T23:31:55Z"},"message":"Add
         styling on events featured projects grid","tree":{"sha":"c24caf1b311d01a71b07a1ae3545428393d80f00","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/c24caf1b311d01a71b07a1ae3545428393d80f00"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"f942adf2329753e36ff048b88afef987cb35bedd","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/f942adf2329753e36ff048b88afef987cb35bedd","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/f942adf2329753e36ff048b88afef987cb35bedd"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 03:29:18 GMT
+  recorded_at: Tue, 13 Jan 2015 17:27:19 GMT
 recorded_with: VCR 2.9.3
