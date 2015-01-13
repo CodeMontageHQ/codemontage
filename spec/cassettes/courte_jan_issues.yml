@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?q=author%3Acourte+type%3Aissue+created%3A2015-01-11..2015-01-12&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 13 Jan 2015 02:25:08 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '10'
+      x-ratelimit-remaining:
+      - '9'
+      x-ratelimit-reset:
+      - '1421115968'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:3E47:4CC65:54B48204
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - 2811da37fbdda4367181b328b22b2499
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":2,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/304","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/304/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/304/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/304/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/304","id":54102518,"number":304,"title":"Add
+        account change options for GitHub-linked users","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-12T20:28:54Z","updated_at":"2015-01-12T20:28:54Z","closed_at":null,"body":"Based
+        on issue #148 and dependent on issue #303:\r\n\r\nAllow users who create a
+        CodeMontage account with their GitHub account to set passwords. This could
+        be as simple as sending new users who create a GH-based account an email to
+        \"set a password\", should they wish to do so.","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/303","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/303/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/303/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/303/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/303","id":54101775,"number":303,"title":"Forgotten
+        passwords can''t be recovered","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-12T20:21:54Z","updated_at":"2015-01-12T20:23:10Z","closed_at":null,"body":"The
+        very mysterious \r\n\r\n![screenshot 2015-01-12 15 19 21](https://cloud.githubusercontent.com/assets/2766324/5710259/9a3b9e24-9a6e-11e4-9a63-f8e23138d9d6.png)\r\n\r\nappears
+        when trying to retrieve a forgotten password (route: /auth/password), which
+        is no help to anyone at all.","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Tue, 13 Jan 2015 02:25:08 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,390 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?q=author%3Acourte+type%3Apr+created%3A2015-01-07..2015-01-08&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 13 Jan 2015 03:29:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '10'
+      x-ratelimit-remaining:
+      - '9'
+      x-ratelimit-reset:
+      - '1421119816'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:3E47:17E725:54B4910C
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - c6c65e5196703428e7641f7d1e9bc353
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":3,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","id":53720469,"number":295,"title":"Backend
+        transition from EventRegistration to CheckIn models (db, model, admin layers)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/code-review-wanted","name":"code-review-wanted","color":"bfe5bf"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/database","name":"database","color":"bfd4f2"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/deploy+with+care","name":"deploy
+        with care","color":"eb6420"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-08T06:50:57Z","updated_at":"2015-01-09T06:12:43Z","closed_at":null,"pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/295","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.patch"},"body":"Everything
+        that was once an event registration is now a check in. This primarily impacts
+        the database and model layers.\r\n\r\n*Check ins on the admin dash*\r\n![screenshot
+        2015-01-08 01 42 49](https://cloud.githubusercontent.com/assets/2766324/5658920/b05c10d4-96d7-11e4-8a80-4d7c07c85612.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/294","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/294/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/294/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/294/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/294","id":53712632,"number":294,"title":"Projects
+        index refactor (to use a partial)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":2,"created_at":"2015-01-08T04:06:48Z","updated_at":"2015-01-09T20:44:36Z","closed_at":"2015-01-09T05:21:48Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/294","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/294","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/294.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/294.patch"},"body":"While
+        we''re partialling things all willy-nilly, here''s a quick refactor of the
+        projects index.\r\n\r\nHere''s a screenshot of it looking exactly the same:\r\n![screenshot
+        2015-01-07 23 05 04](https://cloud.githubusercontent.com/assets/2766324/5657742/af61734c-96c1-11e4-9c06-c6d2696a8989.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/293","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/293/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/293/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/293/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/293","id":53697253,"number":293,"title":"Show
+        an event''s featured projects","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/frontend","name":"frontend","color":"fad8c7"}],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":1,"created_at":"2015-01-07T23:40:51Z","updated_at":"2015-01-09T20:44:36Z","closed_at":"2015-01-09T15:13:36Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/293","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/293","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/293.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/293.patch"},"body":"-
+        shows an event''s featured projects on its page\r\n- using a handy-dandy partial
+        that can be used elsewhere on the site\r\n\r\nDefinitely not 100% on some
+        of the choices I made here. The use of pixel-lengths in the CSS is a major
+        red flag to me, and there is some size-related ugliness as the page gets smaller,
+        the lengths of project names change, technologies/causes are or are not included,
+        etc. etc. Also there''s some strangeness around the current save button.\r\n\r\nClearly
+        a lot of improvements can be made, but it''s a start.\r\n\r\n*Featuring projects,
+        when everything is well-shaped and the page is big*\r\n![screenshot 2015-01-07
+        22 56 19](https://cloud.githubusercontent.com/assets/2766324/5657694/9c77e046-96c0-11e4-9b5b-5ef9eae5e7ae.png)\r\n\r\n*Featuring
+        projects, when the page is big but shapes are different*\r\n![screenshot 2015-01-07
+        22 56 02](https://cloud.githubusercontent.com/assets/2766324/5657695/9c7adeae-96c0-11e4-88c4-3b71e9498dba.png)\r\n\r\n*Featuring
+        projects, when the page is small*\r\n![screenshot 2015-01-07 22 56 48](https://cloud.githubusercontent.com/assets/2766324/5657696/9c7b8de0-96c0-11e4-889b-af20f9ec66f0.png)","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Tue, 13 Jan 2015 03:29:16 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/295/commits?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 13 Jan 2015 03:29:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-reset:
+      - '1421123357'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Mon, 12 Jan 2015 20:28:54 GMT
+      etag:
+      - W/"45c47da68e6446170002f4807982ccb5"
+      vary:
+      - Accept
+      - Accept-Encoding
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:3E48:1BF62E:54B4910D
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      x-served-by:
+      - 76d9828c7e4f1d910f7ba069e90ce976
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"sha":"8b66eaf2a4d126c95872d4d70c1f27f0863a0949","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:21:20Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:21:20Z"},"message":"Rename
+        event_registrations table to check_ins (db level)","tree":{"sha":"97d75aa0aaa2a819ce4f0ee109485405bb20110e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/97d75aa0aaa2a819ce4f0ee109485405bb20110e"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/8b66eaf2a4d126c95872d4d70c1f27f0863a0949","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/8b66eaf2a4d126c95872d4d70c1f27f0863a0949","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/8b66eaf2a4d126c95872d4d70c1f27f0863a0949","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/8b66eaf2a4d126c95872d4d70c1f27f0863a0949/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"31c7659426d90dea67528e7b7e255087e91ab830","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/31c7659426d90dea67528e7b7e255087e91ab830","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/31c7659426d90dea67528e7b7e255087e91ab830"}]},{"sha":"7221febd090470c267fdd25ef5f3f562ebb79f5f","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:26:41Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:26:41Z"},"message":"Rename
+        EventRegistration to CheckIn (model layer) and change associations","tree":{"sha":"b906b1ecb0774c134c01220f3b3842b78ed84bd9","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/b906b1ecb0774c134c01220f3b3842b78ed84bd9"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/7221febd090470c267fdd25ef5f3f562ebb79f5f","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/7221febd090470c267fdd25ef5f3f562ebb79f5f","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/7221febd090470c267fdd25ef5f3f562ebb79f5f","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/7221febd090470c267fdd25ef5f3f562ebb79f5f/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"8b66eaf2a4d126c95872d4d70c1f27f0863a0949","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/8b66eaf2a4d126c95872d4d70c1f27f0863a0949","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/8b66eaf2a4d126c95872d4d70c1f27f0863a0949"}]},{"sha":"01babd2e9306df3279cbea1ec1de2a448f914fc6","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:32:02Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T06:32:02Z"},"message":"Change
+        event registrations to check ins in the admin area","tree":{"sha":"b6c6fece0e8e6cdd19f72e7677c0abeec3f3ce64","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/b6c6fece0e8e6cdd19f72e7677c0abeec3f3ce64"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/01babd2e9306df3279cbea1ec1de2a448f914fc6","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/01babd2e9306df3279cbea1ec1de2a448f914fc6","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/01babd2e9306df3279cbea1ec1de2a448f914fc6","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/01babd2e9306df3279cbea1ec1de2a448f914fc6/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"7221febd090470c267fdd25ef5f3f562ebb79f5f","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/7221febd090470c267fdd25ef5f3f562ebb79f5f","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/7221febd090470c267fdd25ef5f3f562ebb79f5f"}]},{"sha":"e9e1807aed54197b234e3012140d4bdd75bc1016","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T07:00:03Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T07:00:03Z"},"message":"Adjust
+        syntax according to HoundCI recommendations","tree":{"sha":"c8e5d62908e2589a8345d67d04331ba47c432463","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/c8e5d62908e2589a8345d67d04331ba47c432463"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/e9e1807aed54197b234e3012140d4bdd75bc1016","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/e9e1807aed54197b234e3012140d4bdd75bc1016","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/e9e1807aed54197b234e3012140d4bdd75bc1016","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/e9e1807aed54197b234e3012140d4bdd75bc1016/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"01babd2e9306df3279cbea1ec1de2a448f914fc6","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/01babd2e9306df3279cbea1ec1de2a448f914fc6","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/01babd2e9306df3279cbea1ec1de2a448f914fc6"}]},{"sha":"56c573ab5753ddc354a465e90af94ab31966b562","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T14:25:31Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T14:25:31Z"},"message":"Restrict
+        duplicate check-ins","tree":{"sha":"5e0be83c3171900033e440b4b33864893bad0ffb","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/5e0be83c3171900033e440b4b33864893bad0ffb"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/56c573ab5753ddc354a465e90af94ab31966b562","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/56c573ab5753ddc354a465e90af94ab31966b562","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/56c573ab5753ddc354a465e90af94ab31966b562","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/56c573ab5753ddc354a465e90af94ab31966b562/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"e9e1807aed54197b234e3012140d4bdd75bc1016","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/e9e1807aed54197b234e3012140d4bdd75bc1016","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/e9e1807aed54197b234e3012140d4bdd75bc1016"}]}]'
+    http_version: '1.1'
+  recorded_at: Tue, 13 Jan 2015 03:29:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/294/commits?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 13 Jan 2015 03:29:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '58'
+      x-ratelimit-reset:
+      - '1421123357'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Mon, 12 Jan 2015 20:28:54 GMT
+      etag:
+      - W/"56e0d325d30493e260eb97beedab7387"
+      vary:
+      - Accept
+      - Accept-Encoding
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:3E49:1EABB2:54B4910D
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      x-served-by:
+      - 318e55760cf7cdb40e61175a4d36cd32
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"sha":"302a5c2ed3e08dd45ff88273fdceb001f41daecd","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:08:30Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:08:30Z"},"message":"Remove
+        unnecessary wrapper div","tree":{"sha":"84d6aee3db4a1018a0d86891cd6a4fc683969cbc","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/84d6aee3db4a1018a0d86891cd6a4fc683969cbc"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/302a5c2ed3e08dd45ff88273fdceb001f41daecd","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/302a5c2ed3e08dd45ff88273fdceb001f41daecd","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/302a5c2ed3e08dd45ff88273fdceb001f41daecd","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/302a5c2ed3e08dd45ff88273fdceb001f41daecd/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"31c7659426d90dea67528e7b7e255087e91ab830","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/31c7659426d90dea67528e7b7e255087e91ab830","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/31c7659426d90dea67528e7b7e255087e91ab830"}]},{"sha":"a0941e570c599eb87ef479032796baef98699629","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:24:50Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:24:50Z"},"message":"Refactor
+        projects index rendering to use partial","tree":{"sha":"66b06fc4f2e1d8360921c356bfae0a3225b78e31","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/66b06fc4f2e1d8360921c356bfae0a3225b78e31"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/a0941e570c599eb87ef479032796baef98699629","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a0941e570c599eb87ef479032796baef98699629","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/a0941e570c599eb87ef479032796baef98699629","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a0941e570c599eb87ef479032796baef98699629/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"302a5c2ed3e08dd45ff88273fdceb001f41daecd","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/302a5c2ed3e08dd45ff88273fdceb001f41daecd","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/302a5c2ed3e08dd45ff88273fdceb001f41daecd"}]},{"sha":"d569991c368f027445f30aae0969ef08d3824b1e","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:50:19Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:50:19Z"},"message":"Tweak
+        spacing and remove unnecessary <br>","tree":{"sha":"d2df32e46bf576f9ce4750094e58ed0d0e6b8798","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/d2df32e46bf576f9ce4750094e58ed0d0e6b8798"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/d569991c368f027445f30aae0969ef08d3824b1e","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/d569991c368f027445f30aae0969ef08d3824b1e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/d569991c368f027445f30aae0969ef08d3824b1e","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/d569991c368f027445f30aae0969ef08d3824b1e/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"a0941e570c599eb87ef479032796baef98699629","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a0941e570c599eb87ef479032796baef98699629","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/a0941e570c599eb87ef479032796baef98699629"}]},{"sha":"a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:50:57Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-08T03:50:57Z"},"message":"Remove
+        unnecessary row that affected styling","tree":{"sha":"2b5212be4b3016e53b988d31481714c1787e420f","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/2b5212be4b3016e53b988d31481714c1787e420f"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/a4d909eb582dd3bd64006ddfd4bc8793cebfc48b/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"d569991c368f027445f30aae0969ef08d3824b1e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/d569991c368f027445f30aae0969ef08d3824b1e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/d569991c368f027445f30aae0969ef08d3824b1e"}]}]'
+    http_version: '1.1'
+  recorded_at: Tue, 13 Jan 2015 03:29:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/293/commits?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 13 Jan 2015 03:29:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '57'
+      x-ratelimit-reset:
+      - '1421123357'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Mon, 12 Jan 2015 20:28:54 GMT
+      etag:
+      - W/"0d1926f3d19ce5fd3eb8e06c817d7c0a"
+      vary:
+      - Accept
+      - Accept-Encoding
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:3E48:1BF794:54B4910E
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      x-served-by:
+      - 8a5c38021a5cd7cef7b8f49a296fee40
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"sha":"c20bb50e3bdb6e5c54cb424a2af411f26961a569","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:19:14Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:19:14Z"},"message":"Add
+        FeaturedProject model","tree":{"sha":"84bb82330545534fb260d966dd2779b7b12adff2","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/84bb82330545534fb260d966dd2779b7b12adff2"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/c20bb50e3bdb6e5c54cb424a2af411f26961a569","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c20bb50e3bdb6e5c54cb424a2af411f26961a569","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/c20bb50e3bdb6e5c54cb424a2af411f26961a569","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c20bb50e3bdb6e5c54cb424a2af411f26961a569/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"31c7659426d90dea67528e7b7e255087e91ab830","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/31c7659426d90dea67528e7b7e255087e91ab830","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/31c7659426d90dea67528e7b7e255087e91ab830"}]},{"sha":"1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:27:07Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:27:07Z"},"message":"Create
+        migration for featured projects, with index on event","tree":{"sha":"f2014cca24f426a0c163ff76fdce31bd99dff5ac","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/f2014cca24f426a0c163ff76fdce31bd99dff5ac"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"c20bb50e3bdb6e5c54cb424a2af411f26961a569","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c20bb50e3bdb6e5c54cb424a2af411f26961a569","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/c20bb50e3bdb6e5c54cb424a2af411f26961a569"}]},{"sha":"2c605500fd2919edad4dc720a6ad98ab075af508","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:29:09Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:29:09Z"},"message":"Add
+        featured project associations to Project and Event models","tree":{"sha":"fdabc88c5ec547e9c120ba9cb00b73f0334b3651","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/fdabc88c5ec547e9c120ba9cb00b73f0334b3651"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/2c605500fd2919edad4dc720a6ad98ab075af508","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2c605500fd2919edad4dc720a6ad98ab075af508","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/2c605500fd2919edad4dc720a6ad98ab075af508","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2c605500fd2919edad4dc720a6ad98ab075af508/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/1e3f24f32d1ded30bfce73c3d9daf9464e51dc15"}]},{"sha":"70a790e291e709f0bb3ec3efe64528589e772cf4","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:45:36Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-05T17:45:36Z"},"message":"Adjust
+        migration to use Ruby 1.9 hash syntax","tree":{"sha":"89d52e8af051f88dd0aafdce619f9852c3895636","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/89d52e8af051f88dd0aafdce619f9852c3895636"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/70a790e291e709f0bb3ec3efe64528589e772cf4","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/70a790e291e709f0bb3ec3efe64528589e772cf4","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/70a790e291e709f0bb3ec3efe64528589e772cf4","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/70a790e291e709f0bb3ec3efe64528589e772cf4/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"2c605500fd2919edad4dc720a6ad98ab075af508","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2c605500fd2919edad4dc720a6ad98ab075af508","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/2c605500fd2919edad4dc720a6ad98ab075af508"}]},{"sha":"343f458df3b0f1b18fd5926947815e23c8dd3a49","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-06T15:27:04Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-06T15:27:04Z"},"message":"Add
+        index on project_id to featured_projects table","tree":{"sha":"b1364aa7b319ce50695d96f288b7fd6fc5e7f8c2","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/b1364aa7b319ce50695d96f288b7fd6fc5e7f8c2"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/343f458df3b0f1b18fd5926947815e23c8dd3a49","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/343f458df3b0f1b18fd5926947815e23c8dd3a49","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/343f458df3b0f1b18fd5926947815e23c8dd3a49","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/343f458df3b0f1b18fd5926947815e23c8dd3a49/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"70a790e291e709f0bb3ec3efe64528589e772cf4","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/70a790e291e709f0bb3ec3efe64528589e772cf4","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/70a790e291e709f0bb3ec3efe64528589e772cf4"}]},{"sha":"6e3336b629e2e4a9bfb133b834bedd12959b988e","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T19:04:54Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T19:04:54Z"},"message":"Remove
+        broken br tags","tree":{"sha":"c80b31c4edb00caaf67ad5cfc7cfe952a3c30a60","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/c80b31c4edb00caaf67ad5cfc7cfe952a3c30a60"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/6e3336b629e2e4a9bfb133b834bedd12959b988e","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/6e3336b629e2e4a9bfb133b834bedd12959b988e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/6e3336b629e2e4a9bfb133b834bedd12959b988e","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/6e3336b629e2e4a9bfb133b834bedd12959b988e/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"343f458df3b0f1b18fd5926947815e23c8dd3a49","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/343f458df3b0f1b18fd5926947815e23c8dd3a49","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/343f458df3b0f1b18fd5926947815e23c8dd3a49"}]},{"sha":"307ef59fe2a56843c1f06d9ecca675400da1b11c","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T19:05:23Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T19:05:23Z"},"message":"Adjust
+        spacing and indentation of html","tree":{"sha":"bce0d033c43c1dd69e4f7162f3d953f32efd2b8b","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/bce0d033c43c1dd69e4f7162f3d953f32efd2b8b"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/307ef59fe2a56843c1f06d9ecca675400da1b11c","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/307ef59fe2a56843c1f06d9ecca675400da1b11c","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/307ef59fe2a56843c1f06d9ecca675400da1b11c","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/307ef59fe2a56843c1f06d9ecca675400da1b11c/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"6e3336b629e2e4a9bfb133b834bedd12959b988e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/6e3336b629e2e4a9bfb133b834bedd12959b988e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/6e3336b629e2e4a9bfb133b834bedd12959b988e"}]},{"sha":"304291a064bf5f937c77cc692b0b087e05c91c13","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T20:30:44Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T20:30:44Z"},"message":"Add
+        featured projects to events page as list","tree":{"sha":"31653267b7ab34d98cffd2ce36880703a9032120","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/31653267b7ab34d98cffd2ce36880703a9032120"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/304291a064bf5f937c77cc692b0b087e05c91c13","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/304291a064bf5f937c77cc692b0b087e05c91c13","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/304291a064bf5f937c77cc692b0b087e05c91c13","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/304291a064bf5f937c77cc692b0b087e05c91c13/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"307ef59fe2a56843c1f06d9ecca675400da1b11c","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/307ef59fe2a56843c1f06d9ecca675400da1b11c","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/307ef59fe2a56843c1f06d9ecca675400da1b11c"}]},{"sha":"2355483e3703c5e2ca0c2cad52b5bb09d75d4638","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T22:22:45Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T22:22:45Z"},"message":"Use
+        partial to render featured projects on events pages\n\nBug: The partial currently
+        looks wonky with 2/5/8/etc. featured projects.","tree":{"sha":"6cea39f4b45ba9f669506972fc3f4ad793cb7ae9","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/6cea39f4b45ba9f669506972fc3f4ad793cb7ae9"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/2355483e3703c5e2ca0c2cad52b5bb09d75d4638","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2355483e3703c5e2ca0c2cad52b5bb09d75d4638","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/2355483e3703c5e2ca0c2cad52b5bb09d75d4638","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2355483e3703c5e2ca0c2cad52b5bb09d75d4638/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"304291a064bf5f937c77cc692b0b087e05c91c13","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/304291a064bf5f937c77cc692b0b087e05c91c13","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/304291a064bf5f937c77cc692b0b087e05c91c13"}]},{"sha":"f942adf2329753e36ff048b88afef987cb35bedd","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T23:29:15Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T23:29:15Z"},"message":"Switch
+        to ul to allow for awkward numbers of featured events (2/5/8/etc)\n\nSee previous
+        commit for more details.","tree":{"sha":"83a1080ce32326c141951f5769f3728ae869191a","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/83a1080ce32326c141951f5769f3728ae869191a"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/f942adf2329753e36ff048b88afef987cb35bedd","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/f942adf2329753e36ff048b88afef987cb35bedd","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/f942adf2329753e36ff048b88afef987cb35bedd","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/f942adf2329753e36ff048b88afef987cb35bedd/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"2355483e3703c5e2ca0c2cad52b5bb09d75d4638","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/2355483e3703c5e2ca0c2cad52b5bb09d75d4638","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/2355483e3703c5e2ca0c2cad52b5bb09d75d4638"}]},{"sha":"c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T23:31:55Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2015-01-07T23:31:55Z"},"message":"Add
+        styling on events featured projects grid","tree":{"sha":"c24caf1b311d01a71b07a1ae3545428393d80f00","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/c24caf1b311d01a71b07a1ae3545428393d80f00"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/c79bf6f31ffe90a9751d9256a6c77a4ac2c12909/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"f942adf2329753e36ff048b88afef987cb35bedd","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/f942adf2329753e36ff048b88afef987cb35bedd","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/f942adf2329753e36ff048b88afef987cb35bedd"}]}]'
+    http_version: '1.1'
+  recorded_at: Tue, 13 Jan 2015 03:29:18 GMT
+recorded_with: VCR 2.9.3
