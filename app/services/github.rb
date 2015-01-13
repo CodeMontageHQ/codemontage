@@ -3,7 +3,8 @@ module Github
 
   def pull_requests_by_repo(org, repo, day_begin, day_end)
     Octokit.auto_paginate = true
-    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:pr created:#{day_begin}..#{day_end}"
+    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:pr \
+                                     created:#{day_begin}..#{day_end}"
     results.items
   end
 
@@ -18,18 +19,21 @@ module Github
 
   def issues_by_repo(org, repo, day_begin, day_end)
     Octokit.auto_paginate = true
-    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:issue created:#{day_begin}..#{day_end}"
+    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:issue \
+                                     created:#{day_begin}..#{day_end}"
     results.items
   end
 
   def forks_by_repo(repo, day_begin, day_end)
-    results = Octokit.search_repos "#{repo} in:name fork:only created:#{day_begin}..#{day_end}"
+    results = Octokit.search_repos "#{repo} in:name fork:only \
+                                    created:#{day_begin}..#{day_end}"
     results.items
   end
 
   def pull_requests_by_user(user, day_begin, day_end)
     Octokit.auto_paginate = true
-    results = Octokit.search_issues "author:#{user} type:pr created:#{day_begin}..#{day_end}"
+    results = Octokit.search_issues "author:#{user} type:pr \
+                                     created:#{day_begin}..#{day_end}"
     results.items
   end
 
@@ -44,12 +48,14 @@ module Github
 
   def issues_by_user(user, day_begin, day_end)
     Octokit.auto_paginate = true
-    results = Octokit.search_issues "author:#{user} type:issue created:#{day_begin}..#{day_end}"
+    results = Octokit.search_issues "author:#{user} type:issue \
+                                     created:#{day_begin}..#{day_end}"
     results.items
   end
 
   def forks_by_user(user, day_begin, day_end)
-    results = Octokit.search_repos "user:#{user} fork:only created:#{day_begin}..#{day_end}"
+    results = Octokit.search_repos "user:#{user} fork:only \
+                                    created:#{day_begin}..#{day_end}"
     results.items
   end
 
