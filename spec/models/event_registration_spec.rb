@@ -18,7 +18,9 @@ describe EventRegistration do
         er = create(:er_for_october)
 
         VCR.use_cassette("courte_user") do
-          expect(er.github_stat_args).to eq({user: "courte", day_begin: er.event.start_date, day_end: er.event.end_date})
+          expect(er.github_stat_args).to eq(user: "courte",
+                                            day_begin: er.event.start_date,
+                                            day_end: er.event.end_date)
         end
       end
     end
@@ -37,7 +39,7 @@ describe EventRegistration do
         er = create(:er_for_october)
 
         VCR.use_cassette("courte_oct_stats") do
-          expect(er.stats).to eq({prs: 1, issues: 0, commits: 1, forks: 2})
+          expect(er.stats).to eq(prs: 1, issues: 0, commits: 1, forks: 2)
         end
       end
     end

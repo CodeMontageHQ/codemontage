@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Github do
   context "when given a repo" do
