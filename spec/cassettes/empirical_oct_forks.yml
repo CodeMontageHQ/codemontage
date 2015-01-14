@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/repositories?q=empirical-core+in%3Aname+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31
+    uri: https://api.github.com/search/repositories?q=empirical-core+in%3Aname+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
