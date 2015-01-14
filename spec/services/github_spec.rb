@@ -34,7 +34,7 @@ describe Github do
         forks = Github.forks_by_repo("empirical-core",
                                      Time.parse("2014-10-01"),
                                      Time.parse("2014-10-31"))
-        expect(forks.count).to eq(15)
+        expect(forks.count).to eq(14)
       end
     end
   end
