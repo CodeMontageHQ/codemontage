@@ -7,16 +7,12 @@ class FeaturedProject < ActiveRecord::Base
   attr_accessible :project_id, :event_id
 
   def stats
-    args = {}
-    args[:org] = project.organization.github_org
-    args[:repo] = project.github_repo
-    args[:day_begin] = event.start_date
-    args[:day_end] = event.end_date
-
+    args = github_stat_args
     results = {}
+
     results[:prs]     = Github.pull_requests_by_repo(args[:org], args[:repo],
-                                                      args[:day_begin],
-                                                      args[:day_end]).count
+                                                     args[:day_begin],
+                                                     args[:day_end]).count
 
     results[:issues]  = Github.issues_by_repo(args[:org], args[:repo],
                                               args[:day_begin],
@@ -30,5 +26,12 @@ class FeaturedProject < ActiveRecord::Base
                                              args[:day_end]).count
 
     results
+  end
+
+  def github_stat_args
+    { org: project.organization.github_org,
+      repo: project.github_repo,
+      day_begin: event.start_date,
+      day_end: event.end_date }
   end
 end
