@@ -1,6 +1,8 @@
 require "spec_helper"
 
 describe EventRegistration do
+  it { should belong_to(:event) }
+  it { should belong_to(:user) }
 
   describe "#github_stat_args" do
 
