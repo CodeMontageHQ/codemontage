@@ -72,4 +72,19 @@ describe Github do
       end
     end
   end
+
+  it "returns the user login when given a uid" do
+    VCR.use_cassette("courte_user") do
+      login = Github.get_user_login_by_uid("2766324")
+      expect(login).to eq("courte")
+    end
+  end
+
+  it "formats dates for octokit queries" do
+    date1 = Time.new(2012, 12, 12, 13, 14, 15)
+    date2 = Time.new(2011, 11, 11, 12, 13, 14)
+
+    dates = Github.set_date_format(date1, date2)
+    expect(dates).to eq(["2012-12-12", "2011-11-11"])
+  end
 end
