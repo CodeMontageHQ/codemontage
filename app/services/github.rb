@@ -66,6 +66,11 @@ module Github
     results.items
   end
 
+  def get_user_login_by_uid(uid)
+    user = Octokit.user(uid.to_i)
+    user.login
+  end
+
   def org_repo(org, repo)
     "#{org}/#{repo}"
   end
