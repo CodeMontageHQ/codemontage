@@ -66,12 +66,18 @@ module Github
     results.items
   end
 
+  def get_user_login_by_uid(uid)
+    user = Octokit.user(uid.to_i)
+    user.login
+  end
+
   def org_repo(org, repo)
     "#{org}/#{repo}"
   end
 
   def parse_org_repo(url)
-    pr_url_regex = /\Ahttps:\/\/api.github.com\/repos\/([\w\-]+)\/([\w\-]+)\/issues\/\d+\z/
+    pr_url_regex = /\Ahttps:\/\/api.github.com\/repos\/
+                   ([\w\-]+)\/([\w\-]+)\/issues\/\d+\z/x
     org, repo = url.match(pr_url_regex).captures
 
     org_repo(org, repo)
