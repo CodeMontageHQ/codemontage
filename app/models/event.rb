@@ -32,6 +32,7 @@ class Event < ActiveRecord::Base
   def stats
     results = {}
     results[:by_project] = featured_project_stats
+    results[:by_attendee] = attendee_stats
     results[:total] = {}
 
     github_metrics = [:prs, :commits, :issues, :forks]
@@ -52,6 +53,16 @@ class Event < ActiveRecord::Base
 
     featured_projects.each do |fp|
       results.merge!({ fp.project.name => fp.stats })
+    end
+
+    results
+  end
+
+  def attendee_stats
+    results = {}
+
+    event_registrations.each do |er|
+      results.merge!({ er.user.email => er.stats })
     end
 
     results
