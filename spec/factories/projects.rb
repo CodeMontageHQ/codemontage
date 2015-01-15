@@ -7,7 +7,7 @@ FactoryGirl.define do
 
   factory :fake_empirical_project, class: Project do
     association :organization, factory: :fake_empirical_org
-    name "Fake Empirical Project"
+    sequence(:name) { |n| "Fake Empirical Project ##{n}" }
     github_repo "empirical-core"
   end
 end

@@ -21,7 +21,7 @@ describe FeaturedProject do
   end
 
   it "returns github stats in a hash" do
-    fp = create(:fake_wcd_featured)
+    fp = create(:oct_featured_project)
 
     VCR.use_cassette("empirical_oct_stats") do
       expect(fp.stats).to eq(prs: 15, issues: 34, commits: 85, forks: 14)
