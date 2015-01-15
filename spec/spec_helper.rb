@@ -3,12 +3,13 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require 'simplecov'
 SimpleCov.start do
-  add_filter '/config/'
-  add_filter '/spec/'
-  add_filter '/admin/'
-  add_group 'Models', 'app/models'
-  add_group 'Controllers', 'app/controllers'
-  add_group 'Helpers', 'app/helpers'
+  add_filter "/config/"
+  add_filter "/spec/"
+  add_filter "/admin/"
+  add_group "Models", "app/models"
+  add_group "Controllers", "app/controllers"
+  add_group "Helpers", "app/helpers"
+  add_group "Services", "app/services"
 end
 
 require File.expand_path('../../config/environment', __FILE__)
@@ -16,10 +17,16 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
+require 'vcr'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
+VCR.config do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.hook_into                :fakeweb
+end
 
 RSpec.configure do |config|
   # ## Mock Framework
