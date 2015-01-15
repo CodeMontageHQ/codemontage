@@ -40,7 +40,7 @@ class Event < ActiveRecord::Base
     github_metrics.each do |metric|
       results[:total][metric] = 0
 
-      results[:by_project].each do |project, stats|
+      results[:by_attendee].each do |project, stats|
         results[:total][metric] += stats[metric]
       end
     end
