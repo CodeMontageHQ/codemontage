@@ -40,7 +40,7 @@ class Event < ActiveRecord::Base
     github_metrics.each do |metric|
       results[:total][metric] = 0
 
-      results[:by_attendee].each do |project, stats|
+      results[:by_attendee].each do |_attendee, stats|
         results[:total][metric] += stats[metric]
       end
     end
@@ -52,7 +52,7 @@ class Event < ActiveRecord::Base
     results = {}
 
     featured_projects.each do |fp|
-      results.merge!({ fp.project.name => fp.stats })
+      results.merge!(fp.project.name => fp.stats)
     end
 
     results
@@ -62,7 +62,7 @@ class Event < ActiveRecord::Base
     results = {}
 
     event_registrations.each do |er|
-      results.merge!({ er.user.email => er.stats })
+      results.merge!(er.user.email => er.stats)
     end
 
     results
