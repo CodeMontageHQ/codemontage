@@ -10,11 +10,4 @@ FactoryGirl.define do
       end_date { Time.new(2014, 10, 31) }
     end
   end
-
-  factory :fake_wcd_event do
-    short_code "AmplifyWCD2015x3"
-    name "Amplify Women Coder's Dinner"
-    start_date Time.parse("2015-10-01")
-    end_date Time.parse("2015-10-02")
-  end
 end

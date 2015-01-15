@@ -4,7 +4,7 @@ FactoryGirl.define do
     github_org "CodeMontageHQ"
   end
 
-  factory :fake_empirical_org do
+  factory :fake_empirical_org, class: Organization do
     name "Fake Empirical Org"
     github_org "empirical-org"
   end

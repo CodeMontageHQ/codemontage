@@ -4,8 +4,8 @@ FactoryGirl.define do
     association :project
   end
 
-  factory :fake_wcd_featured do
-    association :fake_wcd_event
-    association :fake_empirical_project
+  factory :fake_wcd_featured, class: FeaturedProject do
+    association :event, factory: :october
+    association :project, factory: :fake_empirical_project
   end
 end

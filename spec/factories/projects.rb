@@ -5,8 +5,8 @@ FactoryGirl.define do
     github_repo "codemontage"
   end
 
-  factory :fake_empirical_project do
-    association :fake_empirical_org
+  factory :fake_empirical_project, class: Project do
+    association :organization, factory: :fake_empirical_org
     name "Fake Empirical Project"
     github_repo "empirical-core"
   end
