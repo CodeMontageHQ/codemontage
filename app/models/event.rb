@@ -28,7 +28,7 @@ class Event < ActiveRecord::Base
   scope :public_events, -> { where(is_public: true) }
 
   def self.featured
-    upcoming_events.order('start_date').first
+    upcoming_events.public_events.order('start_date').first
   end
 
   def logo_delete
