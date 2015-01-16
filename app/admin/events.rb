@@ -77,6 +77,7 @@ ActiveAdmin.register Event do
           'No image available'
         end
       end
+      row "Public?" do ad.is_public end
       row :chat_url do link_to ad.chat_url, ad.chat_url if ad.chat_url.present? end
       row :map_url do link_to ad.map_url, ad.map_url if ad.map_url.present? end
       row :schedule_url do link_to ad.schedule_url, ad.schedule_url if ad.schedule_url.present? end
