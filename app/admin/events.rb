@@ -38,7 +38,7 @@ ActiveAdmin.register Event do
       else
         f.input :logo, as: :file
       end
-      f.input :is_public, label: "Public?"
+      f.input :is_public, label: "Public?", as: :boolean
       f.input :chat_url
       f.input :map_url
       f.input :schedule_url
