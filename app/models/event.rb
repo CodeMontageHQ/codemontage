@@ -7,7 +7,8 @@ class Event < ActiveRecord::Base
   has_many :projects, through: :featured_projects
 
   attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
-  attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email, :organizer, :organizer_email, :location
+  attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email
+  attr_accessible :organizer, :organizer_email, :location, :is_public
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
   attr_accessible :featured_projects_attributes
   attr_writer :logo_delete
@@ -24,9 +25,10 @@ class Event < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   scope :upcoming_events, where('end_date >= ?', Date.tomorrow)
+  scope :public_events, -> { where(is_public: true) }
 
   def self.featured
-    upcoming_events.order('start_date').first
+    upcoming_events.public_events.order('start_date').first
   end
 
   def logo_delete
