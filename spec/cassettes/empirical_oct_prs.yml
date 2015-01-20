@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?q=repo%3Aempirical-org%2Fempirical-core+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-02&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3Aempirical-org%2Fempirical-core+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-02&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:16 GMT
+      - Tue, 20 Jan 2015 21:17:48 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,11 +33,11 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '10'
+      - '30'
       x-ratelimit-remaining:
-      - '7'
+      - '26'
       x-ratelimit-reset:
-      - '1421170092'
+      - '1421788725'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E49:16B373D:54B55574
+      - 4C758B1E:1D6F:24E6141:54BEC5FC
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - d594a23ec74671eba905bf91ef329026
+      - 07ff1c8a09e44b62e277fae50a1b1dc4
       content-encoding:
       - gzip
     body:
@@ -94,5 +94,5 @@ http_interactions:
         ","score":1.0},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/events","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","id":44606325,"number":386,"title":"Changed
         Homepage Copy","user":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-01T19:39:40Z","updated_at":"2014-10-02T19:13:53Z","closed_at":"2014-10-02T19:13:52Z","pull_request":{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/pulls/386","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","diff_url":"https://github.com/empirical-org/Empirical-Core/pull/386.diff","patch_url":"https://github.com/empirical-org/Empirical-Core/pull/386.patch"},"body":"","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:16 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:48 GMT
 recorded_with: VCR 2.9.3

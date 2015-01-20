@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?q=repo%3Aempirical-org%2Fempirical-core+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2015-01-06..2015-01-07&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3Aempirical-org%2Fempirical-core+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2015-01-06..2015-01-07&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:16 GMT
+      - Tue, 20 Jan 2015 21:17:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,11 +33,11 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '10'
+      - '30'
       x-ratelimit-remaining:
-      - '6'
+      - '28'
       x-ratelimit-reset:
-      - '1421170092'
+      - '1421788725'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E49:16B37F5:54B55574
+      - 4C758B1E:1D6A:2040665:54BEC5F9
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 76d9828c7e4f1d910f7ba069e90ce976
+      - 474556b853193c38f1b14328ce2d1b7d
       content-encoding:
       - gzip
     body:
@@ -80,5 +80,5 @@ http_interactions:
         of the Travis builds are coming up as broken. We should look into what we
         can do to fix it and get it running properly again. ","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:17 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:45 GMT
 recorded_with: VCR 2.9.3

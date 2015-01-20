@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?q=repo%3Aempirical-org%2Fempirical-core+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-02&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3Aempirical-org%2Fempirical-core+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-02&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:12 GMT
+      - Tue, 20 Jan 2015 21:17:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,11 +33,11 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '10'
+      - '30'
       x-ratelimit-remaining:
-      - '8'
+      - '27'
       x-ratelimit-reset:
-      - '1421170092'
+      - '1421788725'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E44:713CD4:54B55570
+      - 4C758B1E:1D6B:2AFEAA9:54BEC5F9
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - d594a23ec74671eba905bf91ef329026
+      - dc1ce2bfb41810a06c705e83b388572d
       content-encoding:
       - gzip
     body:
@@ -94,10 +94,10 @@ http_interactions:
         ","score":1.0},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/386/events","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","id":44606325,"number":386,"title":"Changed
         Homepage Copy","user":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-01T19:39:40Z","updated_at":"2014-10-02T19:13:53Z","closed_at":"2014-10-02T19:13:52Z","pull_request":{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/pulls/386","html_url":"https://github.com/empirical-org/Empirical-Core/pull/386","diff_url":"https://github.com/empirical-org/Empirical-Core/pull/386.diff","patch_url":"https://github.com/empirical-org/Empirical-Core/pull/386.patch"},"body":"","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:13 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:45 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/393/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/393/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -118,7 +118,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:13 GMT
+      - Tue, 20 Jan 2015 21:17:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -128,15 +128,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '59'
+      - '4998'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Mon, 12 Jan 2015 02:23:51 GMT
+      - Tue, 20 Jan 2015 02:14:50 GMT
       etag:
       - W/"fa082f2632bf025c456fe705de7c35d8"
       vary:
@@ -158,13 +158,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E47:124622C:54B55571
+      - 4C758B1E:1D6E:3FEED35:54BEC5F9
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 7f48e2f7761567e923121f17538d7a6d
+      - 318e55760cf7cdb40e61175a4d36cd32
       content-encoding:
       - gzip
     body:
@@ -176,10 +176,10 @@ http_interactions:
         sections\r\n* Adding #fff background to inner background sections\r\n* Adding
         #eee background to footer background sections","tree":{"sha":"1fab9bdbb196ccf0d367a6e4afecc199edac7c33","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/1fab9bdbb196ccf0d367a6e4afecc199edac7c33"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/21c32a5dc9c6e38b037c3b9f67cf9e953709ee1e","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/21c32a5dc9c6e38b037c3b9f67cf9e953709ee1e","html_url":"https://github.com/empirical-org/Empirical-Core/commit/21c32a5dc9c6e38b037c3b9f67cf9e953709ee1e","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/21c32a5dc9c6e38b037c3b9f67cf9e953709ee1e/comments","author":{"login":"HayleyCAnderson","id":6946910,"avatar_url":"https://avatars.githubusercontent.com/u/6946910?v=3","gravatar_id":"","url":"https://api.github.com/users/HayleyCAnderson","html_url":"https://github.com/HayleyCAnderson","followers_url":"https://api.github.com/users/HayleyCAnderson/followers","following_url":"https://api.github.com/users/HayleyCAnderson/following{/other_user}","gists_url":"https://api.github.com/users/HayleyCAnderson/gists{/gist_id}","starred_url":"https://api.github.com/users/HayleyCAnderson/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/HayleyCAnderson/subscriptions","organizations_url":"https://api.github.com/users/HayleyCAnderson/orgs","repos_url":"https://api.github.com/users/HayleyCAnderson/repos","events_url":"https://api.github.com/users/HayleyCAnderson/events{/privacy}","received_events_url":"https://api.github.com/users/HayleyCAnderson/received_events","type":"User","site_admin":false},"committer":{"login":"HayleyCAnderson","id":6946910,"avatar_url":"https://avatars.githubusercontent.com/u/6946910?v=3","gravatar_id":"","url":"https://api.github.com/users/HayleyCAnderson","html_url":"https://github.com/HayleyCAnderson","followers_url":"https://api.github.com/users/HayleyCAnderson/followers","following_url":"https://api.github.com/users/HayleyCAnderson/following{/other_user}","gists_url":"https://api.github.com/users/HayleyCAnderson/gists{/gist_id}","starred_url":"https://api.github.com/users/HayleyCAnderson/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/HayleyCAnderson/subscriptions","organizations_url":"https://api.github.com/users/HayleyCAnderson/orgs","repos_url":"https://api.github.com/users/HayleyCAnderson/repos","events_url":"https://api.github.com/users/HayleyCAnderson/events{/privacy}","received_events_url":"https://api.github.com/users/HayleyCAnderson/received_events","type":"User","site_admin":false},"parents":[{"sha":"f49411996965335d05205255129dde0009cc4ed1","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/f49411996965335d05205255129dde0009cc4ed1","html_url":"https://github.com/empirical-org/Empirical-Core/commit/f49411996965335d05205255129dde0009cc4ed1"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:13 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:45 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/392/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/392/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -200,7 +200,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:13 GMT
+      - Tue, 20 Jan 2015 21:17:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -210,11 +210,11 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '58'
+      - '4997'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
@@ -240,13 +240,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E46:E70DD0:54B55571
+      - 4C758B1E:1D6B:2AFEB40:54BEC5FA
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - c6c65e5196703428e7641f7d1e9bc353
+      - 318e55760cf7cdb40e61175a4d36cd32
       content-encoding:
       - gzip
     body:
@@ -282,10 +282,10 @@ http_interactions:
         into develop","tree":{"sha":"d051b3f4be33355b7ae0f61f2eeceed2586c97c3","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/d051b3f4be33355b7ae0f61f2eeceed2586c97c3"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/16388ce0cc4a18461055dcb60fbdce0b1de1f836","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/16388ce0cc4a18461055dcb60fbdce0b1de1f836","html_url":"https://github.com/empirical-org/Empirical-Core/commit/16388ce0cc4a18461055dcb60fbdce0b1de1f836","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/16388ce0cc4a18461055dcb60fbdce0b1de1f836/comments","author":{"login":"lishiyo","id":7489058,"avatar_url":"https://avatars.githubusercontent.com/u/7489058?v=3","gravatar_id":"","url":"https://api.github.com/users/lishiyo","html_url":"https://github.com/lishiyo","followers_url":"https://api.github.com/users/lishiyo/followers","following_url":"https://api.github.com/users/lishiyo/following{/other_user}","gists_url":"https://api.github.com/users/lishiyo/gists{/gist_id}","starred_url":"https://api.github.com/users/lishiyo/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/lishiyo/subscriptions","organizations_url":"https://api.github.com/users/lishiyo/orgs","repos_url":"https://api.github.com/users/lishiyo/repos","events_url":"https://api.github.com/users/lishiyo/events{/privacy}","received_events_url":"https://api.github.com/users/lishiyo/received_events","type":"User","site_admin":false},"committer":{"login":"lishiyo","id":7489058,"avatar_url":"https://avatars.githubusercontent.com/u/7489058?v=3","gravatar_id":"","url":"https://api.github.com/users/lishiyo","html_url":"https://github.com/lishiyo","followers_url":"https://api.github.com/users/lishiyo/followers","following_url":"https://api.github.com/users/lishiyo/following{/other_user}","gists_url":"https://api.github.com/users/lishiyo/gists{/gist_id}","starred_url":"https://api.github.com/users/lishiyo/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/lishiyo/subscriptions","organizations_url":"https://api.github.com/users/lishiyo/orgs","repos_url":"https://api.github.com/users/lishiyo/repos","events_url":"https://api.github.com/users/lishiyo/events{/privacy}","received_events_url":"https://api.github.com/users/lishiyo/received_events","type":"User","site_admin":false},"parents":[{"sha":"a105f93d50bc8cdbdbfd128e0063157d36d45910","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/a105f93d50bc8cdbdbfd128e0063157d36d45910","html_url":"https://github.com/empirical-org/Empirical-Core/commit/a105f93d50bc8cdbdbfd128e0063157d36d45910"},{"sha":"9ea0a5f6a293f6989fba206535ac45c7f433ad2b","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/9ea0a5f6a293f6989fba206535ac45c7f433ad2b","html_url":"https://github.com/empirical-org/Empirical-Core/commit/9ea0a5f6a293f6989fba206535ac45c7f433ad2b"}]},{"sha":"76cfb0dcd86c36cb7be13c81e1fee3ea50535983","commit":{"author":{"name":"maryakins","email":"tmaryakins@gmail.com","date":"2014-10-02T01:30:58Z"},"committer":{"name":"maryakins","email":"tmaryakins@gmail.com","date":"2014-10-02T01:30:58Z"},"message":"issue
         387 ordering activities on the lesson planner","tree":{"sha":"5786a53d3d5235609a6fde7396449510c84f1c75","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/5786a53d3d5235609a6fde7396449510c84f1c75"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/76cfb0dcd86c36cb7be13c81e1fee3ea50535983","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/76cfb0dcd86c36cb7be13c81e1fee3ea50535983","html_url":"https://github.com/empirical-org/Empirical-Core/commit/76cfb0dcd86c36cb7be13c81e1fee3ea50535983","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/76cfb0dcd86c36cb7be13c81e1fee3ea50535983/comments","author":{"login":"maryakins","id":8673758,"avatar_url":"https://avatars.githubusercontent.com/u/8673758?v=3","gravatar_id":"","url":"https://api.github.com/users/maryakins","html_url":"https://github.com/maryakins","followers_url":"https://api.github.com/users/maryakins/followers","following_url":"https://api.github.com/users/maryakins/following{/other_user}","gists_url":"https://api.github.com/users/maryakins/gists{/gist_id}","starred_url":"https://api.github.com/users/maryakins/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/maryakins/subscriptions","organizations_url":"https://api.github.com/users/maryakins/orgs","repos_url":"https://api.github.com/users/maryakins/repos","events_url":"https://api.github.com/users/maryakins/events{/privacy}","received_events_url":"https://api.github.com/users/maryakins/received_events","type":"User","site_admin":false},"committer":{"login":"maryakins","id":8673758,"avatar_url":"https://avatars.githubusercontent.com/u/8673758?v=3","gravatar_id":"","url":"https://api.github.com/users/maryakins","html_url":"https://github.com/maryakins","followers_url":"https://api.github.com/users/maryakins/followers","following_url":"https://api.github.com/users/maryakins/following{/other_user}","gists_url":"https://api.github.com/users/maryakins/gists{/gist_id}","starred_url":"https://api.github.com/users/maryakins/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/maryakins/subscriptions","organizations_url":"https://api.github.com/users/maryakins/orgs","repos_url":"https://api.github.com/users/maryakins/repos","events_url":"https://api.github.com/users/maryakins/events{/privacy}","received_events_url":"https://api.github.com/users/maryakins/received_events","type":"User","site_admin":false},"parents":[{"sha":"16388ce0cc4a18461055dcb60fbdce0b1de1f836","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/16388ce0cc4a18461055dcb60fbdce0b1de1f836","html_url":"https://github.com/empirical-org/Empirical-Core/commit/16388ce0cc4a18461055dcb60fbdce0b1de1f836"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:14 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:46 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/391/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/391/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -306,7 +306,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:14 GMT
+      - Tue, 20 Jan 2015 21:17:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -316,15 +316,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '57'
+      - '4996'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 13 Jan 2015 16:27:39 GMT
+      - Tue, 20 Jan 2015 16:42:53 GMT
       etag:
       - W/"cef0a053c6b09b3da786dbf29137f09d"
       vary:
@@ -346,13 +346,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E47:1246355:54B55572
+      - 4C758B1E:1D6D:3C077C0:54BEC5FA
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 8dd185e423974a7e13abbbe6e060031e
+      - 474556b853193c38f1b14328ce2d1b7d
       content-encoding:
       - gzip
     body:
@@ -362,10 +362,10 @@ http_interactions:
         John","email":"sam@gethopscotch.com","date":"2014-10-02T01:27:30Z"},"message":"Sections
         no longer require workbooks to be valid- now you can save a section.","tree":{"sha":"ac718b678a8fcf8ae8488d9efc5c13c330dfe99b","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/ac718b678a8fcf8ae8488d9efc5c13c330dfe99b"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/98ec43c329866d5ee4cbccee3ce5f377c3e9ec40","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/98ec43c329866d5ee4cbccee3ce5f377c3e9ec40","html_url":"https://github.com/empirical-org/Empirical-Core/commit/98ec43c329866d5ee4cbccee3ce5f377c3e9ec40","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/98ec43c329866d5ee4cbccee3ce5f377c3e9ec40/comments","author":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"committer":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"parents":[{"sha":"f49411996965335d05205255129dde0009cc4ed1","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/f49411996965335d05205255129dde0009cc4ed1","html_url":"https://github.com/empirical-org/Empirical-Core/commit/f49411996965335d05205255129dde0009cc4ed1"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:14 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:46 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/390/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/390/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -386,7 +386,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:14 GMT
+      - Tue, 20 Jan 2015 21:17:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -396,15 +396,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '56'
+      - '4995'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 13 Jan 2015 07:04:36 GMT
+      - Fri, 16 Jan 2015 20:10:07 GMT
       etag:
       - W/"57e8e3e71770ebbc22563e1d862a8f55"
       vary:
@@ -426,13 +426,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E45:A7B82B:54B55572
+      - 4C758B1E:1D6D:3C07827:54BEC5FA
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - dc1ce2bfb41810a06c705e83b388572d
+      - 07ff1c8a09e44b62e277fae50a1b1dc4
       content-encoding:
       - gzip
     body:
@@ -450,10 +450,10 @@ http_interactions:
         quick fix for sorting students alphabetically on classroom management page
         - probably want to move this logic out of the ivew.","tree":{"sha":"b644af33dd9911cfa8223322a57fac3e1cb1ba71","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/b644af33dd9911cfa8223322a57fac3e1cb1ba71"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/ae4789c30c682e9c5fe78f3260e99b13b58575fe","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/ae4789c30c682e9c5fe78f3260e99b13b58575fe","html_url":"https://github.com/empirical-org/Empirical-Core/commit/ae4789c30c682e9c5fe78f3260e99b13b58575fe","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/ae4789c30c682e9c5fe78f3260e99b13b58575fe/comments","author":{"login":"cassiemoy","id":6982733,"avatar_url":"https://avatars.githubusercontent.com/u/6982733?v=3","gravatar_id":"","url":"https://api.github.com/users/cassiemoy","html_url":"https://github.com/cassiemoy","followers_url":"https://api.github.com/users/cassiemoy/followers","following_url":"https://api.github.com/users/cassiemoy/following{/other_user}","gists_url":"https://api.github.com/users/cassiemoy/gists{/gist_id}","starred_url":"https://api.github.com/users/cassiemoy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/cassiemoy/subscriptions","organizations_url":"https://api.github.com/users/cassiemoy/orgs","repos_url":"https://api.github.com/users/cassiemoy/repos","events_url":"https://api.github.com/users/cassiemoy/events{/privacy}","received_events_url":"https://api.github.com/users/cassiemoy/received_events","type":"User","site_admin":false},"committer":{"login":"cassiemoy","id":6982733,"avatar_url":"https://avatars.githubusercontent.com/u/6982733?v=3","gravatar_id":"","url":"https://api.github.com/users/cassiemoy","html_url":"https://github.com/cassiemoy","followers_url":"https://api.github.com/users/cassiemoy/followers","following_url":"https://api.github.com/users/cassiemoy/following{/other_user}","gists_url":"https://api.github.com/users/cassiemoy/gists{/gist_id}","starred_url":"https://api.github.com/users/cassiemoy/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/cassiemoy/subscriptions","organizations_url":"https://api.github.com/users/cassiemoy/orgs","repos_url":"https://api.github.com/users/cassiemoy/repos","events_url":"https://api.github.com/users/cassiemoy/events{/privacy}","received_events_url":"https://api.github.com/users/cassiemoy/received_events","type":"User","site_admin":false},"parents":[{"sha":"885f44106378bb1810224321a6780c456c9697e0","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/885f44106378bb1810224321a6780c456c9697e0","html_url":"https://github.com/empirical-org/Empirical-Core/commit/885f44106378bb1810224321a6780c456c9697e0"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:15 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:46 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/389/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/389/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -474,7 +474,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:15 GMT
+      - Tue, 20 Jan 2015 21:17:47 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -484,15 +484,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '55'
+      - '4994'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 13 Jan 2015 16:27:39 GMT
+      - Tue, 20 Jan 2015 16:42:53 GMT
       etag:
       - W/"190cef2b9a6da335d5c02fab0ddb9b53"
       vary:
@@ -514,13 +514,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E47:1246480:54B55572
+      - 4C758B1E:1D6C:34A7EEC:54BEC5FB
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - b0ef53392caa42315c6206737946d931
+      - 173530fed4bbeb1e264b2ed22e8b5c20
       content-encoding:
       - gzip
     body:
@@ -531,10 +531,10 @@ http_interactions:
         figaro + example config file to the project in development/test mode to make
         it easier for new devs to get started.","tree":{"sha":"09d5946c9b0a70925ab0e5886f1fc5dc49d81c35","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/09d5946c9b0a70925ab0e5886f1fc5dc49d81c35"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/8b6ac1c7e9ee61246e9e46ad0aa94edc9e958404","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/8b6ac1c7e9ee61246e9e46ad0aa94edc9e958404","html_url":"https://github.com/empirical-org/Empirical-Core/commit/8b6ac1c7e9ee61246e9e46ad0aa94edc9e958404","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/8b6ac1c7e9ee61246e9e46ad0aa94edc9e958404/comments","author":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"committer":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"parents":[{"sha":"f49411996965335d05205255129dde0009cc4ed1","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/f49411996965335d05205255129dde0009cc4ed1","html_url":"https://github.com/empirical-org/Empirical-Core/commit/f49411996965335d05205255129dde0009cc4ed1"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:15 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:47 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/388/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/388/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -555,7 +555,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:15 GMT
+      - Tue, 20 Jan 2015 21:17:47 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -565,15 +565,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '54'
+      - '4993'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 13 Jan 2015 16:27:39 GMT
+      - Tue, 20 Jan 2015 16:42:53 GMT
       etag:
       - W/"7f25d5edcfe9fc1f7bc6d84609c6dccb"
       vary:
@@ -595,13 +595,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E49:16B353F:54B55573
+      - 4C758B1E:1D6C:34A7F2E:54BEC5FB
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - dc1ce2bfb41810a06c705e83b388572d
+      - 4c8b2d4732c413f4b9aefe394bd65569
       content-encoding:
       - gzip
     body:
@@ -611,10 +611,10 @@ http_interactions:
         John","email":"sam@gethopscotch.com","date":"2014-10-02T00:04:15Z"},"message":"Update
         bootstrap-dropdown file.","tree":{"sha":"c8e784894eda56b894ec7e86db955a470a32135e","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/c8e784894eda56b894ec7e86db955a470a32135e"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/4560d346204417b3b7f18ae1e8a8876cb7c65fb3","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/4560d346204417b3b7f18ae1e8a8876cb7c65fb3","html_url":"https://github.com/empirical-org/Empirical-Core/commit/4560d346204417b3b7f18ae1e8a8876cb7c65fb3","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/4560d346204417b3b7f18ae1e8a8876cb7c65fb3/comments","author":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"committer":{"login":"samjohn","id":126436,"avatar_url":"https://avatars.githubusercontent.com/u/126436?v=3","gravatar_id":"","url":"https://api.github.com/users/samjohn","html_url":"https://github.com/samjohn","followers_url":"https://api.github.com/users/samjohn/followers","following_url":"https://api.github.com/users/samjohn/following{/other_user}","gists_url":"https://api.github.com/users/samjohn/gists{/gist_id}","starred_url":"https://api.github.com/users/samjohn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/samjohn/subscriptions","organizations_url":"https://api.github.com/users/samjohn/orgs","repos_url":"https://api.github.com/users/samjohn/repos","events_url":"https://api.github.com/users/samjohn/events{/privacy}","received_events_url":"https://api.github.com/users/samjohn/received_events","type":"User","site_admin":false},"parents":[{"sha":"f49411996965335d05205255129dde0009cc4ed1","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/f49411996965335d05205255129dde0009cc4ed1","html_url":"https://github.com/empirical-org/Empirical-Core/commit/f49411996965335d05205255129dde0009cc4ed1"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:15 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:47 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/386/commits?per_page=100
+    uri: https://api.github.com/repos/empirical-org/empirical-core/pulls/386/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -635,7 +635,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 13 Jan 2015 17:27:16 GMT
+      - Tue, 20 Jan 2015 21:17:47 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -645,15 +645,15 @@ http_interactions:
       status:
       - 200 OK
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '53'
+      - '4992'
       x-ratelimit-reset:
-      - '1421173633'
+      - '1421792264'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 13 Jan 2015 16:33:30 GMT
+      - Tue, 20 Jan 2015 21:05:22 GMT
       etag:
       - W/"00b062d681eb61d3e0204b8c1d2ef909"
       vary:
@@ -675,13 +675,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 6C0E7A16:3E49:16B362F:54B55573
+      - 4C758B1E:1D6A:20407D3:54BEC5FB
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 4c8b2d4732c413f4b9aefe394bd65569
+      - dc1ce2bfb41810a06c705e83b388572d
       content-encoding:
       - gzip
     body:
@@ -718,5 +718,5 @@ http_interactions:
         test","tree":{"sha":"5b70483c883d6bdb836ec62fff84a748528c2031","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/5b70483c883d6bdb836ec62fff84a748528c2031"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/08efd0af3a186902f3d58d412be64edb1d7268d4","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/08efd0af3a186902f3d58d412be64edb1d7268d4","html_url":"https://github.com/empirical-org/Empirical-Core/commit/08efd0af3a186902f3d58d412be64edb1d7268d4","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/08efd0af3a186902f3d58d412be64edb1d7268d4/comments","author":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"committer":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"parents":[{"sha":"16388ce0cc4a18461055dcb60fbdce0b1de1f836","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/16388ce0cc4a18461055dcb60fbdce0b1de1f836","html_url":"https://github.com/empirical-org/Empirical-Core/commit/16388ce0cc4a18461055dcb60fbdce0b1de1f836"}]},{"sha":"b28a0f3677ee42b710c78c08f84f6f4552ac870b","commit":{"author":{"name":"RyanN","email":"ryan@quill.org","date":"2014-10-01T19:32:45Z"},"committer":{"name":"RyanN","email":"ryan@quill.org","date":"2014-10-01T19:32:45Z"},"message":"changed
         copy","tree":{"sha":"bf37da5852bd9c80883b2d7eaf7175dd6c7e57ab","url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/trees/bf37da5852bd9c80883b2d7eaf7175dd6c7e57ab"},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/git/commits/b28a0f3677ee42b710c78c08f84f6f4552ac870b","comment_count":0},"url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/b28a0f3677ee42b710c78c08f84f6f4552ac870b","html_url":"https://github.com/empirical-org/Empirical-Core/commit/b28a0f3677ee42b710c78c08f84f6f4552ac870b","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/b28a0f3677ee42b710c78c08f84f6f4552ac870b/comments","author":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"committer":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"parents":[{"sha":"08efd0af3a186902f3d58d412be64edb1d7268d4","url":"https://api.github.com/repos/empirical-org/Empirical-Core/commits/08efd0af3a186902f3d58d412be64edb1d7268d4","html_url":"https://github.com/empirical-org/Empirical-Core/commit/08efd0af3a186902f3d58d412be64edb1d7268d4"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 13 Jan 2015 17:27:16 GMT
+  recorded_at: Tue, 20 Jan 2015 21:17:47 GMT
 recorded_with: VCR 2.9.3
