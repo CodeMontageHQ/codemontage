@@ -26,6 +26,8 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 VCR.configure do |c|
   c.cassette_library_dir = "spec/cassettes"
   c.hook_into :fakeweb
+  c.filter_sensitive_data("<GITHUB_KEY>") { ENV["GITHUB_KEY"] }
+  c.filter_sensitive_data("<GITHUB_SECRET>") { ENV["GITHUB_SECRET"] }
 end
 
 RSpec.configure do |config|
