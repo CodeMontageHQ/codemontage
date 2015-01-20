@@ -2,7 +2,6 @@ class Github
 
   def pull_requests_by_repo(org, repo, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
-    Octokit.auto_paginate = true
 
     results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:pr \
                                      created:#{day_begin}..#{day_end}"
@@ -20,7 +19,6 @@ class Github
 
   def issues_by_repo(org, repo, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
-    Octokit.auto_paginate = true
     results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:issue \
                                      created:#{day_begin}..#{day_end}"
     results.items
@@ -35,7 +33,6 @@ class Github
 
   def pull_requests_by_user(user, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
-    Octokit.auto_paginate = true
     results = Octokit.search_issues "author:#{user} type:pr \
                                      created:#{day_begin}..#{day_end}"
     results.items
@@ -85,4 +82,12 @@ class Github
   def set_date_format(*dates)
     dates.map { |date| date.strftime("%Y-%m-%d") }
   end
+
+  private
+
+    def client
+      @client ||= Octokit::Client.new(client_id: ENV['GITHUB_KEY'],
+                                      client_secret: ENV['GITHUB_SECRET'],
+                                      auto_paginate: true)
+    end
 end
