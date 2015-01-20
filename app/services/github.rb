@@ -1,5 +1,4 @@
-module Github
-  module_function
+class Github
 
   def pull_requests_by_repo(org, repo, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
