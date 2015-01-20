@@ -9,17 +9,17 @@ class EventRegistration < ActiveRecord::Base
       args = github_stat_args
       results = {}
 
-      results[:prs]     = Github.pull_requests_by_user(args[:user],
+      results[:prs]     = Github.new.pull_requests_by_user(args[:user],
                                                        args[:day_begin],
                                                        args[:day_end]).count
 
-      results[:issues]  = Github.issues_by_user(args[:user], args[:day_begin],
+      results[:issues]  = Github.new.issues_by_user(args[:user], args[:day_begin],
                                                 args[:day_end]).count
 
-      results[:commits] = Github.commits_by_user(args[:user], args[:day_begin],
+      results[:commits] = Github.new.commits_by_user(args[:user], args[:day_begin],
                                                  args[:day_end]).count
 
-      results[:forks]   = Github.forks_by_user(args[:user], args[:day_begin],
+      results[:forks]   = Github.new.forks_by_user(args[:user], args[:day_begin],
                                                args[:day_end]).count
 
       results
@@ -32,7 +32,7 @@ class EventRegistration < ActiveRecord::Base
     if user.has_github
       uid = user.services.find_by_provider(:github).uid
 
-      { user:      Github.get_user_login_by_uid(uid),
+      { user:      Github.new.get_user_login_by_uid(uid),
         day_begin: event.start_date,
         day_end:   event.end_date }
     else
