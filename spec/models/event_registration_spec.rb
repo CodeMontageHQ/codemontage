@@ -14,7 +14,7 @@ describe EventRegistration do
     end
 
     context "with github auth" do
-      it "returns args" do
+      it "returns args", github_api: true do
         er = create(:er_for_october)
 
         VCR.use_cassette("courte_user") do
@@ -35,7 +35,7 @@ describe EventRegistration do
     end
 
     context "with github auth" do
-      it "returns metrics in a hash" do
+      it "returns metrics in a hash", github_api: true do
         er = create(:er_for_october)
 
         VCR.use_cassette("courte_oct_stats") do
