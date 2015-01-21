@@ -4,8 +4,7 @@ rvm:
   - 2.1.5
 script:
   - bundle exec rake db:drop db:create db:migrate db:test:prepare
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rspec spec || false'
-  - '[ "${TRAVIS_PULL_REQUEST}" != "false" ] && bundle exec rspec spec --tag ~@github_api || false'
+  - ./script/run-tests.sh
 notifications:
   email: false
 
