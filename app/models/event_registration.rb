@@ -10,18 +10,29 @@ class EventRegistration < ActiveRecord::Base
       github_client = Github.new
       results = {}
 
-      results[:prs]     = Github.new.pull_requests_by_user(args[:user],
-                                                       args[:day_begin],
-                                                       args[:day_end]).count
+      results[:prs]     = github_client.pull_requests_by_user(
+                            args[:user],
+                            args[:day_begin],
+                            args[:day_end]
+                          ).count
 
-      results[:issues]  = Github.new.issues_by_user(args[:user], args[:day_begin],
-                                                args[:day_end]).count
+      results[:issues]  = github_client.issues_by_user(
+                            args[:user],
+                            args[:day_begin],
+                            args[:day_end]
+                          ).count
 
-      results[:commits] = Github.new.commits_by_user(args[:user], args[:day_begin],
-                                                 args[:day_end]).count
+      results[:commits] = github_client.commits_by_user(
+                            args[:user],
+                            args[:day_begin],
+                            args[:day_end]
+                          ).count
 
-      results[:forks]   = Github.new.forks_by_user(args[:user], args[:day_begin],
-                                               args[:day_end]).count
+      results[:forks]   = github_client.forks_by_user(
+                            args[:user],
+                            args[:day_begin],
+                            args[:day_end]
+                          ).count
 
       results
     else

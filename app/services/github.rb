@@ -87,9 +87,11 @@ class Github
 
   private
 
-    def client
-      @client ||= Octokit::Client.new(client_id: ENV['GITHUB_KEY'],
-                                      client_secret: ENV['GITHUB_SECRET'],
-                                      auto_paginate: true)
-    end
+  def client
+    @client ||= Octokit::Client.new(
+                  client_id: ENV["GITHUB_KEY"],
+                  client_secret: ENV["GITHUB_SECRET"],
+                  auto_paginate: true
+                )
+  end
 end
