@@ -38,10 +38,10 @@ describe Project do
 
   describe "GitHub API interaction" do
     let(:project) { build(:project) }
-    let(:args) { project.github_api_args.merge!(
-      day_begin: Time.new(2014, 10, 01),
-      day_end: Time.new(2014, 10, 31))
-    }
+    let(:args) do
+      project.github_api_args.merge!(day_begin: Time.new(2014, 10, 01),
+                                     day_end: Time.new(2014, 10, 31))
+    end
 
     describe "#github_api_args" do
       it "returns basic arguments for the GitHub service object" do

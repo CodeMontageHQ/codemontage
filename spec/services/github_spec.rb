@@ -2,10 +2,12 @@ require "spec_helper"
 
 describe Github do
   context "when given a repo" do
-    let(:args) { {org_repo: "CodeMontageHQ/codemontage",
-                 repo: "codemontage",
-                 day_begin: Time.new(2014, 10, 01),
-                 day_end: Time.new(2014, 10, 31)} }
+    let(:args) do
+      { org_repo: "CodeMontageHQ/codemontage",
+        repo: "codemontage",
+        day_begin: Time.new(2014, 10, 01),
+        day_end: Time.new(2014, 10, 31) }
+    end
 
     it "find pull requests" do
       VCR.use_cassette("codemontage_oct_prs") do
