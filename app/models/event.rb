@@ -31,6 +31,45 @@ class Event < ActiveRecord::Base
     upcoming_events.public_events.order('start_date').first
   end
 
+  def stats
+    results = {}
+    results[:by_project] = featured_project_stats
+    results[:by_attendee] = attendee_stats
+    results[:total] = {}
+
+    github_metrics = [:prs, :commits, :issues, :forks]
+
+    github_metrics.each do |metric|
+      results[:total][metric] = 0
+
+      results[:by_attendee].each do |_attendee, stats|
+        results[:total][metric] += stats[metric]
+      end
+    end
+
+    results
+  end
+
+  def featured_project_stats
+    results = {}
+
+    featured_projects.each do |fp|
+      results.merge!(fp.project.name => fp.stats)
+    end
+
+    results
+  end
+
+  def attendee_stats
+    results = {}
+
+    event_registrations.each do |er|
+      results.merge!(er.user.email => er.stats)
+    end
+
+    results
+  end
+
   def logo_delete
     @logo_delete || '0'
   end
