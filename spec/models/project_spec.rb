@@ -29,6 +29,13 @@ describe Project do
       end
     end
 
+    describe "#github_api_args" do
+      it "returns basic arguments for the GitHub service object" do
+        expect(project.github_api_args).to eq(org_repo: "codemontage/foo",
+                                              repo: "foo")
+      end
+    end
+
     describe '#tasks_url' do
       it 'creates an issues url' do
         expect(project.tasks_url).to eq('https://github.com/codemontage/foo/issues')
