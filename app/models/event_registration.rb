@@ -7,6 +7,7 @@ class EventRegistration < ActiveRecord::Base
   def stats
     if github_stat_args
       args = github_stat_args
+      github_client = Github.new
       results = {}
 
       results[:prs]     = Github.new.pull_requests_by_user(args[:user],
