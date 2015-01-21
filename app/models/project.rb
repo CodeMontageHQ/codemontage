@@ -28,6 +28,10 @@ class Project < ActiveRecord::Base
     "#{organization.github_url}/#{github_repo}"
   end
 
+  def github_api_args
+    { org_repo: github_display, repo: github_repo }
+  end
+
   def related_projects
     organization.projects.where('id != ?', id)
   end
