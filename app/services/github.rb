@@ -1,35 +1,35 @@
 module Github
   module_function
 
-  def pull_requests_by_repo(org, repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def pull_requests_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
     Octokit.auto_paginate = true
 
-    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:pr \
+    results = Octokit.search_issues "repo:#{args[:org_repo]} type:pr \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def commits_by_repo(org, repo, day_begin, day_end)
-    prs = pull_requests_by_repo(org, repo, day_begin, day_end)
+  def commits_by_repo(args)
+    prs = pull_requests_by_repo(args)
     commits = prs.map do |pr|
-      Octokit.pull_commits org_repo(org, repo), pr.number
+      Octokit.pull_commits args[:org_repo], pr.number
     end
 
     commits.flatten
   end
 
-  def issues_by_repo(org, repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def issues_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
     Octokit.auto_paginate = true
-    results = Octokit.search_issues "repo:#{org_repo(org, repo)} type:issue \
+    results = Octokit.search_issues "repo:#{args[:org_repo]} type:issue \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def forks_by_repo(repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
-    results = Octokit.search_repos "#{repo} in:name fork:only \
+  def forks_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
+    results = Octokit.search_repos "#{args[:repo]} in:name fork:only \
                                     created:#{day_begin}..#{day_end}"
     results.items
   end
