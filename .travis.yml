@@ -2,7 +2,9 @@ language: ruby
 cache: bundler
 rvm:
   - 2.1.5
-script: bundle exec rake db:drop db:create db:migrate db:test:prepare spec
+script:
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake db:drop db:create db:migrate db:test:prepare spec || false'
+  - bundle exec rake db:drop db:create db:migrate db:test:prepare spec --tag ~@github_api
 notifications:
   email: false
 
