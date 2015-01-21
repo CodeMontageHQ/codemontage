@@ -29,16 +29,54 @@ describe Project do
       end
     end
 
-    describe "#github_api_args" do
-      it "returns basic arguments for the GitHub service object" do
-        expect(project.github_api_args).to eq(org_repo: "codemontage/foo",
-                                              repo: "foo")
-      end
-    end
-
     describe '#tasks_url' do
       it 'creates an issues url' do
         expect(project.tasks_url).to eq('https://github.com/codemontage/foo/issues')
+      end
+    end
+  end
+
+  describe "GitHub API interaction" do
+    let(:project) { build(:project) }
+    let(:args) { project.github_api_args.merge!(
+      day_begin: Time.new(2014, 10, 01),
+      day_end: Time.new(2014, 10, 31))
+    }
+
+    describe "#github_api_args" do
+      it "returns basic arguments for the GitHub service object" do
+        expect(project.github_api_args).to eq(
+          org_repo: "CodeMontageHQ/codemontage",
+          repo: "codemontage"
+        )
+      end
+    end
+
+    it "find pull requests", github_api: true do
+      VCR.use_cassette("codemontage_oct_prs") do
+        prs = project.github_pull_requests(args)
+        expect(prs.count).to eq(2)
+      end
+    end
+
+    it "should find commits", github_api: true do
+      VCR.use_cassette("codemontage_oct_commits") do
+        commits = project.github_commits(args)
+        expect(commits.count).to eq(3)
+      end
+    end
+
+    it "finds issues by repo", github_api: true do
+      VCR.use_cassette("codemontage_oct_issues") do
+        issues = project.github_issues(args)
+        expect(issues.count).to eq(3)
+      end
+    end
+
+    it "finds forks by repo", github_api: true do
+      VCR.use_cassette("codemontage_oct_forks") do
+        forks = project.github_forks(args)
+        expect(forks.count).to eq(0)
       end
     end
   end
