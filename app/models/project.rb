@@ -29,7 +29,10 @@ class Project < ActiveRecord::Base
   end
 
   def github_api_args
-    { org_repo: github_display, repo: github_repo }
+    { org_repo: github_display,
+      repo: github_repo,
+      day_begin: created_at,
+      day_end: Time.now }
   end
 
   def github_pull_requests(args = github_api_args)
