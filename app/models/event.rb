@@ -32,7 +32,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.current
-    Event.where("start_date <= ? AND end_date >= ?", Time.now, Time.now).first
+    Event.public_events.where("start_date <= ? AND end_date >= ?", Time.now, Time.now).first
   end
 
   def logo_delete
