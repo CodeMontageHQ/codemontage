@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'dotenv'
   gem 'vcr'
   gem 'fakeweb'
 end
