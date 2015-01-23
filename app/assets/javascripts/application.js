@@ -37,7 +37,8 @@ APP = {
     dashboard: function() {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
-					$(e.target).parent("span.check_in").html('<i class="fi-check"></i> Checked In');
+					$(e.target).parent("span.check_in")
+            .html('<i class="fi-check"></i> Checked In');
 				});
     }
   },
