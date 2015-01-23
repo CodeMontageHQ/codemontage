@@ -35,6 +35,22 @@ class Project < ActiveRecord::Base
       day_end: Time.now }
   end
 
+  def github_pull_requests(args = github_api_args)
+    Github.new.pull_requests_by_repo(args)
+  end
+
+  def github_commits(args = github_api_args)
+    Github.new.commits_by_repo(args)
+  end
+
+  def github_issues(args = github_api_args)
+    Github.new.issues_by_repo(args)
+  end
+
+  def github_forks(args = github_api_args)
+    Github.new.forks_by_repo(args)
+  end
+
   def related_projects
     organization.projects.where('id != ?', id)
   end
