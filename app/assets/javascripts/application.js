@@ -21,6 +21,10 @@ APP = {
     init: function() {
 			// $(document).foundationTopBar();
 			// $(document).foundationTopBar();
+      $("a.check-in")
+        .bind("ajax:beforeSend", function(e, xhr) {
+          $(e.target).parent("span.check_in").html('<i class="fi-check"></i> Checked In');
+        });
     }
   },
   home: {
