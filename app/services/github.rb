@@ -4,7 +4,7 @@ class Github
     day_begin, day_end = set_date_format(day_begin, day_end)
 
     results = client.search_issues "repo:#{org_repo(org, repo)} type:pr \
-                                     created:#{day_begin}..#{day_end}"
+                                   created:#{day_begin}..#{day_end}"
     results.items
   end
 
@@ -21,14 +21,14 @@ class Github
     day_begin, day_end = set_date_format(day_begin, day_end)
 
     results = client.search_issues "repo:#{org_repo(org, repo)} type:issue \
-                                     created:#{day_begin}..#{day_end}"
+                                   created:#{day_begin}..#{day_end}"
     results.items
   end
 
   def forks_by_repo(repo, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
     results = client.search_repos "#{repo} in:name fork:only \
-                                    created:#{day_begin}..#{day_end}"
+                                  created:#{day_begin}..#{day_end}"
     results.items
   end
 
@@ -36,7 +36,7 @@ class Github
     day_begin, day_end = set_date_format(day_begin, day_end)
 
     results = client.search_issues "author:#{user} type:pr \
-                                     created:#{day_begin}..#{day_end}"
+                                   created:#{day_begin}..#{day_end}"
     results.items
   end
 
@@ -53,14 +53,14 @@ class Github
     day_begin, day_end = set_date_format(day_begin, day_end)
 
     results = client.search_issues "author:#{user} type:issue \
-                                     created:#{day_begin}..#{day_end}"
+                                   created:#{day_begin}..#{day_end}"
     results.items
   end
 
   def forks_by_user(user, day_begin, day_end)
     day_begin, day_end = set_date_format(day_begin, day_end)
     results = client.search_repos "user:#{user} fork:only \
-                                    created:#{day_begin}..#{day_end}"
+                                  created:#{day_begin}..#{day_end}"
     results.items
   end
 
