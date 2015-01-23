@@ -4,18 +4,17 @@ class EventRegistration < ActiveRecord::Base
 
   attr_accessible :event_id, :user_id
 
-  def stats
+  def fetch_github_stats
     if github_api_args
       args = github_api_args
-      github_client = Github.new
-      results = {}
+      stats = {}
 
-      results[:prs]     = github_client.pull_requests_by_user(args).count
-      results[:issues]  = github_client.issues_by_user(args).count
-      results[:commits] = github_client.commits_by_user(args).count
-      results[:forks]   = github_client.forks_by_user(args).count
+      stats[:pull_requests] = user.github_pull_requests(args).count
+      stats[:issues]        = user.github_issues(args).count
+      stats[:commits]       = user.github_commits(args).count
+      stats[:forks]         = user.github_forks(args).count
 
-      results
+      stats
     else
       nil
     end
