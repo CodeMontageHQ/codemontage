@@ -1,47 +1,47 @@
 class Github
 
-  def pull_requests_by_repo(org, repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def pull_requests_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
 
-    results = client.search_issues "repo:#{org_repo(org, repo)} type:pr \
+    results = client.search_issues "repo:#{args[:org_repo]} type:pr \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def commits_by_repo(org, repo, day_begin, day_end)
-    prs = pull_requests_by_repo(org, repo, day_begin, day_end)
+  def commits_by_repo(args)
+    prs = pull_requests_by_repo(args)
     commits = prs.map do |pr|
-      client.pull_commits org_repo(org, repo), pr.number
+      client.pull_commits args[:org_repo], pr.number
     end
 
     commits.flatten
   end
 
-  def issues_by_repo(org, repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def issues_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
 
-    results = client.search_issues "repo:#{org_repo(org, repo)} type:issue \
+    results = client.search_issues "repo:#{args[:org_repo]} type:issue \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def forks_by_repo(repo, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
-    results = client.search_repos "#{repo} in:name fork:only \
+  def forks_by_repo(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
+    results = client.search_repos "#{args[:repo]} in:name fork:only \
                                     created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def pull_requests_by_user(user, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def pull_requests_by_user(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
 
-    results = client.search_issues "author:#{user} type:pr \
+    results = client.search_issues "author:#{args[:user]} type:pr \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def commits_by_user(user, day_begin, day_end)
-    prs = pull_requests_by_user(user, day_begin, day_end)
+  def commits_by_user(args)
+    prs = pull_requests_by_user(args)
     commits = prs.map do |pr|
       client.pull_commits parse_org_repo(pr.url), pr.number
     end
@@ -49,17 +49,18 @@ class Github
     commits.flatten
   end
 
-  def issues_by_user(user, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
+  def issues_by_user(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
 
-    results = client.search_issues "author:#{user} type:issue \
+    results = client.search_issues "author:#{args[:user]} type:issue \
                                      created:#{day_begin}..#{day_end}"
     results.items
   end
 
-  def forks_by_user(user, day_begin, day_end)
-    day_begin, day_end = set_date_format(day_begin, day_end)
-    results = client.search_repos "user:#{user} fork:only \
+  def forks_by_user(args)
+    day_begin, day_end = set_date_format(args[:day_begin], args[:day_end])
+
+    results = client.search_repos "user:#{args[:user]} fork:only \
                                     created:#{day_begin}..#{day_end}"
     results.items
   end
