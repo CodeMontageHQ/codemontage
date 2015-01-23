@@ -38,6 +38,7 @@ describe Project do
 
   describe "#github_api_args" do
     it "returns basic arguments for the GitHub service object" do
+      project = create(:project)
       args = [:org_repo, :repo, :day_begin, :day_end]
 
       args.each do |arg|
