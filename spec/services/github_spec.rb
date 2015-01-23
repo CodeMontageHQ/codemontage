@@ -3,41 +3,41 @@ require "spec_helper"
 describe Github do
   context "when given a repo" do
     it "find pull requests", github_api: true do
-      VCR.use_cassette("empirical_oct_prs") do
-        prs = Github.new.pull_requests_by_repo("empirical-org",
-                                               "empirical-core",
-                                               Time.parse("2014-10-01"),
-                                               Time.parse("2014-10-02"))
-        expect(prs.count).to eq(7)
+      VCR.use_cassette("codemontage_oct_prs") do
+        prs = Github.new.pull_requests_by_repo("CodeMontageHQ/codemontage",
+                                               "codemontage",
+                                               Time.new(2014, 10, 01),
+                                               Time.new(2014, 10, 31))
+        expect(prs.count).to eq(2)
       end
     end
 
     it "should find commits", github_api: true do
-      VCR.use_cassette("empirical_oct_commits") do
-        commits = Github.new.commits_by_repo("empirical-org",
-                                             "empirical-core",
-                                             Time.parse("2014-10-01"),
-                                             Time.parse("2014-10-02"))
-        expect(commits.count).to eq(38)
+      VCR.use_cassette("codemontage_oct_commits") do
+        commits = Github.new.commits_by_repo("CodeMontageHQ/codemontage",
+                                             "codemontage",
+                                             Time.new(2014, 10, 01),
+                                             Time.new(2014, 10, 31))
+        expect(commits.count).to eq(3)
       end
     end
 
     it "finds issues by repo", github_api: true do
-      VCR.use_cassette("empirical_jan_issues") do
-        issues = Github.new.issues_by_repo("empirical-org",
-                                           "empirical-core",
-                                           Time.parse("2015-01-06"),
-                                           Time.parse("2015-01-07"))
-        expect(issues.count).to eq(2)
+      VCR.use_cassette("codemontage_oct_issues") do
+        issues = Github.new.issues_by_repo("CodeMontageHQ/codemontage",
+                                           "codemontage",
+                                           Time.new(2014, 10, 01),
+                                           Time.new(2014, 10, 31))
+        expect(issues.count).to eq(3)
       end
     end
 
     it "finds forks by repo", github_api: true do
-      VCR.use_cassette("empirical_oct_forks") do
-        forks = Github.new.forks_by_repo("empirical-core",
-                                         Time.parse("2014-10-01"),
-                                         Time.parse("2014-10-31"))
-        expect(forks.count).to eq(14)
+      VCR.use_cassette("codemontage_oct_forks") do
+        forks = Github.new.forks_by_repo("codemontage",
+                                         Time.new(2014, 10, 01),
+                                         Time.new(2014, 10, 31))
+        expect(forks.count).to eq(0)
       end
     end
   end
