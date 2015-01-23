@@ -23,7 +23,8 @@ APP = {
 			// $(document).foundationTopBar();
       $("a.check-in")
         .bind("ajax:beforeSend", function(e, xhr) {
-          $(e.target).parent("span.check_in").html('<i class="fi-check"></i> Checked In');
+          $(e.target).parent("span.check_in")
+            .html("<i class=\"fi-check\"></i> Checked In");
         });
     }
   },
@@ -38,7 +39,7 @@ APP = {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
 					$(e.target).parent("span.check_in")
-            .html('<i class="fi-check"></i> Checked In');
+            .html("<i class=\"fi-check\"></i> Checked In");
 				});
     }
   },
