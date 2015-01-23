@@ -71,8 +71,6 @@ UTIL = {
 $(document).ready(UTIL.init); //jquery
 $(function(){ $(document).foundation(); });
 
-$(document).foundation();
-
 //scroll to top
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
