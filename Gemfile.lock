@@ -92,6 +92,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.3)
+    dotenv (1.0.2)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -266,6 +267,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   devise (~> 3.3.0)
+  dotenv
   factory_girl_rails
   fakeweb
   friendly_id (~> 4.0.10)
