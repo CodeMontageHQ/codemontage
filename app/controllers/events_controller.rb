@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_filter :current_event, only: :index
+
   def create
     er = EventRegistration.new
     er.user = current_user
