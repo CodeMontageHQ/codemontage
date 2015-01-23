@@ -28,23 +28,82 @@ describe User do
     it { should_not be_valid }
   end
 
-  describe "#github_api_args" do
+  describe "GitHub API interaction" do
+    let(:user) { create(:user_with_github) }
+    let(:args) do
+      VCR.use_cassette("courte_user") do
+        user.github_api_args.merge!(day_begin: Time.new(2014, 10, 01),
+                                    day_end: Time.new(2014, 10, 31))
+      end
+    end
+
+    describe "#github_api_args" do
+      context "without github auth" do
+        it "returns nil" do
+          user = create(:user)
+          expect(user.github_api_args).to be_nil
+        end
+      end
+
+      context "with github auth" do
+        it "returns args", github_api: true do
+          args = [:user, :day_begin, :day_end]
+
+          VCR.use_cassette("courte_user") do
+            args.each do |arg|
+              expect(user.github_api_args.has_key?(arg)).to be_true
+            end
+          end
+        end
+      end
+    end
+
     context "without github auth" do
-      it "returns nil" do
-        user = create(:user)
-        expect(user.github_api_args).to be_nil
+      let(:user) { create(:user) }
+
+      it "returns nil for pull requests" do
+        expect(user.github_pull_requests).to be_nil
+      end
+
+      it "returns nil for commits" do
+        expect(user.github_commits).to be_nil
+      end
+
+      it "returns nil for issues" do
+        expect(user.github_issues).to be_nil
+      end
+
+      it "returns nil for forks" do
+        expect(user.github_forks).to be_nil
       end
     end
 
     context "with github auth" do
-      it "returns args", github_api: true do
-        user = create(:user_with_github)
-        args = [:user, :day_begin, :day_end]
+      it "finds the user's pull requests", github_api: true do
+        VCR.use_cassette("courte_oct_prs") do
+          prs = user.github_pull_requests(args)
+          expect(prs.count).to eq(1)
+        end
+      end
 
-        VCR.use_cassette("courte_user") do
-          args.each do |arg|
-            expect(user.github_api_args.has_key?(arg)).to be_true
-          end
+      it "finds the user's commits", github_api: true do
+        VCR.use_cassette("courte_oct_commits") do
+          commits = user.github_commits(args)
+          expect(commits.count).to eq(1)
+        end
+      end
+
+      it "finds the user's issues", github_api: true do
+        VCR.use_cassette("courte_oct_issues") do
+          issues = user.github_issues(args)
+          expect(issues.count).to eq(0)
+        end
+      end
+
+      it "finds the user's forks", github_api: true do
+        VCR.use_cassette("courte_oct_forks") do
+          forks = user.github_forks(args)
+          expect(forks.count).to eq(2)
         end
       end
     end

@@ -60,6 +60,22 @@ class User < ActiveRecord::Base
     end
   end
 
+  def github_pull_requests(args = github_api_args)
+    Github.new.pull_requests_by_user(args) if has_github
+  end
+
+  def github_commits(args = github_api_args)
+    Github.new.commits_by_user(args) if has_github
+  end
+
+  def github_issues(args = github_api_args)
+    Github.new.issues_by_user(args) if has_github
+  end
+
+  def github_forks(args = github_api_args)
+    Github.new.forks_by_user(args) if has_github
+  end
+
   protected
 
   def create_profile
