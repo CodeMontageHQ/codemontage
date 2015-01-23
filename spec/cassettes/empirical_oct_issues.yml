@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3Aempirical-org%2Fempirical-core+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-02&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Fri, 23 Jan 2015 21:34:05 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '29'
+      x-ratelimit-reset:
+      - '1422048905'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2983:8F6A3E3:54C2BE4D
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - b0ef53392caa42315c6206737946d931
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":3,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/395","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/395/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/395/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/395/events","html_url":"https://github.com/empirical-org/Empirical-Core/issues/395","id":44728608,"number":395,"title":"Bash
+        the Cloudfront Cache","user":{"login":"petergault","id":3667179,"avatar_url":"https://avatars.githubusercontent.com/u/3667179?v=3","gravatar_id":"","url":"https://api.github.com/users/petergault","html_url":"https://github.com/petergault","followers_url":"https://api.github.com/users/petergault/followers","following_url":"https://api.github.com/users/petergault/following{/other_user}","gists_url":"https://api.github.com/users/petergault/gists{/gist_id}","starred_url":"https://api.github.com/users/petergault/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/petergault/subscriptions","organizations_url":"https://api.github.com/users/petergault/orgs","repos_url":"https://api.github.com/users/petergault/repos","events_url":"https://api.github.com/users/petergault/events{/privacy}","received_events_url":"https://api.github.com/users/petergault/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":8,"created_at":"2014-10-02T19:26:34Z","updated_at":"2014-12-05T06:35:26Z","closed_at":"2014-12-05T06:35:26Z","body":"There
+        is a bug with our 2.0 bootstrap that is making it impossible to click on buttons
+        on tablets. \r\n\r\nSamantha implemented a fix, but the issue is that the
+        assets are being served through cloudfront, so the cache hasn''t been reset
+        yet. We need to reset and recompile the cache so that we can fix this issue.
+        \r\n\r\nIt''s impacting all of our tablet users, which is about 10% of our
+        user base. ","score":1.0},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/394","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/394/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/394/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/394/events","html_url":"https://github.com/empirical-org/Empirical-Core/issues/394","id":44638799,"number":394,"title":"Unable
+        to resolve the server''s DNS address","user":{"login":"sradutta","id":8496822,"avatar_url":"https://avatars.githubusercontent.com/u/8496822?v=3","gravatar_id":"","url":"https://api.github.com/users/sradutta","html_url":"https://github.com/sradutta","followers_url":"https://api.github.com/users/sradutta/followers","following_url":"https://api.github.com/users/sradutta/following{/other_user}","gists_url":"https://api.github.com/users/sradutta/gists{/gist_id}","starred_url":"https://api.github.com/users/sradutta/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sradutta/subscriptions","organizations_url":"https://api.github.com/users/sradutta/orgs","repos_url":"https://api.github.com/users/sradutta/repos","events_url":"https://api.github.com/users/sradutta/events{/privacy}","received_events_url":"https://api.github.com/users/sradutta/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":1,"created_at":"2014-10-02T01:47:51Z","updated_at":"2014-12-07T01:51:58Z","closed_at":"2014-12-07T01:51:57Z","body":"![screen
+        shot 2014-10-01 at 9 46 06 pm](https://cloud.githubusercontent.com/assets/8496822/4485915/1c169f32-49d6-11e4-92a0-505005f3f9b0.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/387","labels_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/387/labels{/name}","comments_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/387/comments","events_url":"https://api.github.com/repos/empirical-org/Empirical-Core/issues/387/events","html_url":"https://github.com/empirical-org/Empirical-Core/issues/387","id":44631761,"number":387,"title":"Students
+        on Assign Lesson Page are Out of Order","user":{"login":"RyanNovas","id":6655439,"avatar_url":"https://avatars.githubusercontent.com/u/6655439?v=3","gravatar_id":"","url":"https://api.github.com/users/RyanNovas","html_url":"https://github.com/RyanNovas","followers_url":"https://api.github.com/users/RyanNovas/followers","following_url":"https://api.github.com/users/RyanNovas/following{/other_user}","gists_url":"https://api.github.com/users/RyanNovas/gists{/gist_id}","starred_url":"https://api.github.com/users/RyanNovas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/RyanNovas/subscriptions","organizations_url":"https://api.github.com/users/RyanNovas/orgs","repos_url":"https://api.github.com/users/RyanNovas/repos","events_url":"https://api.github.com/users/RyanNovas/events{/privacy}","received_events_url":"https://api.github.com/users/RyanNovas/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/labels/1%20-%20Ready","name":"1
+        - Ready","color":"DCDCDC"},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/labels/Level:%20Starter","name":"Level:
+        Starter","color":"207de5"},{"url":"https://api.github.com/repos/empirical-org/Empirical-Core/labels/Ryan%20DRI","name":"Ryan
+        DRI","color":"eb6420"}],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":5,"created_at":"2014-10-01T23:39:30Z","updated_at":"2015-01-13T20:56:05Z","closed_at":"2015-01-13T20:28:41Z","body":"To
+        see go to http://www.quill.org/teachers/classrooms/89/activities/183 with
+        U: Teacher PW: Demo\r\n\r\nThe students should be sorted alphabetically by
+        their last name. Right now they are out of order.\r\n\r\nTo access this page,
+        log in as a teacher, go to \"Lesson Planner,\" select \"Assign\" or \"Edit\"
+        and then a list of students should pop up.","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Fri, 23 Jan 2015 21:34:05 GMT
+recorded_with: VCR 2.9.3
