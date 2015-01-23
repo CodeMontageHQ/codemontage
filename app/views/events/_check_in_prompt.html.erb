@@ -1,0 +1,22 @@
+<% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+  <div id="check_in_prompt" class="reveal-modal index panel radius shadow" data-reveal>
+    <div class="large-12 large-centered row">
+      <% if @current_event.logo_file_name %>
+        <div id="event_logo" class="large-4 columns">
+          <%= link_to (image_tag @current_event.logo, :height => "400px"), event_path(@current_event) %>
+        </div>
+      <% end %>
+      <div class="large-8 columns large-centered text-center">
+        <p><strong>Welcome!</strong> Are you joining us for:</p>
+        <h2><%= link_to @current_event.name, event_path(@current_event) %></h2>
+        <span class="check_in">
+          <% if current_user.events.include?(@current_event) %>
+            <p><i class="fi-check"></i> Checked In<p>
+          <% else %>
+            <%= link_to '<i class="fi-check"></i> &nbsp;Check In Now'.html_safe, events_path(:short_code => @current_event.short_code), remote: true, method: :post, class: "large radius index button centered check-in" %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </div>
+<% end %>
