@@ -10,6 +10,7 @@
 # Ignore sensitive configuration files
 /config/database.yml
 /secret_token
+.env
 
 # Ignore the default SQLite database
 /db/*.sqlite3
