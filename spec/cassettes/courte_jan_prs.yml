@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2015-01-08..2015-01-09&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++created%3A2015-01-08..2015-01-09&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:50 GMT
+      - Fri, 23 Jan 2015 18:38:35 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,9 +35,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '22'
+      - '29'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038375'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C07D4E:54BEC5FE
+      - 4C758B1E:1D6E:A7F13A4:54C2952B
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 318e55760cf7cdb40e61175a4d36cd32
+      - 065b43cd9674091fec48a221b420fbb3
       content-encoding:
       - gzip
     body:
@@ -79,7 +79,7 @@ http_interactions:
         variable from `UsersController` to `User#favorited_projects`.\r\n\r\n*Featured
         projects sitting pretty on events show page*\r\n![screenshot 2015-01-09 09
         50 30](https://cloud.githubusercontent.com/assets/2766324/5682339/3fc444e2-97ed-11e4-9581-4a44479575cd.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/298","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/298/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/298/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/298/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/298","id":53877245,"number":298,"title":"Grid
-        layout for projects","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design","name":"design","color":"0052cc"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design+review+wanted","name":"design
+        layout for projects","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design","name":"design","color":"0052cc"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design%20review%20wanted","name":"design
         review wanted","color":"0052cc"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/frontend","name":"frontend","color":"fad8c7"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-09T15:12:58Z","updated_at":"2015-01-15T15:32:54Z","closed_at":null,"pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/298","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/298","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/298.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/298.patch"},"body":"Replaces
         #293.\r\n\r\n- shows an event''s featured projects on its page\r\n- using
         a handy-dandy partial that can be used elsewhere on the site\r\n\r\nDefinitely
@@ -108,9 +108,9 @@ http_interactions:
         end switches are made -- see #295.\r\n\r\n*The administrative check-in experience*\r\n![screenshot
         2015-01-09 00 52 44](https://cloud.githubusercontent.com/assets/2766324/5676045/d7211560-979b-11e4-823c-b71a825d5721.png)\r\n\r\n*Checking
         in(!) on the user dashboard*\r\n![screenshot 2015-01-09 00 52 23](https://cloud.githubusercontent.com/assets/2766324/5676041/b915935c-979b-11e4-9c07-e0a78411508a.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/295/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","id":53720469,"number":295,"title":"Backend
-        transition from EventRegistration to CheckIn models (db, model, admin layers)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/code+review+wanted","name":"code
-        review wanted","color":"bfe5bf"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/database","name":"database","color":"bfd4f2"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/deploy+with+care","name":"deploy
-        with care","color":"eb6420"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/future+sprint","name":"future
+        transition from EventRegistration to CheckIn models (db, model, admin layers)","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/code%20review%20wanted","name":"code
+        review wanted","color":"bfe5bf"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/database","name":"database","color":"bfd4f2"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/deploy%20with%20care","name":"deploy
+        with care","color":"eb6420"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/future%20sprint","name":"future
         sprint","color":"ededed"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2015-01-08T06:50:57Z","updated_at":"2015-01-16T01:22:21Z","closed_at":null,"pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/295","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/295","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/295.patch"},"body":"Everything
         that was once an event registration is now a check in. This primarily impacts
         the database and model layers.\r\n\r\n*Check ins on the admin dash*\r\n![screenshot
@@ -120,5 +120,5 @@ http_interactions:
         projects index.\r\n\r\nHere''s a screenshot of it looking exactly the same:\r\n![screenshot
         2015-01-07 23 05 04](https://cloud.githubusercontent.com/assets/2766324/5657742/af61734c-96c1-11e4-9c06-c6d2696a8989.png)\r\n","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:50 GMT
+  recorded_at: Fri, 23 Jan 2015 18:38:35 GMT
 recorded_with: VCR 2.9.3

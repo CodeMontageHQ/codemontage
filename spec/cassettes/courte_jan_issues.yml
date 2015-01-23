@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2015-01-11..2015-01-12&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++created%3A2015-01-11..2015-01-12&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:48 GMT
+      - Fri, 23 Jan 2015 18:38:36 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,9 +35,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '24'
+      - '28'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038375'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C07B59:54BEC5FC
+      - 4C758B1E:1D69:3B74734:54C2952B
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - dc1ce2bfb41810a06c705e83b388572d
+      - 2811da37fbdda4367181b328b22b2499
       content-encoding:
       - gzip
     body:
@@ -80,5 +80,5 @@ http_interactions:
         when trying to retrieve a forgotten password (route: /auth/password), which
         is no help to anyone at all.","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:48 GMT
+  recorded_at: Fri, 23 Jan 2015 18:38:35 GMT
 recorded_with: VCR 2.9.3
