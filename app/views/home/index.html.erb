@@ -5,20 +5,20 @@
       <div id="mission" class="large-10 large-centered columns row">
           <%= image_tag("left_curly.jpg", :class => "small-1 large-2 columns") %>
           <span class="mission_text small-2 large-9 columns">
-            <span id="cm_logo_code">{code}</span> 
-            <span id="cm_logo_montage">montage</span> 
-            empowers 
+            <span id="cm_logo_code">{code}</span>
+            <span id="cm_logo_montage">montage</span>
+            empowers
             <span id="coders" title="software developers, engineers, hackers, anyone who leverages computer programming">
               <strong>coders</strong>
-            </span> 
-            to improve their 
+            </span>
+            to improve their
             <span id="impact" title="success, difference, good accomplished">
               <strong>impact</strong>
             </span> on the world.
           </span>
           <%= image_tag("right_curly.jpg", :class => "small-1 large-2 columns") %>
       </div>
-      
+
     </div>
   </section>
   <section>
@@ -71,5 +71,10 @@
       </div>
     </div>
   </section>
+
+  <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+    <%= render "events/check_in_prompt" %>
+  <% end %>
+
   <% content_for(:press) do %>Press<% end %>
 </body>

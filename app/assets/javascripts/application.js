@@ -21,6 +21,11 @@ APP = {
     init: function() {
 			// $(document).foundationTopBar();
 			// $(document).foundationTopBar();
+      $("a.check-in")
+        .bind("ajax:beforeSend", function(e, xhr) {
+          $(e.target).parent("span.check_in")
+            .html("<i class=\"fi-check\"></i> Checked In");
+        });
     }
   },
   home: {
@@ -33,7 +38,8 @@ APP = {
     dashboard: function() {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
-					$(e.target).parent("span.check_in").html('<i class="fi-check"></i> Checked In');
+					$(e.target).parent("span.check_in")
+            .html("<i class=\"fi-check\"></i> Checked In");
 				});
     }
   },
@@ -70,3 +76,18 @@ UTIL = {
 //document.observe("dom:loaded", UTIL.init); //prototype
 $(document).ready(UTIL.init); //jquery
 $(function(){ $(document).foundation(); });
+
+//scroll to top
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $(".scrollup").fadeIn();
+  } else {
+    $(".scrollup").fadeOut();
+  }
+});
+$(".scrollup").click(function () {
+  $("html, body").animate({
+    scrollTop: 0
+  }, 600);
+  return false;
+});

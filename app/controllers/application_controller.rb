@@ -32,4 +32,10 @@ class ApplicationController < ActionController::Base
       redirect_to "https://www.#{request.host_with_port}#{request.fullpath}", status: 301
     end
   end
+
+  private
+
+  def current_event
+    @current_event = Event.current
+  end
 end

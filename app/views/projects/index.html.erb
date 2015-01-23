@@ -18,4 +18,8 @@
     <h6>Looking for something else?</h6>
     <p>Check out our <%= link_to "resources", resources_path %> to connect with other ways to learn, code, and do good.</p>
   </div>
+
+  <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+    <%= render "events/check_in_prompt" %>
+  <% end %>
 </div>

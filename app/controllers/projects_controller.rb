@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :current_event, only: :index
+
   def index
     @featured_projects =
       if params[:tags].present?

@@ -12,21 +12,21 @@
 <![endif]-->
 <head>
 	<meta charset="utf-8" />
-	
+
 	<!-- Uncomment to make IE8 render like IE7 -->
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
-	
+
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+
 	<title><%= content_for?(:title) ? yield(:title) : "CodeMontage" %></title>
-  
+
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
-	
+
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "vendor/custom.modernizr" %>
-  
+
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics' %>
 </head>
@@ -41,8 +41,10 @@
         <%= yield %>
       </div>
     </div>
-  </div>  
-  
+  </div>
+
+  <a href="#" class="scrollup"><i class="fi-arrow-up"></i></a>
+
   <% if content_for?(:press) %><%= render 'layouts/press' %><% end %>
   <%= render 'layouts/footer' %>
 
