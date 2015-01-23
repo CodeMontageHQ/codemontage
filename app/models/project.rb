@@ -28,6 +28,29 @@ class Project < ActiveRecord::Base
     "#{organization.github_url}/#{github_repo}"
   end
 
+  def github_api_args
+    { org_repo: github_display,
+      repo: github_repo,
+      day_begin: created_at,
+      day_end: Time.now }
+  end
+
+  def github_pull_requests(args = github_api_args)
+    Github.pull_requests_by_repo(args)
+  end
+
+  def github_commits(args = github_api_args)
+    Github.commits_by_repo(args)
+  end
+
+  def github_issues(args = github_api_args)
+    Github.issues_by_repo(args)
+  end
+
+  def github_forks(args = github_api_args)
+    Github.forks_by_repo(args)
+  end
+
   def related_projects
     organization.projects.where('id != ?', id)
   end

@@ -2,39 +2,38 @@ require "spec_helper"
 
 describe Github do
   context "when given a repo" do
+    let(:args) do
+      { org_repo: "CodeMontageHQ/codemontage",
+        repo: "codemontage",
+        day_begin: Time.new(2014, 10, 01),
+        day_end: Time.new(2014, 10, 31) }
+    end
+
     it "find pull requests" do
-      VCR.use_cassette("empirical_oct_prs") do
-        prs = Github.pull_requests_by_repo("empirical-org", "empirical-core",
-                                           Time.parse("2014-10-01"),
-                                           Time.parse("2014-10-02"))
-        expect(prs.count).to eq(7)
+      VCR.use_cassette("codemontage_oct_prs") do
+        prs = Github.pull_requests_by_repo(args)
+        expect(prs.count).to eq(2)
       end
     end
 
     it "should find commits" do
-      VCR.use_cassette("empirical_oct_commits") do
-        commits = Github.commits_by_repo("empirical-org", "empirical-core",
-                                         Time.parse("2014-10-01"),
-                                         Time.parse("2014-10-02"))
-        expect(commits.count).to eq(38)
+      VCR.use_cassette("codemontage_oct_commits") do
+        commits = Github.commits_by_repo(args)
+        expect(commits.count).to eq(3)
       end
     end
 
     it "finds issues by repo" do
-      VCR.use_cassette("empirical_jan_issues") do
-        issues = Github.issues_by_repo("empirical-org", "empirical-core",
-                                       Time.parse("2015-01-06"),
-                                       Time.parse("2015-01-07"))
-        expect(issues.count).to eq(2)
+      VCR.use_cassette("codemontage_oct_issues") do
+        issues = Github.issues_by_repo(args)
+        expect(issues.count).to eq(3)
       end
     end
 
     it "finds forks by repo" do
-      VCR.use_cassette("empirical_oct_forks") do
-        forks = Github.forks_by_repo("empirical-core",
-                                     Time.parse("2014-10-01"),
-                                     Time.parse("2014-10-31"))
-        expect(forks.count).to eq(14)
+      VCR.use_cassette("codemontage_oct_forks") do
+        forks = Github.forks_by_repo(args)
+        expect(forks.count).to eq(0)
       end
     end
   end
