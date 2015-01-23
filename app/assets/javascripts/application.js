@@ -74,12 +74,12 @@ $(function(){ $(document).foundation(); });
 //scroll to top
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
-    $('.scrollup').fadeIn();
+    $(".scrollup").fadeIn();
   } else {
-    $('.scrollup').fadeOut();
+    $(".scrollup").fadeOut();
   }
 });
-$('.scrollup').click(function () {
+$(".scrollup").click(function () {
   $("html, body").animate({
     scrollTop: 0
   }, 600);
