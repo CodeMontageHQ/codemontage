@@ -19,5 +19,7 @@
     </div>
   </div>
 
-  <%= render "check_in_prompt" %>
+  <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+    <%= render "check_in_prompt" %>
+  <% end %>
 </div>
