@@ -23,5 +23,16 @@ describe FeaturedProject do
         day_end: Time.new(2014, 10, 31)
       )
     end
+
+    it "returns GitHub stats", github_api: true do
+      VCR.use_cassette("codemontage_oct_stats") do
+        expect(featured_project.fetch_github_stats).to eq(
+          pull_requests: 2,
+          commits: 3,
+          issues: 3,
+          forks: 0
+        )
+      end
+    end
   end
 end
