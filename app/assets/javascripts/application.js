@@ -76,3 +76,18 @@ UTIL = {
 //document.observe("dom:loaded", UTIL.init); //prototype
 $(document).ready(UTIL.init); //jquery
 $(function(){ $(document).foundation(); });
+
+//scroll to top
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $(".scrollup").fadeIn();
+  } else {
+    $(".scrollup").fadeOut();
+  }
+});
+$(".scrollup").click(function () {
+  $("html, body").animate({
+    scrollTop: 0
+  }, 600);
+  return false;
+});
