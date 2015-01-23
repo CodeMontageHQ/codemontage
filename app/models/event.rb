@@ -31,6 +31,10 @@ class Event < ActiveRecord::Base
     upcoming_events.public_events.order('start_date').first
   end
 
+  def self.current
+    Event.where("start_date <= ? AND end_date >= ?", Time.now, Time.now).first
+  end
+
   def logo_delete
     @logo_delete || '0'
   end
