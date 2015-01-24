@@ -40,6 +40,11 @@ class Event < ActiveRecord::Base
     @logo_delete || '0'
   end
 
+  def github_api_args
+    { day_begin: start_date,
+      day_end:   end_date }
+  end
+
   private
 
   def delete_logo

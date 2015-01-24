@@ -19,7 +19,6 @@ class FeaturedProject < ActiveRecord::Base
   end
 
   def github_api_args
-    project.github_api_args.merge!(day_begin: event.start_date,
-                                   day_end: event.end_date)
+    project.github_api_args.merge!(event.github_api_args)
   end
 end

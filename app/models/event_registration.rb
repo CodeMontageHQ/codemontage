@@ -22,8 +22,7 @@ class EventRegistration < ActiveRecord::Base
 
   def github_api_args
     if user.github_api_args
-      user.github_api_args.merge!(day_begin: event.start_date,
-                                  day_end: event.end_date)
+      user.github_api_args.merge!(event.github_api_args)
     else
       nil
     end
