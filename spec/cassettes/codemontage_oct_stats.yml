@@ -1,0 +1,488 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:37 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '29'
+      x-ratelimit-reset:
+      - '1422058537'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2984:A7D363A:54C2E3ED
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - a241e1a8264a6ace03db946c85b92db3
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":2,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","id":47349718,"number":265,"title":"Rails
+        4 Prep: Remove match routes","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"milestone":null,"comments":1,"created_at":"2014-10-31T00:50:30Z","updated_at":"2014-10-31T01:47:03Z","closed_at":"2014-10-31T01:47:03Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/265","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.patch"},"body":"####
+        [''match'' is deprecated in Rails v4 routing](https://github.com/rails/rails/issues/5964),
+        so let''s clean up these instances as we prepare to upgrade\r\n\r\n![cleanup](https://cloud.githubusercontent.com/assets/226228/4854705/b92f9f44-6097-11e4-9346-f225e031aba2.gif)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","id":47164270,"number":264,"title":"Add
+        organizations controller helper","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-29T15:43:24Z","updated_at":"2014-10-29T15:45:26Z","closed_at":"2014-10-29T15:45:26Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/264","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.patch"},"body":"-
+        Ensure github url is working (no 404)\r\n- Ensure github url is github\r\n-
+        Parse github url for organization account\r\n- Parse github url for project
+        repo name\r\n- Return error message if url is wrong.\r\n\r\n(Do not merge.
+        This ain''t real. Pay no attention to the code behind the helper.) :-1: :frowning:
+        \r\n","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:37 GMT
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:37 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '28'
+      x-ratelimit-reset:
+      - '1422058537'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2985:B49287E:54C2E3ED
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - 7f48e2f7761567e923121f17538d7a6d
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":2,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","id":47349718,"number":265,"title":"Rails
+        4 Prep: Remove match routes","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"milestone":null,"comments":1,"created_at":"2014-10-31T00:50:30Z","updated_at":"2014-10-31T01:47:03Z","closed_at":"2014-10-31T01:47:03Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/265","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.patch"},"body":"####
+        [''match'' is deprecated in Rails v4 routing](https://github.com/rails/rails/issues/5964),
+        so let''s clean up these instances as we prepare to upgrade\r\n\r\n![cleanup](https://cloud.githubusercontent.com/assets/226228/4854705/b92f9f44-6097-11e4-9346-f225e031aba2.gif)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","id":47164270,"number":264,"title":"Add
+        organizations controller helper","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-29T15:43:24Z","updated_at":"2014-10-29T15:45:26Z","closed_at":"2014-10-29T15:45:26Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/264","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.patch"},"body":"-
+        Ensure github url is working (no 404)\r\n- Ensure github url is github\r\n-
+        Parse github url for organization account\r\n- Parse github url for project
+        repo name\r\n- Return error message if url is wrong.\r\n\r\n(Do not merge.
+        This ain''t real. Pay no attention to the code behind the helper.) :-1: :frowning:
+        \r\n","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:37 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/265/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4999'
+      x-ratelimit-reset:
+      - '1422062082'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Fri, 23 Jan 2015 23:18:15 GMT
+      etag:
+      - W/"1032341704b30a50d4704872b7add543"
+      vary:
+      - Accept
+      - Accept-Encoding
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2983:9285B68:54C2E3EE
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      x-served-by:
+      - 4c8b2d4732c413f4b9aefe394bd65569
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"sha":"770825089357f323976fe001ad8ba567076d4b78","commit":{"author":{"name":"Vanessa
+        Hurst","email":"vrhurst@gmail.com","date":"2014-10-31T00:44:37Z"},"committer":{"name":"Vanessa
+        Hurst","email":"vrhurst@gmail.com","date":"2014-10-31T00:44:37Z"},"message":"replace
+        ''match'' routes with ''get'' to prep for rails 4 routing","tree":{"sha":"78e06f1295746702c783eb59a6dc2d08d64e343a","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/78e06f1295746702c783eb59a6dc2d08d64e343a"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/770825089357f323976fe001ad8ba567076d4b78","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/770825089357f323976fe001ad8ba567076d4b78","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/770825089357f323976fe001ad8ba567076d4b78","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/770825089357f323976fe001ad8ba567076d4b78/comments","author":null,"committer":null,"parents":[{"sha":"26afe69871dc2c86578ac2c6fb45a060eed39e0e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/26afe69871dc2c86578ac2c6fb45a060eed39e0e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/26afe69871dc2c86578ac2c6fb45a060eed39e0e"}]},{"sha":"12c7ac3ffe2818a3a7bd8564b23003e98d3aa31a","commit":{"author":{"name":"Vanessa
+        Hurst","email":"vrhurst@gmail.com","date":"2014-10-31T00:46:02Z"},"committer":{"name":"Vanessa
+        Hurst","email":"vrhurst@gmail.com","date":"2014-10-31T00:46:02Z"},"message":"remove
+        unused devise route","tree":{"sha":"a4af5a9b0c7f5be5403da310b5abdef48fb4898a","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/a4af5a9b0c7f5be5403da310b5abdef48fb4898a"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/12c7ac3ffe2818a3a7bd8564b23003e98d3aa31a","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/12c7ac3ffe2818a3a7bd8564b23003e98d3aa31a","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/12c7ac3ffe2818a3a7bd8564b23003e98d3aa31a","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/12c7ac3ffe2818a3a7bd8564b23003e98d3aa31a/comments","author":null,"committer":null,"parents":[{"sha":"770825089357f323976fe001ad8ba567076d4b78","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/770825089357f323976fe001ad8ba567076d4b78","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/770825089357f323976fe001ad8ba567076d4b78"}]}]'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:42 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/264/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:43 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4998'
+      x-ratelimit-reset:
+      - '1422062082'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Fri, 23 Jan 2015 23:17:29 GMT
+      etag:
+      - W/"b3140404942b137333814f6b17fe327a"
+      vary:
+      - Accept
+      - Accept-Encoding
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2981:58591D0:54C2E3F3
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      x-served-by:
+      - 2811da37fbdda4367181b328b22b2499
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"sha":"3e9a9ed06a2185fde292cc9b635dc07759597327","commit":{"author":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2014-10-29T15:37:47Z"},"committer":{"name":"Courteney
+        Ervin","email":"courteney.ervin@gmail.com","date":"2014-10-29T15:37:47Z"},"message":"Add
+        organizations controller helper\n\n- Ensure github url is working (no 404)\n-
+        Ensure github url is github\n- Parse github url for organization account\n-
+        Parse github url for project repo name\n- Return error message if url is wrong.","tree":{"sha":"2d1815abc4ea59f6a4170ec0603e09c5ed4816a9","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/2d1815abc4ea59f6a4170ec0603e09c5ed4816a9"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/3e9a9ed06a2185fde292cc9b635dc07759597327","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/3e9a9ed06a2185fde292cc9b635dc07759597327","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/3e9a9ed06a2185fde292cc9b635dc07759597327","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/3e9a9ed06a2185fde292cc9b635dc07759597327/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"26afe69871dc2c86578ac2c6fb45a060eed39e0e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/26afe69871dc2c86578ac2c6fb45a060eed39e0e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/26afe69871dc2c86578ac2c6fb45a060eed39e0e"}]}]'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:43 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '27'
+      x-ratelimit-reset:
+      - '1422058537'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2985:B49321D:54C2E3F3
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - d594a23ec74671eba905bf91ef329026
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":3,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/266","id":47350485,"number":266,"title":"Change
+        ''Devs For Good Meetup'' link label to ''NYC Meetup''","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/frontend","name":"frontend","color":"fad8c7"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/high%20priority","name":"high
+        priority","color":"fbca04"}],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-31T01:00:06Z","updated_at":"2014-11-05T14:34:11Z","closed_at":"2014-11-05T14:34:11Z","body":"####
+        Update this:\r\n\r\n![codemontage](https://cloud.githubusercontent.com/assets/226228/4854764/b53bc592-6098-11e4-9982-20dbbaa7bf62.png)\r\n\r\n####
+        because we''ve merged Developers for Good into the CodeMontage community:\r\n\r\n![codemontage_blog__five_years___developers_for_good____codemontage___open_source_](https://cloud.githubusercontent.com/assets/226228/4854786/176c798c-6099-11e4-8120-7e0ae14ea842.png)\r\n![coders_for_good__formerly_developers_for_good___new_york__ny__-_meetup](https://cloud.githubusercontent.com/assets/226228/4854787/18d9f470-6099-11e4-8c1b-effa0ea14596.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/263","id":47066536,"number":263,"title":"GitHub
+        signup redirects to login instead of authorizing new user","user":{"login":"jarmstrng","id":7620750,"avatar_url":"https://avatars.githubusercontent.com/u/7620750?v=3","gravatar_id":"","url":"https://api.github.com/users/jarmstrng","html_url":"https://github.com/jarmstrng","followers_url":"https://api.github.com/users/jarmstrng/followers","following_url":"https://api.github.com/users/jarmstrng/following{/other_user}","gists_url":"https://api.github.com/users/jarmstrng/gists{/gist_id}","starred_url":"https://api.github.com/users/jarmstrng/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jarmstrng/subscriptions","organizations_url":"https://api.github.com/users/jarmstrng/orgs","repos_url":"https://api.github.com/users/jarmstrng/repos","events_url":"https://api.github.com/users/jarmstrng/events{/privacy}","received_events_url":"https://api.github.com/users/jarmstrng/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":10,"created_at":"2014-10-28T18:55:22Z","updated_at":"2014-12-30T00:01:55Z","closed_at":"2014-12-30T00:01:55Z","body":"Clicking
+        the Sign Up with GitHub button redirects to https://www.codemontage.com/auth/login.","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/262","id":46182473,"number":262,"title":"Add
+        Code of Conduct Note to Individual Event Pages","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design","name":"design","color":"0052cc"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/enhancement","name":"enhancement","color":"1aacbc"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-18T17:45:33Z","updated_at":"2014-10-18T17:47:25Z","closed_at":null,"body":"Each
+        individual event landing page should have a note highlighting the code of
+        conduct (basically the reverse use case of the same information added to the
+        Code of Conduct page in #252 Update Code of Conduct to Show Upcoming Events
+        & PR #255)","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=codemontage+in%3Aname+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:14:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '26'
+      x-ratelimit-reset:
+      - '1422058537'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      link:
+      - <https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=codemontage+in%3Aname+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100&page=0>;
+        rel="last"
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:2983:9286523:54C2E3F6
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - 2811da37fbdda4367181b328b22b2499
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":0,"incomplete_results":false,"items":[]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:14:46 GMT
+recorded_with: VCR 2.9.3
