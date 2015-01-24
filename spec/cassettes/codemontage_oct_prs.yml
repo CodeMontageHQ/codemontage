@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:01:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '26'
+      x-ratelimit-reset:
+      - '1422057753'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:1671:5A7893E:54C2E0E8
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - a30e6f9aa7cf5731b87dfb3b9992202d
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":2,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/265/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","id":47349718,"number":265,"title":"Rails
+        4 Prep: Remove match routes","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"milestone":null,"comments":1,"created_at":"2014-10-31T00:50:30Z","updated_at":"2014-10-31T01:47:03Z","closed_at":"2014-10-31T01:47:03Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/265","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/265","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/265.patch"},"body":"####
+        [''match'' is deprecated in Rails v4 routing](https://github.com/rails/rails/issues/5964),
+        so let''s clean up these instances as we prepare to upgrade\r\n\r\n![cleanup](https://cloud.githubusercontent.com/assets/226228/4854705/b92f9f44-6097-11e4-9346-f225e031aba2.gif)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/264/events","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","id":47164270,"number":264,"title":"Add
+        organizations controller helper","user":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-29T15:43:24Z","updated_at":"2014-10-29T15:45:26Z","closed_at":"2014-10-29T15:45:26Z","pull_request":{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/264","html_url":"https://github.com/CodeMontageHQ/codemontage/pull/264","diff_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.diff","patch_url":"https://github.com/CodeMontageHQ/codemontage/pull/264.patch"},"body":"-
+        Ensure github url is working (no 404)\r\n- Ensure github url is github\r\n-
+        Parse github url for organization account\r\n- Parse github url for project
+        repo name\r\n- Return error message if url is wrong.\r\n\r\n(Do not merge.
+        This ain''t real. Pay no attention to the code behind the helper.) :-1: :frowning:
+        \r\n","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:01:44 GMT
+recorded_with: VCR 2.9.3

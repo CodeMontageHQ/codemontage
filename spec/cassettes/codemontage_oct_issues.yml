@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.v3+json
+      user-agent:
+      - Octokit Ruby Gem 3.5.2
+      content-type:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sat, 24 Jan 2015 00:01:35 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-remaining:
+      - '28'
+      x-ratelimit-reset:
+      - '1422057753'
+      cache-control:
+      - no-cache
+      x-github-media-type:
+      - github.v3; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - "*"
+      x-github-request-id:
+      - 4C758B1E:1676:63953DA:54C2E0DE
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      x-content-type-options:
+      - nosniff
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - 07ff1c8a09e44b62e277fae50a1b1dc4
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"total_count":3,"incomplete_results":false,"items":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/266/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/266","id":47350485,"number":266,"title":"Change
+        ''Devs For Good Meetup'' link label to ''NYC Meetup''","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/frontend","name":"frontend","color":"fad8c7"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/high%20priority","name":"high
+        priority","color":"fbca04"}],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-31T01:00:06Z","updated_at":"2014-11-05T14:34:11Z","closed_at":"2014-11-05T14:34:11Z","body":"####
+        Update this:\r\n\r\n![codemontage](https://cloud.githubusercontent.com/assets/226228/4854764/b53bc592-6098-11e4-9982-20dbbaa7bf62.png)\r\n\r\n####
+        because we''ve merged Developers for Good into the CodeMontage community:\r\n\r\n![codemontage_blog__five_years___developers_for_good____codemontage___open_source_](https://cloud.githubusercontent.com/assets/226228/4854786/176c798c-6099-11e4-8120-7e0ae14ea842.png)\r\n![coders_for_good__formerly_developers_for_good___new_york__ny__-_meetup](https://cloud.githubusercontent.com/assets/226228/4854787/18d9f470-6099-11e4-8c1b-effa0ea14596.png)\r\n","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/263/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/263","id":47066536,"number":263,"title":"GitHub
+        signup redirects to login instead of authorizing new user","user":{"login":"jarmstrng","id":7620750,"avatar_url":"https://avatars.githubusercontent.com/u/7620750?v=3","gravatar_id":"","url":"https://api.github.com/users/jarmstrng","html_url":"https://github.com/jarmstrng","followers_url":"https://api.github.com/users/jarmstrng/followers","following_url":"https://api.github.com/users/jarmstrng/following{/other_user}","gists_url":"https://api.github.com/users/jarmstrng/gists{/gist_id}","starred_url":"https://api.github.com/users/jarmstrng/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jarmstrng/subscriptions","organizations_url":"https://api.github.com/users/jarmstrng/orgs","repos_url":"https://api.github.com/users/jarmstrng/repos","events_url":"https://api.github.com/users/jarmstrng/events{/privacy}","received_events_url":"https://api.github.com/users/jarmstrng/received_events","type":"User","site_admin":false},"labels":[],"state":"closed","locked":false,"assignee":null,"milestone":null,"comments":10,"created_at":"2014-10-28T18:55:22Z","updated_at":"2014-12-30T00:01:55Z","closed_at":"2014-12-30T00:01:55Z","body":"Clicking
+        the Sign Up with GitHub button redirects to https://www.codemontage.com/auth/login.","score":1.0},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262","labels_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/labels{/name}","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/comments","events_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/issues/262/events","html_url":"https://github.com/CodeMontageHQ/codemontage/issues/262","id":46182473,"number":262,"title":"Add
+        Code of Conduct Note to Individual Event Pages","user":{"login":"DBNess","id":226228,"avatar_url":"https://avatars.githubusercontent.com/u/226228?v=3","gravatar_id":"","url":"https://api.github.com/users/DBNess","html_url":"https://github.com/DBNess","followers_url":"https://api.github.com/users/DBNess/followers","following_url":"https://api.github.com/users/DBNess/following{/other_user}","gists_url":"https://api.github.com/users/DBNess/gists{/gist_id}","starred_url":"https://api.github.com/users/DBNess/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/DBNess/subscriptions","organizations_url":"https://api.github.com/users/DBNess/orgs","repos_url":"https://api.github.com/users/DBNess/repos","events_url":"https://api.github.com/users/DBNess/events{/privacy}","received_events_url":"https://api.github.com/users/DBNess/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/design","name":"design","color":"0052cc"},{"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/labels/enhancement","name":"enhancement","color":"1aacbc"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":0,"created_at":"2014-10-18T17:45:33Z","updated_at":"2014-10-18T17:47:25Z","closed_at":null,"body":"Each
+        individual event landing page should have a note highlighting the code of
+        conduct (basically the reverse use case of the same information added to the
+        Code of Conduct page in #252 Update Code of Conduct to Show Upcoming Events
+        & PR #255)","score":1.0}]}'
+    http_version: '1.1'
+  recorded_at: Sat, 24 Jan 2015 00:01:35 GMT
+recorded_with: VCR 2.9.3

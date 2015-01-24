@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:51 GMT
+      - Fri, 23 Jan 2015 18:48:54 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,15 +35,15 @@ http_interactions:
       x-ratelimit-limit:
       - '5000'
       x-ratelimit-remaining:
-      - '4988'
+      - '4993'
       x-ratelimit-reset:
-      - '1421792264'
+      - '1422041915'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Fri, 16 Jan 2015 17:23:37 GMT
+      - Fri, 23 Jan 2015 18:00:05 GMT
       etag:
-      - W/"c42074b8515dbff34f28cd4852317392"
+      - W/"7409a1ac7d607892b94157ebf33b71b0"
       vary:
       - Accept
       - Accept-Encoding
@@ -63,20 +63,20 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C07F2F:54BEC5FF
+      - 4C758B1E:1D6C:8B206B4:54C29796
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 8dd185e423974a7e13abbbe6e060031e
+      - a30e6f9aa7cf5731b87dfb3b9992202d
       content-encoding:
       - gzip
     body:
       encoding: UTF-8
-      string: '{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false,"name":"Courteney","company":null,"blog":null,"location":null,"email":null,"hireable":false,"bio":null,"public_repos":16,"public_gists":2,"followers":18,"following":11,"created_at":"2012-11-10T14:07:09Z","updated_at":"2015-01-16T17:23:37Z"}'
+      string: '{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false,"name":"Courteney","company":null,"blog":null,"location":null,"email":null,"hireable":false,"bio":null,"public_repos":16,"public_gists":2,"followers":18,"following":11,"created_at":"2012-11-10T14:07:09Z","updated_at":"2015-01-23T18:00:05Z"}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:51 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:54 GMT
 - request:
     method: get
     uri: https://api.github.com/user/2766324?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>
@@ -100,7 +100,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:51 GMT
+      - Fri, 23 Jan 2015 18:48:54 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -112,15 +112,15 @@ http_interactions:
       x-ratelimit-limit:
       - '5000'
       x-ratelimit-remaining:
-      - '4987'
+      - '4992'
       x-ratelimit-reset:
-      - '1421792264'
+      - '1422041915'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Fri, 16 Jan 2015 17:23:37 GMT
+      - Fri, 23 Jan 2015 18:00:05 GMT
       etag:
-      - W/"c42074b8515dbff34f28cd4852317392"
+      - W/"7409a1ac7d607892b94157ebf33b71b0"
       vary:
       - Accept
       - Accept-Encoding
@@ -140,23 +140,23 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6E:3FEF6DD:54BEC5FF
+      - 4C758B1E:1D6D:9DDFF79:54C29796
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - b0ef53392caa42315c6206737946d931
+      - 07ff1c8a09e44b62e277fae50a1b1dc4
       content-encoding:
       - gzip
     body:
       encoding: UTF-8
-      string: '{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false,"name":"Courteney","company":null,"blog":null,"location":null,"email":null,"hireable":false,"bio":null,"public_repos":16,"public_gists":2,"followers":18,"following":11,"created_at":"2012-11-10T14:07:09Z","updated_at":"2015-01-16T17:23:37Z"}'
+      string: '{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false,"name":"Courteney","company":null,"blog":null,"location":null,"email":null,"hireable":false,"bio":null,"public_repos":16,"public_gists":2,"followers":18,"following":11,"created_at":"2012-11-10T14:07:09Z","updated_at":"2015-01-23T18:00:05Z"}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:51 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:54 GMT
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -177,7 +177,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:52 GMT
+      - Fri, 23 Jan 2015 18:48:54 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -189,9 +189,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '21'
+      - '29'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038994'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -210,7 +210,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C07FDE:54BEC600
+      - 4C758B1E:1D6C:8B2075E:54C29796
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -218,7 +218,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 4c8b2d4732c413f4b9aefe394bd65569
+      - 76d9828c7e4f1d910f7ba069e90ce976
       content-encoding:
       - gzip
     body:
@@ -231,10 +231,10 @@ http_interactions:
         This ain''t real. Pay no attention to the code behind the helper.) :-1: :frowning:
         \r\n","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:52 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:54 GMT
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -255,7 +255,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:52 GMT
+      - Fri, 23 Jan 2015 18:48:54 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -267,15 +267,15 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '20'
+      - '28'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038994'
       cache-control:
       - no-cache
       x-github-media-type:
       - github.v3; format=json
       link:
-      - <https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100&page=0>;
+      - <https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Aissue++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100&page=0>;
         rel="last"
       x-xss-protection:
       - 1; mode=block
@@ -291,7 +291,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C08064:54BEC600
+      - 4C758B1E:1D6E:A839980:54C29796
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -299,17 +299,17 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 01d096e6cfe28f8aea352e988c332cd3
+      - 2811da37fbdda4367181b328b22b2499
       content-encoding:
       - gzip
     body:
       encoding: UTF-8
       string: '{"total_count":0,"incomplete_results":false,"items":[]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:52 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:54 GMT
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=author%3Acourte+type%3Apr++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -330,7 +330,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:52 GMT
+      - Fri, 23 Jan 2015 18:48:55 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -342,9 +342,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '19'
+      - '27'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038994'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -363,7 +363,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6B:2AFF2B9:54BEC600
+      - 4C758B1E:1D6A:567FED2:54C29797
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -371,7 +371,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - d594a23ec74671eba905bf91ef329026
+      - 13d09b732ebe76f892093130dc088652
       content-encoding:
       - gzip
     body:
@@ -384,7 +384,7 @@ http_interactions:
         This ain''t real. Pay no attention to the code behind the helper.) :-1: :frowning:
         \r\n","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:52 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:55 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/CodeMontageHQ/codemontage/pulls/264/commits?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&per_page=100
@@ -408,7 +408,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:53 GMT
+      - Fri, 23 Jan 2015 18:48:55 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -420,13 +420,13 @@ http_interactions:
       x-ratelimit-limit:
       - '5000'
       x-ratelimit-remaining:
-      - '4986'
+      - '4991'
       x-ratelimit-reset:
-      - '1421792264'
+      - '1422041915'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Fri, 16 Jan 2015 17:23:37 GMT
+      - Fri, 23 Jan 2015 18:00:05 GMT
       etag:
       - W/"b3140404942b137333814f6b17fe327a"
       vary:
@@ -448,13 +448,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:3C0810D:54BEC600
+      - 4C758B1E:1D6E:A839A92:54C29797
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
       - nosniff
       x-served-by:
-      - 7f48e2f7761567e923121f17538d7a6d
+      - 01d096e6cfe28f8aea352e988c332cd3
       content-encoding:
       - gzip
     body:
@@ -466,10 +466,10 @@ http_interactions:
         Ensure github url is github\n- Parse github url for organization account\n-
         Parse github url for project repo name\n- Return error message if url is wrong.","tree":{"sha":"2d1815abc4ea59f6a4170ec0603e09c5ed4816a9","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/trees/2d1815abc4ea59f6a4170ec0603e09c5ed4816a9"},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/git/commits/3e9a9ed06a2185fde292cc9b635dc07759597327","comment_count":0},"url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/3e9a9ed06a2185fde292cc9b635dc07759597327","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/3e9a9ed06a2185fde292cc9b635dc07759597327","comments_url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/3e9a9ed06a2185fde292cc9b635dc07759597327/comments","author":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"committer":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"parents":[{"sha":"26afe69871dc2c86578ac2c6fb45a060eed39e0e","url":"https://api.github.com/repos/CodeMontageHQ/codemontage/commits/26afe69871dc2c86578ac2c6fb45a060eed39e0e","html_url":"https://github.com/CodeMontageHQ/codemontage/commit/26afe69871dc2c86578ac2c6fb45a060eed39e0e"}]}]'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:52 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:55 GMT
 - request:
     method: get
-    uri: https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=user%3Acourte+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=user%3Acourte+fork%3Aonly+++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -490,7 +490,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 20 Jan 2015 21:17:53 GMT
+      - Fri, 23 Jan 2015 18:48:55 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -502,9 +502,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '18'
+      - '26'
       x-ratelimit-reset:
-      - '1421788725'
+      - '1422038994'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -523,7 +523,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6C:34A8710:54BEC601
+      - 4C758B1E:1D6B:721365B:54C29797
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -531,7 +531,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - a241e1a8264a6ace03db946c85b92db3
+      - a30e6f9aa7cf5731b87dfb3b9992202d
       content-encoding:
       - gzip
     body:
@@ -539,5 +539,5 @@ http_interactions:
       string: '{"total_count":2,"incomplete_results":false,"items":[{"id":25838024,"name":"Ospreydit","full_name":"courte/Ospreydit","owner":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/courte/Ospreydit","description":"Reddit
         clone for the Ospreys","fork":true,"url":"https://api.github.com/repos/courte/Ospreydit","forks_url":"https://api.github.com/repos/courte/Ospreydit/forks","keys_url":"https://api.github.com/repos/courte/Ospreydit/keys{/key_id}","collaborators_url":"https://api.github.com/repos/courte/Ospreydit/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/courte/Ospreydit/teams","hooks_url":"https://api.github.com/repos/courte/Ospreydit/hooks","issue_events_url":"https://api.github.com/repos/courte/Ospreydit/issues/events{/number}","events_url":"https://api.github.com/repos/courte/Ospreydit/events","assignees_url":"https://api.github.com/repos/courte/Ospreydit/assignees{/user}","branches_url":"https://api.github.com/repos/courte/Ospreydit/branches{/branch}","tags_url":"https://api.github.com/repos/courte/Ospreydit/tags","blobs_url":"https://api.github.com/repos/courte/Ospreydit/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/courte/Ospreydit/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/courte/Ospreydit/git/refs{/sha}","trees_url":"https://api.github.com/repos/courte/Ospreydit/git/trees{/sha}","statuses_url":"https://api.github.com/repos/courte/Ospreydit/statuses/{sha}","languages_url":"https://api.github.com/repos/courte/Ospreydit/languages","stargazers_url":"https://api.github.com/repos/courte/Ospreydit/stargazers","contributors_url":"https://api.github.com/repos/courte/Ospreydit/contributors","subscribers_url":"https://api.github.com/repos/courte/Ospreydit/subscribers","subscription_url":"https://api.github.com/repos/courte/Ospreydit/subscription","commits_url":"https://api.github.com/repos/courte/Ospreydit/commits{/sha}","git_commits_url":"https://api.github.com/repos/courte/Ospreydit/git/commits{/sha}","comments_url":"https://api.github.com/repos/courte/Ospreydit/comments{/number}","issue_comment_url":"https://api.github.com/repos/courte/Ospreydit/issues/comments/{number}","contents_url":"https://api.github.com/repos/courte/Ospreydit/contents/{+path}","compare_url":"https://api.github.com/repos/courte/Ospreydit/compare/{base}...{head}","merges_url":"https://api.github.com/repos/courte/Ospreydit/merges","archive_url":"https://api.github.com/repos/courte/Ospreydit/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/courte/Ospreydit/downloads","issues_url":"https://api.github.com/repos/courte/Ospreydit/issues{/number}","pulls_url":"https://api.github.com/repos/courte/Ospreydit/pulls{/number}","milestones_url":"https://api.github.com/repos/courte/Ospreydit/milestones{/number}","notifications_url":"https://api.github.com/repos/courte/Ospreydit/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/courte/Ospreydit/labels{/name}","releases_url":"https://api.github.com/repos/courte/Ospreydit/releases{/id}","created_at":"2014-10-27T20:36:49Z","updated_at":"2014-10-27T19:41:32Z","pushed_at":"2014-10-27T19:41:32Z","git_url":"git://github.com/courte/Ospreydit.git","ssh_url":"git@github.com:courte/Ospreydit.git","clone_url":"https://github.com/courte/Ospreydit.git","svn_url":"https://github.com/courte/Ospreydit","homepage":null,"size":72,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":false,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","score":1.0},{"id":24691649,"name":"curriculum","full_name":"courte/curriculum","owner":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/courte/curriculum","description":"","fork":true,"url":"https://api.github.com/repos/courte/curriculum","forks_url":"https://api.github.com/repos/courte/curriculum/forks","keys_url":"https://api.github.com/repos/courte/curriculum/keys{/key_id}","collaborators_url":"https://api.github.com/repos/courte/curriculum/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/courte/curriculum/teams","hooks_url":"https://api.github.com/repos/courte/curriculum/hooks","issue_events_url":"https://api.github.com/repos/courte/curriculum/issues/events{/number}","events_url":"https://api.github.com/repos/courte/curriculum/events","assignees_url":"https://api.github.com/repos/courte/curriculum/assignees{/user}","branches_url":"https://api.github.com/repos/courte/curriculum/branches{/branch}","tags_url":"https://api.github.com/repos/courte/curriculum/tags","blobs_url":"https://api.github.com/repos/courte/curriculum/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/courte/curriculum/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/courte/curriculum/git/refs{/sha}","trees_url":"https://api.github.com/repos/courte/curriculum/git/trees{/sha}","statuses_url":"https://api.github.com/repos/courte/curriculum/statuses/{sha}","languages_url":"https://api.github.com/repos/courte/curriculum/languages","stargazers_url":"https://api.github.com/repos/courte/curriculum/stargazers","contributors_url":"https://api.github.com/repos/courte/curriculum/contributors","subscribers_url":"https://api.github.com/repos/courte/curriculum/subscribers","subscription_url":"https://api.github.com/repos/courte/curriculum/subscription","commits_url":"https://api.github.com/repos/courte/curriculum/commits{/sha}","git_commits_url":"https://api.github.com/repos/courte/curriculum/git/commits{/sha}","comments_url":"https://api.github.com/repos/courte/curriculum/comments{/number}","issue_comment_url":"https://api.github.com/repos/courte/curriculum/issues/comments/{number}","contents_url":"https://api.github.com/repos/courte/curriculum/contents/{+path}","compare_url":"https://api.github.com/repos/courte/curriculum/compare/{base}...{head}","merges_url":"https://api.github.com/repos/courte/curriculum/merges","archive_url":"https://api.github.com/repos/courte/curriculum/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/courte/curriculum/downloads","issues_url":"https://api.github.com/repos/courte/curriculum/issues{/number}","pulls_url":"https://api.github.com/repos/courte/curriculum/pulls{/number}","milestones_url":"https://api.github.com/repos/courte/curriculum/milestones{/number}","notifications_url":"https://api.github.com/repos/courte/curriculum/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/courte/curriculum/labels{/name}","releases_url":"https://api.github.com/repos/courte/curriculum/releases{/id}","created_at":"2014-10-01T19:11:34Z","updated_at":"2014-10-01T12:08:01Z","pushed_at":"2014-11-06T03:03:31Z","git_url":"git://github.com/courte/curriculum.git","ssh_url":"git@github.com:courte/curriculum.git","clone_url":"https://github.com/courte/curriculum.git","svn_url":"https://github.com/courte/curriculum","homepage":null,"size":138,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":false,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Tue, 20 Jan 2015 21:17:53 GMT
+  recorded_at: Fri, 23 Jan 2015 18:48:55 GMT
 recorded_with: VCR 2.9.3

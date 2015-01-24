@@ -3,37 +3,37 @@ require "spec_helper"
 describe Github do
   context "when given a repo" do
     let(:args) do
-      { org_repo: "empirical-org/empirical-core",
-        repo: "empirical-core",
+      { org_repo: "CodeMontageHQ/codemontage",
+        repo: "codemontage",
         day_begin: Time.parse("2014-10-01"),
-        day_end: Time.parse("2014-10-02") }
+        day_end: Time.parse("2014-10-31") }
     end
 
     it "find pull requests", github_api: true do
-      VCR.use_cassette("empirical_oct_prs") do
+      VCR.use_cassette("codemontage_oct_prs") do
         prs = Github.new.pull_requests_by_repo(args)
-        expect(prs.count).to eq(7)
+        expect(prs.count).to eq(2)
       end
     end
 
     it "should find commits", github_api: true do
-      VCR.use_cassette("empirical_oct_commits") do
+      VCR.use_cassette("codemontage_oct_commits") do
         commits = Github.new.commits_by_repo(args)
-        expect(commits.count).to eq(38)
+        expect(commits.count).to eq(3)
       end
     end
 
     it "finds issues by repo", github_api: true do
-      VCR.use_cassette("empirical_oct_issues") do
+      VCR.use_cassette("codemontage_oct_issues") do
         issues = Github.new.issues_by_repo(args)
         expect(issues.count).to eq(3)
       end
     end
 
     it "finds forks by repo", github_api: true do
-      VCR.use_cassette("empirical_oct_forks") do
+      VCR.use_cassette("codemontage_oct_forks") do
         forks = Github.new.forks_by_repo(args)
-        expect(forks.count).to eq(8)
+        expect(forks.count).to eq(0)
       end
     end
   end
