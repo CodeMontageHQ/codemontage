@@ -65,6 +65,31 @@ class Event < ActiveRecord::Base
     stats
   end
 
+  def total_github_stats
+    github_metrics = [:pull_requests, :commits, :issues, :forks]
+    stats = {}
+
+    github_metrics.each do |metric|
+      stats[metric] = 0
+
+      attendee_github_stats.each do |_user, user_stats|
+        stats[metric] += user_stats[metric] if user_stats
+      end
+    end
+
+    stats
+  end
+
+  def fetch_github_stats
+    stats = {}
+
+    stats[:by_attendee] = attendee_github_stats
+    stats[:by_project] = project_github_stats
+    stats[:total] = total_github_stats
+
+    stats
+  end
+
   private
 
   def delete_logo
