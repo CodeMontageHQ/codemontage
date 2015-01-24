@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=user%3Acourte+fork%3Aonly+++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/repositories?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=user%3Acourte+fork%3Aonly+++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Fri, 23 Jan 2015 18:38:38 GMT
+      - Sat, 24 Jan 2015 00:01:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,9 +35,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '26'
+      - '25'
       x-ratelimit-reset:
-      - '1422038375'
+      - '1422057753'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1D6D:9D9BC14:54C2952D
+      - 4C758B1E:1675:BAFFE1A:54C2E0EA
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 318e55760cf7cdb40e61175a4d36cd32
+      - 13d09b732ebe76f892093130dc088652
       content-encoding:
       - gzip
     body:
@@ -72,5 +72,5 @@ http_interactions:
       string: '{"total_count":2,"incomplete_results":false,"items":[{"id":25838024,"name":"Ospreydit","full_name":"courte/Ospreydit","owner":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/courte/Ospreydit","description":"Reddit
         clone for the Ospreys","fork":true,"url":"https://api.github.com/repos/courte/Ospreydit","forks_url":"https://api.github.com/repos/courte/Ospreydit/forks","keys_url":"https://api.github.com/repos/courte/Ospreydit/keys{/key_id}","collaborators_url":"https://api.github.com/repos/courte/Ospreydit/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/courte/Ospreydit/teams","hooks_url":"https://api.github.com/repos/courte/Ospreydit/hooks","issue_events_url":"https://api.github.com/repos/courte/Ospreydit/issues/events{/number}","events_url":"https://api.github.com/repos/courte/Ospreydit/events","assignees_url":"https://api.github.com/repos/courte/Ospreydit/assignees{/user}","branches_url":"https://api.github.com/repos/courte/Ospreydit/branches{/branch}","tags_url":"https://api.github.com/repos/courte/Ospreydit/tags","blobs_url":"https://api.github.com/repos/courte/Ospreydit/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/courte/Ospreydit/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/courte/Ospreydit/git/refs{/sha}","trees_url":"https://api.github.com/repos/courte/Ospreydit/git/trees{/sha}","statuses_url":"https://api.github.com/repos/courte/Ospreydit/statuses/{sha}","languages_url":"https://api.github.com/repos/courte/Ospreydit/languages","stargazers_url":"https://api.github.com/repos/courte/Ospreydit/stargazers","contributors_url":"https://api.github.com/repos/courte/Ospreydit/contributors","subscribers_url":"https://api.github.com/repos/courte/Ospreydit/subscribers","subscription_url":"https://api.github.com/repos/courte/Ospreydit/subscription","commits_url":"https://api.github.com/repos/courte/Ospreydit/commits{/sha}","git_commits_url":"https://api.github.com/repos/courte/Ospreydit/git/commits{/sha}","comments_url":"https://api.github.com/repos/courte/Ospreydit/comments{/number}","issue_comment_url":"https://api.github.com/repos/courte/Ospreydit/issues/comments/{number}","contents_url":"https://api.github.com/repos/courte/Ospreydit/contents/{+path}","compare_url":"https://api.github.com/repos/courte/Ospreydit/compare/{base}...{head}","merges_url":"https://api.github.com/repos/courte/Ospreydit/merges","archive_url":"https://api.github.com/repos/courte/Ospreydit/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/courte/Ospreydit/downloads","issues_url":"https://api.github.com/repos/courte/Ospreydit/issues{/number}","pulls_url":"https://api.github.com/repos/courte/Ospreydit/pulls{/number}","milestones_url":"https://api.github.com/repos/courte/Ospreydit/milestones{/number}","notifications_url":"https://api.github.com/repos/courte/Ospreydit/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/courte/Ospreydit/labels{/name}","releases_url":"https://api.github.com/repos/courte/Ospreydit/releases{/id}","created_at":"2014-10-27T20:36:49Z","updated_at":"2014-10-27T19:41:32Z","pushed_at":"2014-10-27T19:41:32Z","git_url":"git://github.com/courte/Ospreydit.git","ssh_url":"git@github.com:courte/Ospreydit.git","clone_url":"https://github.com/courte/Ospreydit.git","svn_url":"https://github.com/courte/Ospreydit","homepage":null,"size":72,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":false,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","score":1.0},{"id":24691649,"name":"curriculum","full_name":"courte/curriculum","owner":{"login":"courte","id":2766324,"avatar_url":"https://avatars.githubusercontent.com/u/2766324?v=3","gravatar_id":"","url":"https://api.github.com/users/courte","html_url":"https://github.com/courte","followers_url":"https://api.github.com/users/courte/followers","following_url":"https://api.github.com/users/courte/following{/other_user}","gists_url":"https://api.github.com/users/courte/gists{/gist_id}","starred_url":"https://api.github.com/users/courte/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/courte/subscriptions","organizations_url":"https://api.github.com/users/courte/orgs","repos_url":"https://api.github.com/users/courte/repos","events_url":"https://api.github.com/users/courte/events{/privacy}","received_events_url":"https://api.github.com/users/courte/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/courte/curriculum","description":"","fork":true,"url":"https://api.github.com/repos/courte/curriculum","forks_url":"https://api.github.com/repos/courte/curriculum/forks","keys_url":"https://api.github.com/repos/courte/curriculum/keys{/key_id}","collaborators_url":"https://api.github.com/repos/courte/curriculum/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/courte/curriculum/teams","hooks_url":"https://api.github.com/repos/courte/curriculum/hooks","issue_events_url":"https://api.github.com/repos/courte/curriculum/issues/events{/number}","events_url":"https://api.github.com/repos/courte/curriculum/events","assignees_url":"https://api.github.com/repos/courte/curriculum/assignees{/user}","branches_url":"https://api.github.com/repos/courte/curriculum/branches{/branch}","tags_url":"https://api.github.com/repos/courte/curriculum/tags","blobs_url":"https://api.github.com/repos/courte/curriculum/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/courte/curriculum/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/courte/curriculum/git/refs{/sha}","trees_url":"https://api.github.com/repos/courte/curriculum/git/trees{/sha}","statuses_url":"https://api.github.com/repos/courte/curriculum/statuses/{sha}","languages_url":"https://api.github.com/repos/courte/curriculum/languages","stargazers_url":"https://api.github.com/repos/courte/curriculum/stargazers","contributors_url":"https://api.github.com/repos/courte/curriculum/contributors","subscribers_url":"https://api.github.com/repos/courte/curriculum/subscribers","subscription_url":"https://api.github.com/repos/courte/curriculum/subscription","commits_url":"https://api.github.com/repos/courte/curriculum/commits{/sha}","git_commits_url":"https://api.github.com/repos/courte/curriculum/git/commits{/sha}","comments_url":"https://api.github.com/repos/courte/curriculum/comments{/number}","issue_comment_url":"https://api.github.com/repos/courte/curriculum/issues/comments/{number}","contents_url":"https://api.github.com/repos/courte/curriculum/contents/{+path}","compare_url":"https://api.github.com/repos/courte/curriculum/compare/{base}...{head}","merges_url":"https://api.github.com/repos/courte/curriculum/merges","archive_url":"https://api.github.com/repos/courte/curriculum/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/courte/curriculum/downloads","issues_url":"https://api.github.com/repos/courte/curriculum/issues{/number}","pulls_url":"https://api.github.com/repos/courte/curriculum/pulls{/number}","milestones_url":"https://api.github.com/repos/courte/curriculum/milestones{/number}","notifications_url":"https://api.github.com/repos/courte/curriculum/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/courte/curriculum/labels{/name}","releases_url":"https://api.github.com/repos/courte/curriculum/releases{/id}","created_at":"2014-10-01T19:11:34Z","updated_at":"2014-10-01T12:08:01Z","pushed_at":"2014-11-06T03:03:31Z","git_url":"git://github.com/courte/curriculum.git","ssh_url":"git@github.com:courte/curriculum.git","clone_url":"https://github.com/courte/curriculum.git","svn_url":"https://github.com/courte/curriculum","homepage":null,"size":138,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":false,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Fri, 23 Jan 2015 18:38:38 GMT
+  recorded_at: Sat, 24 Jan 2015 00:01:46 GMT
 recorded_with: VCR 2.9.3

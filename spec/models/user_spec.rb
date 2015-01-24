@@ -27,4 +27,26 @@ describe User do
     end
     it { should_not be_valid }
   end
+
+  describe "#github_api_args" do
+    context "without github auth" do
+      it "returns nil" do
+        user = create(:user)
+        expect(user.github_api_args).to be_nil
+      end
+    end
+
+    context "with github auth" do
+      it "returns args", github_api: true do
+        user = create(:user_with_github)
+        args = [:user, :day_begin, :day_end]
+
+        VCR.use_cassette("courte_user") do
+          args.each do |arg|
+            expect(user.github_api_args.has_key?(arg)).to be_true
+          end
+        end
+      end
+    end
+  end
 end

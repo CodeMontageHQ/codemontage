@@ -48,6 +48,18 @@ class User < ActiveRecord::Base
     favorite_projects.map(&:project_id).to_set
   end
 
+  def github_api_args
+    if has_github
+      uid = services.find_by_provider(:github).uid
+
+      { user:      Github.new.get_user_login_by_uid(uid),
+        day_begin: created_at,
+        day_end: Time.now }
+    else
+      nil
+    end
+  end
+
   protected
 
   def create_profile

@@ -36,6 +36,17 @@ describe Project do
     end
   end
 
+  describe "#github_api_args" do
+    it "returns basic arguments for the GitHub service object" do
+      project = create(:project)
+      args = [:org_repo, :repo, :day_begin, :day_end]
+
+      args.each do |arg|
+        expect(project.github_api_args.has_key?(arg)).to be_true
+      end
+    end
+  end
+
   describe '#related_projects' do
     let(:organization) { Organization.create!(name: 'CodeMontage') }
 

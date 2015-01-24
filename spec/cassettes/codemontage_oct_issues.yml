@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage%2Fcodemontage+type%3Aissue++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
+    uri: https://api.github.com/search/issues?client_id=<GITHUB_KEY>&client_secret=<GITHUB_SECRET>&q=repo%3ACodeMontageHQ%2Fcodemontage+type%3Aissue++++++++++++++++++++++++++++++++++++++created%3A2014-10-01..2014-10-31&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Fri, 23 Jan 2015 18:42:00 GMT
+      - Sat, 24 Jan 2015 00:01:35 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -35,9 +35,9 @@ http_interactions:
       x-ratelimit-limit:
       - '30'
       x-ratelimit-remaining:
-      - '29'
+      - '28'
       x-ratelimit-reset:
-      - '1422038580'
+      - '1422057753'
       cache-control:
       - no-cache
       x-github-media-type:
@@ -56,7 +56,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-github-request-id:
-      - 4C758B1E:1672:73739AF:54C295F8
+      - 4C758B1E:1676:63953DA:54C2E0DE
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
       x-content-type-options:
@@ -64,7 +64,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - 8dd185e423974a7e13abbbe6e060031e
+      - 07ff1c8a09e44b62e277fae50a1b1dc4
       content-encoding:
       - gzip
     body:
@@ -82,5 +82,5 @@ http_interactions:
         Code of Conduct page in #252 Update Code of Conduct to Show Upcoming Events
         & PR #255)","score":1.0}]}'
     http_version: '1.1'
-  recorded_at: Fri, 23 Jan 2015 18:42:00 GMT
+  recorded_at: Sat, 24 Jan 2015 00:01:35 GMT
 recorded_with: VCR 2.9.3
