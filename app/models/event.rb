@@ -45,6 +45,26 @@ class Event < ActiveRecord::Base
       day_end:   end_date }
   end
 
+  def attendee_github_stats
+    stats = {}
+
+    event_registrations.each do |er|
+      stats.merge!(er.user.email => er.fetch_github_stats)
+    end
+
+    stats
+  end
+
+  def project_github_stats
+    stats = {}
+
+    featured_projects.each do |fp|
+      stats.merge!(fp.project.name => fp.fetch_github_stats)
+    end
+
+    stats
+  end
+
   private
 
   def delete_logo
