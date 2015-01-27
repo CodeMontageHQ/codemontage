@@ -2,16 +2,17 @@
 
 h5 span.favorite {
   font-size: 18px;
-  margin: 0 0 -10px;
   padding-left: 15px;
 
   form {
     display: inline-block;
+    margin: 0;
     div { margin: 0 0 10px; }
   }
 
   .button {
     font-weight: normal;
     padding: 4px;
+    margin: 0;
   }
 }
