@@ -69,10 +69,14 @@ ActiveAdmin.register Project do
         link_to proj.url, proj.url, target: 'blank' if proj.url?
       end
       row :install_url do |proj|
-        link_to proj.install_url, proj.install_url, target: "blank" if proj.install_url?
+        if proj.install_url?
+          link_to proj.install_url, proj.install_url, target: "blank"
+        end
       end
       row :help_url do |proj|
-        link_to proj.help_url, proj.help_url, target: "blank" if proj.help_url?
+        if proj.help_url?
+          link_to proj.help_url, proj.help_url, target: "blank"
+        end
       end
       row :description
       row 'Causes' do ad.cause_list end
