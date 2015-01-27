@@ -5,9 +5,11 @@
       <h4><%= @project.name %></h4>
       <div id="links">
         <ul class="no-bullet">
-          <li><%= link_to '<i class="fi-web"></i> '.html_safe + display_url(@project.url), @project.url, :target => '_blank' unless !@project.url.present? %></li>
-          <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + @project.github_display + " Code", @project.github_url, :target => '_blank' unless !@project.github_url.present? %></li>
-          <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + @project.name + " Open Tasks", @project.tasks_url, :target => '_blank' unless !@project.tasks_url.present? %></li>
+          <li><%= link_to '<i class="fi-web"></i> '.html_safe + display_url(@project.url), @project.url, :target => '_blank'if @project.url.present? %></li>
+          <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + @project.github_display + " Code", @project.github_url, :target => '_blank' if @project.github_url.present? %></li>
+          <li><%= link_to '<i class="fi-wrench"></i> '.html_safe + "Install " + @project.name, @project.install_url, :target => '_blank' if @project.install_url.present? %></li>
+          <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + @project.name + " Open Tasks", @project.tasks_url, :target => '_blank' if @project.tasks_url.present? %></li>
+          <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + @project.name + " News", twitter_url(@project.organization.twitter), :target => '_blank' if @project.organization.twitter.present? %></li>
         </ul>
       </div>
 
