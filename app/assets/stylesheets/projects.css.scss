@@ -24,18 +24,6 @@ h5 span.favorite {
   }
 }
 
-#project_links.one-line ul {
-  padding-bottom: 3%;
-
-  li {
-    float: left;
-    padding: 0 2%;
-    border-left: 2px solid $cmTeal;
-
-    &:first-child { border: 0 none; }
-  }
-}
-
-#summary {
-  clear: both;
+.project_links {
+  margin-bottom: 6%;
 }
