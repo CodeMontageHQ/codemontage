@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150112145730) do
+ActiveRecord::Schema.define(:version => 20150127012233) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -154,6 +154,8 @@ ActiveRecord::Schema.define(:version => 20150112145730) do
     t.string   "slug"
     t.boolean  "is_approved",     :default => false, :null => false
     t.string   "url"
+    t.string   "install_url"
+    t.string   "help_url"
   end
 
   add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true
