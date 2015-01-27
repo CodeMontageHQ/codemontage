@@ -16,3 +16,10 @@ h5 span.favorite {
     margin: 0;
   }
 }
+
+.project {
+  border-bottom: 1px solid $cmLightGrey;
+  &.row {
+    margin-bottom: 15px;
+  }
+}
