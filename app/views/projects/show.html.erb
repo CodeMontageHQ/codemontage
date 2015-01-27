@@ -3,25 +3,25 @@
     <div class="large-8 columns">
       <h4><%= link_to @project.organization.name, organization_path(@project.organization) %></h4>
       <h4><%= @project.name %></h4>
-      <div id="project_links" class="one-line">
-        <ul class="no-bullet">
-          <% if @project.url.present? %>
-            <li><%= link_to '<i class="fi-web"></i> '.html_safe + " Website", @project.url, :target => '_blank' %></li>
-          <% end %>
-          <% if @project.github_url.present? %>
-            <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + " Code Base", @project.github_url, :target => '_blank' %></li>
-          <% end %>
-          <% if @project.install_url.present? %>
-            <li><%= link_to '<i class="fi-wrench"></i> '.html_safe + " Install", @project.install_url, :target => '_blank' %></li>
-          <% end %>
-          <% if @project.tasks_url.present? %>
-            <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + " Tasks", @project.tasks_url, :target => '_blank' %></li>
-          <% end %>
-          <% if @project.organization.twitter.present? %>
-            <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.organization.twitter), :target => '_blank' %></li>
-          <% end %>
-        </ul>
-      </div>
+
+      <ul class="no-bullet inline-list project_links">
+        <% if @project.url.present? %>
+          <li><%= link_to '<i class="fi-web"></i> '.html_safe + " Website", @project.url, :target => '_blank' %></li>
+        <% end %>
+        <% if @project.github_url.present? %>
+          <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + " Code Base", @project.github_url, :target => '_blank' %></li>
+        <% end %>
+        <% if @project.install_url.present? %>
+          <li><%= link_to '<i class="fi-wrench"></i> '.html_safe + " Install", @project.install_url, :target => '_blank' %></li>
+        <% end %>
+        <% if @project.tasks_url.present? %>
+          <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + " Tasks", @project.tasks_url, :target => '_blank' %></li>
+        <% end %>
+        <% if @project.organization.twitter.present? %>
+          <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.organization.twitter), :target => '_blank' %></li>
+        <% end %>
+      </ul>
+
 
       <div id="summary">
         <p><%= @project.description %></p>

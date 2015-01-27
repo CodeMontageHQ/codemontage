@@ -16,7 +16,7 @@
 
     <p><%= project.description %></p>
 
-    <ul class="no-bullet">
+    <ul class="no-bullet inline-list project_links">
       <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + "Code Base", project.github_url, :target => '_blank' if project.github_url.present? %></li>
       <li><%= link_to '<i class="fi-wrench"></i> '.html_safe + "Install", project.install_url, :target => '_blank' if project.install_url.present? %></li>
       <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' if project.tasks_url.present? %></li>
