@@ -10,6 +10,12 @@ ActiveAdmin.register Project do
     end
     column :github_repo
     column :description
+    column :install_url do |proj|
+      link_to proj.install_url, proj.install_url, target: "blank" if proj.install_url?
+    end
+    column :help_url do |proj|
+      link_to proj.help_url, proj.help_url, target: "blank" if proj.help_url?
+    end
     column 'Causes', :cause_list
     column 'Technologies', :technology_list
     column :notes
@@ -25,6 +31,9 @@ ActiveAdmin.register Project do
   filter :name
   filter :github_repo
   filter :description
+  filter :url
+  filter :install_url
+  filter :help_url
   filter :notes
   filter :created_at
   filter :updated_at
@@ -38,6 +47,8 @@ ActiveAdmin.register Project do
       f.input :name
       f.input :github_repo
       f.input :url
+      f.input :install_url
+      f.input :help_url
       f.input :description
       f.input :cause_list, label: 'Causes'
       f.input :technology_list, label: 'Technologies'
@@ -56,6 +67,12 @@ ActiveAdmin.register Project do
       row :github_repo
       row :url do |proj|
         link_to proj.url, proj.url, target: 'blank' if proj.url?
+      end
+      row :install_url do |proj|
+        link_to proj.install_url, proj.install_url, target: "blank" if proj.install_url?
+      end
+      row :help_url do |proj|
+        link_to proj.help_url, proj.help_url, target: "blank" if proj.help_url?
       end
       row :description
       row 'Causes' do ad.cause_list end
