@@ -46,39 +46,11 @@ class Event < ActiveRecord::Base
   end
 
   def attendee_github_stats
-    stats = {}
-
-    event_registrations.find_in_batches(batch_size: 5) do |er_batch|
-      er_batch.each do |er|
-        begin
-          stats.merge!(er.user.email => er.fetch_github_stats)
-        rescue
-          next
-        end
-      end
-
-      sleep(60) #avoid GH search rate limit
-    end
-
-    stats
+    @attendee_github_stats ||= fetch_attendee_github_stats
   end
 
   def project_github_stats
-    stats = {}
-
-    featured_projects.find_in_batches(batch_size: 5) do |fp_batch|
-      fp_batch.each do |fp|
-        begin
-          stats.merge!(fp.project.name => fp.fetch_github_stats)
-        rescue
-          next
-        end
-      end
-
-      sleep(60)
-    end
-
-    stats
+    @project_github_stats ||= fetch_project_github_stats
   end
 
   def total_github_stats
@@ -96,6 +68,10 @@ class Event < ActiveRecord::Base
     stats
   end
 
+  def github_stats
+    @github_stats ||= fetch_github_stats
+  end
+
   def fetch_github_stats
     stats = {}
 
@@ -110,5 +86,41 @@ class Event < ActiveRecord::Base
 
   def delete_logo
     logo.clear if logo_delete == '1'
+  end
+
+  def fetch_attendee_github_stats
+    stats = {}
+
+    event_registrations.find_in_batches(batch_size: 5) do |er_batch|
+      er_batch.each do |er|
+        begin
+          stats.merge!(er.user.email => er.fetch_github_stats)
+        rescue
+          next
+        end
+      end
+
+      sleep(60) #avoid GH search rate limit
+    end
+
+    stats
+  end
+
+  def fetch_project_github_stats
+    stats = {}
+
+    featured_projects.find_in_batches(batch_size: 5) do |fp_batch|
+      fp_batch.each do |fp|
+        begin
+          stats.merge!(fp.project.name => fp.fetch_github_stats)
+        rescue
+          next
+        end
+      end
+
+      sleep(60)
+    end
+
+    stats
   end
 end
