@@ -49,7 +49,11 @@ class Event < ActiveRecord::Base
     stats = {}
 
     event_registrations.each do |er|
-      stats.merge!(er.user.email => er.fetch_github_stats)
+      begin
+        stats.merge!(er.user.email => er.fetch_github_stats)
+      rescue
+        next
+      end
     end
 
     stats
@@ -59,7 +63,11 @@ class Event < ActiveRecord::Base
     stats = {}
 
     featured_projects.each do |fp|
-      stats.merge!(fp.project.name => fp.fetch_github_stats)
+      begin
+        stats.merge!(fp.project.name => fp.fetch_github_stats)
+      rescue
+        next
+      end
     end
 
     stats
