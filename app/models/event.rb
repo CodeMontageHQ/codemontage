@@ -42,7 +42,7 @@ class Event < ActiveRecord::Base
     @logo_delete || '0'
   end
 
-  def favorited_project_stats
+  def featured_projects_favorites_stats
     stats = {}
     stats[:by_project] = {}
 
@@ -87,14 +87,14 @@ class Event < ActiveRecord::Base
     stats
   end
 
-  def github_stats
-    @github_stats ||= fetch_github_stats
+  def engagement_stats
+    @engagement_stats ||= fetch_engagement_stats
   end
 
-  def fetch_github_stats
+  def fetch_engagement_stats
     stats = {}
 
-    stats[:featured_project_favorites] = favorited_project_stats
+    stats[:favorites] = featured_projects_favorites_stats
     stats[:by_attendee] = attendee_github_stats
     stats[:by_project] = project_github_stats
     stats[:total] = total_github_stats
