@@ -100,7 +100,7 @@ class Event < ActiveRecord::Base
         end
       end
 
-      sleep(60) #avoid GH search rate limit
+      sleep(60) # avoid GH search rate limit
     end
 
     stats
@@ -118,7 +118,7 @@ class Event < ActiveRecord::Base
         end
       end
 
-      sleep(60)
+      sleep(60) # avoid GH search rate limit
     end
 
     stats
