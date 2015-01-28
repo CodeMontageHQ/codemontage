@@ -42,6 +42,23 @@ class Event < ActiveRecord::Base
     @logo_delete || '0'
   end
 
+  def favorited_project_stats
+    stats = {}
+    stats[:by_project] = {}
+
+    projects.each do |project|
+      event_faves = project.favorite_projects.select do |fave|
+        fave.created_at >= start_date && fave.created_at <= end_date
+      end
+
+      stats[:by_project].merge!(project.name => event_faves.count)
+    end
+
+    stats[:total] = stats[:by_project].values.reduce(:+)
+
+    stats
+  end
+
   def github_api_args
     { day_begin: start_date,
       day_end:   end_date }
@@ -77,6 +94,7 @@ class Event < ActiveRecord::Base
   def fetch_github_stats
     stats = {}
 
+    stats[:featured_project_favorites] = favorited_project_stats
     stats[:by_attendee] = attendee_github_stats
     stats[:by_project] = project_github_stats
     stats[:total] = total_github_stats
