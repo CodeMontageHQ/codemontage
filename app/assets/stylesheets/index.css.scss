@@ -68,7 +68,7 @@ body[data-controller="home"][data-action="index"] {
 @media only screen and (max-width: 767px) {
   #mission {
 
-    img { height: 350px; }
+    img { display: none; }
     .mission_text { font-size: 1.7em; }
 
   }
