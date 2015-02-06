@@ -65,12 +65,16 @@ body[data-controller="home"][data-action="index"] {
 
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-device-width:767px), screen and (max-width:767px) {
   #mission {
-
     img { display: none; }
     .mission_text { font-size: 1.7em; }
+  }
+}
 
+@media screen and (max-device-width:854px), screen and (max-width:854px) {
+  #mission img {
+    width: 12%;
   }
 }
 
