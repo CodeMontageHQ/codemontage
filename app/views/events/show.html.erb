@@ -29,6 +29,21 @@
         </div>
       </div>
 
+      <div id="event_code_of_conduct" class="large-10 columns large-centered">
+        <h4>Code of Conduct</h4>
+        <p>
+          This event is utilizing the <%= link_to "CodeMontage Code of Conduct", "/code_of_conduct" %>. <strong>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact an event organizer immediately.</strong>
+
+          <ul class="no-bullet">
+          <% if @event.lead_organizer.present? %>
+            <li><strong>Lead Organizer:</strong> <%= @event.lead_organizer %>, <a href="mailto:<%= @event.lead_email %>"><%= @event.lead_email %></a></li>
+          <% end %>
+          <% if @event.organizer.present? %>
+            <li><strong>Organizer:</strong> <%= @event.organizer %>, <a href="mailto:<%= @event.organizer_email %>"><%= @event.organizer_email %></a></li>
+          <% end %>
+        </p>
+      </div>
+
       <div id="event_featured_projects" class="large-10 columns large-centered">
         <% if @featured_projects.present? %>
           <h4>Featured Projects</h4>
