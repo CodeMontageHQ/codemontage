@@ -27,8 +27,8 @@ ActiveAdmin.register Event do
       f.input :lead_email, label: 'Lead organizer email'
       f.input :organizer
       f.input :organizer_email
-      f.input :start_date
-      f.input :end_date
+      f.input :start_date, hint: "Be sure to input the start date in UTC/Greenwich Mean Time."
+      f.input :end_date, hint: "Be sure to input the end date in UTC/Greenwich Mean Time."
       f.input :location
       f.input :teaser
       f.input :description
