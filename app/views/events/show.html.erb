@@ -29,6 +29,17 @@
         </div>
       </div>
 
+      <% if @event.schedule.present? %>
+        <div id="event_schedule" class="large-10 columns large-centered">
+          <h4>Schedule</h4>
+          <div class="large-10 columns large-centered">
+            <ul>
+              <%=raw @event.schedule %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+
       <div id="event_code_of_conduct" class="large-10 columns large-centered">
         <h4>Code of Conduct</h4>
         <p>
