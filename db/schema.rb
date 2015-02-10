@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150127012233) do
+ActiveRecord::Schema.define(:version => 20150209221313) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20150127012233) do
     t.string   "organizer_email"
     t.string   "location"
     t.boolean  "is_public",         :default => false, :null => false
+    t.text     "schedule"
   end
 
   add_index "events", ["short_code"], :name => "index_events_on_short_code", :unique => true
