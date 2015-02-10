@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
   has_many :projects, through: :featured_projects
 
   attr_accessible :name, :short_code, :start_date, :end_date, :teaser, :description, :notes
-  attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email
+  attr_accessible :logo, :logo_delete, :lead_organizer, :lead_email, :schedule
   attr_accessible :organizer, :organizer_email, :location, :is_public
   attr_accessible :chat_url, :map_url, :schedule_url, :hashtag, :eventbrite_url
   attr_accessible :featured_projects_attributes
