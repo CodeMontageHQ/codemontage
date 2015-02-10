@@ -43,6 +43,7 @@ ActiveAdmin.register Event do
         f.input :logo, as: :file
       end
       f.input :is_public, label: "Public?", as: :boolean
+      f.input :schedule
       f.input :chat_url
       f.input :map_url
       f.input :schedule_url
@@ -82,6 +83,7 @@ ActiveAdmin.register Event do
         end
       end
       row "Public?" do ad.is_public end
+      row :schedule
       row :chat_url do link_to ad.chat_url, ad.chat_url if ad.chat_url.present? end
       row :map_url do link_to ad.map_url, ad.map_url if ad.map_url.present? end
       row :schedule_url do link_to ad.schedule_url, ad.schedule_url if ad.schedule_url.present? end
