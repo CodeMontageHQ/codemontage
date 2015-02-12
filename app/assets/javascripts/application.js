@@ -23,8 +23,9 @@ APP = {
 			// $(document).foundationTopBar();
       $("a.check-in")
         .bind("ajax:beforeSend", function(e, xhr) {
-          $(e.target).parent("span.check_in")
-            .html("<i class=\"fi-check\"></i> Checked In");
+          $("span.check_in").each( function() {
+            $(this).html("<i class=\"fi-check\"></i> Checked In");
+          })
         });
     }
   },
@@ -38,8 +39,9 @@ APP = {
     dashboard: function() {
 			$("form.button_to")
 				.bind("ajax:beforeSend", function(e, xhr) {
-					$(e.target).parent("span.check_in")
-            .html("<i class=\"fi-check\"></i> Checked In");
+          $("span.check_in").each( function() {
+            $(this).html("<i class=\"fi-check\"></i> Checked In");
+          })
 				});
     }
   },
