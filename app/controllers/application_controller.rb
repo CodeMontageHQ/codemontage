@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :force_www!
+  before_filter :force_www!, :nav_events
 
   def after_sign_in_path_for(resource)
     dashboard_path
@@ -37,5 +37,9 @@ class ApplicationController < ActionController::Base
 
   def current_event
     @current_event = Event.current
+  end
+
+  def nav_events
+    @nav_events = Event.upcoming_events.public_events.order('start_date').take(4)
   end
 end
