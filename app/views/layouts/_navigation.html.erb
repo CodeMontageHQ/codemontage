@@ -16,6 +16,11 @@
         <li><%= link_to "Jobs", jobs_path %></li>
         <li class="has-dropdown"><%= link_to "Events", events_path %>
           <ul class="dropdown">
+            <% if @nav_events %>
+              <% @nav_events.each do |nav_event| %>
+                <li><%= link_to nav_event.name, event_path(nav_event) %></li>
+              <% end %>
+            <% end %>
             <li><%= link_to "Women Coders Dinner", 'https://www.codemontage.com/events/amplify-women-coders-dinner' %></li>
             <li><%= link_to "Coder Day of Service", coder_day_path %></li>
             <li><%= link_to "NYC Meetup", "http://meetup.com/Developers-for-Good", :target => "_blank" %></li>
