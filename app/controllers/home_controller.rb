@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   before_filter :login_required, only: [:dashboard]
-  before_filter :current_event, only: :index
+  before_filter :current_event, only: [:index, :dashboard]
 
   def dashboard
     @favorite_projects = current_user.favorites

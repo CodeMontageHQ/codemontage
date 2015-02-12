@@ -11,4 +11,8 @@
       <%= render 'home/dashboard/events' %>     
     </div>
   </div>
+
+  <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+    <%= render "events/check_in_prompt" %>
+  <% end %>
 </body>
