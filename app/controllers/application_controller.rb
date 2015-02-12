@@ -40,6 +40,9 @@ class ApplicationController < ActionController::Base
   end
 
   def nav_events
-    @nav_events = Event.upcoming_events.public_events.order('start_date').take(4)
+    @nav_events = Event.upcoming_events.
+                        public_events.
+                        order("start_date").
+                        take(4)
   end
 end
