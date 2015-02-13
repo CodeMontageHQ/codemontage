@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
 
   attr_accessible :cause_list, :description, :github_repo, :help_url,
                   :install_url, :is_active, :is_approved, :name, :notes,
-                  :organization_id, :technology_list, :url
+                  :organization_id, :technology_list, :url, :twitter
   validates_presence_of :name, :github_repo
 
   has_many :favorite_projects

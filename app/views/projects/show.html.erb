@@ -17,7 +17,9 @@
         <% if @project.tasks_url.present? %>
           <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + " Tasks", @project.tasks_url, :target => '_blank' %></li>
         <% end %>
-        <% if @project.organization.twitter.present? %>
+        <% if @project.twitter.present? %>
+          <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.twitter), :target => '_blank' %></li>
+        <% elsif @project.organization.twitter.present? %>
           <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.organization.twitter), :target => '_blank' %></li>
         <% end %>
       </ul>

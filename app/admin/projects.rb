@@ -42,6 +42,7 @@ ActiveAdmin.register Project do
   filter :is_active
   filter :slug
   filter :is_approved, as: :select
+  filter :twitter
 
   form do |f|
     f.inputs 'Project Details', multipart: true do
@@ -57,6 +58,7 @@ ActiveAdmin.register Project do
       f.input :notes
       f.input :is_active, label: 'Active?'
       f.input :is_approved, label: 'Approved?'
+      f.input :twitter, label: "Twitter handle"
     end
 
     f.buttons
@@ -86,6 +88,9 @@ ActiveAdmin.register Project do
       row 'Approved?' do ad.is_approved end
       row :created_at
       row :updated_at
+      row :twitter do |proj|
+        link_to proj.twitter, "http://twitter.com/" + proj.twitter, target: "blank" if proj.twitter?
+      end
     end
 
     active_admin_comments

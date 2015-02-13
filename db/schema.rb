@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150209221313) do
+ActiveRecord::Schema.define(:version => 20150213195324) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -38,14 +38,14 @@ ActiveRecord::Schema.define(:version => 20150209221313) do
   add_index "event_registrations", ["user_id"], :name => "index_event_registrations_on_user_id"
 
   create_table "events", :force => true do |t|
-    t.string   "short_code",        :null => false
-    t.string   "name",              :null => false
+    t.string   "short_code",                           :null => false
+    t.string   "name",                                 :null => false
     t.datetime "start_date"
     t.datetime "end_date"
     t.text     "description"
     t.text     "notes"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -134,29 +134,30 @@ ActiveRecord::Schema.define(:version => 20150209221313) do
     t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
+    t.string   "slug"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "slug"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
 
   create_table "projects", :force => true do |t|
-    t.integer  "organization_id",                    :null => false
-    t.string   "name",                               :null => false
+    t.integer  "organization_id",                                  :null => false
+    t.string   "name",                                             :null => false
     t.string   "github_repo"
     t.string   "description"
     t.text     "notes"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.boolean  "is_active",       :default => true,  :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.boolean  "is_active",                     :default => true,  :null => false
     t.string   "slug"
-    t.boolean  "is_approved",     :default => false, :null => false
+    t.boolean  "is_approved",                   :default => false, :null => false
     t.string   "url"
     t.string   "install_url"
     t.string   "help_url"
+    t.string   "twitter",         :limit => 15
   end
 
   add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true
