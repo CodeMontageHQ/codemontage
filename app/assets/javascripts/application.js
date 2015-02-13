@@ -23,7 +23,12 @@ APP = {
 			// $(document).foundationTopBar();
       $("a.check-in")
         .bind("ajax:beforeSend", function(e, xhr) {
-          $("span.check_in").each( function() {
+          $target = $(e.target).parent("span.check_in");
+          event_class = $target.attr("class").split(" ")[1];
+
+          $target.html("<i class=\"fi-check\"></i> Checked In");
+
+          $("#" + event_class + " span.check_in").each( function() {
             $(this).html("<i class=\"fi-check\"></i> Checked In");
           });
         });
