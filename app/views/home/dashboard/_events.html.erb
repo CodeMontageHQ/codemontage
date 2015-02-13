@@ -16,15 +16,16 @@
             <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " " + event.hashtag, 'http://twitter.com/' + event.hashtag, :target => '_blank' unless !event.hashtag.present? %></li>
           </ul>
         </p>
-      </div>
-      <div class="event_check_in text-center">
-        <span class="check_in">
-          <% if @registered_events.include?(event) %>
-            <p><i class="fi-check"></i> Checked In<p>
-          <% else %>
-          <%= button_to "Check In", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
-          <% end %>
-        </span>
+
+        <div class="event_check_in text-center">
+          <span class="check_in">
+            <% if @registered_events.include?(event) %>
+              <p><i class="fi-check"></i> Checked In<p>
+            <% else %>
+            <%= button_to "Check In", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
+            <% end %>
+          </span>
+        </div>
       </div>
     <% end %>
   <% else %>
