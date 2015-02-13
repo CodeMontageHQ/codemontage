@@ -1,33 +1,31 @@
 <div id="events" class="index radius panel row">
-
-  <div id="coder_day">
   <% if @upcoming_events.present? %>
     <h3>Upcoming Events</h3>
     <% @upcoming_events.each do |event| %>
-    <div class="event">
-      <% if event.logo.present? %>
-        <%= link_to (image_tag event.logo.url, :height => "300px"), event_path(event) %>
-      <% else %>
-        <%= link_to event.name, event_path(event) %>
-      <% end %>
-      <p>
-        <ul id="event_resources" class="no-bullet">
-          <li><%= link_to '<i class="fi-megaphone"></i> '.html_safe + " Chat", event.chat_url, :target => '_blank' unless !event.chat_url.present? %></li>
-          <li><%= link_to '<i class="fi-map"></i> '.html_safe + " Map", event.map_url, :target => '_blank' unless !event.map_url.present? %></li>
-          <li><%= link_to '<i class="fi-clock"></i> '.html_safe + " Schedule", event.schedule_url, :target => '_blank' unless !event.schedule_url.present?  %></li>
-          <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " " + event.hashtag, 'http://twitter.com/' + event.hashtag, :target => '_blank' unless !event.hashtag.present? %></li>
-        </ul>
-      </p>
-    </div>
-    <div class="event_check_in text-center">
-      <span class="check_in">
-        <% if @registered_events.include?(event) %>
-          <p><i class="fi-check"></i> Checked In<p>
+      <div class="event">
+        <% if event.logo.present? %>
+          <%= link_to (image_tag event.logo.url, :height => "300px"), event_path(event) %>
         <% else %>
-        <%= button_to "Check In", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
+          <%= link_to event.name, event_path(event) %>
         <% end %>
-      </span>
-    </div>
+        <p>
+          <ul id="event_resources" class="no-bullet">
+            <li><%= link_to '<i class="fi-megaphone"></i> '.html_safe + " Chat", event.chat_url, :target => '_blank' unless !event.chat_url.present? %></li>
+            <li><%= link_to '<i class="fi-map"></i> '.html_safe + " Map", event.map_url, :target => '_blank' unless !event.map_url.present? %></li>
+            <li><%= link_to '<i class="fi-clock"></i> '.html_safe + " Schedule", event.schedule_url, :target => '_blank' unless !event.schedule_url.present?  %></li>
+            <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " " + event.hashtag, 'http://twitter.com/' + event.hashtag, :target => '_blank' unless !event.hashtag.present? %></li>
+          </ul>
+        </p>
+      </div>
+      <div class="event_check_in text-center">
+        <span class="check_in">
+          <% if @registered_events.include?(event) %>
+            <p><i class="fi-check"></i> Checked In<p>
+          <% else %>
+          <%= button_to "Check In", events_path(:short_code => event.short_code), :remote => :true, :class => "radius button" %>
+          <% end %>
+        </span>
+      </div>
     <% end %>
   <% else %>
     <h3>Let's Chat</h3>
@@ -40,5 +38,4 @@
       </ul>
     </p>
   <% end %>
-  </div>
 </div>
