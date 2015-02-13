@@ -8,7 +8,7 @@
     <div class="large-8 columns large-centered text-center">
       <p><strong>Welcome!</strong> Are you joining us for:</p>
       <h2><%= link_to @current_event.name, event_path(@current_event) %></h2>
-      <span class="check_in">
+      <span class="check_in <%= dom_id(@current_event) %>">
         <% if current_user.events.include?(@current_event) %>
           <p><i class="fi-check"></i> Checked In<p>
         <% else %>

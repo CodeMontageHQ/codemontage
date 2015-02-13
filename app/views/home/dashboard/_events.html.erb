@@ -2,7 +2,7 @@
   <% if @upcoming_events.present? %>
     <h3>Upcoming Events</h3>
     <% @upcoming_events.each do |event| %>
-      <div class="event">
+      <div id="<%= dom_id(event) %>" class="event">
         <% if event.logo.present? %>
           <%= link_to (image_tag event.logo.url, :height => "300px"), event_path(event) %>
         <% else %>
