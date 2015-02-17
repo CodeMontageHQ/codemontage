@@ -59,6 +59,20 @@ class Event < ActiveRecord::Base
     stats
   end
 
+  def all_favorites_stats
+    stats = {}
+
+    all_favorites = FavoriteProject.created_between(start_date, end_date)
+    stats[:total] = all_favorites.count
+
+    stats[:by_project] = all_favorites.group_by { |fave| fave.project.name }
+    stats[:by_project].each do |project_name, project_faves|
+      stats[:by_project][project_name] = project_faves.count
+    end
+
+    stats
+  end
+
   def github_api_args
     { day_begin: start_date,
       day_end:   end_date }
