@@ -36,6 +36,8 @@ CodeMontage::Application.routes.draw do
   get '/our_services', controller: 'home', action: 'services'
   get '/resources', controller: 'home', action: 'resources'
   get '/training', controller: 'home', action: 'training'
+  get '/project_requirements', controller: 'home',
+                               action: 'project_requirements'
 
   # Blog
   get '/blog' => redirect('http://blog.codemontage.com')
