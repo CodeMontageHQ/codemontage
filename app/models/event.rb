@@ -108,7 +108,8 @@ class Event < ActiveRecord::Base
   def fetch_engagement_stats
     stats = {}
 
-    stats[:favorites] = featured_projects_favorites_stats
+    stats[:all_favorites] = all_favorites_stats
+    stats[:featured_favorites] = featured_projects_favorites_stats
     stats[:by_attendee] = attendee_github_stats
     stats[:by_project] = project_github_stats
     stats[:total] = total_github_stats
