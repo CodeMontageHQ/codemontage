@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150209221313) do
+ActiveRecord::Schema.define(:version => 20150211210612) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -201,6 +201,18 @@ ActiveRecord::Schema.define(:version => 20150209221313) do
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
+
+  create_table "user_engaged_projects", :force => true do |t|
+    t.string   "project_github_url", :null => false
+    t.string   "engagement_type",    :null => false
+    t.datetime "github_created_at",  :null => false
+    t.integer  "user_id",            :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "user_engaged_projects", ["project_github_url"], :name => "index_user_engaged_projects_on_project_github_url"
+  add_index "user_engaged_projects", ["user_id"], :name => "index_user_engaged_projects_on_user_id"
 
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id",                            :null => false

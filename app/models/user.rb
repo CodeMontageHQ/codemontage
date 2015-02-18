@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
   has_one :profile, class_name: 'UserProfile'
   delegate :gravatar_email, :headline, :is_coder, :name, :represents_org, :represents_team, :cause_list, :technology_list, :email_news, :email_training, to: :profile
 
+  has_many :user_engaged_projects
+
   validates_presence_of :password, on: :create # will only run on account creation
 
   validates_presence_of :email    # will run in all validation contexts
