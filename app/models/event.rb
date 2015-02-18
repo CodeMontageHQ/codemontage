@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  before_save :delete_logo
+
   has_many :event_registrations
   has_many :sponsors, through: :sponsorships, source: :organization
   has_many :sponsorships
