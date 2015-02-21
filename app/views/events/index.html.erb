@@ -2,15 +2,26 @@
   <div>
     <h4>Events</h4>
 
-    <% if @events.present? %>
+    <% if @upcoming_events.present? %>
       <p>Join us online or in-person at these upcoming events to build open source and change the world:</p>
 
       <div class="events">
-        <% @events.each do |event| %>
+        <% @upcoming_events.each do |event| %>
           <div class="large-10 centered">
             <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
           </div>
 
+        <% end %>
+
+        <% if @past_events.present? %>
+          <h4 style="padding-top: 25px;">Past Events</h4>
+
+          <% @past_events.each do |event| %>
+          <div class="large-10 centered">
+            <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
+          </div>
+
+          <% end %>
         <% end %>
       </div>
     <% else %>
@@ -23,3 +34,4 @@
     <%= render "check_in_prompt" %>
   <% end %>
 </div>
+
