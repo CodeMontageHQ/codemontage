@@ -43,15 +43,12 @@ class Event < ActiveRecord::Base
   end
 
   def featured_projects_favorites_stats
-    stats = {}
-    stats[:by_project] = {}
+    stats = { by_project: {} }
+
+    all_favorites = all_favorites_stats[:by_project]
 
     projects.each do |project|
-      event_faves = project.favorite_projects.select do |fave|
-        fave.created_at >= start_date && fave.created_at <= end_date
-      end
-
-      stats[:by_project].merge!(project.name => event_faves.count)
+      stats[:by_project][project.name] = all_favorites[project.name]
     end
 
     stats[:total] = stats[:by_project].values.reduce(:+)
