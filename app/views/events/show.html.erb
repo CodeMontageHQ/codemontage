@@ -26,6 +26,8 @@
         <div>
           <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></p>
         </div>
+      <% else %>
+          <p class="text-center"><strong><%= @event.start_date.strftime("%B %d, %Y") %></strong></p>
       <% end %>
 
       <div class="large-10 columns large-centered text-center">
