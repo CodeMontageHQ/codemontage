@@ -9,18 +9,24 @@
 
       <div id="event_rsvp_top" class="row">
         <div class="large-10 columns large-centered text-center">
-          <%= %>
-          <% if @event.eventbrite_url.present? %>
-            <%= link_to "RSVP for the " + @event.name, @event.eventbrite_url, :class => "large index radius button" %>
+          <%=  %>
+          <% if @event.upcoming? %>
+            <% if @event.eventbrite_url.present? %>
+              <%= link_to "RSVP for the " + @event.name, @event.eventbrite_url, :class => "large index radius button" %>
+            <% else %>
+              <%= link_to "Join the " + @event.name, dashboard_path, :class => "large index radius button" %>
+            <% end %>
           <% else %>
-            <%= link_to "Join the " + @event.name, dashboard_path, :class => "large index radius button" %>
+            <%= link_to "Too late! View More Events", events_path, :class => "large index radius button" %>
           <% end %>
         </div>
       </div>
 
-      <div>
-        <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></p>
-      </div>
+      <% if @event.upcoming? %>
+        <div>
+          <p class="text-center"><strong>Join us <%= @event.start_date.strftime("%B %d, %Y") %> for the </strong></p>
+        </div>
+      <% end %>
 
       <div class="large-10 columns large-centered text-center">
         <h1><%= @event.name %></h1>
@@ -66,11 +72,15 @@
     <div id="event_rsvp_bottom" class="row">
       <div class="large-6 columns large-centered text-center">
         <%= %>
-        <% if @event.eventbrite_url.present? %>
-          <%= link_to "RSVP for the " + @event.name, @event.eventbrite_url, :class => "large index radius button" %>
-        <% else %>
-          <%= link_to "Join the " + @event.name, dashboard_path, :class => "large index radius button" %>
-        <% end %>
+          <% if @event.upcoming? %>
+            <% if @event.eventbrite_url.present? %>
+              <%= link_to "RSVP for the " + @event.name, @event.eventbrite_url, :class => "large index radius button" %>
+            <% else %>
+              <%= link_to "Join the " + @event.name, dashboard_path, :class => "large index radius button" %>
+            <% end %>
+          <% else %>
+            <%= link_to "Too late! View More Events", events_path, :class => "large index radius button" %>
+          <% end %>
       </div>
     </div>
 
