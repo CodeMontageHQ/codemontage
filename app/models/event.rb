@@ -86,11 +86,11 @@ class Event < ActiveRecord::Base
   end
 
   def upcoming?
-    true if self.start_date > Time.now
+    true if start_date > Time.now
   end
 
   def past?
-    true if self.start_date < Time.now
+    true if start_date < Time.now
   end
 
   private
