@@ -42,20 +42,6 @@ class Event < ActiveRecord::Base
     @logo_delete || '0'
   end
 
-  def featured_projects_favorites_stats
-    stats = { by_project: {} }
-
-    all_favorites = all_favorites_stats[:by_project]
-
-    projects.each do |project|
-      stats[:by_project][project.name] = all_favorites[project.name]
-    end
-
-    stats[:total] = stats[:by_project].values.reduce(:+)
-
-    stats
-  end
-
   def all_favorites_stats
     stats = {}
 
@@ -66,6 +52,20 @@ class Event < ActiveRecord::Base
     stats[:by_project].each do |project_name, project_faves|
       stats[:by_project][project_name] = project_faves.count
     end
+
+    stats
+  end
+
+  def featured_projects_favorites_stats
+    stats = { by_project: {} }
+
+    all_favorites = all_favorites_stats[:by_project]
+
+    projects.each do |project|
+      stats[:by_project][project.name] = all_favorites[project.name]
+    end
+
+    stats[:total] = stats[:by_project].values.reduce(:+)
 
     stats
   end
