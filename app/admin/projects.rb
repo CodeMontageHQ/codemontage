@@ -89,7 +89,10 @@ ActiveAdmin.register Project do
       row :created_at
       row :updated_at
       row :twitter do |proj|
-        link_to proj.twitter, "http://twitter.com/" + proj.twitter, target: "blank" if proj.twitter?
+        if proj.twitter?
+          twitter_url = "http://twitter.com/" + proj.twitter
+          link_to proj.twitter, twitter_url, target: "blank"
+        end
       end
     end
 
