@@ -12,7 +12,12 @@
     </ul>
     <section class="top-bar-section">
       <ul class="left">
-        <li><%= link_to "Projects", projects_path %></li>
+        <li class="has-dropdown">
+          <%= link_to "Projects", projects_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Project Requirements", project_requirements_path %></li>
+          </ul>
+        </li>
         <li><%= link_to "Jobs", jobs_path %></li>
         <li class="has-dropdown"><%= link_to "Events", events_path %>
           <ul class="dropdown">
