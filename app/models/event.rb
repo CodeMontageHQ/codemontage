@@ -27,6 +27,7 @@ class Event < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   scope :upcoming_events, -> { where("end_date >= ?", Time.now) }
+  scope :past_events, -> { where("end_date < ?", Time.now) }
   scope :public_events, -> { where(is_public: true) }
 
   def self.featured
@@ -112,6 +113,14 @@ class Event < ActiveRecord::Base
     stats[:total] = total_github_stats
 
     stats
+  end
+
+  def upcoming?
+    true if end_date >= Time.now
+  end
+
+  def past?
+    true if end_date < Time.now
   end
 
   private
