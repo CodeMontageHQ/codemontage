@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150213195324) do
+ActiveRecord::Schema.define(:version => 20150227190642) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20150213195324) do
   add_index "active_admin_comments", ["author_user_id"], :name => "index_active_admin_comments_on_author_user_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "beta_signups", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "beta_signups", ["user_id"], :name => "index_beta_signups_on_user_id"
 
   create_table "event_registrations", :force => true do |t|
     t.integer  "event_id",   :null => false
