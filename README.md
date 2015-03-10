@@ -10,8 +10,7 @@ Join our mission to create superhero coders! You can get involved by taking any 
 1. [Register for CodeMontage](http://codemontage.com/auth/github).
 2. [Follow us on Twitter](http://twitter.com/CodeMontage).
 3. Be the change you wish to see by [creating a branch](http://guides.github.com/overviews/flow) submitting a [pull request](https://github.com/CodeMontageHQ/codemontage/pulls/new) to improve the platform. *Please include a screenshot of any user interface changes with all pull requests.*
-4. Suggest an improvement by opening an [issue](https://github.com/CodeMontageHQ/codemontage/issues/new).
-(We recommend including [emojis](http://www.emoji-cheat-sheet.com) for maximum effectiveness.)
+4. Suggest an improvement by opening an [issue](https://github.com/CodeMontageHQ/codemontage/issues/new). Please follow [our issue template](https://github.com/CodeMontageHQ/codemontage/issues/347) and use multiple [emojis](http://www.emoji-cheat-sheet.com) for maximum effectiveness. :+1::100::wink:
 5. Reach out to us at hello@codemontage.com.
 
 
