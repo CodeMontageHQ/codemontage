@@ -1,37 +1,37 @@
 <div class="row">
-  <div>
-    <h4>Events</h4>
+	<div>
+		<h4>Events</h4>
 
-    <% if @upcoming_events.present? %>
-      <p>Join us online or in-person at these upcoming events to build open source and change the world:</p>
+		<% if @upcoming_events.present? %>
+		<p>Join us online or in-person at these upcoming events to build open source and change the world:</p>
 
-      <div class="events">
-        <% @upcoming_events.each do |event| %>
-          <div class="large-10 centered">
-            <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
-          </div>
+			<div class="events">
+				<% @upcoming_events.each do |event| %>
+					<div class="large-10 centered">
+						<h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
+					</div>
 
-        <% end %>
+					<% end %>
 
-        <% if @past_events.present? %>
-          <h4 class="top-25">Past Events</h4>
+					<% if @past_events.present? %>
+					<h4 class="top-25">Past Events</h4>
 
-          <% @past_events.each do |event| %>
-          <div class="large-10 centered">
-            <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
-          </div>
+					<% @past_events.each do |event| %>
+					<div class="large-10 centered">
+						<h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
+					</div>
 
-          <% end %>
-        <% end %>
-      </div>
-    <% else %>
-      <p>Oops! We can't seem to find any events. <%= link_to "Jump into a project", projects_path %>, or <%= link_to "reach out to an organization", organizations_path %> directly.</p>
-    <% end %>
-    </div>
-  </div>
+					<% end %>
+					<% end %>
 
-  <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
-    <%= render "check_in_prompt" %>
-  <% end %>
+				<% else %>
+				<p>Oops! We can't seem to find any events. <%= link_to "Jump into a project", projects_path %>, or <%= link_to "reach out to an organization", organizations_path %> directly.</p>
+				<% end %>
+			</div>
+	</div>
+
+<% if current_user && @current_event && !current_user.events.include?(@current_event) %>
+<%= render "check_in_prompt" %>
+<% end %>
 </div>
 

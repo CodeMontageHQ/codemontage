@@ -30,7 +30,7 @@
           <p>We believe <%= link_to 'coders can be superheroes', "http://devslovebacon.com/conferences/bacon-2013/talks/developers-are-superheroes-and-so-can-you" %>.</br>
             Join us to find open source, social impact projects that improve the world.</p>
         </div>
-        <div id="sign_up" class="large-6 columns">
+        <div id="sign_up" class="large-6 columns text-center">
 		    <% if user_signed_in? %>
           <%= link_to '<i class="fi-laptop"></i> &nbsp;Start Coding Now'.html_safe, projects_path, :class => "large radius index button centered home-signup" %>
         <% else %>
