@@ -5,7 +5,7 @@ CodeMontage::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'codemontage.com' }
 
-  config.action_mailer.deliver_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   # Mandrill smtp settings
   config.action_mailer.smtp_settings = {
