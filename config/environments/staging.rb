@@ -5,6 +5,19 @@ CodeMontage::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'codemontage.com' }
 
+  config.action_mailer.deliver_method = :smtp
+
+  # Mandrill smtp settings
+  config.action_mailer.smtp_settings = {
+    user_name: ENV["MANDRILL_USERNAME"],
+    password: ENV["MANDRILL_PASSWORD"],
+    address: "smtp.mandrillapp.com",
+    port: 587,
+    enable_starttls_auto: true,
+    authentication: :plain,
+    domain: "codemontage.com"
+  }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
