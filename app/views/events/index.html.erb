@@ -27,7 +27,6 @@
     <% else %>
       <p>Oops! We can't seem to find any events. <%= link_to "Jump into a project", projects_path %>, or <%= link_to "reach out to an organization", organizations_path %> directly.</p>
     <% end %>
-    </div>
   </div>
 
   <% if current_user && @current_event && !current_user.events.include?(@current_event) %>
