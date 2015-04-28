@@ -1,0 +1,55 @@
+<div class="row">
+  <div id="beta_text" class="row">
+    <div class="column large-12">
+      <hgroup>
+        <h1>Empower your career as a software developer.</h1>
+        <h2>Manage your self-driven learning, share your progress, and take your expertise to the next level.</h2>
+      </hgroup>
+
+      <p>Do you want to find a new position? Distinguish yourself in your current one? Or maybe just learn a new programming tool?</p>
+
+      <p>Team up with CodeMontage and use proven techniques to prioritize your learning, boost your credibility, and create new industry relationships. Let us help you keep your craft sharp!</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <% if user_signed_in? %>
+      <% if current_user.beta_signup %>
+
+        <div id="beta_thank_you" class="large-8 columns large-centered text-center panel">
+          <h5>Thank you for signing up!</h5>
+          <p>We'll be in touch soon with more information.</p>
+        </div>
+
+      <% else %>
+
+        <div id="beta_signup" class="large-4 columns large-centered">
+          <%= link_to '<i class="fi-laptop"></i> &nbsp;Sign Up for the Beta!'.html_safe, "#", method: :post, remote: true, class: "large radius index button centered beta-signup activated" %>
+        </div>
+
+      <% end %>
+    <% else %>
+      <div class="large-9 columns large-centered">
+
+        <div class="row">
+          <div id="beta_signin" class="large-5 columns">
+            <%= link_to "<i class=\"fi-social-github\"></i> Sign in with GitHub".html_safe, "/auth/github", class: "large radius index button centered beta-signin" %>
+          </div>
+
+          <div class="large-2 columns">
+            <p class="text-center"><i class="fi-arrow-right"></i></p>
+          </div>
+
+          <div id="beta_signup" class="large-5 columns">
+            <span data-tooltip aria-haspopup="true" class="has-tip radius" title="You have to sign in first!">
+              <%= link_to '<i class="fi-laptop"></i> &nbsp;Sign Up for the Beta!'.html_safe, "#", remote: true, class: "large radius button centered index beta-signup deactivated" %>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>

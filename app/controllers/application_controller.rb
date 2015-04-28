@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   before_filter :force_www!, :nav_events
 
   def after_sign_in_path_for(resource)
-    dashboard_path
+    path = URI.parse(request.referrer).path
+    path == "/beta" ? request.referrer : dashboard_path
   end
 
   def after_sign_out_path_for(resource_or_scope) # return to page you logged out from

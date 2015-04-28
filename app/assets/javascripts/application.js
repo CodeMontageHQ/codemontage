@@ -47,6 +47,19 @@ APP = {
           $(e.target).parent("span.check_in")
             .html("<i class=\"fi-check\"></i> Checked In");
 				});
+    },
+    beta: function() {
+      $("#beta_signup .activated")
+        .bind("ajax:beforeSend", function(e, xhr) {
+          var thank_you_div = "<div id=\"beta_thank_you\" " +
+                              "class=\"large-8 columns large-centered " +
+                              "text-center panel\">\n" +
+                              "<h5>Thank you for signing up!</h5>\n" +
+                              "<p>We'll be in touch soon " +
+                              "with more information.</p>\n" +
+                              "</div>";
+          $(e.target).closest("div.row").html(thank_you_div);
+        });
     }
   },
   projects: {

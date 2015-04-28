@@ -1,0 +1,42 @@
+@import "compass";
+@import "colors";
+
+.beta-signup {
+  margin-top: 30%;
+  width: 100%;
+
+  .fi-laptop {
+    font-size: 1.8em;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+}
+
+#beta_signin {
+  .button {
+    border: $cmPurple;
+    @include background-image(linear-gradient(bottom top, #8e4487, #653060 ));
+    width: 100%;
+
+    &:hover{
+      @include background-image(linear-gradient(bottom top, lighten(#8e4487, 10%), lighten(#653060, 10%)));
+    }
+
+    .fi-social-github {
+      font-size: 1.8em;
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.fi-arrow-right {
+  font-size: 3em;
+}
+
+#beta_signup .deactivated {
+  color: #fff;
+  background-color: $cmLightGrey;
+  background-image: none;
+  box-shadow: none;
+}
