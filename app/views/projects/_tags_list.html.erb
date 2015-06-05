@@ -1,0 +1,6 @@
+<form class="tag_list <%= color %>">
+  <div><input type="radio" name="tags" class="tag_radio" value="all">All</input></div>
+  <% tag_list.each do |tech| %>
+    <div><input type="radio" name="tags" class="tag_radio" value="<%= tech %>"><%= "#{tech}" -%></input></div>
+  <% end %>
+</form>

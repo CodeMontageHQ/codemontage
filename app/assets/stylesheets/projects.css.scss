@@ -27,3 +27,21 @@ h5 span.favorite {
 .project_links {
   margin-bottom: 6%;
 }
+
+.tag_list {
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  
+  div {
+    display: inline-block;
+    padding-right: 10px;
+  }
+}
+
+.purple { background-color: $cmPurple; }
+.teal { background-color: $cmTeal; }

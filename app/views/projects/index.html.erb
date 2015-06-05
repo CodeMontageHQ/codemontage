@@ -5,7 +5,10 @@
     <% if @featured_projects.present? %>
       <p>These open source, community-driven projects are making the world better and could really use your help. Check them out and contribute however you'd like. Or, view <%= link_to "organizations", organizations_path %>.
         Excited to contribute, but can't dig in right now? <%= link_to "Code Later", code_later_url %>!</p>
-
+        
+      <%= render partial: 'tags_list', locals: { tag_list: @tech_list, color: "purple" } %>
+      <%= render partial: 'tags_list', locals: { tag_list: @cause_list, color: "teal" } %>
+        
       <% @featured_projects.each do |project| %>
         <%= render partial: 'project', locals: { project: project } %>
       <% end %>

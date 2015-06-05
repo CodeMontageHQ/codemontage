@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
       else
         Project.featured
       end.with_technologies_and_causes.with_organization
+    @tech_list, @cause_list = view_context.projects_tech_and_cause_tags_lists(@featured_projects)
   end
 
   def show
