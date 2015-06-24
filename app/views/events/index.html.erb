@@ -1,25 +1,32 @@
 <div class="row">
-  <div>
+  <div class="events">
     <h4>Events</h4>
 
-    <% if @upcoming_events.present? %>
-      <p>Join us online or in-person at these upcoming events to build open source and change the world:</p>
+    <% if @public_events.present? %>
+    
+      <div class="upcoming-events">
+        <% if @upcoming_events.present? %>
+          <p>Join us online or in-person at these upcoming events to build open source and change the world:</p>
 
-      <div class="events">
-        <% @upcoming_events.each do |event| %>
-          <div class="large-10 centered">
-            <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
-          </div>
+          <% @upcoming_events.each do |event| %>
+            <div class="large-10 centered">
+              <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
+            </div>
 
+          <% end %>
+        <% else %>
+          <p>There are no upcoming events.</p>
         <% end %>
-
+      </div>
+        
+      <div class="past-events">
         <% if @past_events.present? %>
           <h4 class="top-25">Past Events</h4>
 
           <% @past_events.each do |event| %>
-          <div class="large-10 centered">
-            <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
-          </div>
+            <div class="large-10 centered">
+              <h5><%= link_to event.name + " - " + event.start_date.strftime("%B %d, %Y"), event_path(event) %></h5>
+            </div>
 
           <% end %>
         <% end %>
