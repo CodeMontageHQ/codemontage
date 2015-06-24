@@ -142,11 +142,11 @@ ActiveRecord::Schema.define(:version => 20150227190642) do
     t.datetime "updated_at",                                         :null => false
     t.string   "image_url"
     t.string   "twitter",           :limit => 15
-    t.string   "slug"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "slug"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
