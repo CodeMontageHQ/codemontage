@@ -14,6 +14,7 @@ class EventsController < ApplicationController
   def index
     @upcoming_events = Event.upcoming_events.public_events.order("start_date desc")
     @past_events = Event.past_events.public_events.order("start_date desc")
+    @public_events = Event.public_events.order("start_date desc")
   end
 
   def show
