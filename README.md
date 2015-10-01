@@ -19,7 +19,7 @@ Join our mission to create superhero coders! You can get involved by taking any 
 These setup instructions have been tested on Mac OS X, Microsoft Windows 7 with and without Cygwin, and Linux (Ubuntu 10.8.) Installing and running the site
 under Windows with or without Cygwin may be possible with enough environmental modifications, but doing so is outside the scope of this document.
 
-CodeMontage currently uses Ruby on Rails 3.2.17 and Postgres 9.2.2. The Gemfile specifies Ruby 2.0.0, but the site also runs in development under 1.9.3 and 2.1.1 (tested in Ubuntu.)
+CodeMontage currently uses Ruby on Rails 3.2.17 and Postgres 9.2.2. The Gemfile specifies Ruby 2.1.5, but the site also runs in development under 1.9.3 and 2.1.1 (tested in Ubuntu.)
 
 To get started,
 * Install Rails. If you're using a Mac, we recommend [Rails Installer](http://railsinstaller.org). Under Ubuntu, follow the instructions [here](https://www.digitalocean.com/community/articles/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-precise-pangolin-with-rvm).
