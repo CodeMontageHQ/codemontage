@@ -18,7 +18,10 @@
           <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + " Tasks", @project.tasks_url, :target => '_blank' %></li>
         <% end %>
         <% if @project.twitter.present? %>
-          <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.twitter), :target => '_blank' %></li>
+
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this project!" data-via="CodeMontage" data-hashtags="HackForChange">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
         <% elsif @project.organization.twitter.present? %>
           <li><%= link_to '<i class="fi-social-twitter"></i> '.html_safe + " Project News", twitter_url(@project.organization.twitter), :target => '_blank' %></li>
         <% end %>
