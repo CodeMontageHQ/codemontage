@@ -57,20 +57,6 @@ class Event < ActiveRecord::Base
     stats
   end
 
-  def featured_projects_favorites_stats
-    stats = { by_project: {} }
-
-    all_favorites = all_favorites_stats[:by_project]
-
-    projects.each do |project|
-      stats[:by_project][project.name] = all_favorites[project.name]
-    end
-
-    stats[:total] = stats[:by_project].values.reduce(:+)
-
-    stats
-  end
-
   def github_api_args
     { day_begin: start_date,
       day_end:   end_date }
@@ -107,7 +93,6 @@ class Event < ActiveRecord::Base
     stats = {}
 
     stats[:all_favorites] = all_favorites_stats
-    stats[:featured_favorites] = featured_projects_favorites_stats
     stats[:by_attendee] = attendee_github_stats
     stats[:by_project] = project_github_stats
     stats[:total] = total_github_stats
