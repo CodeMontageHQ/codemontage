@@ -76,7 +76,7 @@ class ServicesController < ApplicationController
                 sign_in_and_redirect(:user, user)
               end
             else
-              flash[:error] =  service_route.capitalize + ' cannot be used to sign up on CodeMontage as no valid email address has been provided. Please add a public email address or sign up manually. If you already have an account, you can sign in and add ' + service_route.capitalize + ' from your profile.'
+              flash[:alert] =  service_route.capitalize + ' cannot be used to sign up on CodeMontage as no valid email address has been provided. Please add a public email address or sign up manually. If you already have an account, you can sign in and add ' + service_route.capitalize + ' from your profile.'
               redirect_to new_user_session_path
             end
           end
@@ -95,11 +95,11 @@ class ServicesController < ApplicationController
           end
         end
       else
-        flash[:error] =  service_route.capitalize + ' returned invalid data for the user id.'
+        flash[:alert] =  service_route.capitalize + ' returned invalid data for the user id.'
         redirect_to new_user_session_path
       end
     else
-      flash[:error] = 'Error while authenticating via ' + service_route.capitalize + '.'
+      flash[:alert] = 'Error while authenticating via ' + service_route.capitalize + '.'
       redirect_to new_user_session_path
     end
   end
