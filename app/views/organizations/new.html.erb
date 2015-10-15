@@ -1,14 +1,14 @@
 <body>
-  
+
   <h2>Submit a Project</h2>
 
-  <%= simple_form_for @organization, :validate => true do |f| %>  
+  <%= simple_form_for @organization, :validate => true do |f| %>
   	<div class="form-inputs">
 	    <%= f.simple_fields_for :projects do |project| %>
 	     <div class="row">
 	     	<%= project.input :name, :label => 'Project Name', wrapper_html: { class: "large-6 columns" }, error_html: { class: "error"} %>
 	    	<%= project.input :github_repo, :label => 'GitHub Repository', :placeholder => 'Just the repo name, please...', wrapper_html: { class: 'large-6 columns' }, error_html: { class: "error"} %>
-	    </div>	
+	    </div>
     	  <%= project.input :url, :label => 'Project Website' %>
 	    	<%= project.input :description, :placeholder => 'What does your project do?' %>
 	    <% end %>
@@ -17,12 +17,12 @@
 	    <div class="row">
 	    	<%= f.input :github_org, :label => 'Organization GitHub Username', :required => true, wrapper_html: { class: 'large-6 columns'}, error_html: { class: "error"} %>
 	    	<%= f.input :url, :label => 'Organization Website', :required => false, :as => :url, wrapper_html: { class: 'large-6 columns'} %>
-	    </div>	
+	    </div>
 	   <div class="row">
     		<%= f.input :contact_name, :label => 'Contact Name', :placeholder => 'Who should we talk to for more info?', wrapper_html: { class: 'large-4 columns' } %>
     		<%= f.input :contact_role, :label => 'Contact Title', :placeholder => 'What do they do at the org?', wrapper_html: { class: 'large-4 columns'} %>
 	   		<%= f.input :contact_email, :label => 'Contact Email', :as => :email, wrapper_html: { class: 'large-4 columns'} %>
-	    </div>		
+	    </div>
     </div>
 
     <div class="form-actions">
