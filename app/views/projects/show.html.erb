@@ -42,6 +42,10 @@
 
     <div class="large-4 columns">
       <%= link_to image_tag(find_logo(@project.organization), :alt => @project.organization.name), @project.organization.url, :target => '_blank' if find_logo?(@project.organization) %>
+      
+      <div id="social_share">
+        <%= render partial: 'project_social', locals: { project: @project } %>
+      </div>
 
       <div id="project_causes">
         <h5>Causes</h5>

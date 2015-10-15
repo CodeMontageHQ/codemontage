@@ -1,0 +1,9 @@
+<% if project.twitter.present? %>
+  <a href="http://twitter.com/home?status=Check out the @<%= project.twitter %> project on @CodeMontage!" title="Share on Twitter" target="_blank" class="button radius small">
+    <i class="fi-social-twitter"></i> Share on Twitter
+  </a>
+<% elsif project.organization.twitter.present? %>
+  <a href="http://twitter.com/home?status=Check out @<%= project.organization.twitter %> on @CodeMontage!" title="Share on Twitter" target="_blank" class="button radius small">
+    <i class="fi-social-twitter"></i> Share on Twitter
+  </a>
+<% end %>

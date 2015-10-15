@@ -21,6 +21,9 @@
       <li><%= link_to '<i class="fi-wrench"></i> '.html_safe + "Install", project.install_url, :target => '_blank' if project.install_url.present? %></li>
       <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + "Tasks", project.tasks_url, :target => '_blank' if project.tasks_url.present? %></li>
       <li><%= link_to '<i class="fi-comments"></i> '.html_safe + "Help", project.help_url, :target => '_blank' if project.help_url.present? %></li>
+      <li>
+        <%= render partial: 'project_social', locals: { project: project } %>
+      </li>
     </ul>
   </div>
 
