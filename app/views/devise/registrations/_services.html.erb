@@ -4,21 +4,21 @@
   <div id="current_services">
     <% if current_user.services.exists? %>
       <h6>The following <%= @services.count == 1 ? 'account is' : 'services are' %> connected with your CodeMontage account:</h6>
-  
-      <% @services.each do |service| %>  
-        <div class="services_used">  
+
+      <% @services.each do |service| %>
+        <div class="services_used">
             <%= image_tag "#{service.provider}_64.png", :size => "64x64" %>
             <div class = "user">
-              <div class="line1">Login: <%= service.ulogin.to_s != '' ? service.ulogin : 'not set' %></div>  
+              <div class="line1">Login: <%= service.ulogin.to_s != '' ? service.ulogin : 'not set' %></div>
               <div class="line2">Email: <%= service.uemail != '' ? service.uemail : 'not set' %></div>
               <div class="line3">
                   <% @services.count == 1 ? @msg = 'Removing this service might lock you out of your account if you do not know your CodeMontage email and password' : @msg = '' %>
                   <%= link_to "Remove this service", service, :confirm => 'Are you sure you want to remove this authentication service? ' + @msg, :method => :delete, :class => "remove" %>
               </div>
             </div>
-        </div>  
+        </div>
       <% end %>
-      
+
     <% else %>
       <h5>There are currently no external services connected with your CodeMontage account. We recommend adding <%= link_to "Github", "/auth/github" %>.</h5>
     <% end %>

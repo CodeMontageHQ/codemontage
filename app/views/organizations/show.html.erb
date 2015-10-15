@@ -31,7 +31,7 @@
                   <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
                 </div>
                 <div class="job_technologies large-6 columns">
-                  <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
+                  <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>
                 </div>
               </div>
               <div class="job_summary row">

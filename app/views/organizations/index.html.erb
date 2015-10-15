@@ -2,17 +2,17 @@
   <div class="row">
     <div>
       <h4>Organizations</h4>
-      
+
       <p>These organizations are trailblazing social good technology with open source, community-driven projects that help the world. Check them out and contribute however you'd like.</p>
 
       <div class="organizations row">
         <!-- split organizations to display into groups based on three column design -->
-        <% @featured_split = (@featured_orgs.count / 3) + 1 %> 
+        <% @featured_split = (@featured_orgs.count / 3) + 1 %>
 
         <% @featured_orgs.in_groups_of(@featured_split, false).each do |featured_array| %>
           <div class="large-4 columns">
             <% featured_array.each do |featured| %>
-            <h5><strong>  
+            <h5><strong>
               <% if featured.image_url? %>
                 <%= link_to (image_tag featured.image_url, :width => "150px"), organization_path(featured) %>
               <% else %>
@@ -20,7 +20,7 @@
               <% end %>
             <strong></h5>
             <% end %>
-            
+            a
           </div>
         <% end %>
       </div>
