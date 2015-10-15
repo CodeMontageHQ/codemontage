@@ -1,6 +1,7 @@
 class OrganizationsController < ApplicationController
   def new
     @organization = Organization.new
+    @organization.is_public_submission = current_user.is_admin unless current_user.nil?
     @project = @organization.projects.build(params[:projects])
   end
 

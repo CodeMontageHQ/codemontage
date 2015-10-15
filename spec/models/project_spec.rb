@@ -83,7 +83,7 @@ describe Project do
   end
 
   describe '#related_projects' do
-    let(:organization) { Organization.create!(name: 'CodeMontage') }
+    let(:organization) { Organization.create!(name: "CodeMontage", github_org: "codeMontage") }
 
     before do
       @project_1 = Project.create!(name: 'Code Montage', organization_id: organization.id, github_repo: 'codemontage')

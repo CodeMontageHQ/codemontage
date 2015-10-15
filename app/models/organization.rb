@@ -12,8 +12,8 @@ class Organization < ActiveRecord::Base
   attr_writer :logo_delete
   attr_accessor :is_public_submission
 
-  validates_presence_of :name
-  validates_presence_of :github_org, if: :is_public_submission
+  validates :name, presence: true
+  validates :github_org, presence: true, unless: :is_public_submission
 
   # Paperclip
   has_attached_file :logo, styles: { thumb: '100x100>', medium: '250x250>' },
