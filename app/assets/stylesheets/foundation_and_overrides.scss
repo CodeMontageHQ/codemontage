@@ -1042,3 +1042,7 @@ $topbar-nav-toggle-size: 12px;
 
 
 @import 'foundation';
+
+.error small, small.error {
+  background: none repeat scroll 0 0 lighten($cmPurple, 7%);
+}
