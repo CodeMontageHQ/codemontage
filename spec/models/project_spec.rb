@@ -6,7 +6,8 @@ describe Project do
   it { should have_many(:events).through(:featured_projects) }
 
   it { should validate_presence_of(:name) }
-  it { should validate_presence_of(:github_repo) }
+  it { should validate_presence_of(:submitted_github_url).on(:create) }
+  it { should validate_presence_of(:github_repo).on(:update) }
 
   context 'github-related methods' do
     let(:project) { Project.new }
@@ -86,12 +87,18 @@ describe Project do
     let(:organization) { Organization.create!(name: 'CodeMontage') }
 
     before do
-      @project_1 = Project.create!(name: 'Code Montage', organization_id: organization.id, github_repo: 'codemontage')
-      @project_2 = Project.create!(name: 'Happy Days', organization_id: organization.id, github_repo: 'happydays')
+      @project_1 = Project.create!(name: 'Code Montage', organization_id: organization.id, submitted_github_url: 'https://github.com/CodeMontageHQ/codemontage')
+      @project_2 = Project.create!(name: 'Happy Days', organization_id: organization.id, submitted_github_url: 'https://github.com/kig/happydays')
     end
 
     it "returns its organization's other projects" do
       expect(@project_1.related_projects).to eq([@project_2])
+    end
+  end
+
+  describe '.parse_git_url' do
+    it "returns organization/repo given a github project url" do
+      expect(Project.parse_git_url('https://github.com/CodeMontageHQ/codemontage')).to eq('CodeMontageHQ/codemontage')
     end
   end
 end

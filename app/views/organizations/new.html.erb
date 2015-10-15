@@ -7,15 +7,14 @@
 	    <%= f.simple_fields_for :projects do |project| %>
 	     <div class="row">
 	     	<%= project.input :name, :label => 'Project Name', wrapper_html: { class: "large-6 columns" }, error_html: { class: "error"} %>
-	    	<%= project.input :github_repo, :label => 'GitHub Repository', :placeholder => 'Just the repo name, please...', wrapper_html: { class: 'large-6 columns' }, error_html: { class: "error"} %>
+	     	<%= project.input :submitted_github_url, :label => 'GitHub Repository URL', :placeholder => 'Just the repo url, please...', wrapper_html: { class: 'large-6 columns' }, error_html: { class: "error"} %>
 	    </div>	
     	  <%= project.input :url, :label => 'Project Website' %>
 	    	<%= project.input :description, :placeholder => 'What does your project do?' %>
 	    <% end %>
 
-	    <%= f.input :name, :label => 'Organization Name', error_html: { class: "error" } %>
 	    <div class="row">
-	    	<%= f.input :github_org, :label => 'Organization GitHub Username', :required => true, wrapper_html: { class: 'large-6 columns'}, error_html: { class: "error"} %>
+	    	<%= f.input :name, :label => 'Organization Name', wrapper_html: { class: 'large-6 columns'}, error_html: { class: "error" } %>
 	    	<%= f.input :url, :label => 'Organization Website', :required => false, :as => :url, wrapper_html: { class: 'large-6 columns'} %>
 	    </div>	
 	   <div class="row">

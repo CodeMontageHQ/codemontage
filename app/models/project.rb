@@ -1,12 +1,21 @@
 class Project < ActiveRecord::Base
+  before_create :set_github_repo
   belongs_to :organization
   acts_as_ordered_taggable
   acts_as_ordered_taggable_on :technologies, :causes
 
   attr_accessible :cause_list, :description, :github_repo, :help_url,
                   :install_url, :is_active, :is_approved, :name, :notes,
-                  :organization_id, :technology_list, :url, :twitter
-  validates_presence_of :name, :github_repo
+                  :organization_id, :technology_list, :url, :twitter,
+                  :submitted_github_url
+  
+  attr_accessor :submitted_github_url
+  validates :name, presence: true
+  validates :github_repo, presence: true, on: :update
+  validates :submitted_github_url, presence: true, 
+            format: { with: /\Ahttps?:\/\/github.com\/[\w-]+\/[\w\.-]+(\/)?\Z/i, 
+                      message: 'Please enter a valid GitHub URL.' },
+            on: :create
 
   has_many :favorite_projects
   has_many :users, through: :favorite_projects
@@ -59,5 +68,16 @@ class Project < ActiveRecord::Base
 
   def tasks_url
     "#{github_url}/issues"
+  end
+
+  def self.parse_git_url(url)
+    url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '')
+       .gsub(/(\.git|\/)$/i, '')
+  end
+
+  private
+
+  def set_github_repo
+    self.github_repo = Project.parse_git_url(submitted_github_url).split('/').last
   end
 end

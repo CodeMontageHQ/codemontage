@@ -6,11 +6,6 @@ describe Organization do
   it { should validate_presence_of(:name) }
 
   context 'validations' do
-    context 'if public submission' do
-      before { subject.stub(:is_public_submission) { true } }
-      it { should validate_presence_of(:github_org) }
-    end
-
     context 'if not public submission' do
       before { subject.stub(:is_public_submission) { false } }
       it { should_not validate_presence_of(:github_org) }
@@ -18,6 +13,24 @@ describe Organization do
 
     context 'if not public submission, implicit' do
       it { should_not validate_presence_of(:github_org) }
+    end
+  end
+
+  context 'create organization' do
+    let(:organization) { 
+      Organization.new(projects_attributes: { "0" => 
+                                                 { 
+                                                    name: "sidekiq",
+                                                    submitted_github_url: "https://github.com/mperham/sidekiq"
+                                                 }
+                                            }, 
+                       name: "Mperham") 
+    }
+
+    it 'populates github_repo and github_org upon create' do
+      organization.save
+      expect(organization.projects.first.github_repo).to eq('sidekiq')
+      expect(organization.github_org).to eq('mperham')
     end
   end
 

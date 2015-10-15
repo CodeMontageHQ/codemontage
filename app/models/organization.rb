@@ -1,19 +1,23 @@
 class Organization < ActiveRecord::Base
   before_save :delete_logo
+  before_create :set_github_org
 
   has_many :jobs
   has_many :projects
   has_many :organization_metrics
   has_many :sponsorships
 
-  attr_accessible :name, :url, :github_org, :description, :is_tax_exempt, :contact_name, :contact_role, :contact_email, :annual_budget_usd, :total_staff_size, :tech_staff_size, :notes, :image_url, :twitter, :logo, :logo_delete
+  attr_accessible :name, :url, :github_org, :description,
+                  :is_tax_exempt, :contact_name, :contact_role,
+                  :contact_email, :annual_budget_usd, :total_staff_size, 
+                  :tech_staff_size, :notes, :image_url, :twitter, :logo,
+                  :logo_delete
   attr_accessible :organization_metrics_attributes, :projects_attributes
 
   attr_writer :logo_delete
   attr_accessor :is_public_submission
 
-  validates_presence_of :name
-  validates_presence_of :github_org, if: :is_public_submission
+  validates :name, presence: true
 
   # Paperclip
   has_attached_file :logo, styles: { thumb: '100x100>', medium: '250x250>' },
@@ -47,5 +51,13 @@ class Organization < ActiveRecord::Base
 
   def delete_logo
     logo.clear if logo_delete == '1'
+  end
+
+  def set_github_org
+    if projects.first
+      self.github_org = Project.parse_git_url(projects.first.submitted_github_url)
+                          .split('/')
+                          .first
+    end
   end
 end
