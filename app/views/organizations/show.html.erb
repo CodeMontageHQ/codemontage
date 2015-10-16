@@ -4,7 +4,6 @@
       <div id="org_info" class="row">
         <div class="large-8 columns">
           <h4><%= @organization.name %></h4>
-
           <ul class="no-bullet">
             <li><%= link_to '<i class="fi-web"></i> '.html_safe + @organization.display_url, @organization.url, :target => '_blank' unless !@organization.url.present? %></li>
             <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + @organization.github_org, @organization.github_url, :target => '_blank' unless !@organization.github_url.present? %></li>
@@ -17,81 +16,60 @@
       </div>
       <div id="org_summary">
         <p><%= @organization.description %></p>
-        </br>
+        <br>
       </div>
       <% if @jobs.present? %>
-      <div id="org_jobs">
-        <h4>Jobs</h4>
-        <hr>
-        <div id="job_posts">
-          <% @jobs.each do |job| %>
-            <div class="job_post">
-              <div class="job_headline row">
-                <div class="job_highlight large-6 columns">
-                  <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
+        <div id="org_jobs">
+          <h4>Jobs</h4>
+          <hr>
+          <div id="job_posts">
+            <% @jobs.each do |job| %>
+              <div class="job_post">
+                <div class="job_headline row">
+                  <div class="job_highlight large-6 columns">
+                    <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
+                  </div>
+                  <div class="job_technologies large-6 columns">
+                    <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>
+                  </div>
                 </div>
-                <div class="job_technologies large-6 columns">
-                  <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
+                <div class="job_summary row">
+                  <div class="large-12 columns">
+                    <p><%= job.overview %></p>
+                  </div>
                 </div>
               </div>
-              <div class="job_summary row">
-                <div class="large-12 columns">
-                  <p><%= job.overview %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </div>
       <% end %>
       <% if !@projects.present? && (@jobs.present? | @sponsorships.present?) %>
         <!--don't mention a lack of projects for organizations that post jobs or sponsor -->
       <% else %>
-      <div id="org_projects">
-        <h4>Projects</h4>
-        <hr>
-
-        <% if @projects.present? %>
-          <% @projects.each do |project| %>
-            <div class="row">
-              <div class="large-8 columns">
-                <h5 class="project_title"><%= link_to project.name, project_path(project) %></h5>
-                <ul class="no-bullet">
-                  <li><%= link_to '<i class="fi-social-github"></i> '.html_safe + project.github_display + " Code", project.github_url, :target => '_blank' unless !project.github_url.present? %></li>
-                  <li><%= link_to '<i class="fi-page-edit"></i> '.html_safe + project.name + " Open Tasks", project.tasks_url, :target => '_blank' unless !project.tasks_url.present? %></li>
-                </ul>
-                <p><%= project.description %></p>
-              </div>
-              <div class="large-4 columns">
-                <div id="project_causes">
-                  <h5>Causes</h5>
-                  <%= project_tags_link_list project, 'causes' %>
-                </div>
-
-                <div id="project_technologies">
-                  <h5>Technologies</h5>
-                  <%= project_tags_link_list project, 'technologies' %>
-                </div>
-              </div>
-            </div>
+        <div id="org_projects">
+          <h4>Projects</h4>
+          <hr>
+          <% if @projects.present? %>
+            <% @projects.each do |project| %>
+              <%= render partial: 'projects/project', locals: {project: project} %>
+            <% end %>
+          <% else %>
+            <p>Aww, bummer. There aren't any current projects for this organization. Check out other projects <%= link_to "here", projects_path %>.</p>
           <% end %>
-        <% else %>
-          <p>Aww, bummer. There aren't any current projects for this organization. Check out other projects <%= link_to "here", projects_path %>.</p>
-        <% end %>
-        </br>
-      </div>
+          <br>
+        </div>
       <% end %>
       <% if @sponsorships.present? %>
-      <div id="org_sponsorships">
-        <h4>Sponsorships</h4>
-        <hr>
-        <div id="sponsorships">
-          <div class="sponsorship_event">
-            <h6><%= link_to "Coder Day of Service 2014", coder_day_path %><h6>
-            <%= link_to (image_tag 'coder_day_badge_logo.png', :width => "120"), coder_day_path %>
+        <div id="org_sponsorships">
+          <h4>Sponsorships</h4>
+          <hr>
+          <div id="sponsorships">
+            <div class="sponsorship_event">
+              <h6><%= link_to "Coder Day of Service 2014", coder_day_path %></h6>
+              <%= link_to (image_tag 'coder_day_badge_logo.png', :width => "120"), coder_day_path %>
+            </div>
           </div>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
