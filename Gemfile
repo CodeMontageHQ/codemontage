@@ -40,6 +40,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'vcr'
   gem 'fakeweb'
+  gem 'faker'
 end
 
 group :test do

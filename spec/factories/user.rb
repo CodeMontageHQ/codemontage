@@ -14,4 +14,9 @@ FactoryGirl.define do
       create_list(:service, 1, user: user)
     end
   end
+
+  factory :cm_user, class: User do
+    email { "#{Faker::Internet.user_name}@#{Faker::Internet.domain_name}" }
+    password Faker::Internet.password
+  end
 end

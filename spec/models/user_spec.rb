@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe User do
   # rspec shoulda matchers
@@ -6,8 +6,28 @@ describe User do
   it { should allow_mass_assignment_of(:password) }
   it { should allow_mass_assignment_of(:remember_me) }
 
+  it { should have_many(:event_registrations) }
+  it { should have_many(:events).through(:event_registrations) }
+  it { should have_many(:favorite_projects) }
+  it { should have_many(:favorites).through(:favorite_projects) }
+  it { should have_many(:projects).through(:favorite_projects) }
+  it { should have_many(:services) }
+  it { should have_one(:profile) }
+
   before do
-    @user = User.new(email: 'captain@planet.com', password: 'passw0rd')
+    @user = User.new(email: "captain@planet.com", password: "passw0rd")
+  end
+
+  describe "with_github" do
+    before do
+      @user1 = create(:cm_user)
+      @user2 = create(:cm_user)
+      @service = @user1.services.create(provider: "github", uid: "foobar")
+    end
+
+    it "should return user who has github service" do
+      expect(User.with_github).to eq([@user1])
+    end
   end
 
   subject { @user }
@@ -15,14 +35,14 @@ describe User do
   it { should respond_to(:email) }
   it { should be_valid }
 
-  describe 'email not present' do
-    before { @user.email = ' ' }
+  describe "email not present" do
+    before { @user.email = " " }
     it { should_not be_valid }
   end
 
-  describe 'duplicate email' do
+  describe "duplicate email" do
     before do
-      @user2 = User.new(email: 'captain@planet.com', password: 'passw0rd')
+      @user2 = User.new(email: "captain@planet.com", password: "passw0rd")
       @user2.save
     end
     it { should_not be_valid }
