@@ -21,6 +21,7 @@ CodeMontage::Application.routes.draw do
   resources :projects
   resources :favorites
   resources :events
+  resources :beta_signups, only: [:create]
 
   # Static content
   get '/about', controller: 'home', action: 'about'
