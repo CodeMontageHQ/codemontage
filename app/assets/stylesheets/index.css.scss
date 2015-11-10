@@ -70,6 +70,14 @@ body[data-controller="home"][data-action="index"] {
     img { display: none; }
     .mission_text { font-size: 1.7em; }
   }
+  #coder_welcome {
+    .button {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 75%;
+    }
+  }
 }
 
 @media screen and (max-device-width:854px), screen and (max-width:854px) {
