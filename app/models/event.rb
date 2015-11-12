@@ -115,6 +115,46 @@ class Event < ActiveRecord::Base
     stats
   end
 
+  def create_raffle_tickets
+    tickets = []
+
+    attendee_github_stats.each do |email, stats|
+      contributions = stats ? stats[:pull_requests] + stats[:issues] : 0
+      contributions.times { tickets << email }
+    end
+
+    tickets
+  end
+
+  def select_raffle_winner(tickets = create_raffle_tickets)
+    winner = User.find_by_email(tickets.sample)
+    { email: winner.email, name: winner.profile.name } if winner
+  end
+
+  def print_raffle_winners(winners)
+    winner_text = ""
+    winners.compact!
+
+    winners.each_with_index do |winner, i|
+      winner_text += "#{i+1}. #{winner[:name]} - #{winner[:email]}\n"
+    end
+
+    winner_text = "This event had no contributions." if winner_text.blank?
+    Rails.logger.info(winner_text)
+  end
+
+  def raffle(num_winners = 2)
+    winners = []
+    tickets = create_raffle_tickets
+
+    if tickets.present?
+      num_winners.times { winners << select_raffle_winner(tickets) }
+    end
+
+    print_raffle_winners(winners)
+    tickets
+  end
+
   def upcoming?
     true if end_date >= Time.now
   end
