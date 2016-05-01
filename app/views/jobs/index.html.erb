@@ -2,7 +2,7 @@
   <div class="row">
     <div>
       <h4>Jobs You've Been Looking For</h4>
-      
+
       <p>Wonder if you can make a difference with <em>most</em> of your time, instead of just your free time? Check out the full-time, paid opportunities below at companies that want to help you make a bigger impact on the world.</p>
 
       <div class="jobs">
@@ -13,7 +13,7 @@
               <h6><%= link_to job.title, job.apply_url %> at <%= link_to job.organization.name, job.organization.url %></h6>
             </div>
             <div class="job_technologies six columns">
-              <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>  
+              <h6><%= "{ " + job.technology_list.to_s + " }" unless !job.technology_list.present? %></h6>
             </div>
           </div>
           <div class="job_summary row">
