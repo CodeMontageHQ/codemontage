@@ -2,9 +2,12 @@
 
 .top-bar {
   margin: 0 0 20px;
+  overflow: visible;
+
 
   ul.left {
     background: $cmOffBlack;
+    margin-top: -8px;
     > li.cta:hover { background: $cmOffBlack !important; }  //do not highlight top bar rectangle behind button
     > li.cta .button {   border: $cmPurple;
     background: $cmPurple;
@@ -25,6 +28,29 @@
   .cta-nav:hover {
     background: darken($cmPurple, 10%);
   }
+
+  @media (max-width: 835px) {
+    .top-bar-section {
+      overflow: hidden;
+      height: 0px;
+    }
+    &.expanded .top-bar-section {
+      overflow: visible;
+      height: auto;
+    }
+    ul.left {
+      margin-top: 0px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 835px) {
+    &.logged-out .toggle-topbar.menu-icon {
+      margin-top: -46px;
+    }
+    ul.left > li.cta .button {
+      margin-left: 0;
+    }
+  }
 }
 
 .top-bar.logged-in ul>li.logo img {
@@ -38,5 +64,5 @@
   margin: 5px;
   margin-left: 45px;
   margin-right: 45px;
-  margin-top: -40px;
+  margin-top: -15px;
 }
