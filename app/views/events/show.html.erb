@@ -1,12 +1,30 @@
 <body>
   <% content_for :title do @event.name end %>
-
+  
   <div class="event">
+    <div id="side_nav">
+  		<div class="large-2 columns panel">
+    		<ul class="side-nav">
+  			<% if @event.schedule.present? %>
+      			<li><a href="#schedule">Schedule</a></li>
+  			<% end %>
+      			<li><a href="#conduct">Code of Conduct</a></li>
+  			<% if @featured_projects.present? %>
+      			<li><a href="#featured">Featured Projects</a></li>
+  			<% end %>
+  			<% if @event.sponsors.present? %>
+      			<li><a href="#sponsors">Sponsors</a></li>
+  			<% end %>
+    		</ul>
+  		</div>
+    </div>
+	
+	<div class = "large-10 columns">
     <div id="event_welcome" class="row">
       <div class="large-10 columns large-centered text-center">
         <%= image_tag @event.logo, :alt => @event.name %>
       </div>
-
+	  
       <div id="event_rsvp_top" class="row">
         <div class="large-10 columns large-centered text-center">
           <%=  %>
@@ -36,10 +54,11 @@
           <p><%=raw @event.description %><p>
         </div>
       </div>
+	  
 
       <% if @event.schedule.present? %>
-        <div id="event_schedule" class="large-10 columns large-centered">
-          <h4>Schedule</h4>
+	  	<div id="event_schedule" class="large-10 columns large-centered">
+          <a id="schedule"><h4>Schedule</h4></a>
           <div class="large-10 columns large-centered">
             <ul>
               <%=raw @event.schedule %>
@@ -49,7 +68,7 @@
       <% end %>
 
       <div id="event_code_of_conduct" class="large-10 columns large-centered">
-        <h4>Code of Conduct</h4>
+        <a id="conduct">Useful Tips Section<h4>Code of Conduct</h4></a>
         <p>
           This event is utilizing the <%= link_to "CodeMontage Code of Conduct", "/code_of_conduct" %>. <strong>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact an event organizer immediately.</strong>
 
@@ -65,11 +84,12 @@
 
       <div id="event_featured_projects" class="large-10 columns large-centered">
         <% if @featured_projects.present? %>
-          <h4>Featured Projects</h4>
+          <a id="featured"><h4>Featured Projects</h4></a>
           <%= render partial: 'projects/project', collection: @featured_projects %>
         <% end %>
       </div>
     </div>
+
 
     <div id="event_rsvp_bottom" class="row">
       <div class="large-6 columns large-centered text-center">
@@ -87,7 +107,7 @@
     </div>
 
     <% if @event.sponsors.present? %>
-      <div id="event_sponsors" class="row">
+      <a id="sponsors"><div id="event_sponsors" class="row"></a>
         <div class="large-10 columns large-centered">
           <h2><%= @event.name %> Sponsors</h2>
           <div class="sponsors row large-centered">
@@ -117,6 +137,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <% content_for(:press) do %>Press<% end %>
