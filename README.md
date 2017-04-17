@@ -1,4 +1,4 @@
-##Welcome to the CodeMontage Platform
+## Welcome to the CodeMontage Platform
 [![Build Status](https://travis-ci.org/CodeMontageHQ/codemontage.png)](https://travis-ci.org/CodeMontageHQ/codemontage)
 
 **[CodeMontage](http://codemontage.com) empowers coders to improve their impact on the world.**
@@ -14,7 +14,7 @@ Join our mission to create superhero coders! You can get involved by taking any 
 5. Reach out to us at hello@codemontage.com.
 
 
-###Development Environment Setup
+### Development Environment Setup
 
 These setup instructions have been tested on Mac OS X, Microsoft Windows 7 with and without Cygwin, and Linux (Ubuntu 10.8.) Installing and running the site
 under Windows with or without Cygwin may be possible with enough environmental modifications, but doing so is outside the scope of this document.
