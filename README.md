@@ -22,7 +22,7 @@ under Windows with or without Cygwin may be possible with enough environmental m
 CodeMontage currently uses Ruby on Rails 3.2.17 and Postgres 9.2.2. The Gemfile specifies Ruby 2.1.5, but the site also runs in development under 1.9.3 and 2.1.1 (tested in Ubuntu.)
 
 To get started,
-* Install Rails. If you're using a Mac, we recommend [Rails Installer](http://railsinstaller.org). Under Ubuntu, follow the instructions [here](https://www.digitalocean.com/community/articles/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-precise-pangolin-with-rvm).
+* Install Rails. If you're using a Mac, we recommend [Rails Installer](http://railsinstaller.org). Under Ubuntu, follow the instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-16-04).
 * Install Postgres. For the Mac, we recommend [Postgres App](http://postgresapp.com). (If you're using Mac OS X Lion, you may need [this fix for Postgres](http://stackoverflow.com/questions/9354122/how-to-install-postgresql-9-1-on-osx-lion).) Under Ubuntu, follow the instructions [here](http://stackoverflow.com/questions/11092807/installing-postgresql-on-ubuntu-for-ruby-on-rails).
 
 * Clone the CodeMontage Repo:
